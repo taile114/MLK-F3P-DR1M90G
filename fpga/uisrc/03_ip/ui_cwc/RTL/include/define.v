@@ -1,0 +1,14 @@
+`define ui_cwc_P0_Available
+`define ui_cwc_P10_Available
+`define ui_cwc_P11_Available
+`define ui_cwc_P12_Available
+`define ui_cwc_P13_Available
+`define ui_cwc_P1_Available
+`define ui_cwc_P2_Available
+`define ui_cwc_P3_Available
+`define ui_cwc_P4_Available
+`define ui_cwc_P5_Available
+`define ui_cwc_P6_Available
+`define ui_cwc_P7_Available
+`define ui_cwc_P8_Available
+`define ui_cwc_P9_Available

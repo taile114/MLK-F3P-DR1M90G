@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "stage\tops\ttensor_workspace_bytes\tstems\r\n0\t135\t372988\t15\r\n1\t75\t185204\t4\r\n2\t75\t181932\t4\r\n3\t75\t185204\t4\r\n4\t11\t83664\t2\r\n5\t4\t2828\t1\r\nMemAvailable:     812204 kB\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB",
+      "command": "cat /mnt/mmcblk0p2/npu-tests/fused-v1/result_neon_full/plan.tsv; for f in /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq /sys/class/thermal/thermal_zone*/temp; do if test -r \"$f\"; then echo \"$f\"; cat \"$f\"; fi; done; grep -E \"MemAvailable|Cma\" /proc/meminfo",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

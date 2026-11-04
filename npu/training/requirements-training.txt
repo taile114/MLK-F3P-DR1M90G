@@ -1,0 +1,9 @@
+# Install torch first from https://download.pytorch.org/whl/cu126.
+# Other packages can be installed from the Tsinghua PyPI mirror.
+-r requirements.txt
+torch==2.8.0+cu126
+numpy==2.3.5
+scipy==1.16.3
+scikit-learn==1.7.2
+matplotlib==3.10.7
+pandas==3.0.1

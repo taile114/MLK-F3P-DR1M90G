@@ -1,0 +1,31 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "command": "cat /proc/sys/kernel/printk; sha256sum /mnt/mmcblk0p2/npu-tests/fused-replay-evidence-v1.tar.gz",
+      "output": "8\t4\t1\t7\r\nf8fbd88e71fe0e10fb17cef977df43d8666858fa6ee5ed0f9ad0dae2cc768d7c  /mnt/mmcblk0p2/npu-tests/fused-replay-evidence-v1.tar.gz"
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "chunk_bytes": 65536,
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "bytes": 1298288,
+      "sha256": "f8fbd88e71fe0e10fb17cef977df43d8666858fa6ee5ed0f9ad0dae2cc768d7c",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\fused-replay-evidence-v1.tar.gz",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/fused-replay-evidence-v1.tar.gz",
+      "verified": true
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "command": "cat /proc/sys/kernel/printk; grep -E \"MemAvailable|Cma\" /proc/meminfo",
+      "output": "8\t4\t1\t7\r\nMemAvailable:     808672 kB\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

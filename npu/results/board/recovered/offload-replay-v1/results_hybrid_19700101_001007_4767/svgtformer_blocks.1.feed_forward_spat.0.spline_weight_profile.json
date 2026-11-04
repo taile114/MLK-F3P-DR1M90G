@@ -1,0 +1,561 @@
+{
+	"ArmNN": {
+		"optimize_measurements_#1": {
+			"type": "Event",
+			"Wall clock time_#1": {
+				"type": "Measurement",
+				"raw": [
+					1079.520000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#1": {
+				"type": "Measurement",
+				"raw": [
+					608537791.072000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#1": {
+				"type": "Measurement",
+				"raw": [
+					608538870.592000
+				],
+				"unit": "us"
+			},
+			"Optimizer_Pass_#2": {
+				"type": "Event",
+				"Wall clock time_#2": {
+					"type": "Measurement",
+					"raw": [
+						24.960000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#2": {
+					"type": "Measurement",
+					"raw": [
+						608537888.722000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#2": {
+					"type": "Measurement",
+					"raw": [
+						608537913.682000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#3": {
+				"type": "Event",
+				"Wall clock time_#3": {
+					"type": "Measurement",
+					"raw": [
+						7.680000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#3": {
+					"type": "Measurement",
+					"raw": [
+						608537945.602000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#3": {
+					"type": "Measurement",
+					"raw": [
+						608537953.282000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#4": {
+				"type": "Event",
+				"Wall clock time_#4": {
+					"type": "Measurement",
+					"raw": [
+						26.160000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#4": {
+					"type": "Measurement",
+					"raw": [
+						608537975.392000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#4": {
+					"type": "Measurement",
+					"raw": [
+						608538001.552000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_AssignBackends_#5": {
+				"type": "Event",
+				"Wall clock time_#5": {
+					"type": "Measurement",
+					"raw": [
+						139.950000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#5": {
+					"type": "Measurement",
+					"raw": [
+						608538186.682000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#5": {
+					"type": "Measurement",
+					"raw": [
+						608538326.632000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#6": {
+				"type": "Event",
+				"Wall clock time_#6": {
+					"type": "Measurement",
+					"raw": [
+						4.350000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#6": {
+					"type": "Measurement",
+					"raw": [
+						608538333.922000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#6": {
+					"type": "Measurement",
+					"raw": [
+						608538338.272000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_ApplyBackendOptimizations_#7": {
+				"type": "Event",
+				"Wall clock time_#7": {
+					"type": "Measurement",
+					"raw": [
+						278.490000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#7": {
+					"type": "Measurement",
+					"raw": [
+						608538343.072000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#7": {
+					"type": "Measurement",
+					"raw": [
+						608538621.562000
+					],
+					"unit": "us"
+				},
+				"Optimizer_OptimizeSubgraph_#8": {
+					"type": "Event",
+					"Wall clock time_#8": {
+						"type": "Measurement",
+						"raw": [
+							120.060000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#8": {
+						"type": "Measurement",
+						"raw": [
+							608538497.212000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#8": {
+						"type": "Measurement",
+						"raw": [
+							608538617.272000
+						],
+						"unit": "us"
+					}
+				}
+			}
+		},
+		"loaded_network_measurements_#9": {
+			"type": "Event",
+			"Wall clock time_#9": {
+				"type": "Measurement",
+				"raw": [
+					1326.300000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#9": {
+				"type": "Measurement",
+				"raw": [
+					608539788.772000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#9": {
+				"type": "Measurement",
+				"raw": [
+					608541115.072000
+				],
+				"unit": "us"
+			},
+			"LoadNetwork_CreateWorkloads_#10": {
+				"type": "Event",
+				"Wall clock time_#10": {
+					"type": "Measurement",
+					"raw": [
+						436.380000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#10": {
+					"type": "Measurement",
+					"raw": [
+						608539890.382000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#10": {
+					"type": "Measurement",
+					"raw": [
+						608540326.762000
+					],
+					"unit": "us"
+				},
+				"ALHardNPULayer_CreateWorkload_#11": {
+					"type": "Event",
+					"Wall clock time_#11": {
+						"type": "Measurement",
+						"raw": [
+							389.280000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#11": {
+						"type": "Measurement",
+						"raw": [
+							608539935.022000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#11": {
+						"type": "Measurement",
+						"raw": [
+							608540324.302000
+						],
+						"unit": "us"
+					}
+				}
+			},
+			"LoadNetwork_AllocateDynamicBuffers_#12": {
+				"type": "Event",
+				"Wall clock time_#12": {
+					"type": "Measurement",
+					"raw": [
+						546.390000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#12": {
+					"type": "Measurement",
+					"raw": [
+						608540363.182000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#12": {
+					"type": "Measurement",
+					"raw": [
+						608540909.572000
+					],
+					"unit": "us"
+				}
+			},
+			"AlnpuConstantWorkload_Execute_#13": {
+				"GUID": "72",
+				"type": "Event",
+				"Wall clock time_#13": {
+					"type": "Measurement",
+					"raw": [
+						35.070000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#13": {
+					"type": "Measurement",
+					"raw": [
+						608540916.502000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#13": {
+					"type": "Measurement",
+					"raw": [
+						608540951.572000
+					],
+					"unit": "us"
+				}
+			},
+			"AlnpuConstantWorkload_Execute_#14": {
+				"GUID": "73",
+				"type": "Event",
+				"Wall clock time_#14": {
+					"type": "Measurement",
+					"raw": [
+						7.350000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#14": {
+					"type": "Measurement",
+					"raw": [
+						608540955.892000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#14": {
+					"type": "Measurement",
+					"raw": [
+						608540963.242000
+					],
+					"unit": "us"
+				}
+			}
+		},
+		"inference_measurements_#15": {
+			"type": "Event",
+			"Wall clock time_#15": {
+				"type": "Measurement",
+				"raw": [
+					515.580000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#15": {
+				"type": "Measurement",
+				"raw": [
+					608796577.974000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#15": {
+				"type": "Measurement",
+				"raw": [
+					608797093.554000
+				],
+				"unit": "us"
+			},
+			"PrepareInputs_#16": {
+				"type": "Event",
+				"Wall clock time_#16": {
+					"type": "Measurement",
+					"raw": [
+						19.650000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#16": {
+					"type": "Measurement",
+					"raw": [
+						608796601.584000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#16": {
+					"type": "Measurement",
+					"raw": [
+						608796621.234000
+					],
+					"unit": "us"
+				}
+			},
+			"PrepareOutputs_#17": {
+				"type": "Event",
+				"Wall clock time_#17": {
+					"type": "Measurement",
+					"raw": [
+						29.880000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#17": {
+					"type": "Measurement",
+					"raw": [
+						608796623.814000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#17": {
+					"type": "Measurement",
+					"raw": [
+						608796653.694000
+					],
+					"unit": "us"
+				}
+			},
+			"Execute_#18": {
+				"type": "Event",
+				"Wall clock time_#18": {
+					"type": "Measurement",
+					"raw": [
+						404.310000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#18": {
+					"type": "Measurement",
+					"raw": [
+						608796659.064000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#18": {
+					"type": "Measurement",
+					"raw": [
+						608797063.374000
+					],
+					"unit": "us"
+				},
+				"Working Memory Allocation_#19": {
+					"type": "Event",
+					"Wall clock time_#19": {
+						"type": "Measurement",
+						"raw": [
+							1.080000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#19": {
+						"type": "Measurement",
+						"raw": [
+							608796663.954000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#19": {
+						"type": "Measurement",
+						"raw": [
+							608796665.034000
+						],
+						"unit": "us"
+					}
+				},
+				"AlnpuConstantWorkload_Execute_#20": {
+					"GUID": "72",
+					"type": "Event",
+					"Wall clock time_#20": {
+						"type": "Measurement",
+						"raw": [
+							0.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#20": {
+						"type": "Measurement",
+						"raw": [
+							608796671.304000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#20": {
+						"type": "Measurement",
+						"raw": [
+							608796672.054000
+						],
+						"unit": "us"
+					}
+				},
+				"AlnpuConstantWorkload_Execute_#21": {
+					"GUID": "73",
+					"type": "Event",
+					"Wall clock time_#21": {
+						"type": "Measurement",
+						"raw": [
+							0.510000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#21": {
+						"type": "Measurement",
+						"raw": [
+							608796676.434000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#21": {
+						"type": "Measurement",
+						"raw": [
+							608796676.944000
+						],
+						"unit": "us"
+					}
+				},
+				"AlnpuALHardNPUWorkload_Execute_#22": {
+					"GUID": "74",
+					"type": "Event",
+					"Wall clock time_#22": {
+						"type": "Measurement",
+						"raw": [
+							364.860000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#22": {
+						"type": "Measurement",
+						"raw": [
+							608796685.374000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#22": {
+						"type": "Measurement",
+						"raw": [
+							608797050.234000
+						],
+						"unit": "us"
+					}
+				},
+				"SyncMemGeneric_Execute_#23": {
+					"type": "Event",
+					"Wall clock time_#23": {
+						"type": "Measurement",
+						"raw": [
+							6.060000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#23": {
+						"type": "Measurement",
+						"raw": [
+							608797056.834000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#23": {
+						"type": "Measurement",
+						"raw": [
+							608797062.894000
+						],
+						"unit": "us"
+					}
+				}
+			}
+		}
+	}
+}

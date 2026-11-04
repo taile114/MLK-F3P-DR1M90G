@@ -1,0 +1,13 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerName : pinned_input\lLayerType : Input\lBackendID : Alnpu\l}"];
+    1 [label="{Constant|Guid : 1\lLayerName : tvgtformer_blocks.0.feed_forward_temp.0.spline_weight\lLayerType : Constant\lBackendID : Alnpu\l}"];
+    2 [label="{Constant|Guid : 2\lLayerName : zero_bias\lLayerType : Constant\lBackendID : Alnpu\l}"];
+    11 [label="{ALHardNPU|OutputChannels : 144\lFilterWidth : 1\lFilterHeight : 1\lGuid : 11\lLayerName : ALHardNPU-tvgtformer_blocks.0.feed_forward_temp.0.spline_weight\lLayerType : ALHardNPU\lBackendID : Alnpu\l}"];
+    4 [label="{Output|Guid : 4\lLayerType : Output\lBackendID : Alnpu\l}"];
+    0 -> 11 [label=< [11,112] >];
+    1 -> 11 [label=< [144,112] >];
+    2 -> 11 [label=< [144] >];
+    11 -> 4 [label=< [11,144] >];
+}

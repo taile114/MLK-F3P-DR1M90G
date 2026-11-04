@@ -1,0 +1,13 @@
+group,shape,rows,input_features,output_features,physical_input_features,physical_output_features,backend,compute_layer_type,exit_code,iterations,max_error_lsb,mismatches,saturated_original_outputs,mean_enqueue_us,mean_quantize_pack_enqueue_sync_restore_us
+control,c00,8,8,8,8,8,CpuRef,FullyConnected,0,3,0,0,0,270.21,294.04
+control,c00,8,8,8,8,8,Alnpu,ALHardNPU,0,3,1,0,0,303.43,335.14
+first,m06,11,12,21,16,24,CpuRef,FullyConnected,0,3,0,0,0,324.6,346.46
+first,m06,11,12,21,16,24,Alnpu,ALHardNPU,0,3,1,0,0,385.74,419.79
+attention,m06,11,12,21,16,24,CpuRef,FullyConnected,0,3,0,0,0,330.34,350.43
+attention,m06,11,12,21,16,24,Alnpu,ALHardNPU,0,3,1,0,0,387.07,420.51
+attention,m09,11,108,21,112,24,CpuRef,FullyConnected,0,3,0,0,0,662.52,709.77
+attention,m09,11,108,21,112,24,Alnpu,ALHardNPU,0,3,1,0,0,2259.44,2324.19
+attention,m14,12,11,21,16,24,CpuRef,FullyConnected,0,3,0,0,0,350.47,374.29
+attention,m14,12,11,21,16,24,Alnpu,ALHardNPU,0,3,1,0,0,384.67,422.58
+attention,m17,12,99,21,104,24,CpuRef,FullyConnected,0,3,0,0,0,723.74,771.78
+attention,m17,12,99,21,104,24,Alnpu,ALHardNPU,0,3,1,0,0,426.08,489.82

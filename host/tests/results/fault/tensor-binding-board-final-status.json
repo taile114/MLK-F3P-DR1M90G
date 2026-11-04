@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "sync; /etc/init.d/S99qtapp status; readlink -f /opt/mlk_fault; sha256sum /opt/mlk_fault/libmlk_fault.so /opt/mlk_fault/model.json; grep Cma /proc/meminfo; grep -i npu /proc/interrupts",
+      "output": "mlk_ps_local running (pid 2221)\r\n/opt/mlk_fault-packages/f3p-fault-single-v1-8bbaf69bc054a253\r\n57282f7ad231829cb4bd09deccb306412351e9e9ce284908b14e623405e56ef7  /opt/mlk_fault/libmlk_fault.so\r\n8bbaf69bc054a253f2e7e6ef47ade121bf8dfe8c622b4025add20acaa6d4ff58  /opt/mlk_fault/model.json\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:       2892          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "operation": "command",
+      "exit_code": 0
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

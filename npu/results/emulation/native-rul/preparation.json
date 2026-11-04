@@ -1,0 +1,71 @@
+{
+  "checkpoint": "E:\\competion\\code\\fkp-dvgt\\outputs\\motor_stable23_v1_gpu\\best.pt",
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "config": {
+    "num_nodes": 11,
+    "time_length": 10,
+    "d_model": [
+      21,
+      21
+    ],
+    "num_heads": 3,
+    "lambda_param": 0.5,
+    "d_ff": [
+      140,
+      140
+    ],
+    "dropout": 0.15,
+    "num_blocks": 2
+  },
+  "source_onnx_sha256": "b9eac7e3a7902931b638126a4e824b10472f4248c7f26e76ac1c0af1cde091b4",
+  "state_entries": 209,
+  "state_floats": 483353,
+  "first_reference": 21.45941925048828,
+  "checkpoint_first_prediction": 21.45941925048828,
+  "first_gelu_input_shapes": [
+    [
+      1,
+      11,
+      140
+    ],
+    [
+      1,
+      12,
+      140
+    ],
+    [
+      1,
+      11,
+      140
+    ],
+    [
+      1,
+      12,
+      140
+    ],
+    [
+      1,
+      64
+    ]
+  ],
+  "native_full_model_verified": false,
+  "f3p_verified": false,
+  "npu_requested": false,
+  "gelu": "Original exact-erf form, evaluated by host C++ std::erf between six native network segments",
+  "provenance": {
+    "run_native_rul.sh": "cbd0850bb3578ce7dfa651db63fcd772ea2614f77c1043def796cfeafb4de9ba",
+    "weights.bin": "0a61767a0b324fd032db6857424b0857dd9dff75979bee25384b928a75905f02",
+    "weights.tsv": "59c8879b5d7b147b274d153b428791ae2e0013e1197f658617b026d88053e0a4",
+    "data\\input_f32.bin": "8521c0b786cd42c14b1df70d5c8806af2810c06b0f04ff6f6a6c44d4eaff21bb",
+    "data\\labels_f32.bin": "cd6d8c0b617d5f59993e70e72f9f5eb058651df09bc2becc93f13466ee02a474",
+    "data\\reference_f32.bin": "f531e22b68e00211443d5608fa3a05e70765a6675d9b50b140e401f395a13cd5",
+    "data\\samples.csv": "87a4ae2a1b364b96ba0103dc0c8952aaacee0c2861b8ce1714287bed6c28e74c",
+    "pc_reference\\pre_gelu_0.bin": "43d30bc52882a2268f09c9233fa0f52ff09dceb9022d99c1a8b167aa645cfaf1",
+    "pc_reference\\pre_gelu_1.bin": "60ec7dd26e2b6b0b18940bf464ad2d36acf8d34f3767ddfb90302537c362deac",
+    "pc_reference\\pre_gelu_2.bin": "cb97663003b469c86b670eea50acb82708e4157740ddf55bb1ca27cd18bdf59e",
+    "pc_reference\\pre_gelu_3.bin": "7c50713119bf643ed94001becf68df07375f0dd31a24e68f06210a7ac008ae41",
+    "pc_reference\\pre_gelu_4.bin": "9e6b7b1c8078a8bece86bc686b175e406bbc0098c60da088dcf559f9a0208edf",
+    "src\\model_config.hpp": "e886ad2cbf457d246f302d5f0bc19d57710c94b9384aa57c25ef00b8bf7c0866",
+    "src\\native_rul.cpp": "9392db74e9822e7ad96ffac081724f1af7ab297d0641e5d1e309ef03643b5a71"
+  }
+}

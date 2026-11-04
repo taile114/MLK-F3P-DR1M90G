@@ -1,0 +1,9 @@
+sample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.541999817 mae=3.541999817 mean_forward_us=1036726.159
+rul_unit=observed_aging_test_session
+quantized_branches=0 accuracy_acceptance=TBD
+sample=2 prediction=0.7044243813 reference=0.7044879198 absolute_error=6.353855133e-05
+result=inference_completed samples=3 max_reference_error=0.008430480957 mismatches=2 rmse=2.098539946 mae=1.57227246 mean_forward_us=876295.836
+rul_unit=observed_aging_test_session
+quantized_branches=2 accuracy_acceptance=TBD
+result=compiled_and_cpu_checked

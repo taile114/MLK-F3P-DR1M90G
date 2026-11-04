@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="645" viewBox="0 0 1400 645">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#526777"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="30" y="50" width="300" height="130" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="180.0" y="104.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="180.0" dy="0">采集事件</tspan>
+<tspan x="180.0" dy="39.15">三轴振动 / 转速</tspan>
+</text>
+<rect x="410" y="50" width="430" height="130" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="625.0" y="104.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="625.0" dy="0">PL FIFO与sensor_dma</tspan>
+<tspan x="625.0" dy="39.15">备齐突发后发起AXI写</tspan>
+</text>
+<rect x="920" y="50" width="440" height="130" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1140.0" y="104.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="1140.0" dy="0">HP1 → DDR环形区</tspan>
+<tspan x="1140.0" dy="39.15">0x3EF00000 / 1 MiB</tspan>
+</text>
+<path d="M330,115 L410,115" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M840,115 L920,115" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="920" y="300" width="440" height="140" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1140.0" y="359.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="1140.0" dy="0">PS轮询DMA_BLK_SEQ</tspan>
+<tspan x="1140.0" dy="39.15">检查跳号 / 读取完成块</tspan>
+</text>
+<path d="M1140,180 L1140,300" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="410" y="300" width="430" height="140" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="625.0" y="359.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="625.0" dy="0">驱动解码与物理量转换</tspan>
+<tspan x="625.0" dy="39.15">时间戳 / 序号 / 质量</tspan>
+</text>
+<path d="M920,370 L840,370" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="300" width="300" height="140" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="180.0" y="359.605" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="180.0" dy="0">Qt / 记录 / 网络</tspan>
+<tspan x="180.0" dy="39.15">模型输入适配</tspan>
+</text>
+<path d="M410,370 L330,370" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="180" y="510" width="1040" height="90" rx="8" fill="#F3F4F6" stroke="#9AAFC1" stroke-width="2"/>
+<text x="700.0" y="564.18" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="700.0" dy="0">PS ⇄ GP0 AXI4-Lite：控制、状态、温度/电流、特征与告警</tspan>
+</text>
+</svg>

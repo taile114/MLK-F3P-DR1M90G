@@ -1,0 +1,156 @@
+{
+  "state": "restored_boot_files_written_and_read_back_verified",
+  "disk": {
+    "number": 2,
+    "serial": "121220160204",
+    "bytes": 31299993600,
+    "bus": "USB",
+    "partition_style": "MBR"
+  },
+  "boot_partition": {
+    "number": 1,
+    "letter": "F",
+    "filesystem": "FAT32",
+    "partition_bytes": 103809024
+  },
+  "existing_contents_removal_authorized": true,
+  "backup_performed": false,
+  "backup_policy": "User authorized SD restoration and previously authorized replacing SD contents without backup",
+  "filesystem_read_only_check": "chkdsk reported no file or folder errors; no repair flags used",
+  "filesystem_repair_executed": false,
+  "formatted": false,
+  "partition_table_modified": false,
+  "second_partition_modified": false,
+  "eMMC_modified": false,
+  "old_files_removed": [
+    "aic8800D80/aic_powerlimit_8800d80.txt",
+    "aic8800D80/aic_userconfig_8800d80.txt",
+    "aic8800D80/calibmode_8800d80.bin",
+    "aic8800D80/fmacfw_8800d80_h_u02.bin",
+    "aic8800D80/fmacfw_8800d80_u02_ipc.bin",
+    "aic8800D80/fmacfw_8800d80_u02.bin",
+    "aic8800D80/fw_adid_8800d80_u02.bin",
+    "aic8800D80/fw_ble_scan_ad_filter.bin",
+    "aic8800D80/fw_patch_8800d80_u02.bin",
+    "aic8800D80/fw_patch_table_8800d80_u02.bin",
+    "aic8800D80/lmacfw_rf_8800d80_u02.bin",
+    "aic_load_fw.ko",
+    "aic8800_fdrv.ko",
+    "BOOT.bin",
+    "BOOT.bin.bak",
+    "BOOT.bin.ours-bak",
+    "boot.scr",
+    "GobiNet.ko",
+    "quectel-CM",
+    "system.dtb",
+    "uImage.lz4"
+  ],
+  "files_written_and_verified": [
+    {
+      "path": "BOOT.bin",
+      "bytes": 5179264,
+      "sha256": "567e14124fa17137e964ebcadd4680d8349058beacd4070377ba0ac3fc8c2585"
+    },
+    {
+      "path": "boot.scr",
+      "bytes": 466,
+      "sha256": "c48444ee51a8d26660807a94fb8ae7cd620e06622e9ea0f57b969422952d0d6c"
+    },
+    {
+      "path": "check_npu.sh",
+      "bytes": 2385,
+      "sha256": "d1f62ca2441676311c4f967ed7e81349f9b7792506505f3068855e438ad4e0de"
+    },
+    {
+      "path": "checksums.sha256",
+      "bytes": 907,
+      "sha256": "acdc09af617d30b3441a2b096b6e890432f494378314ec0f518729f223133270"
+    },
+    {
+      "path": "f3p-cpu-accel-arm64-v1.tar.gz",
+      "bytes": 2428852,
+      "sha256": "b7bb155dba6672d72792ecf82d7893a509e15f4dccda61d515cdacd5a284fb66"
+    },
+    {
+      "path": "f3p-npu-smoke-arm64-v1.tar.gz",
+      "bytes": 61704,
+      "sha256": "214e781c2eee4f19bf9d263d74c32ce045ad0c25fbf03a92576729a9b6d2a824"
+    },
+    {
+      "path": "f3p-rul-probe-arm64.tar.gz",
+      "bytes": 7203739,
+      "sha256": "febd37b91d4a17aac6d8aca48faadf9ac9ddab106ee96146288a6a9e2ad9e5ba"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1772,
+      "sha256": "6eb5953989efc91844bd1f5ff509490d8bedae58b917ad0622903e3dd743eafd"
+    },
+    {
+      "path": "README-NPU.txt",
+      "bytes": 1722,
+      "sha256": "9f02af94b05552530f0a87e72672e378106b8c0a7b151fa627dff87abd8e9a75"
+    },
+    {
+      "path": "system.dtb",
+      "bytes": 16899,
+      "sha256": "e1ddd7405245d7b9f644c64066bda64369edbac0d8e8676564261d9cfc22b979"
+    },
+    {
+      "path": "uImage.lz4",
+      "bytes": 8362070,
+      "sha256": "b570c65a8deef13bbf7770038a779a2b94c97000afb564896ccdd3e6bba7fab9"
+    },
+    {
+      "path": "uInitrd.lz4",
+      "bytes": 75774898,
+      "sha256": "4dc1f9cfaadfa19cae2dd4b4cd9e0795e3289bbefd5f2d01af9adeada3ae074e"
+    }
+  ],
+  "checksum_manifest_entries_verified": 11,
+  "volume_cache_flushed": true,
+  "free_bytes_after": 3154944,
+  "partition_layout_before": [
+    {
+      "PartitionNumber": 1,
+      "Offset": 1048576,
+      "Size": 103809024,
+      "DriveLetter": "F",
+      "Type": "FAT32 XINT13"
+    },
+    {
+      "PartitionNumber": 2,
+      "Offset": 104857600,
+      "Size": 31195136000,
+      "DriveLetter": "\u0000",
+      "Type": "Unknown"
+    }
+  ],
+  "partition_layout_after": [
+    {
+      "PartitionNumber": 1,
+      "Offset": 1048576,
+      "Size": 103809024,
+      "DriveLetter": "F",
+      "Type": "FAT32 XINT13"
+    },
+    {
+      "PartitionNumber": 2,
+      "Offset": 104857600,
+      "Size": 31195136000,
+      "DriveLetter": "\u0000",
+      "Type": "Unknown"
+    }
+  ],
+  "physical_boot_after_this_restore_verified": true,
+  "safe_ejection_pending": false,
+  "safe_ejection": {
+    "serial": "121220160204",
+    "device_instance": "USB\\VID_14CD&PID_1212\\121220160204",
+    "configuration_manager_code": 0,
+    "veto_type": 0,
+    "veto_name": "",
+    "safe_ejection_accepted": true
+  },
+  "physical_boot_evidence": "../board/restored-sd-v2-inspect-serial.json"
+}

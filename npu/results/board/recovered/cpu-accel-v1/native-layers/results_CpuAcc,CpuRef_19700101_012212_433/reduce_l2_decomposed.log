@@ -1,0 +1,19 @@
+case=reduce_l2_decomposed requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.36 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    1|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info:    2|CpuAcc  |Reduce                    0.02KB(0.02KB)      |0.01KB(0.01KB)      |0.03KB(0.03KB)      
+Info:    3|CpuAcc  |Activation                0.01KB(0.01KB)      |0.01KB(0.01KB)      |0.02KB(0.02KB)      
+Info: ******************************************************************************************************
+stage=optimize passed
+stage=load passed
+Info: Execution time: 2.36 ms.
+element=0 actual=5 expected=5
+element=1 actual=13 expected=13
+result=passed case=reduce_l2_decomposed max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

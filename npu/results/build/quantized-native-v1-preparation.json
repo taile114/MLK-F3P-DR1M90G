@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "validation_indices": [
+    0,
+    92,
+    183
+  ],
+  "validation_sha256": "032ed664d10b47147e21698f3320ca48b2eedcec3f230554e572fa3c7803c3d2",
+  "quantized_branches": [
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ],
+  "calibration_sha256": "507c248eede9d435ce1cf48664277cac73a9981bc50d2fdc5298d1196e9c9025",
+  "weights_dependency": "Byte-identical weights from the verified native CPU baseline",
+  "test_dataset_opened": false,
+  "training_executed": false,
+  "application_accuracy_threshold": "TBD"
+}

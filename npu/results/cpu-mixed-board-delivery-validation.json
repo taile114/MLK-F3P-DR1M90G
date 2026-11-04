@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "archives": 6,
+  "internal_checksums": 329,
+  "unchanged_source_copies": 121,
+  "python_files": 27,
+  "shell_files": 8,
+  "relative_links": 107,
+  "saved_qemu_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 7.62939453125e-06,
+    "rmse": 3.2562665311550036,
+    "mae": 2.7719338807192715
+  },
+  "saved_mixed_qemu_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 8.58306884765625e-06,
+    "rmse": 3.2562667131254135,
+    "mae": 2.771934077233979
+  },
+  "saved_mixed_board_replay": {
+    "result": "inference_completed",
+    "samples": 165,
+    "max_reference_error": 8.583068848e-06,
+    "mismatches": 0,
+    "rmse": 3.256266713,
+    "mae": 2.771934077,
+    "mean_forward_us": 199451.7223,
+    "backend": "CpuAcc,CpuRef",
+    "profile_first_window": false,
+    "exit_code": 0,
+    "board_result_directory": "/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012236_505"
+  },
+  "observed_board_reference_to_mixed_time_ratio": 4.653261999432732,
+  "board_evidence": "physical CpuRef and mixed CPU runs passed from serial logs; board CSV, DOT and profiling files not retrieved",
+  "training_executed": false,
+  "board_test_rerun": false,
+  "npu_verified": false,
+  "sd_staging": {
+    "files": 10,
+    "checksum_entries": 9,
+    "bytes": 98970783,
+    "uimage_crc_verified": true,
+    "disk_written": false,
+    "board_boot_verified": false
+  }
+}

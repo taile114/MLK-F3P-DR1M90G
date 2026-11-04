@@ -1,0 +1,1 @@
+Linux buildroot 6.1.111-rt42 #8 SMP PREEMPT Sat Oct 31 16:57:40 +08 2026 aarch64 GNU/Linux

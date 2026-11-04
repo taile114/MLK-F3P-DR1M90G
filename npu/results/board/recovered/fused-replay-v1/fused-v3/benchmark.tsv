@@ -1,0 +1,13 @@
+round	mode	directory
+1	reference	/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_005837_5470
+1	neon	/mnt/mmcblk0p2/npu-tests/fused-v3/results_neon_19700101_005916_5490
+1	cpu_quantized	/mnt/mmcblk0p2/npu-tests/fused-v3/results_cpu_quantized_19700101_005925_5510
+1	hybrid	/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_005935_5529
+2	hybrid	/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_005944_5548
+2	cpu_quantized	/mnt/mmcblk0p2/npu-tests/fused-v3/results_cpu_quantized_19700101_005954_5567
+2	neon	/mnt/mmcblk0p2/npu-tests/fused-v3/results_neon_19700101_010003_5586
+2	reference	/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_010013_5605
+3	neon	/mnt/mmcblk0p2/npu-tests/fused-v3/results_neon_19700101_010052_5625
+3	reference	/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_010101_5644
+3	hybrid	/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_010141_5666
+3	cpu_quantized	/mnt/mmcblk0p2/npu-tests/fused-v3/results_cpu_quantized_19700101_010150_5685

@@ -1,0 +1,64 @@
+#!/bin/sh
+# 打印当前生效链路，格式 <kind>:<iface> 或 none。
+# 判定口径：链路已获得 IPv4 地址；优先级 千兆网 > 4G > WiFi。
+# 供 mlk_net_watch 与 mlk_wifi_dhcp 共用，避免两处各写一套优先级。
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+has_ipv4() {
+    ip -4 addr show dev "$1" 2>/dev/null | grep -q 'inet '
+}
+
+# 校园网 PPPoE：ppp* 承载在千兆网口上，按千兆网优先级处理。
+pppoe_enabled() {
+    [ -f /var/lib/mlk/pppoe.conf ] || return 1
+    grep -q '^enabled=1' /var/lib/mlk/pppoe.conf 2>/dev/null
+}
+
+if pppoe_enabled; then
+    for dir in /sys/class/net/ppp*; do
+        [ -d "$dir" ] || continue
+        name=${dir##*/}
+        has_ipv4 "$name" && { echo "ethernet:$name"; exit 0; }
+    done
+fi
+
+# 千兆网：非无线 eth*/en*，且载波在位并已获得地址。
+for dir in /sys/class/net/*; do
+    name=${dir##*/}
+    [ "$name" = lo ] && continue
+    [ -d "$dir/wireless" ] && continue
+    case "$name" in
+        eth*|en*)
+            [ "$(cat "$dir/carrier" 2>/dev/null)" = 1 ] || continue
+            has_ipv4 "$name" && { echo "ethernet:$name"; exit 0; }
+            ;;
+    esac
+done
+
+# 4G：wwan/ppp/rmnet，或 GobiNet/qmi_wwan/cdc_mbim 驱动的 usb 口。
+for dir in /sys/class/net/*; do
+    name=${dir##*/}
+    case "$name" in
+        wwan*|ppp*|rmnet*)
+            has_ipv4 "$name" && { echo "cellular:$name"; exit 0; }
+            ;;
+        usb*)
+            driver=$(readlink -f "$dir/device/driver" 2>/dev/null)
+            driver=${driver##*/}
+            case "$driver" in
+                GobiNet|qmi_wwan|cdc_mbim)
+                    has_ipv4 "$name" && { echo "cellular:$name"; exit 0; }
+                    ;;
+            esac
+            ;;
+    esac
+done
+
+# WiFi：带 wireless 属性的接口。
+for dir in /sys/class/net/*; do
+    name=${dir##*/}
+    [ -d "$dir/wireless" ] || continue
+    has_ipv4 "$name" && { echo "wifi:$name"; exit 0; }
+done
+
+echo none

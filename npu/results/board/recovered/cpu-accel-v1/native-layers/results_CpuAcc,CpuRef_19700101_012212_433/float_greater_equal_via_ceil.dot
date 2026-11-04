@@ -1,0 +1,23 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    1 [label="{Input|Guid : 1\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    5 [label="{Input|Guid : 5\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    2 [label="{ElementwiseBinary|Guid : 2\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    17 [label="{MemCopy|Guid : 17\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuRef\l}"];
+    3 [label="{ElementwiseUnary|UnaryOperation : Unknown\lGuid : 3\lLayerType : ElementwiseUnary\lBackendID : CpuRef\l}"];
+    18 [label="{MemCopy|Guid : 18\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuAcc\l}"];
+    4 [label="{Activation|Function : BoundedReLu\lA : 1.000000\lB : 0.000000\lGuid : 4\lLayerType : Activation\lBackendID : CpuAcc\l}"];
+    6 [label="{ElementwiseBinary|Guid : 6\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    7 [label="{Output|Guid : 7\lLayerType : Output\lBackendID : CpuAcc\l}"];
+    1 -> 2 [label=< [2,3] >];
+    0 -> 2 [label=< [2,3] >];
+    2 -> 17 [label=< [2,3] >];
+    17 -> 3 [label=< [2,3] >];
+    3 -> 18 [label=< [2,3] >];
+    18 -> 4 [label=< [2,3] >];
+    5 -> 6 [label=< [2,3] >];
+    4 -> 6 [label=< [2,3] >];
+    6 -> 7 [label=< [2,3] >];
+}

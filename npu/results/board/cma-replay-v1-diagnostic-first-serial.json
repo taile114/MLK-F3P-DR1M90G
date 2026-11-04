@@ -1,0 +1,40 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "test ! -e /mnt/mmcblk0p2/npu-tests/cma-v1 && mkdir /mnt/mmcblk0p2/npu-tests/cma-v1",
+      "exit_code": 0,
+      "operation": "command",
+      "output": ""
+    },
+    {
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-cma-diagnostic-arm64-v1.tar.gz",
+      "verified": true,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/cma-v1/package.tar.gz",
+      "sha256": "fefabc7dc05ca1791b0a752f254440b2976fd560515f5b4d3fcd372878f8c3c5",
+      "bytes": 289819,
+      "operation": "upload"
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-v1 && gzip -dc package.tar.gz | tar -xf -",
+      "exit_code": 0,
+      "operation": "command",
+      "output": ""
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-v1/f3p-cma-diagnostic-v1 && ln -s /mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.bin weights.bin && ln -s /mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.tsv weights.tsv",
+      "exit_code": 0,
+      "operation": "command",
+      "output": ""
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-v1/f3p-cma-diagnostic-v1 && sha256sum -c checksums.sha256 && sha256sum -c weights.sha256 && sh run.sh hybrid 1",
+      "exit_code": 0,
+      "operation": "command",
+      "output": "bin/rul_cma: OK\r\nbin/timeout: OK\r\ndata/checksums.sha256: OK\r\ndata/input_f32.bin: OK\r\ndata/labels_f32.bin: OK\r\ndata/reference_f32.bin: OK\r\nsrc/model_config.hpp: OK\r\nsrc/native_rul_cma.cpp: OK\r\nrun.sh: OK\r\nqparams_head.tsv: OK\r\nweights.sha256: OK\r\nweights.bin: OK\r\nweights.tsv: OK\r\n[  495.902020] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  495.902094] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nstage=build_segment_5 begin\r\nsegment=5 physical_npu_layers=1\r\nsegment=5 optimizer_messages=47\r\nstage=build_segment_5 passed\r\nsample=0 prediction=21.43906212 reference=21.45799828 absolute_error=0.01893615723\r\nresult=inference_completed samples=1 max_reference_error=0.01893615723 mismatches=1 rmse=3.560937881 mae=3.560937881 mean_forward_us=247154.372\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nafter_enqueue,0,5,6569984,118036,50,35,6440408,15\r\nbefore_unload,0,6,6569984,118036,50,35,6440408,15\r\nafter_unload,0,6,6455296,118036,50,38,6431192,12\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/cma-v1/f3p-cma-diagnostic-v1/results_hybrid_19700101_000814_3364"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

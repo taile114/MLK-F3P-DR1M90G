@@ -1,0 +1,16 @@
+********* Start testing of FaultTest *********
+Config: Using QtTest library 5.13.2, Qt 5.13.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 5.3.1 20160406 (Red Hat 5.3.1-6))
+PASS   : FaultTest::initTestCase()
+QWARN  : FaultTest::realFrozenDatasetAndReport() This plugin does not support propagateSizeHints()
+PASS   : FaultTest::realFrozenDatasetAndReport()
+PASS   : FaultTest::cancelBeforeWorkerStartsAndRestart()
+PASS   : FaultTest::rejectsUnsealedOrMissingAssets()
+PASS   : FaultTest::rejectsDifferentDatasetModelAndInvalidGrade()
+PASS   : FaultTest::externalOrderingExpiryAndConfirmation()
+QINFO  : FaultTest::windowEvaluationToLiveWaitsAndCanStop() U7 告警不可用（需要 PL 接口 v1.3）
+QWARN  : FaultTest::windowEvaluationToLiveWaitsAndCanStop() This plugin does not support propagateSizeHints()
+QWARN  : FaultTest::windowEvaluationToLiveWaitsAndCanStop() This plugin does not support propagateSizeHints()
+PASS   : FaultTest::windowEvaluationToLiveWaitsAndCanStop()
+PASS   : FaultTest::cleanupTestCase()
+Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 24388ms
+********* Finished testing of FaultTest *********

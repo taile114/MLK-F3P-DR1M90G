@@ -1,0 +1,71 @@
+#!/bin/sh
+# The supplicant and DHCP monitor run independently of the Qt application.
+start_wifi() {
+    umask 077
+    mkdir -p /var/run/wpa_supplicant /var/lib/mlk
+    release=$(uname -r)
+    modules=/lib/modules/$release/extra
+    grep -q '^aic_load_fw ' /proc/modules || insmod "$modules/aic_load_fw.ko" aic_fw_path=/lib/firmware/aic8800D80 || return 1
+    grep -q '^aic8800_fdrv ' /proc/modules || insmod "$modules/aic8800_fdrv.ko" || return 1
+    # USB firmware loading can re-enumerate the device after the init script returns.
+    (
+        tries=0
+        while [ "$tries" -lt 30 ]; do
+            for wireless in /sys/class/net/*/wireless; do
+                [ -d "$wireless" ] || continue
+                interface=${wireless%/wireless}; interface=${interface##*/}
+                config=/var/lib/mlk/wpa-$interface.conf
+                if [ ! -f "$config" ]; then
+                    printf 'ctrl_interface=/var/run/wpa_supplicant\nupdate_config=1\n' > "$config"
+                fi
+                chmod 600 "$config"
+                ip link set "$interface" up || exit 1
+                wpa_supplicant -B -D nl80211,wext -i "$interface" -c "$config" -P /var/run/mlk-wpa.pid || exit 1
+                wpa_cli -B -i "$interface" -a /usr/bin/mlk_wifi_dhcp -P /var/run/mlk-wpa-monitor.pid
+                exit $?
+            done
+            tries=$((tries+1)); sleep 1
+        done
+        echo 'WiFi interface unavailable; check HOST jumper and AIC8800 firmware' >&2
+    ) &
+}
+start_cellular() {
+    release=$(uname -r)
+    module=/lib/modules/$release/extra/GobiNet.ko
+    [ -f "$module" ] || return 0
+    grep -q '^GobiNet ' /proc/modules && return 0
+    insmod "$module" || return 1
+}
+start_network_priority() {
+    if [ -f /var/run/mlk-net-watch.pid ] &&
+       kill -0 "$(cat /var/run/mlk-net-watch.pid)" 2>/dev/null; then
+        return 0
+    fi
+    /usr/bin/mlk_net_watch >/dev/null 2>&1 &
+    echo $! > /var/run/mlk-net-watch.pid
+}
+start_pppoe() {
+    [ -f /var/lib/mlk/pppoe.conf ] || return 0
+    grep -q '^enabled=1' /var/lib/mlk/pppoe.conf 2>/dev/null || return 0
+    /usr/bin/mlk_pppoe start >/dev/null 2>&1 &
+}
+case "$1" in
+    start)
+        start_cellular
+        start_network_priority
+        start_pppoe
+        if [ -f /var/run/mlk-wpa.pid ] &&
+           kill -0 "$(cat /var/run/mlk-wpa.pid)" 2>/dev/null; then
+            exit 0
+        fi
+        start_wifi ;;
+    stop)
+        /usr/bin/mlk_pppoe stop >/dev/null 2>&1 || true
+        for pidfile in /var/run/mlk-net-watch.pid /var/run/mlk-wpa-monitor.pid /var/run/mlk-wpa.pid /var/run/mlk-wifi-dhcp-*.pid; do
+            [ -f "$pidfile" ] || continue
+            kill "$(cat "$pidfile")" 2>/dev/null || true
+            rm -f "$pidfile"
+        done ;;
+    restart) "$0" stop; "$0" start ;;
+    *) echo "usage: $0 {start|stop|restart}" >&2; exit 1 ;;
+esac

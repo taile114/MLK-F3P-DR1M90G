@@ -1,0 +1,681 @@
+WARNING: Layer of type Transpose is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Activation can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type FullyConnected is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Backend is not capable of supporting dynamic weights (NonConstWeights) and FullyConnected weights are set as dynamic (non constant). ), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type FullyConnected is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Backend is not capable of supporting dynamic weights (NonConstWeights) and FullyConnected weights are set as dynamic (non constant). ), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reduce is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reduce is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Transpose is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Activation can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Do Not Supported, Reshape can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type FullyConnected is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Backend is not capable of supporting dynamic weights (NonConstWeights) and FullyConnected weights are set as dynamic (non constant). ), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Activation is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input total elements not matching, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Slice is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: only support add now, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Reshape is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Concat is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: output type not supported, concatenation can`t fit to 'alnpu'
+
+input type not supported, concatenation can`t fit to 'alnpu'
+
+input type not supported, concatenation can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Quantize is not supported on requested backend Alnpu for input data type Float32 and output data type QAsymmU8 (reason: Do Not Supported, Quantize can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type Dequantize is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type Float32 (reason: Do Not Supported, Dequantize can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+WARNING: Layer of type ElementwiseBinary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: input type not supported, elementwise can`t fit to 'alnpu'
+
+input type not supported, elementwise can`t fit to 'alnpu'
+
+output type not supported, elementwise can`t fit to 'alnpu'
+
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.

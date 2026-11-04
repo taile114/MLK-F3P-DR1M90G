@@ -1,0 +1,415 @@
+# sha256sum -c checksums.sha256
+backend_assignment.json: OK
+backend_assignment_profile.json: OK
+build_info.txt: OK
+check_npu.sh: OK
+emulation_layers_CpuAcc/batch_matmul_2d.dot: OK
+emulation_layers_CpuAcc/batch_matmul_2d.log: OK
+emulation_layers_CpuAcc/batch_matmul_3d.dot: OK
+emulation_layers_CpuAcc/batch_matmul_3d.log: OK
+emulation_layers_CpuAcc/broadcast_less.dot: OK
+emulation_layers_CpuAcc/broadcast_less.log: OK
+emulation_layers_CpuAcc/cast_bool_float.dot: OK
+emulation_layers_CpuAcc/cast_bool_float.log: OK
+emulation_layers_CpuAcc/comparison_and.dot: OK
+emulation_layers_CpuAcc/comparison_and.log: OK
+emulation_layers_CpuAcc/einsum_via_fc.dot: OK
+emulation_layers_CpuAcc/einsum_via_fc.log: OK
+emulation_layers_CpuAcc/float_greater_equal_via_ceil.log: OK
+emulation_layers_CpuAcc/float_less_boundaries.log: OK
+emulation_layers_CpuAcc/float_less_via_ceil.log: OK
+emulation_layers_CpuAcc/greater_equal.dot: OK
+emulation_layers_CpuAcc/greater_equal.log: OK
+emulation_layers_CpuAcc/less.dot: OK
+emulation_layers_CpuAcc/less.log: OK
+emulation_layers_CpuAcc/logical_and.dot: OK
+emulation_layers_CpuAcc/logical_and.log: OK
+emulation_layers_CpuAcc/reduce_l2_decomposed.dot: OK
+emulation_layers_CpuAcc/reduce_l2_decomposed.log: OK
+emulation_layers_CpuAcc/relu.dot: OK
+emulation_layers_CpuAcc/relu.log: OK
+emulation_layers_CpuAcc/spline_gate_float.log: OK
+emulation_layers_CpuAcc/summary.txt: OK
+emulation_layers_CpuAcc,CpuRef/batch_matmul_2d.dot: OK
+emulation_layers_CpuAcc,CpuRef/batch_matmul_2d.log: OK
+emulation_layers_CpuAcc,CpuRef/batch_matmul_3d.dot: OK
+emulation_layers_CpuAcc,CpuRef/batch_matmul_3d.log: OK
+emulation_layers_CpuAcc,CpuRef/broadcast_less.dot: OK
+emulation_layers_CpuAcc,CpuRef/broadcast_less.log: OK
+emulation_layers_CpuAcc,CpuRef/cast_bool_float.dot: OK
+emulation_layers_CpuAcc,CpuRef/cast_bool_float.log: OK
+emulation_layers_CpuAcc,CpuRef/comparison_and.dot: OK
+emulation_layers_CpuAcc,CpuRef/comparison_and.log: OK
+emulation_layers_CpuAcc,CpuRef/einsum_via_fc.dot: OK
+emulation_layers_CpuAcc,CpuRef/einsum_via_fc.log: OK
+emulation_layers_CpuAcc,CpuRef/float_greater_equal_via_ceil.dot: OK
+emulation_layers_CpuAcc,CpuRef/float_greater_equal_via_ceil.log: OK
+emulation_layers_CpuAcc,CpuRef/float_less_boundaries.dot: OK
+emulation_layers_CpuAcc,CpuRef/float_less_boundaries.log: OK
+emulation_layers_CpuAcc,CpuRef/float_less_via_ceil.dot: OK
+emulation_layers_CpuAcc,CpuRef/float_less_via_ceil.log: OK
+emulation_layers_CpuAcc,CpuRef/greater_equal.dot: OK
+emulation_layers_CpuAcc,CpuRef/greater_equal.log: OK
+emulation_layers_CpuAcc,CpuRef/less.dot: OK
+emulation_layers_CpuAcc,CpuRef/less.log: OK
+emulation_layers_CpuAcc,CpuRef/logical_and.dot: OK
+emulation_layers_CpuAcc,CpuRef/logical_and.log: OK
+emulation_layers_CpuAcc,CpuRef/reduce_l2_decomposed.dot: OK
+emulation_layers_CpuAcc,CpuRef/reduce_l2_decomposed.log: OK
+emulation_layers_CpuAcc,CpuRef/relu.dot: OK
+emulation_layers_CpuAcc,CpuRef/relu.log: OK
+emulation_layers_CpuAcc,CpuRef/spline_gate_float.dot: OK
+emulation_layers_CpuAcc,CpuRef/spline_gate_float.log: OK
+emulation_layers_CpuAcc,CpuRef/summary.txt: OK
+emulation_layers_CpuRef/batch_matmul_2d.dot: OK
+emulation_layers_CpuRef/batch_matmul_2d.log: OK
+emulation_layers_CpuRef/batch_matmul_3d.dot: OK
+emulation_layers_CpuRef/batch_matmul_3d.log: OK
+emulation_layers_CpuRef/broadcast_less.dot: OK
+emulation_layers_CpuRef/broadcast_less.log: OK
+emulation_layers_CpuRef/cast_bool_float.log: OK
+emulation_layers_CpuRef/comparison_and.dot: OK
+emulation_layers_CpuRef/comparison_and.log: OK
+emulation_layers_CpuRef/einsum_via_fc.dot: OK
+emulation_layers_CpuRef/einsum_via_fc.log: OK
+emulation_layers_CpuRef/float_greater_equal_via_ceil.dot: OK
+emulation_layers_CpuRef/float_greater_equal_via_ceil.log: OK
+emulation_layers_CpuRef/float_less_boundaries.dot: OK
+emulation_layers_CpuRef/float_less_boundaries.log: OK
+emulation_layers_CpuRef/float_less_via_ceil.dot: OK
+emulation_layers_CpuRef/float_less_via_ceil.log: OK
+emulation_layers_CpuRef/greater_equal.dot: OK
+emulation_layers_CpuRef/greater_equal.log: OK
+emulation_layers_CpuRef/less.dot: OK
+emulation_layers_CpuRef/less.log: OK
+emulation_layers_CpuRef/logical_and.dot: OK
+emulation_layers_CpuRef/logical_and.log: OK
+emulation_layers_CpuRef/reduce_l2_decomposed.dot: OK
+emulation_layers_CpuRef/reduce_l2_decomposed.log: OK
+emulation_layers_CpuRef/relu.dot: OK
+emulation_layers_CpuRef/relu.log: OK
+emulation_layers_CpuRef/spline_gate_float.dot: OK
+emulation_layers_CpuRef/spline_gate_float.log: OK
+emulation_layers_CpuRef/summary.txt: OK
+emulation_mixed_all/a_spat.bin: OK
+emulation_mixed_all/a_temp.bin: OK
+emulation_mixed_all/exit_code.txt: OK
+emulation_mixed_all/pre_gelu_0.bin: OK
+emulation_mixed_all/pre_gelu_1.bin: OK
+emulation_mixed_all/pre_gelu_2.bin: OK
+emulation_mixed_all/pre_gelu_3.bin: OK
+emulation_mixed_all/pre_gelu_4.bin: OK
+emulation_mixed_all/predictions.csv: OK
+emulation_mixed_all/probe.log: OK
+emulation_mixed_all/segment_0.dot: OK
+emulation_mixed_all/segment_0_optimizer.txt: OK
+emulation_mixed_all/segment_1.dot: OK
+emulation_mixed_all/segment_1_optimizer.txt: OK
+emulation_mixed_all/segment_2.dot: OK
+emulation_mixed_all/segment_2_optimizer.txt: OK
+emulation_mixed_all/segment_3.dot: OK
+emulation_mixed_all/segment_3_optimizer.txt: OK
+emulation_mixed_all/segment_4.dot: OK
+emulation_mixed_all/segment_4_optimizer.txt: OK
+emulation_mixed_all/segment_5.dot: OK
+emulation_mixed_all/segment_5_optimizer.txt: OK
+emulation_mixed_first/a_spat.bin: OK
+emulation_mixed_first/a_temp.bin: OK
+emulation_mixed_first/exit_code.txt: OK
+emulation_mixed_first/pre_gelu_0.bin: OK
+emulation_mixed_first/pre_gelu_1.bin: OK
+emulation_mixed_first/pre_gelu_2.bin: OK
+emulation_mixed_first/pre_gelu_3.bin: OK
+emulation_mixed_first/pre_gelu_4.bin: OK
+emulation_mixed_first/predictions.csv: OK
+emulation_mixed_first/probe.log: OK
+emulation_mixed_first/segment_0.dot: OK
+emulation_mixed_first/segment_0_optimizer.txt: OK
+emulation_mixed_first/segment_0_profile.json: OK
+emulation_mixed_first/segment_1.dot: OK
+emulation_mixed_first/segment_1_optimizer.txt: OK
+emulation_mixed_first/segment_1_profile.json: OK
+emulation_mixed_first/segment_2.dot: OK
+emulation_mixed_first/segment_2_optimizer.txt: OK
+emulation_mixed_first/segment_2_profile.json: OK
+emulation_mixed_first/segment_3.dot: OK
+emulation_mixed_first/segment_3_optimizer.txt: OK
+emulation_mixed_first/segment_3_profile.json: OK
+emulation_mixed_first/segment_4.dot: OK
+emulation_mixed_first/segment_4_optimizer.txt: OK
+emulation_mixed_first/segment_4_profile.json: OK
+emulation_mixed_first/segment_5.dot: OK
+emulation_mixed_first/segment_5_optimizer.txt: OK
+emulation_mixed_first/segment_5_profile.json: OK
+emulation_reference_first/a_spat.bin: OK
+emulation_reference_first/a_temp.bin: OK
+emulation_reference_first/exit_code.txt: OK
+emulation_reference_first/pre_gelu_0.bin: OK
+emulation_reference_first/pre_gelu_1.bin: OK
+emulation_reference_first/pre_gelu_2.bin: OK
+emulation_reference_first/pre_gelu_3.bin: OK
+emulation_reference_first/pre_gelu_4.bin: OK
+emulation_reference_first/predictions.csv: OK
+emulation_reference_first/probe.log: OK
+emulation_reference_first/segment_0.dot: OK
+emulation_reference_first/segment_0_optimizer.txt: OK
+emulation_reference_first/segment_1.dot: OK
+emulation_reference_first/segment_1_optimizer.txt: OK
+emulation_reference_first/segment_2.dot: OK
+emulation_reference_first/segment_2_optimizer.txt: OK
+emulation_reference_first/segment_3.dot: OK
+emulation_reference_first/segment_3_optimizer.txt: OK
+emulation_reference_first/segment_4.dot: OK
+emulation_reference_first/segment_4_optimizer.txt: OK
+emulation_reference_first/segment_5.dot: OK
+emulation_reference_first/segment_5_optimizer.txt: OK
+native-layers/bin/native_layers: OK
+native-layers/build.sh: OK
+native-layers/run_native_layers.sh: OK
+native-layers/src/native_layers.cpp: OK
+native-rul/bin/rul_native: OK
+native-rul/build.sh: OK
+native-rul/contracts/input_contract.json: OK
+native-rul/contracts/normalization.npz: OK
+native-rul/contracts/preprocessing.json: OK
+native-rul/contracts/replay.json: OK
+native-rul/data/input_f32.bin: OK
+native-rul/data/labels_f32.bin: OK
+native-rul/data/reference_f32.bin: OK
+native-rul/data/samples.csv: OK
+native-rul/pc_reference/pre_gelu_0.bin: OK
+native-rul/pc_reference/pre_gelu_1.bin: OK
+native-rul/pc_reference/pre_gelu_2.bin: OK
+native-rul/pc_reference/pre_gelu_3.bin: OK
+native-rul/pc_reference/pre_gelu_4.bin: OK
+native-rul/preparation.json: OK
+native-rul/run_native_rul.sh: OK
+native-rul/src/model_config.hpp: OK
+native-rul/src/native_rul.cpp: OK
+native-rul/weights.bin: OK
+native-rul/weights.tsv: OK
+README.md: OK
+run_layers.sh: OK
+run_rul.sh: OK
+verification.json: OK
+# sh check_npu.sh
+=== kernel and boot arguments ===
+Linux buildroot 6.1.111-rt42 #8 SMP PREEMPT Wed Jul 30 14:40:27 CST 2025 aarch64 GNU/Linux
+console=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=8 root=/dev/mmcblk1p2 rootwait rootfstype=ext4 rw
+=== root filesystem and free space ===
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 7.0G    404.1M      6.2G   6% /
+devtmpfs                429.5M         0    429.5M   0% /dev
+tmpfs                   494.3M         0    494.3M   0% /dev/shm
+tmpfs                   494.3M    284.0K    494.1M   0% /tmp
+tmpfs                   494.3M    136.0K    494.2M   0% /run
+/dev/mmcblk1p2            7.0G    404.1M      6.2G   6% /mnt/mmcblk1p2
+/dev/mmcblk1p1           97.5M     35.9M     61.5M  37% /mnt/mmcblk1p1
+/dev/sda1               117.2G     18.8G     98.4G  16% /mnt/usb
+/dev/root / ext4 rw,relatime 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=439808k,nr_inodes=109952,mode=755 0 0
+proc /proc proc rw,relatime 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=666 0 0
+tmpfs /dev/shm tmpfs rw,relatime,mode=777 0 0
+tmpfs /tmp tmpfs rw,relatime 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,relatime,mode=755 0 0
+sysfs /sys sysfs rw,relatime 0 0
+/dev/mmcblk1p2 /mnt/mmcblk1p2 ext4 rw,relatime 0 0
+/dev/mmcblk1p1 /mnt/mmcblk1p1 vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+/dev/sda1 /mnt/usb vfat ro,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro 0 0
+=== NPU and CMA devices ===
+MISSING /dev/hard_npu
+MISSING /dev/soft_npu
+MISSING /dev/cma_mem
+=== available kernel configuration ===
+UNAVAILABLE /proc/config.gz
+=== module filenames containing npu or cma ===
+=== builtin NPU/CMA module entries ===
+kernel/drivers/virtio/virtio_input.ko
+kernel/drivers/input/input-core.ko
+kernel/drivers/input/input-leds.ko
+=== registered platform drivers ===
+=== device-tree nodes containing npu or cma ===
+NODE /proc/device-tree/soc/hard_npu@63F00000
+compatible=anlogic,hard_npu
+NODE /proc/device-tree/reserved-memory/linux,cma
+compatible=shared-dma-pool
+=== loaded modules ===
+Module                  Size  Used by    Not tainted
+aic8800_fdrv          442368  0
+aic_load_fw            65536  1 aic8800_fdrv
+=== NPU/CMA kernel messages ===
+[    0.000000] Reserved memory: created CMA memory pool at 0x0000000017c00000, size 128 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Memory: 879620K/1048576K available (10432K kernel code, 1388K rwdata, 3300K rodata, 1728K init, 587K bss, 37884K reserved, 131072K cma-reserved)
+=== CPU capabilities ===
+processor       : 0
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x41
+CPU part        : 0xd04
+processor       : 1
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x41
+CPU part        : 0xd04
+# sh run_layers.sh
+results=/root/f3p-cpu-accel-v1/native-layers/results_CpuAcc,CpuRef_19700101_012212_433
+--- relu exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- less exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- greater_equal exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- broadcast_less exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- logical_and exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- comparison_and exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- cast_bool_float exit_code=50 ---
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)
+Info: ------------------------------------------------------------------------------------------------------
+Info:    1|CpuAcc  |Cast                      0.01KB(0.01KB)      |0.02KB(0.02KB)      |0.03KB(0.03KB)
+Info: ******************************************************************************************************
+stage=optimize passed
+Error: An error occurred when preparing the network workloads:  CastQueueDescriptor:  Tensor type is not supported.
+Info: Shutdown time: 0.02 ms.
+result=failed stage=load error=LoadNetwork failed: An error occurred when preparing the network workloads:  CastQueueDescriptor:  Tensor type is not supported.
+--- float_less_via_ceil exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- float_greater_equal_via_ceil exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- float_less_boundaries exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- spline_gate_float exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- batch_matmul_2d exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- batch_matmul_3d exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- einsum_via_fc exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- reduce_l2_decomposed exit_code=0 ---
+Info: Shutdown time: 0.02 ms.
+--- summary ---
+relu 0
+less 0
+greater_equal 0
+broadcast_less 0
+logical_and 0
+comparison_and 0
+cast_bool_float 50
+float_less_via_ceil 0
+float_greater_equal_via_ceil 0
+float_less_boundaries 0
+spline_gate_float 0
+batch_matmul_2d 0
+batch_matmul_3d 0
+einsum_via_fc 0
+reduce_l2_decomposed 0
+results=/root/f3p-cpu-accel-v1/native-layers/results_CpuAcc,CpuRef_19700101_012212_433
+# F3P_PROFILE=1 sh run_rul.sh 1
+requested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 available_backends=CpuRef,ALRef,CpuAcc,
+stage=build_segment_0 begin
+segment=0 optimizer_messages=30
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 optimizer_messages=8
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 optimizer_messages=8
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 optimizer_messages=8
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 optimizer_messages=4
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 optimizer_messages=2
+stage=build_segment_5 passed
+sample=0 prediction=21.45941734 reference=21.45941925 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.540582657 mae=3.540582657 mean_forward_us=239449.353
+rul_unit=observed_aging_test_session
+exit_code=0 results=/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490
+# sh run_rul.sh 0
+requested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=165 profile_first_window=0 available_backends=CpuRef,ALRef,CpuAcc,
+stage=build_segment_0 begin
+segment=0 optimizer_messages=30
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 optimizer_messages=8
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 optimizer_messages=8
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 optimizer_messages=8
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 optimizer_messages=4
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 optimizer_messages=2
+stage=build_segment_5 passed
+sample=0 prediction=21.45941734 reference=21.45941925 absolute_error=1.907348633e-06
+sample=9 prediction=21.46434975 reference=21.46434784 absolute_error=1.907348633e-06
+sample=19 prediction=21.35564804 reference=21.35564995 absolute_error=1.907348633e-06
+sample=29 prediction=18.36180305 reference=18.36180305 absolute_error=0
+sample=39 prediction=16.40874863 reference=16.40875053 absolute_error=1.907348633e-06
+sample=49 prediction=13.26981258 reference=13.26981354 absolute_error=9.536743164e-07
+sample=59 prediction=12.5825119 reference=12.58250904 absolute_error=2.861022949e-06
+sample=69 prediction=16.83311653 reference=16.83311462 absolute_error=1.907348633e-06
+sample=79 prediction=10.34422684 reference=10.34422112 absolute_error=5.722045898e-06
+sample=89 prediction=7.285292625 reference=7.285291672 absolute_error=9.536743164e-07
+sample=99 prediction=10.17171288 reference=10.17171192 absolute_error=9.536743164e-07
+sample=109 prediction=11.28157806 reference=11.28157425 absolute_error=3.814697266e-06
+sample=119 prediction=2.194139957 reference=2.194138288 absolute_error=1.668930054e-06
+sample=129 prediction=1.897197962 reference=1.897197723 absolute_error=2.384185791e-07
+sample=139 prediction=9.58275032 reference=9.582747459 absolute_error=2.861022949e-06
+sample=149 prediction=5.971948624 reference=5.97194767 absolute_error=9.536743164e-07
+sample=159 prediction=6.427772522 reference=6.427774429 absolute_error=1.907348633e-06
+sample=164 prediction=7.724251747 reference=7.724251747 absolute_error=0
+result=inference_completed samples=165 max_reference_error=8.583068848e-06 mismatches=0 rmse=3.256266713 mae=2.771934077 mean_forward_us=199451.7223
+rul_unit=observed_aging_test_session
+exit_code=0 results=/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012236_505
+# sh run_rul.sh 0 CpuRef
+requested_backend=CpuRef onnx_parser_used=false host_gelu=std::erf samples=165 profile_first_window=0 available_backends=CpuRef,ALRef,CpuAcc,
+stage=build_segment_0 begin
+segment=0 optimizer_messages=0
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 optimizer_messages=0
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 optimizer_messages=0
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 optimizer_messages=0
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 optimizer_messages=0
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 optimizer_messages=0
+stage=build_segment_5 passed
+sample=0 prediction=21.45942116 reference=21.45941925 absolute_error=1.907348633e-06
+sample=9 prediction=21.46434975 reference=21.46434784 absolute_error=1.907348633e-06
+sample=19 prediction=21.35564613 reference=21.35564995 absolute_error=3.814697266e-06
+sample=29 prediction=18.36180305 reference=18.36180305 absolute_error=0
+sample=39 prediction=16.40875053 reference=16.40875053 absolute_error=0
+sample=49 prediction=13.26981449 reference=13.26981354 absolute_error=9.536743164e-07
+sample=59 prediction=12.58250809 reference=12.58250904 absolute_error=9.536743164e-07
+sample=69 prediction=16.83311653 reference=16.83311462 absolute_error=1.907348633e-06
+sample=79 prediction=10.34422398 reference=10.34422112 absolute_error=2.861022949e-06
+sample=89 prediction=7.285289764 reference=7.285291672 absolute_error=1.907348633e-06
+sample=99 prediction=10.17171383 reference=10.17171192 absolute_error=1.907348633e-06
+sample=109 prediction=11.28157806 reference=11.28157425 absolute_error=3.814697266e-06
+sample=119 prediction=2.194138527 reference=2.194138288 absolute_error=2.384185791e-07
+sample=129 prediction=1.897198915 reference=1.897197723 absolute_error=1.192092896e-06
+sample=139 prediction=9.582747459 reference=9.582747459 absolute_error=0
+sample=149 prediction=5.971948624 reference=5.97194767 absolute_error=9.536743164e-07
+sample=159 prediction=6.427774906 reference=6.427774429 absolute_error=4.768371582e-07
+sample=164 prediction=7.724250317 reference=7.724251747 absolute_error=1.430511475e-06
+result=inference_completed samples=165 max_reference_error=7.629394531e-06 mismatches=0 rmse=3.256266531 mae=2.771933881 mean_forward_us=928101.1201
+rul_unit=observed_aging_test_session
+exit_code=0 results=/root/f3p-cpu-accel-v1/native-rul/results_CpuRef_19700101_012334_521

@@ -1,0 +1,15 @@
+relu 0
+less 0
+greater_equal 0
+broadcast_less 0
+logical_and 0
+comparison_and 0
+cast_bool_float 50
+float_less_via_ceil 0
+float_greater_equal_via_ceil 0
+float_less_boundaries 0
+spline_gate_float 0
+batch_matmul_2d 0
+batch_matmul_3d 0
+einsum_via_fc 0
+reduce_l2_decomposed 0

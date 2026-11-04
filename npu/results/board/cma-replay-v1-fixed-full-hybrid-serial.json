@@ -1,0 +1,20 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && sh run.sh hybrid 0",
+      "exit_code": 0,
+      "operation": "command",
+      "output": "[  837.682808] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  837.682882] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nsample=149 prediction=6.677417755 reference=6.682352066 absolute_error=0.004934310913\r\nsample=159 prediction=4.323186398 reference=4.34380579 absolute_error=0.0206193924\r\nsample=169 prediction=1.489403605 reference=1.499105453 absolute_error=0.00970184803\r\nsample=179 prediction=0.3314216733 reference=0.3265510798 absolute_error=0.004870593548\r\nsample=183 prediction=0.7017445564 reference=0.7044879198 absolute_error=0.00274336338\r\nresult=inference_completed samples=184 max_reference_error=0.0305480957 mismatches=182 rmse=2.467951069 mae=1.979471068 mean_forward_us=196307.908\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nafter_enqueue,183,5,1204224,123264,10,0,1087880,10\r\nbefore_unload,183,6,1204224,123264,10,0,1087880,10\r\nafter_unload,183,6,843776,123264,10,6,836744,4\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/cma-fixed-v2/results_hybrid_19700101_001356_5184"
+    },
+    {
+      "command": "grep -E \"MemAvailable|Cma\" /proc/meminfo; dmesg | tail -n 8",
+      "exit_code": 0,
+      "operation": "command",
+      "output": "MemAvailable:     807600 kB\r\nCmaTotal:         131072 kB\r\nCmaFree:          124392 kB\r\n[  669.915799] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  669.915869] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  792.519756] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  792.519829] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  811.910558] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  811.910640] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  837.682808] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  837.682882] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

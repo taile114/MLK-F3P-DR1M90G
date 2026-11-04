@@ -1,0 +1,39 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "",
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_profile_19700101_000417_4190 && tar -cf ../profile-metrics.tar operations.tsv host_gelu.tsv predictions.csv plan.tsv probe.log meminfo_before.txt meminfo_after.txt"
+    },
+    {
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/profile-metrics.tar",
+      "sha256": "36c84638e9ecf124369761c79c8a572be8710fe4ef112600a0348aada2dcdd8b",
+      "bytes": 55808,
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:/competion/code/project/npu/work/offload-profile-metrics.tar",
+      "chunk_bytes": 65536,
+      "verified": true,
+      "operation": "download",
+      "kernel_console_level_during_chunk": 1
+    },
+    {
+      "operation": "upload",
+      "local_path": "E:/competion/code/project/npu/work/offload-support-update-v1.tar.gz",
+      "verified": true,
+      "sha256": "487b625b78ab1be3456723eb2170aaf2ce5b5fbf9fa946f76a2280fc6f0e03bf",
+      "bytes": 19296,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/support-update-v1.tar.gz"
+    },
+    {
+      "output": "[  331.472123] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.472219] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.538847] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.538931] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.615474] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.615567] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.684766] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.684862] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.752994] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.753089] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.818576] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.818661] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.895379] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.895480] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  331.965087] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  331.965185] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  332.030514] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  332.030599] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  332.098179] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  332.098274] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nrelu 40\r\nsigmoid 40\r\ntanh 40\r\nsoftmax 40\r\nceil 40\r\nadd 40\r\nsub 40\r\nmul 40\r\ndiv 40\r\nbatch_matmul 40\r\nresults=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_support_19700101_000530_4423",
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && gzip -dc ../support-update-v1.tar.gz | tar -xf -; chmod +x bin/npu_op_support; sh support.sh"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

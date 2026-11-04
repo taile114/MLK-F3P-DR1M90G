@@ -1,0 +1,32 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && tr -d \"\\r\" < candidate_checksums.sha256 > candidate_checksums_lf.sha256 && sha256sum -c candidate_checksums_lf.sha256",
+      "output": "qparams_ff4.tsv: OK\r\nqparams_ff6.tsv: OK\r\nqparams_input_ff5.tsv: OK\r\nqparams_input_ff7.tsv: OK\r\nconv_input.txt: OK\r\ncandidate_plans.json: OK"
+    },
+    {
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh run.sh hybrid 1 qparams_ff4.tsv",
+      "output": "[  572.346427] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  572.346511] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=1 warmup=5 max_reference_error=0.006175994873 mismatches=1 rmse=3.535825729 mae=3.535825729 mean_forward_us=43211.101 timed_allocation_calls=272 timed_allocation_bytes=10908 NPU_layers=4 max_integer_lsb=1 integer_audit=1 operation_profile=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_hybrid_19700101_000931_4698"
+    },
+    {
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh run.sh hybrid 1 qparams_input_ff5.tsv conv_input.txt",
+      "output": "[  573.785069] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  573.785157] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=1 warmup=5 max_reference_error=0.1190929413 mismatches=1 rmse=3.422908783 mae=3.422908783 mean_forward_us=43187.52 timed_allocation_calls=340 timed_allocation_bytes=13635 NPU_layers=5 max_integer_lsb=1 integer_audit=1 operation_profile=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_hybrid_19700101_000932_4715"
+    },
+    {
+      "operation": "command",
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh run.sh hybrid 1 qparams_ff6.tsv",
+      "output": "[  575.318023] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  575.318105] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=1 warmup=5 max_reference_error=0.01441001892 mismatches=1 rmse=3.556411743 mae=3.556411743 mean_forward_us=43323.271 timed_allocation_calls=408 timed_allocation_bytes=16362 NPU_layers=6 max_integer_lsb=1 integer_audit=1 operation_profile=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_hybrid_19700101_000934_4733"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

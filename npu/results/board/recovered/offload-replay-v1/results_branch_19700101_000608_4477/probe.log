@@ -1,0 +1,1 @@
+result=branch_completed layer=linear_x.spline_weight layout=fc rows=110 input_features=207 output_features=23 cpu_neon_us=2650.23005 npu_boundary_us=3407.38955 max_integer_lsb=1 branch_rmse=0.008569092774 branch_max_abs=0.01917737722 capture_cpu_error=0 input_clipped=0 output_saturated=0 cma_bytes=77824

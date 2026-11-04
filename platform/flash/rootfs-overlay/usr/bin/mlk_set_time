@@ -1,0 +1,15 @@
+#!/bin/sh
+# Serial fallback must not overwrite a healthy network-disciplined clock.
+case "$1" in ''|*[!0-9]*) exit 2 ;; esac
+[ "$1" -ge 1700000000 ] && [ "$1" -le 2147483647 ] || exit 2
+if mlk_time_status >/dev/null 2>&1; then
+    echo MLK_TIME_SOURCE=network
+    exit 0
+fi
+date -u -s "@$1" >/dev/null || exit 1
+state=${MLK_TIME_STATE_DIR:-/var/lib/mlk}
+mkdir -p "$state" /var/run
+date -u +%s > "$state/lasttime"
+echo serial > /var/run/mlk-time-source
+[ ! -e /dev/rtc0 ] || hwclock -w 2>/dev/null || true
+echo MLK_TIME_SOURCE=serial

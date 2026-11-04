@@ -1,0 +1,200 @@
+{
+  "architecture": "fault_mtl_f3p_cnn2d_v2",
+  "input_profile": "base6",
+  "task_definition": "bench_fault_sim_v2",
+  "label_contract_version": "fault_labels_v2_operator_v1",
+  "preprocessing_version": "base6_causal_tilt_ref_v2",
+  "temperature_rule": "case_temp_35_40_45_v1",
+  "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+  "tilt_rule_status": "REF",
+  "fault_order": [
+    "overload",
+    "undervoltage",
+    "overtemperature",
+    "mount_tilt"
+  ],
+  "input_shapes": {
+    "time_frequency": [
+      8,
+      64,
+      48
+    ],
+    "spectrum": [
+      3,
+      769
+    ],
+    "vibration_stats": [
+      12
+    ],
+    "mount_pose": [
+      8
+    ],
+    "fast_state": [
+      6,
+      40
+    ],
+    "slow_state": [
+      9,
+      60
+    ]
+  },
+  "mount_pose_channels": [
+    "g_x",
+    "g_y",
+    "g_z",
+    "tilt_deg",
+    "g_norm",
+    "coverage",
+    "valid_pose",
+    "age_pose"
+  ],
+  "fusion_dimension": 224,
+  "fast_state_dimension": 240,
+  "slow_state_dimension": 540,
+  "mount_pose_dimension": 8,
+  "status": "labels_and_window_audit_completed_training_not_ready",
+  "segments": 26,
+  "normal_segments": 2,
+  "fault_segments": 24,
+  "per_fault_grade_segments": {
+    "overload": {
+      "1": 2,
+      "2": 2,
+      "3": 2
+    },
+    "undervoltage": {
+      "2": 2,
+      "3": 2,
+      "1": 2
+    },
+    "overtemperature": {
+      "1": 2,
+      "2": 2,
+      "3": 2
+    },
+    "mount_tilt": {
+      "1": 2,
+      "2": 2,
+      "3": 2
+    }
+  },
+  "native_4s_candidates": 3939,
+  "same_file_4s_candidates": 3266,
+  "complete_60s_candidates": 2483,
+  "qualified_windows": 0,
+  "feature_caches": 0,
+  "rejection_counts": {
+    "current_gap": 2461,
+    "current_history_or_freshness": 21,
+    "mount_pose_no_gravity_reference": 2483,
+    "mount_pose_nonpositive_timestep": 2325,
+    "mount_pose_quality_limits_unconfigured": 2483,
+    "mount_pose_vibration_gap": 2483,
+    "slow_state_coverage": 2483,
+    "speed_gap": 2483,
+    "speed_history_or_freshness": 25,
+    "temperature_history_or_freshness": 22,
+    "unreviewed_current_calibrated": 2483,
+    "unreviewed_pose_mount_unchanged": 2483,
+    "unreviewed_range_reviewed": 2483,
+    "unreviewed_timestamps_verified": 2483,
+    "unreviewed_vibration_dma": 2483,
+    "vibration_gap": 2483,
+    "vibration_nonpositive_timestep": 2325,
+    "vibration_time_jitter": 2483,
+    "fast_state_coverage": 161,
+    "vibration_crosses_source_file": 386
+  },
+  "label_policy": {
+    "operator_grade_rule": "operator_filename_grade_v1",
+    "operator_tilt_degrees_equivalent": false,
+    "per_class_supervision_bases": {
+      "overload": {
+        "operator_confirmed_normal_operation": 2,
+        "operator_confirmed_filename_grade": 6
+      },
+      "undervoltage": {
+        "operator_confirmed_normal_operation": 2,
+        "operator_confirmed_filename_grade": 6
+      },
+      "overtemperature": {
+        "operator_confirmed_normal_operation": 2,
+        "temperature_demo_threshold_uncertainty_unverified": 18,
+        "operator_confirmed_filename_grade": 6
+      },
+      "mount_tilt": {
+        "operator_confirmed_horizontal": 2,
+        "operator_confirmed_filename_grade": 6
+      }
+    },
+    "grade_rule_scope": "Operator-confirmed filename grades are protocol levels; reference-angle boundaries only govern inclination_reference"
+  },
+  "all_native_and_selection_sources_unchanged": true,
+  "source_files_verified": 265,
+  "selected_npz_files_verified": 26,
+  "referenced_mlkc_files_verified": 230,
+  "all_prepared_artifact_hashes_verified": true,
+  "all_window_labels_verified": true,
+  "non_target_unknown_masks_preserved": true,
+  "numerical_angle_values_created": false,
+  "physical_quality_flags_waived": false,
+  "gravity_calibration_created": false,
+  "independent_validation_available": false,
+  "independent_test_available": false,
+  "normalization_fitted": false,
+  "real_data_training_performed": false,
+  "final_training_performed": false,
+  "automated_tests": {
+    "tests": 79,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_report": "runs/tests-selection.xml",
+  "paths": {
+    "reviewed_labels": "../data/reviewed/active_selection_v2/episodes.jsonl",
+    "label_table": "../data/reviewed/active_selection_v2/labels.csv",
+    "preparation_manifest": "../data/reviewed/active_selection_v2/preparation_manifest.json",
+    "window_manifest": "cache/active_selection_v2_operator/dataset_manifest.json",
+    "window_index": "cache/active_selection_v2_operator/windows.jsonl"
+  },
+  "artifact_hashes": {
+    "episodes.jsonl": "280417f8031ee0fc9b9c0448994d42a22c4631845dd449fe4fd6f62e8c5830ed",
+    "preparation_manifest.json": "3f020040f50e6704c6d67bbc413e0c8dba9a71c91ac0980d2078d91781e1a746",
+    "dataset_manifest.json": "64f68cf4adb31a8643bbcc87d2dc27e2a8caca3b9ab95b406d2b18feae36d29a",
+    "tests-selection.xml": "fb56fa82faed159c54b380cb63d8e679a81af9a413a7148acedd94b93c7122d9"
+  },
+  "source_sha256": {
+    "fault_mtl/__init__.py": "781145d8b502b2d2db83518b392524bdf0ff6eb319c8bab804e55d2b74dd96aa",
+    "fault_mtl/adapt_legacy.py": "4ced0e5e4a9364a2f09050585f068963e1ae6d5df7ae0dc5b2dc6a114f1af827",
+    "fault_mtl/check_gpu.py": "678acc1aff643b6c3668a38930a9976bd8138e4610968f4ea1286b8a76725426",
+    "fault_mtl/dataset.py": "4cfa4bc05279362e55c721105c5820d890216431e478c44830fd317b2b4226ae",
+    "fault_mtl/evaluate.py": "ef4a4dc282306644b88ebcdd111f61a7b5103a24d5e36319b929801768836691",
+    "fault_mtl/export.py": "c662ed37b754bb451de928ff862ba7f21925649056792377920bdfadfffa5257",
+    "fault_mtl/losses.py": "fd98f664a284b3744a5d8a202f156d757579f8d3b1d852e37139d8822150134c",
+    "fault_mtl/metrics.py": "55c9bd21eb89caaaf80bd8a4e5f312e7aa6c10dd06edb0152d1a13628a410003",
+    "fault_mtl/model.py": "1aa94bfdd215cd28dbb8be2dd3144686c2b4cb4c4cd5630b16690d5d5447003f",
+    "fault_mtl/mount_pose.py": "98cba6149fec5c41d7c8b207eaa67d592d2e6814fb6fa5bdabac069178dfbb12",
+    "fault_mtl/prepare_dataset.py": "9d7f5b471c8818307765f240a98212f8c860d9717f5b44826363f6e7583e9da0",
+    "fault_mtl/prepare_selection.py": "32c0da067d959181c020e3209e859e3ec7e96d3fb12eadf2dcfdfffebe5030b6",
+    "fault_mtl/preprocessing.py": "eda23d517b63631df1f40a1cc525fd532931e9dc7694f57ec0e4ae49b89d03c3",
+    "fault_mtl/schema.py": "8ceccb79e637f9e73bacf008e4c247281aa79ad9189be1aeb864d207affea360",
+    "fault_mtl/train.py": "34b32a32ddef2c81f727c9252bea774a0a3ced17f4ad54803d203cb01b182a8a",
+    "fault_mtl/validate.py": "b11184b453b0c9343f9872079fa3ba0b8f753d376a5eb758318db09ccde017d2",
+    "tests/conftest.py": "e3fa76ff5cdc36dac6ce0ebd307a1bf69b340297bd6e0ac812193a4b2e40cc91",
+    "tests/test_device.py": "d2129b6662bf04089a68f4e7b7298fb4799e4ea2d932fa7ec14e04d869572aad",
+    "tests/test_model.py": "91c3e2a047644ba6299f0daf9465455df61b2a7a89a394392c1be6b45e11d7cc",
+    "tests/test_mount_pose.py": "482543e7cb9f96691fd78c4919b1cbff6d3d22d79c90878aee1f03c4e18d6227",
+    "tests/test_pipeline.py": "8ddccf51ae0b48a92dbab6d49e54178aa0dee6a61a9506aa17e2e9bae143ee9b",
+    "tests/test_preprocessing.py": "a3e89d37284424d2befd36dce2e2300451a7355a5e0606983e74198234cea7d7",
+    "tests/test_selection.py": "b2488fc0056270ab2ac09e2c57e0466629e4632cc25eca824c7a98910b4c5910",
+    "tests/test_v2_compatibility.py": "fa9c3eaf9c6c17607ee997e4332cd4bec1aff233004cb7cbba745b97ac61e47a",
+    "README.md": "b0775c8aa0d0d31103acd3c6c35eeb09e5c91b487cb06df3fd15bb5d01ceab39",
+    "configs/base6.yaml": "1612167239c160b395eece3648963fe30e418da4303fdd8c7fd2a8625f065bc3",
+    "../data/README.md": "085957b785b139b2a911b5279c17608c037516c0e2aea60fa1170d3a6a590fa3",
+    "../设计方案.md": "7fbb59186407d5e8052f51576078dbae0ab522478498a89c1adc3416c6e7311d",
+    "../补采数据说明.md": "e6ac3b3e06da043d438a785b63c91e944781e0a2f504e2f2a31dfa6fcadcae7e"
+  },
+  "documentation_local_links_verified": true,
+  "source_whitespace_check": "passed"
+}

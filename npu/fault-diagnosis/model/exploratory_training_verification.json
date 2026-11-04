@@ -1,0 +1,583 @@
+{
+  "architecture": "fault_mtl_f3p_cnn2d_v2",
+  "input_profile": "base6",
+  "task_definition": "bench_fault_sim_v2",
+  "label_contract_version": "fault_labels_v2_operator_v1",
+  "preprocessing_version": "base6_native_blocks_short_context_v2",
+  "temperature_rule": "case_temp_35_40_45_v1",
+  "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+  "tilt_rule_status": "REF",
+  "fault_order": [
+    "overload",
+    "undervoltage",
+    "overtemperature",
+    "mount_tilt"
+  ],
+  "input_shapes": {
+    "time_frequency": [
+      8,
+      64,
+      48
+    ],
+    "spectrum": [
+      3,
+      769
+    ],
+    "vibration_stats": [
+      12
+    ],
+    "mount_pose": [
+      8
+    ],
+    "fast_state": [
+      6,
+      40
+    ],
+    "slow_state": [
+      9,
+      60
+    ]
+  },
+  "mount_pose_channels": [
+    "g_x",
+    "g_y",
+    "g_z",
+    "tilt_deg",
+    "g_norm",
+    "coverage",
+    "valid_pose",
+    "age_pose"
+  ],
+  "fusion_dimension": 224,
+  "fast_state_dimension": 240,
+  "slow_state_dimension": 540,
+  "mount_pose_dimension": 8,
+  "temperature_head_policy": "mechanical_heads_temperature_blind_v1",
+  "status": "exploratory_gpu_training_and_frozen_test_completed",
+  "purpose": "development_within_record_holdout_not_final_acceptance",
+  "dataset": {
+    "candidates": 1785,
+    "accepted": 1783,
+    "train_windows": 1063,
+    "val_windows": 360,
+    "test_windows": 360,
+    "actual_split_ratios": {
+      "train": 0.5961862030286035,
+      "val": 0.20190689848569826,
+      "test": 0.20190689848569826
+    },
+    "validation_scope": "within_record_time_block_holdout; shared source sessions/date/device; not independent trial acceptance",
+    "source_acquisition_partition_coverage": {
+      "warmup_g0_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "warmup_g0_r01_part02": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g1_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g1_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g2_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g2_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g3_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g1_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g1_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g2_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g2_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g2_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g2_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g3_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g3_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g1_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g1_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g2_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g2_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g3_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "mount_tilt_g3_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g3_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overtemperature_g3_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g1_replacement_r01_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "undervoltage_g1_replacement_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ],
+      "overload_g3_r02_part01": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "rejection_counts": {
+      "exploratory_fast_state_coverage": 2,
+      "exploratory_slow_state_coverage": 1
+    }
+  },
+  "checks": {
+    "all_26_sources_in_each_partition": true,
+    "all_window_labels_match_confirmed_sources": true,
+    "physical_time_support_disjoint": true,
+    "native_dma_blocks_disjoint": true,
+    "state_history_outside_four_seconds_invalid": true,
+    "normalization_fit_only_train": true,
+    "level_reference_fit_only_train": true,
+    "original_source_files_unchanged": true,
+    "original_source_files_verified": 265,
+    "test_used_for_training_or_model_selection": false,
+    "final_training_performed": false
+  },
+  "training": {
+    "device": "cuda:0",
+    "epochs": 25,
+    "best_epoch": 21,
+    "first_training_loss": 1.0006023207131554,
+    "last_training_loss": 0.07782443744294784,
+    "structure": {
+      "parameters": 257008,
+      "fixed_padding_weights": 720,
+      "conv_linear_weights": 256288,
+      "cnn_mac_per_window": 12386304,
+      "linear_mac_per_window": 259488
+    }
+  },
+  "temperature_invariance": {
+    "checkpoint_sha256": "c4085e945a4181a2d47a2e0e63f41e02097443901c204e1de9110ce97fa480f3",
+    "probe_split": "val",
+    "samples": 64,
+    "temperature_change_c": 50,
+    "temperature_valid_and_age_also_changed": true,
+    "mechanical_max_abs_change": {
+      "class_logits": 0.0,
+      "severity_scores": 0.0,
+      "grade_logits": 0.0
+    },
+    "thermal_logit_max_abs_change": 37.72043228149414,
+    "mechanical_classes": [
+      "overload",
+      "undervoltage",
+      "mount_tilt"
+    ],
+    "scope": "explicit temperature channels only; physical heating may still change current/vibration"
+  },
+  "test": {
+    "windows": 360,
+    "primary_episode_equal": {
+      "A_set": 1.0,
+      "A_grade_e2e": null,
+      "A_grade_oracle": null,
+      "A_joint": 1.0,
+      "macro_f1": 1.0,
+      "masked_class_accuracy": 1.0,
+      "masked_grade_e2e_accuracy": 0.9903846153846154,
+      "masked_grade_oracle_accuracy": 0.9903846153846154
+    },
+    "per_class": {
+      "overload": {
+        "positive_support": 75,
+        "negative_support": 66,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "grade_support": 75,
+        "grades": {
+          "1": {
+            "support": 18,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "2": {
+            "support": 36,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "3": {
+            "support": 21,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          }
+        },
+        "grade_e2e_accuracy": 1.0,
+        "severe_to_mild_rate": 0.0,
+        "grade_confusion_e2e_true_1_2_3_pred_0_1_2_3": [
+          [
+            0,
+            18,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            36,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            21
+          ]
+        ],
+        "grade_confusion_oracle": [
+          [
+            18,
+            0,
+            0
+          ],
+          [
+            0,
+            36,
+            0
+          ],
+          [
+            0,
+            0,
+            21
+          ]
+        ]
+      },
+      "undervoltage": {
+        "positive_support": 80,
+        "negative_support": 66,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "grade_support": 80,
+        "grades": {
+          "1": {
+            "support": 32,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "2": {
+            "support": 30,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "3": {
+            "support": 18,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          }
+        },
+        "grade_e2e_accuracy": 1.0,
+        "severe_to_mild_rate": 0.0,
+        "grade_confusion_e2e_true_1_2_3_pred_0_1_2_3": [
+          [
+            0,
+            32,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            30,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            18
+          ]
+        ],
+        "grade_confusion_oracle": [
+          [
+            32,
+            0,
+            0
+          ],
+          [
+            0,
+            30,
+            0
+          ],
+          [
+            0,
+            0,
+            18
+          ]
+        ]
+      },
+      "overtemperature": {
+        "positive_support": 58,
+        "negative_support": 302,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "grade_support": 58,
+        "grades": {
+          "1": {
+            "support": 16,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "2": {
+            "support": 14,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "3": {
+            "support": 28,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          }
+        },
+        "grade_e2e_accuracy": 1.0,
+        "severe_to_mild_rate": 0.0,
+        "grade_confusion_e2e_true_1_2_3_pred_0_1_2_3": [
+          [
+            0,
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            14,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            28
+          ]
+        ],
+        "grade_confusion_oracle": [
+          [
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            14,
+            0
+          ],
+          [
+            0,
+            0,
+            28
+          ]
+        ]
+      },
+      "mount_tilt": {
+        "positive_support": 81,
+        "negative_support": 66,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "grade_support": 81,
+        "grades": {
+          "1": {
+            "support": 27,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          },
+          "2": {
+            "support": 25,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 0.88
+          },
+          "3": {
+            "support": 29,
+            "detection_recall": 1.0,
+            "grade_e2e_accuracy": 1.0
+          }
+        },
+        "grade_e2e_accuracy": 0.9629629629629629,
+        "severe_to_mild_rate": 0.0,
+        "grade_confusion_e2e_true_1_2_3_pred_0_1_2_3": [
+          [
+            0,
+            27,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            22,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            29
+          ]
+        ],
+        "grade_confusion_oracle": [
+          [
+            27,
+            0,
+            0
+          ],
+          [
+            2,
+            22,
+            1
+          ],
+          [
+            0,
+            0,
+            29
+          ]
+        ]
+      }
+    },
+    "fully_reviewed_normal_windows": 66,
+    "fully_reviewed_positive_windows": 0,
+    "metrics_scope": "known labels and protocol grades; non-target unknown classes excluded; same-record held-out time blocks"
+  },
+  "automated_tests": {
+    "tests": 88,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_report": "runs/tests-exploratory.xml",
+  "artifacts": {
+    "cache/active_selection_exploratory_v2/dataset_manifest.json": "f1de51be58ab7bcb11bc4d14c4ea9cf77793ce2852077e1f9278aa714b20f3c9",
+    "cache/active_selection_exploratory_v2/preprocess.json": "79803bdbe6fdbae45fa1edf201b615e89ef0fca8ae6b4e3c70938dd9828f2e87",
+    "cache/active_selection_exploratory_v2/split_blocks.csv": "637bd20c56a19203c5981b94fbfca58bf2fd5ce7f9744b53663e9e184fccf41a",
+    "runs/active_selection_exploratory_v2_seed42/best.pt": "c4085e945a4181a2d47a2e0e63f41e02097443901c204e1de9110ce97fa480f3",
+    "runs/active_selection_exploratory_v2_seed42/summary.json": "eeea1c12e7c806d8dbfbebd218f0e3c2d95255b82c7d61df68ea00e21dc46a68",
+    "runs/active_selection_exploratory_v2_seed42/temperature_invariance.json": "8ed695dbd49c9f29b380b90aacd60ecdbf9a7b023b0d0362b4c079be38e2624d",
+    "runs/active_selection_exploratory_v2_seed42/temperature_coverage.csv": "cd49e3fd328c71c1bb4605fc30a42fe32fd982057b6caf3816cb3521ca2332c6",
+    "runs/active_selection_exploratory_v2_seed42/test/metrics.json": "a0bc0bc8e7e59bbc4227de0c931c270d1365385e67f713771a23f1204867c8f8",
+    "runs/tests-exploratory.xml": "604071aecc20f88833a7d2def32932d3c48e8bc24b62b55f7fb1083777e208ad"
+  },
+  "source_sha256": {
+    "fault_mtl/__init__.py": "781145d8b502b2d2db83518b392524bdf0ff6eb319c8bab804e55d2b74dd96aa",
+    "fault_mtl/adapt_legacy.py": "4ced0e5e4a9364a2f09050585f068963e1ae6d5df7ae0dc5b2dc6a114f1af827",
+    "fault_mtl/check_gpu.py": "678acc1aff643b6c3668a38930a9976bd8138e4610968f4ea1286b8a76725426",
+    "fault_mtl/dataset.py": "0906210a1b76b17732d2f0c57e7f2fc1a0504a064a40e8ed51ab481a919d6e8d",
+    "fault_mtl/evaluate.py": "4c9971d9ad238d7080433546bf687c189794431eb6887c948c3d54db2fd65204",
+    "fault_mtl/exploratory.py": "36f54e1b26683072f06aa28b8037efa45107b06d9cdb873529e3359d23961fbb",
+    "fault_mtl/export.py": "c9b332febfed3f7ca17ed69b79413e5dac0c1bf2882b224c6d3e90df88cc38b6",
+    "fault_mtl/losses.py": "fd98f664a284b3744a5d8a202f156d757579f8d3b1d852e37139d8822150134c",
+    "fault_mtl/metrics.py": "d10881a963bd9a4d86a3113945c01d61e939e2571780e517eb081df7f9bfe826",
+    "fault_mtl/model.py": "98b39d9bf3b625ecec65d37c537863de26d656c6f9a20dce9d7911219704b6bc",
+    "fault_mtl/mount_pose.py": "98cba6149fec5c41d7c8b207eaa67d592d2e6814fb6fa5bdabac069178dfbb12",
+    "fault_mtl/prepare_dataset.py": "10a2faf8644131bf47eb0908b88a42c5a2541fce943af1eacbd9e12544484a7f",
+    "fault_mtl/prepare_selection.py": "32c0da067d959181c020e3209e859e3ec7e96d3fb12eadf2dcfdfffebe5030b6",
+    "fault_mtl/preprocessing.py": "808e1297851ae7dd754b54bda3188a1646003a959fef584df997c79e9405ef94",
+    "fault_mtl/schema.py": "78671f959f2f4a5835799b5022b00ae05f41d39b3ff174d03cd5c9721d2536f8",
+    "fault_mtl/train.py": "3bfd00209e76d9c8920a4388571c059ac75961815a2712464808bd0480703644",
+    "fault_mtl/validate.py": "b11184b453b0c9343f9872079fa3ba0b8f753d376a5eb758318db09ccde017d2",
+    "tests/conftest.py": "e3fa76ff5cdc36dac6ce0ebd307a1bf69b340297bd6e0ac812193a4b2e40cc91",
+    "tests/test_device.py": "d2129b6662bf04089a68f4e7b7298fb4799e4ea2d932fa7ec14e04d869572aad",
+    "tests/test_exploratory.py": "b7cd1f6009cc3e2657da71cf32d5a7adea2dd2a081864ddc0651b96869beffd1",
+    "tests/test_model.py": "91c3e2a047644ba6299f0daf9465455df61b2a7a89a394392c1be6b45e11d7cc",
+    "tests/test_mount_pose.py": "482543e7cb9f96691fd78c4919b1cbff6d3d22d79c90878aee1f03c4e18d6227",
+    "tests/test_pipeline.py": "8ddccf51ae0b48a92dbab6d49e54178aa0dee6a61a9506aa17e2e9bae143ee9b",
+    "tests/test_preprocessing.py": "a3e89d37284424d2befd36dce2e2300451a7355a5e0606983e74198234cea7d7",
+    "tests/test_selection.py": "b2488fc0056270ab2ac09e2c57e0466629e4632cc25eca824c7a98910b4c5910",
+    "tests/test_v2_compatibility.py": "fa9c3eaf9c6c17607ee997e4332cd4bec1aff233004cb7cbba745b97ac61e47a",
+    "configs/base6.yaml": "1612167239c160b395eece3648963fe30e418da4303fdd8c7fd2a8625f065bc3",
+    "configs/exploratory.yaml": "cd02319d36e53f22662111ea3620a8a58f3de6d2741b00e67d72fad76809544f",
+    "README.md": "af607759c5a2be216be810d82dfe9183f68e33c9c31f43b5b601a13ae869cd82",
+    "快速训练说明.md": "b632dae878ddf38468962235d047cae4e173c093b0a9eb5fc6c0172348048fc3",
+    "../data/README.md": "3ea53ae1309fec02a32a48fde26f3fcae1d2118c4407331df296e6ccf336e4d9",
+    "../设计方案.md": "45026ce130b20ae2fb243daa6916b8e74c1a4e9e48a21c84686dfad37ae57bc3",
+    "../缺口处理方案.md": "dcce30b873d1bcd6d2599b64fc40323fda0cac1ccb31922acb71f5d0e72d6934"
+  },
+  "independent_trial_test_available": false,
+  "board_export_performed": false,
+  "acceptance_verified": false
+}

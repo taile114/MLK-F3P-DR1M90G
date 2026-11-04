@@ -1,0 +1,65 @@
+{
+  "execution_plan": "ff6",
+  "engine_sha256": "6fc35de42a75d15c621c9a2a49b4d48ec2287585c959dedd543d52502ebfe7de",
+  "cpu_qemu": {
+    "reloads": 2,
+    "windows_per_reload": 184,
+    "predictions": 368,
+    "max_reference_error": 8.106231689e-06
+  },
+  "invalid_plan_cases_passed": [
+    "missing",
+    "duplicate",
+    "shape",
+    "scale",
+    "unknown",
+    "extra",
+    "truncated"
+  ],
+  "hardware_ff6_shared_library_verified": true,
+  "hdmi_acquisition_npu_coexistence_verified": false,
+  "disk_written": true,
+  "qt_5_13_tests": {
+    "rul_passed": 14,
+    "rul_failed": 0,
+    "windows_passed": 3,
+    "windows_failed": 0
+  },
+  "arm64_qt_built": true,
+  "sd_written_and_readback_verified": true,
+  "active_boot_environment": "paired_vendor_npu_hdmi_with_ext4_rootfs",
+  "physical_hdmi_verified": true,
+  "hdmi_resolution": [
+    1920,
+    1080
+  ],
+  "board_cpu": {
+    "reloads": 2,
+    "windows_per_reload": 184,
+    "predictions": 368,
+    "max_fp32_error": 8.106231689e-06,
+    "mean_forward_us": 45475.45108695652,
+    "max_reload_difference": 0.0
+  },
+  "board_ff6": {
+    "reloads": 2,
+    "windows_per_reload": 184,
+    "predictions": 368,
+    "max_fp32_error": 0.04857254028,
+    "mean_forward_us": 43386.04347826087,
+    "max_reload_difference": 0.0,
+    "max_difference_from_frozen_ff6": 0.0,
+    "cma_stable_bytes": 233472,
+    "cma_after_destroy_bytes": 0,
+    "hard_npu_interrupt_delta": 18522,
+    "soft_npu_interrupt_delta": 0,
+    "matches_frozen_predictions_exactly": true
+  },
+  "physical_rul_updates_confirmed": true,
+  "qt_live_ff6_replay_verified": true,
+  "limits": [
+    "Dataset replay only; live sensor adaptation not included",
+    "184-window validation set; independent 165-window test not rerun",
+    "Long-duration stability and project PL acquisition coexistence remain unverified"
+  ]
+}

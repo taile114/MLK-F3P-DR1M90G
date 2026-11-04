@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "archives": 5,
+  "internal_checksums": 136,
+  "unchanged_source_copies": 121,
+  "python_files": 25,
+  "shell_files": 7,
+  "relative_links": 72,
+  "saved_qemu_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 7.62939453125e-06,
+    "rmse": 3.2562665311550036,
+    "mae": 2.7719338807192715
+  },
+  "board_evidence": "serial summary; board CSV not retrieved",
+  "training_executed": false,
+  "board_test_rerun": false,
+  "npu_verified": false
+}

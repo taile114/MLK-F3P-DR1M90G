@@ -1,0 +1,67 @@
+applet_list_exit=0
+gunzip
+gzip
+tar
+zcat
+APPLET gzip
+BusyBox v1.35.0 (2025-11-23 21:49:12 PST) multi-call binary.
+
+Usage: gzip [-cfkdt] [FILE]...
+
+Compress FILEs (or stdin)
+
+	-d	Decompress
+	-c	Write to stdout
+	-f	Force
+	-k	Keep input files
+	-t	Test integrity
+help_exit=0
+APPLET gunzip
+BusyBox v1.35.0 (2025-11-23 21:49:12 PST) multi-call binary.
+
+Usage: gunzip [-cfkt] [FILE]...
+
+Decompress FILEs (or stdin)
+
+	-c	Write to stdout
+	-f	Force
+	-k	Keep input files
+	-t	Test integrity
+help_exit=0
+APPLET zcat
+BusyBox v1.35.0 (2025-11-23 21:49:12 PST) multi-call binary.
+
+Usage: zcat [FILE]...
+
+Decompress to stdout
+help_exit=0
+52bce92f6b964faf806373d69499c6624e217440cecdb40c751dbdda94154e4a  /tmp/f3p-sd-archive-tools/busybox
+pipeline_untar_exit=0
+bin/npu_smoke: OK
+build.sh: OK
+build_info.txt: OK
+emulation_s8/exit_code.txt: OK
+emulation_s8/graph.dot: OK
+emulation_s8/output.csv: OK
+emulation_s8/output_bytes.bin: OK
+emulation_s8/probe.log: OK
+emulation_s8/profile.json: OK
+emulation_u8/exit_code.txt: OK
+emulation_u8/graph.dot: OK
+emulation_u8/output.csv: OK
+emulation_u8/output_bytes.bin: OK
+emulation_u8/probe.log: OK
+emulation_u8/profile.json: OK
+emulation_u8_s8/exit_code.txt: OK
+emulation_u8_s8/graph.dot: OK
+emulation_u8_s8/output.csv: OK
+emulation_u8_s8/output_bytes.bin: OK
+emulation_u8_s8/probe.log: OK
+emulation_u8_s8/profile.json: OK
+README.md: OK
+run.sh: OK
+runtime_hashes.txt: OK
+src/npu_smoke.cpp: OK
+unexpected_failures.txt: OK
+verification.json: OK
+package_checksum_exit=0

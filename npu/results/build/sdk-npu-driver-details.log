@@ -1,0 +1,261 @@
+=== NPU Kconfig ===
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# npu related drivers
+#
+
+menu "NPU Modules"
+
+menuconfig NPU_MODULE
+        bool "NPU related Modules"
+        help
+                This option enables the NPU related modules, including hard_npu_driver,
+                soft_npu_driver and cma_mem_driver.
+
+if NPU_MODULE
+
+config HARD_NPU_DRIVER
+        tristate "hard_npu_driver"
+        help
+                This option enables the NPU driver for hard NPU device. hard NPU device is
+                used to accelerate conv and gemm operations.
+
+config SOFT_NPU_DRIVER
+        tristate "soft_npu_driver"
+        help
+                This option enables the NPU driver for soft NPU device. soft NPU device is
+                used to accelerate operations except for conv and gemm.
+
+config CMA_MEM_DRIVER
+        tristate "cma_mem_driver"
+        help
+                This option enables the NPU driver for cma memory. hard NPU and soft NPU device
+                exchange data through cma memory.
+
+endif # NPU_MODULE
+
+endmenu
+
+=== built kernel identifiers ===
+-rw-r--r-- 1 uisrc uisrc 13 Mar 10  2025 /home/uisrc/uisrc-lab-anlogic/sources/linux/include/config/kernel.release
+6.1.111-rt42
+-rw-r--r-- 1 uisrc uisrc 35 Mar 10  2025 /home/uisrc/uisrc-lab-anlogic/sources/linux/include/generated/utsrelease.h
+#define UTS_RELEASE "6.1.111-rt42"
+MISSING include/generated/utsversion.h
+-rw-r--r-- 1 uisrc uisrc 47976 Mar 10  2025 /home/uisrc/uisrc-lab-anlogic/sources/linux/include/generated/autoconf.h
+#define CONFIG_INPUT_KEYBOARD 1
+#define CONFIG_GENERIC_SMP_IDLE_THREAD 1
+#define CONFIG_BCMA_POSSIBLE 1
+#define CONFIG_HAVE_PREEMPT_DYNAMIC 1
+#define CONFIG_INPUT_MOUSE 1
+#define CONFIG_CMA_SIZE_SEL_MBYTES 1
+#define CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV 1
+#define CONFIG_INPUT_MATRIXKMAP 1
+#define CONFIG_INPUT_MISC 1
+#define CONFIG_INPUT_VIVALDIFMAP 1
+#define CONFIG_PREEMPT_BUILD 1
+#define CONFIG_INPUT_EVDEV 1
+#define CONFIG_HAVE_PREEMPT_LAZY 1
+#define CONFIG_HAVE_PREEMPT_DYNAMIC_KEY 1
+#define CONFIG_PREEMPT_RCU 1
+#define CONFIG_SMP 1
+#define CONFIG_INPUT_LEDS 1
+#define CONFIG_INPUT_FF_MEMLESS 1
+#define CONFIG_VIRTIO_INPUT 1
+#define CONFIG_CMA_SIZE_MBYTES 16
+#define CONFIG_CMA_AREAS 7
+#define CONFIG_DMA_CMA 1
+#define CONFIG_PREEMPT 1
+#define CONFIG_PREEMPT_COUNT 1
+#define CONFIG_CMA 1
+#define CONFIG_PREEMPTION 1
+#define CONFIG_CMA_ALIGNMENT 8
+#define CONFIG_INPUT 1
+MISSING Module.symvers
+=== hard NPU device-tree and probe ===
+	.mmap = hard_npu_mmap,
+};
+
+static int drv_hard_npu_probe(struct platform_device *pdev);
+static int drv_hard_npu_remove(struct platform_device *pdev);
+static const struct of_device_id hard_npu_match_table[] = {
+	{.compatible = "anlogic,hard_npu"},
+};
+
+static struct platform_driver hard_npu_driver = {.probe = drv_hard_npu_probe,
+						 .remove = drv_hard_npu_remove,
+						 .driver = {
+							 .name = "hard_npu",
+							 .owner = THIS_MODULE,
+							 .of_match_table = hard_npu_match_table,
+						 }};
+
+static int drv_hard_npu_probe(struct platform_device *pdev)
+{
+	dev_info(&(pdev->dev), "%s( %p)\n", __func__, pdev);
+
+	if (hard_npu_irq_num < 0) {
+		dev_err(hardnpu_devp, "get irq resource failed in hard_npu device\n");
+		return -EINVAL;
+	}
+
+	dev_info(hardnpu_devp, "find irq num: %d\n", hard_npu_irq_num);
+
+	struct resource *mem_src_p = platform_get_resource(pdev, IORESOURCE_MEM, 0);
+
+	if (mem_src_p == NULL) {
+		dev_err(hardnpu_devp, "get mem resource failed in hard_npu device\n");
+		return -EINVAL;
+	}
+
+	s_hard_npu_register.virt_addr = devm_ioremap_resource(&pdev->dev, mem_src_p);
+	dev_info(hardnpu_devp, "devm_ioremap_resource return %p\n", s_hard_npu_register.virt_addr);
+
+	s_hard_npu_register.phys_addr = mem_src_p->start;
+	dev_info(hardnpu_devp, "mem start addr: %lx\n", s_hard_npu_register.phys_addr);
+
+	s_hard_npu_register.size = (mem_src_p->end - mem_src_p->start + 1);
+	dev_info(hardnpu_devp, "mem size: %d\n", s_hard_npu_register.size);
+
+	/* get the major number of the character device */
+	if ((alloc_chrdev_region(&s_major, 0, 1, CDEV_DEV_NAME)) < 0) {
+		dev_err(hardnpu_devp, "could not allocate major number\n");
+		return -EBUSY;
+	}
+
+	// get top config mem resource
+	struct resource *top_mem_src_p = platform_get_resource(pdev, IORESOURCE_MEM, 1);
+
+	if (top_mem_src_p == NULL) {
+		dev_err(hardnpu_devp, "get top config mem resource failed in hard_npu device\n");
+		return -EINVAL;
+	}
+
+	// enable hardnpu
+	void __iomem *enable_register_ptr = ioremap((top_mem_src_p->start +
+			ENABLE_REGISTER_ADDRESS), sizeof(u32));
+
+	if (!enable_register_ptr) {
+		dev_err(hardnpu_devp, "Failed to map enable register address for hardnpu\n");
+		return -ENOMEM;
+	}
+
+	u32 tmp_val = 0x3;
+
+	iowrite32(tmp_val, enable_register_ptr);
+	iounmap(enable_register_ptr);
+
+	// enable sram
+	void __iomem *sram_register_ptr = ioremap((top_mem_src_p->start +
+			SRAM_ENABLE_REGISTER_ADDRESS), sizeof(u32));
+
+	if (!sram_register_ptr) {
+		dev_err(hardnpu_devp, "Failed to map sram wakeup register address for hardnpu\n");
+		return -ENOMEM;
+	}
+
+	tmp_val = ioread32(sram_register_ptr);
+	tmp_val &= 0xC0FFFFFF;
+	iowrite32(tmp_val, sram_register_ptr);
+	iounmap(sram_register_ptr);
+
+	// get crp config mem resource
+	struct resource *crp_mem_src_p = platform_get_resource(pdev, IORESOURCE_MEM, 2);
+
+	if (crp_mem_src_p == NULL) {
+		dev_err(hardnpu_devp, "get crp config mem resource failed in hard_npu device\n");
+		return -EINVAL;
+	}
+
+	// soft reset
+	void __iomem *soft_reset_register_ptr = ioremap((crp_mem_src_p->start +
+			SOFT_RESET_REGISTER_ADDRESS), sizeof(u32));
+
+	if (!soft_reset_register_ptr) {
+		dev_err(hardnpu_devp, "Failed to map soft reset register address for hardnpu\n");
+		return -ENOMEM;
+	}
+
+	tmp_val = ioread32(soft_reset_register_ptr);
+	tmp_val &= 0xFFFFEFFF;
+	iowrite32(tmp_val, soft_reset_register_ptr);
+	tmp_val = ioread32(soft_reset_register_ptr);
+	tmp_val |= 0x00001000;
+	iowrite32(tmp_val, soft_reset_register_ptr);
+	iounmap(soft_reset_register_ptr);
+
+	/* initialize the device structure and register the device with the kernel */
+	cdev_init(&s_cdev, &hard_npu_fops);
+	s_cdev.owner = THIS_MODULE;
+	if ((cdev_add(&s_cdev, s_major, 1)) < 0) {
+		dev_err(hardnpu_devp, "could not allocate chrdev\n");
+		unregister_chrdev_region(s_major, 1);
+		return -EBUSY;
+	}
+
+	// request handler
+	int err = request_irq(hard_npu_irq_num, my_hard_npu_interrupt, IRQF_TRIGGER_HIGH,
+			 "HARD_NPU_IRQ", (void *)NULL);
+
+	if (err) {
+		dev_err(hardnpu_devp, "fail to register interrupt handler\n");
+		cdev_del(&s_cdev);
+		unregister_chrdev_region(s_major, 1);
+		return err;
+	}
+
+	// create device class
+	s_dev_class = class_create(THIS_MODULE, CDEV_DEV_NAME);
+	if (IS_ERR(s_dev_class)) {
+		dev_err(hardnpu_devp, "fail to create device class\n");
+		err = PTR_ERR(s_dev_class);
+		free_irq(hard_npu_irq_num, (void *)NULL);
+		cdev_del(&s_cdev);
+		unregister_chrdev_region(s_major, 1);
+		return err;
+	}
+	// create device
+	s_devp = device_create(s_dev_class, NULL, s_major, NULL, "%s", CDEV_DEV_NAME);
+	if (IS_ERR(s_devp)) {
+		dev_err(hardnpu_devp, "fail to create device\n");
+		err = PTR_ERR(s_devp);
+		class_destroy(s_dev_class);
+		free_irq(hard_npu_irq_num, (void *)NULL);
+=== CMA registration ===
+344:			ret = copy_to_user((struct cma_buffer_t *)(arg), &(bf_node->buffer),
+345:					sizeof(struct cma_buffer_t));
+346:			up(&s_cma_sem);
+350:		ret = down_interruptible(&s_cma_sem);
+352:			struct cma_buffer_node_t *bf_node =
+356:				_dev_err(cma_dev, "Access Unmanaged Phy_addr at 0x%lx\n", arg);
+357:				up(&s_cma_sem);
+360:			spin_lock(&s_cma_lock);
+363:			spin_unlock(&s_cma_lock);
+364:			up(&s_cma_sem);
+368:		_dev_err(cma_dev, KERN_ERR "No such IOCTL, cmd is %d\n", cmd);
+374:static const struct file_operations cma_mem_fops = {
+376:	.open = cma_mem_open,
+377:	.release = cma_mem_release,
+378:	.read = cma_mem_read,
+379:	.write = cma_mem_write,
+380:	// .llseek = cma_mem_llseek,
+381:	.mmap = cma_mem_mmap,
+382:	.unlocked_ioctl = cma_ioctl,
+385:struct miscdevice cma_mem_misc = {
+386:	.name = "cma_mem",
+387:	.fops = &cma_mem_fops,
+390:static int __init cma_mem_init(void)
+392:	int ret = misc_register(&cma_mem_misc);
+395:		pr_err("failed to register cma test misc device!\n");
+399:	cma_dev = cma_mem_misc.this_device;
+400:	cma_dev->coherent_dma_mask = ~0;
+402:	_dev_info(cma_dev, "registered.\n");
+406:module_init(cma_mem_init);
+408:static void __exit cma_mem_exit(void)
+410:	misc_deregister(&cma_mem_misc);
+413:module_exit(cma_mem_exit);
+=== NPU device-tree definitions ===
+/home/uisrc/uisrc-lab-anlogic/sources/linux/arch/arm64/boot/dts/anlogic/anlogic-dr1m90.dts:41:	hard_npu: hard_npu@63F00000 {
+/home/uisrc/uisrc-lab-anlogic/sources/linux/arch/arm64/boot/dts/anlogic/anlogic-dr1m90.dts:42:		compatible = "anlogic,hard_npu";
+/home/uisrc/uisrc-lab-anlogic/sources/linux/arch/arm64/boot/dts/anlogic/anlogic-dr1m90-softip.dts:202:	soft_npu0: soft_npu@1F0000000 {
+/home/uisrc/uisrc-lab-anlogic/sources/linux/arch/arm64/boot/dts/anlogic/anlogic-dr1m90-softip.dts:203:		compatible = "anlogic,soft_npu";

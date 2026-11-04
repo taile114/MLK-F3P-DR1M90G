@@ -1,0 +1,18 @@
+requested_backend=CpuRef cpu_fallback_allowed=false trained_weights_used=true rows=1 input_features=1188 output_features=64 physical_input_features=1192 physical_output_features=64 samples=3 input_scale=0.005249343812 weight_scale=0.001607685583 output_scale=0.01074843202
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.62 ms.
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    3|CpuRef  |FullyConnected            0.00KB(0.00KB)      |0.06KB(0.06KB)      |0.06KB(0.06KB)      
+Info: ******************************************************************************************************
+compute_layer_type=FullyConnected actual_backend=CpuRef
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=0B
+
+Info: Execution time: 4.63 ms.
+Info: Execution time: 4.22 ms.
+Info: Execution time: 3.88 ms.
+result=passed samples=3 max_error_lsb=0 mismatches=0 fp32_branch_rmse=0.003256213335 fp32_branch_max_abs=0.008093607612 mean_enqueue_sync_us=4388.38 full_rul_npu_verified=false
+Info: Shutdown time: 0.03 ms.

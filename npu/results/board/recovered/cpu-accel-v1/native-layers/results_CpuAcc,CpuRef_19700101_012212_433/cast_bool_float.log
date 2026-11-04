@@ -1,0 +1,14 @@
+case=cast_bool_float requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.38 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    1|CpuAcc  |Cast                      0.01KB(0.01KB)      |0.02KB(0.02KB)      |0.03KB(0.03KB)      
+Info: ******************************************************************************************************
+stage=optimize passed
+Error: An error occurred when preparing the network workloads:  CastQueueDescriptor:  Tensor type is not supported.
+Info: Shutdown time: 0.02 ms.
+result=failed stage=load error=LoadNetwork failed: An error occurred when preparing the network workloads:  CastQueueDescriptor:  Tensor type is not supported.

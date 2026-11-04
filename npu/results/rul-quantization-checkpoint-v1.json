@@ -1,0 +1,26 @@
+{
+  "status": "saved_evidence_checks_passed_with_known_hybrid_failure",
+  "calibration_branches": 124,
+  "real_weight_npu_cases": 6,
+  "new_recovered_files": 288,
+  "fp32_validation_samples": 184,
+  "cpu_quantized_validation_samples": 184,
+  "hybrid_completed_samples": 91,
+  "hybrid_requested_samples": 184,
+  "hybrid_exit_code": 2,
+  "hybrid_failure": "CMA allocation failure",
+  "full_model_hybrid_validation_replay_verified": false,
+  "training_executed": false,
+  "test_dataset_opened": false,
+  "new_experiments_stopped": true,
+  "next_action": "Diagnose CMA allocation/working-memory lifetime before another long NPU replay",
+  "serial_port_released": true,
+  "post_exit_memory_kB": {
+    "MemAvailable": 808108,
+    "CmaFree": 122992,
+    "CmaTotal": 131072
+  },
+  "compiler_VM_cleanly_stopped": true,
+  "continuation_document": "docs/rul-quantization-validation.md",
+  "delivery_validation": "results/rul-quantization-delivery-validation.json"
+}

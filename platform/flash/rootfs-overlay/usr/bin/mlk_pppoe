@@ -1,0 +1,113 @@
+#!/bin/sh
+# PPPoE dial-up for the campus wired port.
+#
+# The wired port may be a PPPoE access concentrator instead of a DHCP
+# network. The account is the carrier account (phone number). The script
+# renders /etc/ppp/peers/mlk-pppoe and the secrets files from
+# /var/lib/mlk/pppoe.conf, then runs pppd in persist mode.
+set -u
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+CONF=/var/lib/mlk/pppoe.conf
+PEERS=/etc/ppp/peers/mlk-pppoe
+RUN=/var/run/mlk-pppoe
+PIDFILE="/var/run/ppp-mlk-pppoe.pid"
+IFACE=ppp0
+PPPD=/usr/sbin/pppd
+
+read_conf() {
+    [ -f "$CONF" ] || return 1
+    user=$(sed -n 's/^user=//p' "$CONF" | head -1)
+    password=$(sed -n 's/^password=//p' "$CONF" | head -1)
+    service=$(sed -n 's/^service=//p' "$CONF" | head -1)
+    nic=$(sed -n 's/^iface=//p' "$CONF" | head -1)
+    [ -n "$nic" ] || nic=eth0
+    [ -n "$user" ] && [ -n "$password" ]
+}
+
+has_ipv4() {
+    ip -4 addr show dev "$1" 2>/dev/null | grep -q 'inet '
+}
+
+running() {
+    [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null
+}
+
+prepare() {
+    mkdir -p "$RUN" /etc/ppp/peers
+    [ -e /dev/ppp ] || mknod /dev/ppp c 108 0
+    chmod 600 "$CONF" 2>/dev/null
+    printf '"%s" * "%s"\n' "$user" "$password" > /etc/ppp/chap-secrets
+    printf '"%s" * "%s"\n' "$user" "$password" > /etc/ppp/pap-secrets
+    chmod 600 /etc/ppp/chap-secrets /etc/ppp/pap-secrets
+    {
+        echo "plugin pppoe.so"
+        echo "$nic"
+        echo "noauth"
+        echo "user \"$user\""
+        echo "defaultroute"
+        echo "replacedefaultroute"
+        echo "persist"
+        echo "maxfail 0"
+        echo "holdoff 5"
+        echo "mtu 1492"
+        echo "mru 1492"
+        echo "usepeerdns"
+        echo "ipparam mlk-pppoe"
+        echo "linkname mlk-pppoe"
+        [ -n "$service" ] && echo "rp_pppoe_service \"$service\""
+    } > "$PEERS"
+    chmod 600 "$PEERS"
+}
+
+stop_pppd() {
+    if running; then
+        kill "$(cat "$PIDFILE")" 2>/dev/null
+    fi
+    # BusyBox 无 pkill/pgrep，直接扫描 /proc 的 cmdline。
+    for proc in /proc/[0-9]*; do
+        pid=${proc#/proc/}
+        [ "$pid" = "$$" ] && continue
+        cmdline=$(tr '\0' ' ' < "$proc/cmdline" 2>/dev/null) || continue
+        case "$cmdline" in
+            *"pppd call mlk-pppoe"*) kill "$pid" 2>/dev/null ;;
+        esac
+    done
+    sleep 1
+    rm -f "$PIDFILE" /var/run/ppp0.pid
+}
+
+case "${1:-}" in
+start)
+    read_conf || { echo "down: account or password missing"; exit 1; }
+    stop_pppd
+    prepare
+    "$PPPD" call mlk-pppoe
+    i=0
+    while [ "$i" -lt 20 ]; do
+        has_ipv4 "$IFACE" && break
+        i=$((i + 1))
+        sleep 0.5
+    done
+    if has_ipv4 "$IFACE"; then
+        echo "up:$(ip -4 -o addr show dev "$IFACE" | sed -n 's/.*inet \([0-9.]*\).*/\1/p' | head -1)"
+    else
+        echo "down: no address yet"
+    fi
+    ;;
+stop)
+    stop_pppd
+    echo "down"
+    ;;
+status)
+    if has_ipv4 "$IFACE"; then
+        echo "up:$(ip -4 -o addr show dev "$IFACE" | sed -n 's/.*inet \([0-9.]*\).*/\1/p' | head -1)"
+    else
+        echo "down"
+    fi
+    ;;
+*)
+    echo "usage: mlk_pppoe start|stop|status" >&2
+    exit 2
+    ;;
+esac

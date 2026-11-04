@@ -1,0 +1,9 @@
+QT += core
+QT -= gui
+CONFIG += console c++17 link_pkgconfig
+CONFIG -= app_bundle
+PKGCONFIG += openssl
+TEMPLATE = app
+TARGET = mlk-capture
+SOURCES += capturetool.cpp capturestore.cpp crypto.cpp
+HEADERS += capturestore.h crypto.h

@@ -1,0 +1,1 @@
+{"mode":"quantized","samples":360,"warmup":3,"npu_execution_requested":false,"cpu_fallback_allowed":false,"max_fp32_error":0.106956481934,"max_quantized_error":6.67572021484e-06,"max_cnn_lsb":0,"numeric_mismatches":0,"mean_forward_us":60265.1982667,"steady_cma_bytes":0,"after_release_cma_bytes":0}

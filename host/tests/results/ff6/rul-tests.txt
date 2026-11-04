@@ -1,0 +1,18 @@
+********* Start testing of RulTest *********
+Config: Using QtTest library 5.13.2, Qt 5.13.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 5.3.1 20160406 (Red Hat 5.3.1-6))
+PASS   : RulTest::initTestCase()
+PASS   : RulTest::wireAndUnits()
+PASS   : RulTest::legacyAndControl()
+PASS   : RulTest::encryptedJournal()
+PASS   : RulTest::missingModelAndRecovery()
+PASS   : RulTest::incompatibleBundle(old-two-branch)
+PASS   : RulTest::incompatibleBundle(wrong-plan-name)
+PASS   : RulTest::incompatibleBundle(wrong-branch-count)
+PASS   : RulTest::incompatibleBundle(corrupt-plan)
+PASS   : RulTest::incompatibleBundle(missing-plan)
+PASS   : RulTest::stopWhileLoading()
+PASS   : RulTest::replayStateAndReload()
+PASS   : RulTest::secureReceiverRejectsClearControl()
+PASS   : RulTest::cleanupTestCase()
+Totals: 14 passed, 0 failed, 0 skipped, 0 blacklisted, 2005ms
+********* Finished testing of RulTest *********

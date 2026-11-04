@@ -1,0 +1,34 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "command",
+      "command": "sha256sum /opt/qt_play/mlk_ps_local /usr/bin/fault_check /opt/mlk_rul/model.json; ls -l /tmp/fault-consttensor-fix* 2>/dev/null; true",
+      "output": "0df57fa0d4aa4002deca8f15f1293ad0d81b6d0d2d826436e616411c051ca400  /opt/qt_play/mlk_ps_local\r\nc72393f27789d2f0c2ca8f4902c99ec33d32b79f52c98f4b05d209f8675376e7  /usr/bin/fault_check\r\n4ae5798021df30eace49d3ff35a1015edac15b536828cfdef1a58749420100f1  /opt/mlk_rul/model.json",
+      "exit_code": 0
+    },
+    {
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\fault-consttensor-fix.tar.gz",
+      "bytes": 45817,
+      "verified": true,
+      "operation": "upload",
+      "sha256": "135ac992e1b925f492dab4a6e63dbdbeafceb1099ae4166431c7d13f3482f8da",
+      "remote_path": "/tmp/fault-consttensor-fix.tar.gz"
+    },
+    {
+      "operation": "command",
+      "command": "test ! -e /tmp/fault-consttensor-fix && mkdir /tmp/fault-consttensor-fix-stage && gzip -dc /tmp/fault-consttensor-fix.tar.gz | tar -xf - -C /tmp/fault-consttensor-fix-stage",
+      "output": "",
+      "exit_code": 0
+    },
+    {
+      "operation": "command",
+      "command": "sh /tmp/fault-consttensor-fix-stage/fault-consttensor-fix/install.sh --keep-stopped; readlink -f /opt/mlk_fault; readlink /opt/mlk_fault.previous; sha256sum /opt/mlk_fault/libmlk_fault.so; grep Cma /proc/meminfo",
+      "output": "libmlk_fault.so: OK\r\nmodel.json: OK\r\nruntime.sha256: OK\r\ninstall.sh: OK\r\nmlk_ps_local stopped (pid 428)\r\ncleared PL sensor DMA ring\r\nlibmlk_fault.so: OK\r\npreprocess.json: OK\r\nqparams.tsv: OK\r\nthresholds.bin: OK\r\nweights.bin: OK\r\nweights.tsv: OK\r\nmodel.json: OK\r\nFault runtime updated: /opt/mlk_fault-packages/f3p-fault-single-v1-8bbaf69bc054a253\r\n/opt/mlk_fault-packages/f3p-fault-single-v1-8bbaf69bc054a253\r\nmlk_fault-packages/f3p-fault-single-v1-3c4b13fb11100aac\r\n57282f7ad231829cb4bd09deccb306412351e9e9ce284908b14e623405e56ef7  /opt/mlk_fault/libmlk_fault.so\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB",
+      "exit_code": 0
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

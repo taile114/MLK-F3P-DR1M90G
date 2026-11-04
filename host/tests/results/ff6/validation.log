@@ -1,0 +1,12 @@
+plan_rejection=missing passed
+plan_rejection=duplicate passed
+plan_rejection=shape passed
+plan_rejection=scale passed
+plan_rejection=unknown passed
+plan_rejection=extra passed
+plan_rejection=truncated passed
+/home/uisrc/mlk-host-ff6/build-ff6-runtime-v2/libmlk_rul.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=34ab04fa0aa756765e3194cfc76a5a2ddc2444f4, with debug_info, not stripped
+/home/uisrc/mlk-host-ff6/build-ff6-runtime-v2/check_engine:  ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 3.7.0, BuildID[sha1]=3137431df0bb9a52485fee0d1b82e59e5ae9c36e, with debug_info, not stripped
+6fc35de42a75d15c621c9a2a49b4d48ec2287585c959dedd543d52502ebfe7de  /home/uisrc/mlk-host-ff6/build-ff6-runtime-v2/libmlk_rul.so
+libssl-dev
+/opt/Qt5.13.2/5.13.2/gcc_64/bin/qmake

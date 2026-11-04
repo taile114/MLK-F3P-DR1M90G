@@ -1,0 +1,7 @@
+bin/native_layers: OK
+src/native_layers.cpp: OK
+run_native_layers.sh: OK
+README.txt: OK
+build_info.txt: OK
+efafb72b9e83f434064956997863b85e7cd6decf85633b5fd2700eada748cee0  /tmp/f3p-native-layer-probe-arm64-v1.tar.gz
+stage=build_and_package_passed

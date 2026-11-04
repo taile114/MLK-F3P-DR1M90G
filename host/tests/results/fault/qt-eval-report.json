@@ -1,0 +1,89 @@
+{
+    "backend": "cpu",
+    "classAccuracy": 1,
+    "classConfusion": [
+        [
+            66,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            75,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            80,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            58,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            81
+        ]
+    ],
+    "classCorrect": 360,
+    "classJointCorrect": [
+        66,
+        75,
+        80,
+        58,
+        77
+    ],
+    "faultJointAccuracy": 0.9863945578231292,
+    "faultJointCorrect": 290,
+    "faultSamples": 294,
+    "gradeConfusion": [
+        [
+            66,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            93,
+            0,
+            0
+        ],
+        [
+            0,
+            4,
+            101,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            96
+        ]
+    ],
+    "jointAccuracy": 0.9888888888888889,
+    "jointCorrect": 356,
+    "maxInferUs": 47990,
+    "meanInferUs": 21004.325,
+    "medianInferUs": 20975,
+    "model": "f3p-fault-single-v1",
+    "p95InferUs": 26331,
+    "preprocess": "base6_native_blocks_short_context_v2",
+    "samples": 360,
+    "schema": "mlk.fault.eval_report.v1",
+    "windowsPerSecond": 47.60924238222366
+}

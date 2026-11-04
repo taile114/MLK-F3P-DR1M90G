@@ -1,0 +1,46 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "command": "mkdir -p /mnt/mmcblk0p2/npu-tests; test ! -e /mnt/mmcblk0p2/npu-tests/offload-v2 && mkdir /mnt/mmcblk0p2/npu-tests/offload-v2",
+      "output": "",
+      "operation": "command"
+    },
+    {
+      "verified": true,
+      "local_path": "E:/competion/code/project/npu/work/f3p-offload-arm64-v2.tar.gz",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/update.tar.gz",
+      "operation": "upload",
+      "bytes": 373360,
+      "sha256": "dc9c73e2eb029e7e960a8223448f4160553666170f7e032f8b2687bcf87313f3"
+    },
+    {
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2 && gzip -dc update.tar.gz | tar -xf -",
+      "output": "",
+      "operation": "command"
+    },
+    {
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sha256sum -c checksums.sha256",
+      "output": "bin/timeout: OK\r\nqparams_all.tsv: OK\r\nbuild.sh: OK\r\ndata/input_f32.bin: OK\r\nsrc/native_rul_quantized.cpp: OK\r\nbin/rul_offload: OK\r\nqparams_head.tsv: OK\r\ndata/labels_f32.bin: OK\r\npreparation.json: OK\r\ndata/reference_f32.bin: OK\r\nsrc/native_rul_cma.cpp: OK\r\nsrc/native_rul_offload.cpp: OK\r\nsrc/offload_quantized_fc.hpp: OK\r\nweights.sha256: OK\r\nsrc/allocation_probe.hpp: OK\r\nsrc/offload_ops.hpp: OK\r\nrun.sh: OK\r\nsrc/model_config.hpp: OK",
+      "operation": "command"
+    },
+    {
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && cp /mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.bin /mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.tsv . && sha256sum -c weights.sha256",
+      "output": "weights.bin: OK\r\nweights.tsv: OK",
+      "operation": "command"
+    },
+    {
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh run.sh profile 1",
+      "output": "result=inference_completed mode=neon samples=1 warmup=5 max_reference_error=3.814697266e-06 mismatches=0 rmse=3.54199791 mae=3.54199791 mean_forward_us=45981.15 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0 operation_profile=1\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_profile_19700101_000349_4174",
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

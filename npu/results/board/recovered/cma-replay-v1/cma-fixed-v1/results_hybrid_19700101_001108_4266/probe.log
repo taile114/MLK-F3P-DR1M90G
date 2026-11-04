@@ -1,0 +1,23 @@
+requested_backend=Alnpu,CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 runtime_policy=per_segment cma_policy=npu_segments_only available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=build_segment_0 begin
+segment=0 physical_npu_layers=0
+segment=0 optimizer_messages=834
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 physical_npu_layers=0
+segment=1 optimizer_messages=289
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 physical_npu_layers=0
+segment=2 optimizer_messages=289
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 physical_npu_layers=0
+segment=3 optimizer_messages=289
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 physical_npu_layers=1
+segment=4 optimizer_messages=110
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+result=failed stage=build_segment_5 error=CpuAcc already has an allocator associated with it at function RegisterAllocator [/home/rtxiao/repos/AL_armnn/scripts/source/armnn/src/armnn/BackendRegistry.cpp:118]

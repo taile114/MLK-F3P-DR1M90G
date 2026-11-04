@@ -1,0 +1,316 @@
+{
+  "schema": "mlk.fault.live_input_acceptance.v1",
+  "scope": "Offline Qt with synthetic native frames and real CPU model; no physical board update or acceptance",
+  "application_sha256": "64571005c0b4b4efc5eb3434e17c9e1700e58c18f65b8cc7bbb198b9e126c267",
+  "architecture": "AArch64 ELF64 little-endian",
+  "source_hash_format": "UTF-8 text with LF line endings",
+  "source_sha256": {
+    "host/common/capturedialog.cpp": "6f31de814eb1b0c5e41213efce2fb1066c5b75155fc269d2bba6597aa175d36e",
+    "host/common/capturestore.cpp": "aa2d4bc5da31f85a3cc03884526e901d88663e1db3d6bc9bc19375b718f802bd",
+    "host/common/capturestore.h": "d699c8345b0aca72e1eef7127bd07d09a0105892562476cc3b574ac99999e82e",
+    "host/common/fault_engine_api.h": "3952b0dcecab9387054cd183afe8faa18d59136a27a3ce58308162b0ab9ea063",
+    "host/common/faultresult.h": "fc01cacd8cd06c50389d9939ab209e926d8d9f964f9cb4f06b62fb0594c138f7",
+    "host/common/faulttypes.h": "c170fa76906e49adf4da151f10d7960bdfc98d857af90fc9ff3e338cd6495222",
+    "host/common/workorderoutbox.cpp": "29b0eebf9b69cc4f06615d5b2a197ed9e225bbd639ef4fa2367aba2a7aa38258",
+    "host/common/workorderoutbox.h": "55d848d2b7512ffab53fd98c5f878f85cd2e72c7d46e32bf1408a5720e85221f",
+    "host/common/workorders.cpp": "538dea5a5b357873cf63cb4d8a1b17b11b3116cbfd4c0fe3af81668330549492",
+    "host/common/workorders.h": "7e19dfd6362b304e4df4a902b06e56ac0dc9236626d455d7df09a279a81e4395",
+    "host/ps-local/fault-inference/engine/fault_engine.cpp": "d254ad5b6854c4945309c4bdf3e8fd6efc788788d014f2978b085e02e78ee47c",
+    "host/ps-local/mlk_ps_local.pro": "62f569723f27650972c4fd077c4919f1503855c3d5d4c18dbd8bc322aaf7c4c4",
+    "host/ps-local/src/alarmcontroller.cpp": "5904dce256b24cabc575b4bc6772e57d638cd163791737c2156107a05767211b",
+    "host/ps-local/src/datasource.cpp": "7c0f5784bc841e2a7f0f71e2d15d9ef3aa42e11ac73a1288a31a62ea48c31b6f",
+    "host/ps-local/src/datasource.h": "3ad593082681e1a16f99592af7b3a047570e3afd8c04e0770328d591e3223883",
+    "host/ps-local/src/faultinputadapter.cpp": "09e234cf9106ede0dae89845138b9b265c49197268dd161d708b13d240fca389",
+    "host/ps-local/src/faultlivecontroller.cpp": "af310b1705ff8976d650f9cf6a1c7ff39bd3b1c89b9ca42bbb007467a558833a",
+    "host/ps-local/src/faultpanel.cpp": "5f154dbca7ea2377c66d7641cb34fec84f63fe33d5488bcf7c749a9995cb6fc8",
+    "host/ps-local/src/faultpanel.h": "1f7f868b6b0e63efcde9d764eead75d28ac73e1227b1373c63c72e6158be99f3",
+    "host/ps-local/src/faultpreprocess.cpp": "49050b943d6a2cb92a672834e2ce957a1dff6b2c1d140f0c55fe25d8ee039850",
+    "host/ps-local/src/faultpreprocess.h": "0a8490b5e6a1fdd659eea2111ef17c6797c5abe77d1fc71465c6a67a882bcb19",
+    "host/ps-local/src/faultrecordpolicy.h": "3583105f21ca236c71380ec6c5ab2cb5b72c0e99da28122d9f7fc409b0170d16",
+    "host/ps-local/src/faultruntime.cpp": "144c9d4bb9cf3067131af5db742b1822613d95cfc30fe6186723af5c103b0854",
+    "host/ps-local/src/faultruntime.h": "4a002ff8332304dc096ea2de695e12513ed95f4f6afca114fba3c0561ce85e11",
+    "host/ps-local/src/faultworker.cpp": "060b33566104281cf4b2ebdc1abff1b857404a6dcf78c302d9964513861c5871",
+    "host/ps-local/src/klocalwindow.cpp": "8c97cbac6759aba9803dc961f786f3ca710bb7b68655796b44bfdeed8b1babc1",
+    "host/ps-local/src/klocalwindow.h": "5e9b9bf73ab6aac1a23cfd12b524b6ecac05075536a6afaa8227d5c6f014b0e8",
+    "host/ps-local/src/pl_host.cpp": "4a0c311566d4024909a2cc800dbd5ba7a3ebcefe89012ea69ff5a43f172cc13c",
+    "host/ps-local/src/pl_host.h": "10befe7cf98626b6039f1047cd1f4871c9ce1f5183392bfd431f03514bddc396",
+    "host/ps-local/src/plsampleclock.h": "9466a3d4780b3a1531d20134ad37430fd0f70a203d911675fc62f2cfd8e0d5bb",
+    "host/tests/test_fault.cpp": "7e78f7806d582c4583ef532303b024fa4c9f96aa729e89dbf5a1b76fea5db4a6",
+    "host/tests/windows.pro": "61504121397178f4165f50507eb8ddf695a3338b5b4a6580ff6496741612a37a"
+  },
+  "source_raw_sha256": {
+    "host/common/capturedialog.cpp": "59cb0cac3bf8ae2bcff805daa431212e056c833a5a1d01e1a4ab7017cdf2d76c",
+    "host/common/capturestore.cpp": "d93e77e17560bf8917f380874ce0123a33e34321f35cbae62140d26be9f9639f",
+    "host/common/capturestore.h": "352b42867b67c39fc461afe3ae6472e780b60e34215924e120a690dae6477499",
+    "host/common/fault_engine_api.h": "3952b0dcecab9387054cd183afe8faa18d59136a27a3ce58308162b0ab9ea063",
+    "host/common/faultresult.h": "fc01cacd8cd06c50389d9939ab209e926d8d9f964f9cb4f06b62fb0594c138f7",
+    "host/common/faulttypes.h": "c170fa76906e49adf4da151f10d7960bdfc98d857af90fc9ff3e338cd6495222",
+    "host/common/workorderoutbox.cpp": "29b0eebf9b69cc4f06615d5b2a197ed9e225bbd639ef4fa2367aba2a7aa38258",
+    "host/common/workorderoutbox.h": "55d848d2b7512ffab53fd98c5f878f85cd2e72c7d46e32bf1408a5720e85221f",
+    "host/common/workorders.cpp": "f868d81eb758a40b55c8659add48a037fc2dd8c1be275f0f0e055b1babc9941f",
+    "host/common/workorders.h": "541979c2378285f3ac8caadc898a491c5533e6c77ac0ed5a43eadef09017e047",
+    "host/ps-local/fault-inference/engine/fault_engine.cpp": "d254ad5b6854c4945309c4bdf3e8fd6efc788788d014f2978b085e02e78ee47c",
+    "host/ps-local/mlk_ps_local.pro": "9a3fe4b24a9a04daa38c5ab4cf68fce8df8082fd4dcfba99f45f0b390d585e86",
+    "host/ps-local/src/alarmcontroller.cpp": "024cb7480e2e87edf3fecfcc7253f791c876867583016ad10995b772cebcee56",
+    "host/ps-local/src/datasource.cpp": "bc65b585f6826e2f0e30729529bd66384eb48b6cb000dea2d9e72b99230ddeff",
+    "host/ps-local/src/datasource.h": "68dc1b1d262ed41905cd0626d2e5006da56dffa9f92bfecf83aae2ed39dd60ca",
+    "host/ps-local/src/faultinputadapter.cpp": "c1aa9a04c9cf914d0e2df7354024043d57665a793fa3d4b32f291b5f44e740cc",
+    "host/ps-local/src/faultlivecontroller.cpp": "8abe3d462617508b6e68689fdd1babd5749a9bf3a506afaaf9b5dda1092ae823",
+    "host/ps-local/src/faultpanel.cpp": "16053def581ce8a11d691f3ad24f17957aabf9de88dde069cc6e45a7f62496bc",
+    "host/ps-local/src/faultpanel.h": "2292100277d449ac0091fd8dab43fd4e532b3160077f27164ec50ebd7f9e93b1",
+    "host/ps-local/src/faultpreprocess.cpp": "49050b943d6a2cb92a672834e2ce957a1dff6b2c1d140f0c55fe25d8ee039850",
+    "host/ps-local/src/faultpreprocess.h": "0a8490b5e6a1fdd659eea2111ef17c6797c5abe77d1fc71465c6a67a882bcb19",
+    "host/ps-local/src/faultrecordpolicy.h": "d6c6d5751b4344f6d3d0452004f7c5fc4bcd753f4545ed95dedd4c6bfcf0a48c",
+    "host/ps-local/src/faultruntime.cpp": "144c9d4bb9cf3067131af5db742b1822613d95cfc30fe6186723af5c103b0854",
+    "host/ps-local/src/faultruntime.h": "4a002ff8332304dc096ea2de695e12513ed95f4f6afca114fba3c0561ce85e11",
+    "host/ps-local/src/faultworker.cpp": "253ade47bca93c539c84b29b4b49008b939535fc0a53178a73ec6943d5236de8",
+    "host/ps-local/src/klocalwindow.cpp": "db12c0a93369cb25d42caca5fbce3aa6228f93203d5715a9988944bc1b7867b6",
+    "host/ps-local/src/klocalwindow.h": "e67b0a6fc6633ff0df16300ed107a009590e0408033d30482b54165a5d37e484",
+    "host/ps-local/src/pl_host.cpp": "38ec2702ea14937aef34691a021b953c8c7e5d892be60a3ad7248900e2ea3784",
+    "host/ps-local/src/pl_host.h": "cfac4020307c308da2c5b7ec97d39e8e8d867a2d09de878bbcbe8a90e22ff7c2",
+    "host/ps-local/src/plsampleclock.h": "16a5305f8d274849d8c48a4d35a23162a42e4e75acce793b5d222502a9012d19",
+    "host/tests/test_fault.cpp": "b52c58dcaf0d6714cc39883f6fb489cf4c5d0e7e2dfe9a9fd26d401e75748cb4",
+    "host/tests/windows.pro": "51c435c396bc637ef9e822cfdbbc80669fe9e027643ced89122828f71d2d1a33"
+  },
+  "source_archive_sha256": "811299df5e92697eaad9806a7fe89ac126abdd15bc10169e00e4795cd8a88bf2",
+  "qt_tests": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "coverage": [
+      "PL counter wrap, polling jitter and UTC step",
+      "SPEED_COUNT is not block length",
+      "actual sample gap retained",
+      "DMA delayed polling recovers oldest retained slots with PS-owned snapshot",
+      "DMA overrun, sequence wrap and restart",
+      "native 3123 Hz blocks with real gaps pass frozen gates; sparse coverage is rejected",
+      "live CPU inference with missing blocks updates waiting status to running",
+      "real CPU classification of synthetic live window",
+      "fast/slow quality thresholds",
+      "backward time resets context",
+      "recording starts with diagnosis",
+      "confirmed model window label",
+      "two associated capture segments",
+      "frozen 360-window evaluation",
+      "opt-in normal segment deletion, unknown/fault context and manual label protection",
+      "confirmed model grade 2 alarm bits and clearing after three normal windows",
+      "two full 27683-float reference fixtures match training exactly",
+      "log10 TF, per-block dynamic statistics, strict past-only state grids and invalid ages",
+      "23.6/35.0 C thermal mask, 35.1/41/46 C enabled, overload/undervoltage unchanged",
+      "background outbox cold decrypt heartbeat and one in-flight batch",
+      "ciphertext tamper and credential/directory cache invalidation plus ACK removal",
+      "live journal MiB threshold keeps encrypted logs",
+      "0.80 trial alarm gate, consecutive windows, low-score revocation and immutable duplicate scores"
+    ]
+  },
+  "record_retention": {
+    "default": "keep_all",
+    "optional": "only_new_fully_normal_segments",
+    "context_seconds": 10,
+    "unknown_windows_and_abnormal_labels_protected": true
+  },
+  "alarm_scope": "Software alarm grade bits checked; physical LED/buzzer timing requires board verification",
+  "arm_smoke": {
+    "sockets_ready": true,
+    "bounded_exit": 124,
+    "scope": "QEMU loader and Qt initialization"
+  },
+  "update_archive_sha256": "45fd836cce4f6d53f5d3a582cdd487da605e275a3eb6da4e88d813e92c65ea57",
+  "board_updated": false,
+  "field_feedback": {
+    "source": "user operation report for previous application",
+    "recording_visible_after_diagnosis_stop": true,
+    "live_inference_reached_model": true,
+    "observed_temperature_celsius": 23.6,
+    "observed_class": "overtemperature",
+    "new_application_and_library_in_this_report_deployed": false
+  },
+  "baseline_regression": {
+    "commit": "de6e22247b36360fa0e62fc4b2850a5ce2926d23",
+    "production_source": "HEAD before this change; new regression tests",
+    "source_archive_sha256": "3bf56242857331d710f8fa53425b4378e28f3e29b708c439988cfaed4c3c63f1",
+    "expected_failures": [
+      "dmaRingRecoversSlowPollsAndOwnsSnapshot",
+      "nativeWindowGapsUseFrozenQualityGates"
+    ]
+  },
+  "evidence_sha256": {
+    "live-input-tests.log": "c71e94126a4d91a7da1ff88f6d02950b463203e1c89edef4b29dda7ae94fed4b",
+    "live-gap-repro.log": "461f9c06a44836ab11b53a0d0104768a5af5105470ac08478ca72e135234feaf",
+    "live-labeled-review.png": "7ca4562a3fdf5358b1a298c71d34458753f1db246d09b1d51748af60d329bb1c",
+    "live-arm-smoke.log": "db601b3a49e7aef1c61d736a61480411cc18c913550ecf5df641ef4b805f184e",
+    "thermal-engine-smoke.log": "851e18ecf21ac917b1ee407f4f6badb0f85507a6e74e7d77875372cb41f943e3",
+    "thermal-qemu-cpu.json": "ffd1ffe51b2c6c6f770d776ad829a277ba8283d1f1139185204fbfadebbb38bf",
+    "thermal-installer-tests.log": "8f1da42be785873d4cd71d216ce5a5113ed7c333a1315477623d5315ae441085",
+    "cpu-installer-arm-smoke.log": "e7302a7ae193b8a4d551cb959b724227622346c3f6d17c39bc9008896e8ccaf7",
+    "cpu-outbox.json": "8195874ea585fdf4aced497b29f36d93750ffe33229c40b130dfa0e31047d7eb",
+    "cpu-card-arm-smoke.log": "e38be030976b95ccbc4f1fe3122d0a748f3202114344232382216ffe20909a4c"
+  },
+  "pending": [
+    "physical board CPU and sampling cadence after diagnosis and recording stop",
+    "NPU capture coexistence and live quality after update",
+    "independent real sensor confidence calibration"
+  ],
+  "library_sha256": "90d403c06d26be4516148084fdf72d607e8c7c90bbca5623161044aee4d78d44",
+  "runtime_manifest_sha256": "228dd67e249f6f8e16b672c39823be2280ec186662fb5afef2b4316ca6beae24",
+  "preprocess_parity": [
+    {
+      "branch": "time_frequency",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "spectrum",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "vibration_stats",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "mount_pose",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "fast_state",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "slow_state",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-time_frequency",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-spectrum",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-vibration_stats",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-mount_pose",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-fast_state",
+      "max_abs": 0.0
+    },
+    {
+      "branch": "thermal-slow_state",
+      "max_abs": 0.0
+    }
+  ],
+  "temperature_policy": {
+    "maximum_masked_celsius": 35.0,
+    "comparison": "<=",
+    "excluded_class": 3,
+    "selection": "argmax and softmax among 0,1,2,4",
+    "temperature": "latest valid physical observation strictly before window end",
+    "weights_or_grade_thresholds_changed": false,
+    "frozen_dataset_evaluation_masked": false
+  },
+  "temperature_reference_cases": {
+    "window.json": [
+      {
+        "temperature": 23.6,
+        "rawClass": 0,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 35.0,
+        "rawClass": 0,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 35.1,
+        "rawClass": 0,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 41.0,
+        "rawClass": 0,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 46.0,
+        "rawClass": 0,
+        "guardedClass": 0
+      }
+    ],
+    "thermal-window.json": [
+      {
+        "temperature": 23.6,
+        "rawClass": 3,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 35.0,
+        "rawClass": 3,
+        "guardedClass": 0
+      },
+      {
+        "temperature": 35.1,
+        "rawClass": 3,
+        "guardedClass": 3
+      },
+      {
+        "temperature": 41.0,
+        "rawClass": 3,
+        "guardedClass": 3
+      },
+      {
+        "temperature": 46.0,
+        "rawClass": 3,
+        "guardedClass": 3
+      }
+    ]
+  },
+  "fixture_sha256": {
+    "host/tests/fixtures/fault-preprocess/expected.f32": "1394d7cc0eef74398312932684011e0dfb8f12d2219091778c1947c453205d13",
+    "host/tests/fixtures/fault-preprocess/thermal-expected.f32": "2afc81bff618b024a3116a244a4368f9ff35011f615834c6ca2837b32edd99d2",
+    "host/tests/fixtures/fault-preprocess/thermal-window.json": "c96fd33ec45cf4f5e47cce1e1997413ba78c5e793d977103b4ae295110e3f8b8",
+    "host/tests/fixtures/fault-preprocess/window.json": "07bf1d80790cce2f5e54cd196d5fa8c7998b94b6dc06e86a8b988edef2177b30"
+  },
+  "unchanged_training_assets_sha256": {
+    "weights.bin": "0e4cf734d67a6e0babb79c76f32d7a7912787aec928e9f30ddd95a19269300af",
+    "weights.tsv": "3ad9ac617450b94913bf2e43c1c79548b58d2a8f8c60d7c39a5e3cd375fbcc8f",
+    "thresholds.bin": "6bddf73d5e4b8b4fab67d5c625738cdcee25c3aeeea7831cf10c96c44b25002e",
+    "qparams.tsv": "64c4211d098f78c8358120ae014c6c2bd63a2a2f94b95a34342f40b7b7b17e26",
+    "preprocess.json": "e4b5aa1ba7b8fc01879c666fb08affa3692b09cac3a1de799fbcf22ce4abea32"
+  },
+  "weights_checked_against_sd_snapshot": true,
+  "installer_tests": {
+    "passed": 3,
+    "scope": "isolated Linux file trees and simulated service; no board",
+    "coverage": [
+      "application/library install and repeat",
+      "trained asset mismatch refuses change",
+      "failed service restores application and runtime link"
+    ]
+  },
+  "arm_engine_smoke": {
+    "tensor_binding": "paired Arm NN SDK passed",
+    "cpu_samples": 3,
+    "class_correct": 3,
+    "joint_correct": 3,
+    "reference_mismatch": 0,
+    "npu_execution_verified": false
+  },
+  "alarm_confidence_policy": {
+    "minimum_score": 0.8,
+    "comparison": ">=",
+    "calibrated": false,
+    "below_threshold": "retain raw candidate; clear model alarm and confirmation; no work order",
+    "confirm_windows": 2,
+    "normal_recovery_windows": 3,
+    "frozen_dataset_evaluation_gated": false,
+    "limitations": [
+      "may miss low-confidence true faults",
+      "does not reject overconfident false predictions"
+    ]
+  },
+  "sd_card_updated": true
+}

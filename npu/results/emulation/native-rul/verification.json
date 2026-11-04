@@ -1,0 +1,65 @@
+{
+  "status": "qemu_full_replay_passed",
+  "architecture": "AArch64",
+  "backend": "CpuRef",
+  "samples": 165,
+  "mismatches": 0,
+  "atol": 0.0001,
+  "rtol": 0.0001,
+  "max_reference_error": 7.62939453125e-06,
+  "mean_reference_error": 2.0858013268673058e-06,
+  "rmse": 3.2562665311550036,
+  "mae": 2.7719338807192715,
+  "reference_rmse": 3.256266584606473,
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "checkpoint_unchanged": true,
+  "weights_sha256": "0a61767a0b324fd032db6857424b0857dd9dff75979bee25384b928a75905f02",
+  "binary_sha256": "8da56d044edda6656a101a8743eb001bed562018f4df20197fab762ab657fefb",
+  "input_shape": [
+    1,
+    23,
+    110
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "rul_unit": "observed_aging_test_session",
+  "network_segments": 6,
+  "host_gelu_boundaries": 5,
+  "first_sample_boundary_comparison": [
+    {
+      "boundary": 0,
+      "elements": 1540,
+      "max_absolute_error": 1.3113021850585938e-06
+    },
+    {
+      "boundary": 1,
+      "elements": 1680,
+      "max_absolute_error": 2.86102294921875e-06
+    },
+    {
+      "boundary": 2,
+      "elements": 1540,
+      "max_absolute_error": 2.384185791015625e-06
+    },
+    {
+      "boundary": 3,
+      "elements": 1680,
+      "max_absolute_error": 3.814697265625e-06
+    },
+    {
+      "boundary": 4,
+      "elements": 64,
+      "max_absolute_error": 2.86102294921875e-06
+    }
+  ],
+  "deterministic_eval": true,
+  "graph_probability": 0,
+  "dropout_enabled": false,
+  "reference_and_labels_are_model_inputs": false,
+  "physical_f3p_full_model_verified": false,
+  "npu_requested": false,
+  "quantized": false,
+  "timing_note": "Emulator timing is not physical-board performance; first forward includes debug output and warmup."
+}

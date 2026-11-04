@@ -1,0 +1,15 @@
+{
+  "purpose": "Transfer minimum NPU convolution probe to USB, distinct from the boot microSD",
+  "disk_number": 2,
+  "device": "aigo W381",
+  "serial": "990006044030",
+  "disk_bytes": 125829120000,
+  "destination": "F:\\f3p-npu-smoke-arm64-v1.tar.gz",
+  "bytes": 61704,
+  "sha256": "214e781c2eee4f19bf9d263d74c32ce045ad0c25fbf03a92576729a9b6d2a824",
+  "read_back_verified": true,
+  "volume_cache_flushed": true,
+  "other_files_modified": false,
+  "safe_ejection_pending": true,
+  "board_npu_test_pending": true
+}

@@ -1,0 +1,20 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "output": "[  914.412787] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  914.412865] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nsample=149 prediction=6.682348728 reference=6.682352066 absolute_error=3.337860107e-06\r\nsample=159 prediction=4.343804836 reference=4.34380579 absolute_error=9.536743164e-07\r\nsample=169 prediction=1.499104857 reference=1.499105453 absolute_error=5.960464478e-07\r\nsample=179 prediction=0.3265508413 reference=0.3265510798 absolute_error=2.384185791e-07\r\nsample=183 prediction=0.7044889927 reference=0.7044879198 absolute_error=1.072883606e-06\r\nresult=inference_completed samples=184 max_reference_error=7.629394531e-06 mismatches=0 rmse=2.465939977 mae=1.977114853 mean_forward_us=197497.6278\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=0 accuracy_acceptance=TBD\r\nafter_enqueue,183,5,0,124392,0,0,0,0\r\nbefore_unload,183,6,0,124392,0,0,0,0\r\nafter_unload,183,6,0,124392,0,0,0,0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/cma-fixed-v2/results_baseline_19700101_001513_5204",
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && sh run.sh baseline 0"
+    },
+    {
+      "exit_code": 0,
+      "output": "[  955.521568] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  955.521648] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nsample=149 prediction=6.673636913 reference=6.682352066 absolute_error=0.00871515274\r\nsample=159 prediction=4.349043846 reference=4.34380579 absolute_error=0.005238056183\r\nsample=169 prediction=1.510737538 reference=1.499105453 absolute_error=0.01163208485\r\nsample=179 prediction=0.3312405348 reference=0.3265510798 absolute_error=0.004689455032\r\nsample=183 prediction=0.7044243813 reference=0.7044879198 absolute_error=6.353855133e-05\r\nresult=inference_completed samples=184 max_reference_error=0.01163208485 mismatches=142 rmse=2.465709979 mae=1.97699601 mean_forward_us=197345.6824\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nafter_enqueue,183,5,0,124400,0,0,0,0\r\nbefore_unload,183,6,0,124400,0,0,0,0\r\nafter_unload,183,6,0,124400,0,0,0,0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/cma-fixed-v2/results_cpu_quantized_19700101_001554_5223",
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && sh run.sh cpu_quantized 0"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

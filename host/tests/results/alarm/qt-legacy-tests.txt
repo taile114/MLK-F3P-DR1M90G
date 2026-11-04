@@ -1,0 +1,8 @@
+********* Start testing of WindowTest *********
+Config: Using QtTest library 5.15.19, Qt 5.15.19 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 15.3.0), nixos 26.05
+PASS   : WindowTest::initTestCase()
+QWARN  : WindowTest::pairingAndAutomaticListen() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::pairingAndAutomaticListen()
+PASS   : WindowTest::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 782ms
+********* Finished testing of WindowTest *********

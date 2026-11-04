@@ -1,0 +1,16 @@
+{
+  "state": "raw_return_verified",
+  "archive": {
+    "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/offload-board-return-v1.tar.gz",
+    "bytes": 4416219,
+    "sha256": "5985ae480724abb27c134cc9d75f355636abde46b3c4d42f0b2e627639209c8b"
+  },
+  "raw_files": 1513,
+  "inventory": "offload-replay-v1-files-sha256.json",
+  "independent_verifier": "offload-replay-v1-verification.json",
+  "console_loglevel_restored": true,
+  "serial_port_released": true,
+  "compiler_VM_cleanly_stopped": true,
+  "new_training_executed": false,
+  "new_test_set_inference_executed": false
+}

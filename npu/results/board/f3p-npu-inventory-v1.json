@@ -1,0 +1,42 @@
+{
+  "evidence": "check_npu.sh output contained in f3p-cpu-mixed-v1.log",
+  "kernel": "6.1.111-rt42 #8 SMP PREEMPT Wed Jul 30 14:40:27 CST 2025 aarch64",
+  "bootargs": "console=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=8 root=/dev/mmcblk1p2 rootwait rootfstype=ext4 rw",
+  "storage": {
+    "boot_medium_user_confirmed": "eMMC",
+    "root_device": "/dev/mmcblk1p2",
+    "root_filesystem": "ext4",
+    "root_available_df_h": "6.2G",
+    "spare_microSD_user_confirmed": true
+  },
+  "missing_devices": [
+    "/dev/hard_npu",
+    "/dev/soft_npu",
+    "/dev/cma_mem"
+  ],
+  "hard_npu_device_tree_node": {
+    "path": "/proc/device-tree/soc/hard_npu@63F00000",
+    "compatible": "anlogic,hard_npu",
+    "status_property": "not printed"
+  },
+  "soft_npu_device_tree_node_found": false,
+  "reserved_cma_mib": 128,
+  "npu_cma_module_filenames_found": [],
+  "builtin_scan_false_positives": [
+    "kernel/drivers/virtio/virtio_input.ko",
+    "kernel/drivers/input/input-core.ko",
+    "kernel/drivers/input/input-leds.ko"
+  ],
+  "registered_npu_cma_platform_drivers_found": [],
+  "kernel_config_available": false,
+  "cpu_count_observed": 2,
+  "cpu_implementer": "0x41",
+  "cpu_part": "0xd04",
+  "cpu_features": "fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid",
+  "available_runtime_backends": [
+    "CpuRef",
+    "ALRef",
+    "CpuAcc"
+  ],
+  "conclusion": "Hardware NPU/CMA runtime path not ready. Hard NPU is described by the device tree, but no corresponding devices or registered drivers were found; soft NPU node not found. The exact kernel configuration remains unverified."
+}

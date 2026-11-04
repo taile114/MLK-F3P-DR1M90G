@@ -1,0 +1,23 @@
+requested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=build_segment_0 begin
+segment=0 optimizer_messages=30
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 optimizer_messages=8
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 optimizer_messages=8
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 optimizer_messages=8
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 optimizer_messages=4
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 optimizer_messages=2
+stage=build_segment_5 passed
+sample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.541999817 mae=3.541999817 mean_forward_us=234072.693
+rul_unit=observed_aging_test_session
+quantized_branches=0 accuracy_acceptance=TBD

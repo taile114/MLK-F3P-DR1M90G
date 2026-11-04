@@ -1,0 +1,94 @@
+{
+  "archives": [
+    {
+      "file": "f3p-native-layer-probe-arm64-v2.tar.gz",
+      "bytes": 37136,
+      "sha256": "205f6e4251e6eccf4f0560918d18858d0d3890d36d77a86e5cd136100609281a",
+      "checksum_manifest": "f3p-native-layer-probe-v2/checksums.sha256"
+    },
+    {
+      "file": "f3p-native-rul-arm64-v1.tar.gz",
+      "bytes": 2057636,
+      "sha256": "5c940835bcbd428e9fb4509df26c34b5a2d40cdbf03ffb19667a14e3ba0d5e65",
+      "checksum_manifest": "f3p-native-rul-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-parser-compat-v2.tar.gz",
+      "bytes": 2611077,
+      "sha256": "879aea9e283ef2da236dfbbea02e41c8680595a0efd3f695ba40a91c8959cfff",
+      "checksum_manifest": "f3p-parser-compat-v2/checksums.sha256"
+    },
+    {
+      "file": "f3p-parser-diagnostics-v1.tar.gz",
+      "bytes": 2605003,
+      "sha256": "cc379fe69640fe0a329b2ca83a13021190f83774f60409dc701ae6c0f821426c",
+      "checksum_manifest": "f3p-parser-diagnostics-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-rul-probe-arm64.tar.gz",
+      "bytes": 7203739,
+      "sha256": "febd37b91d4a17aac6d8aca48faadf9ac9ddab106ee96146288a6a9e2ad9e5ba",
+      "checksum_manifest": "f3p-rul-probe/deployment.sha256"
+    },
+    {
+      "file": "f3p-cpu-accel-arm64-v1.tar.gz",
+      "bytes": 2428852,
+      "sha256": "b7bb155dba6672d72792ecf82d7893a509e15f4dccda61d515cdacd5a284fb66",
+      "checksum_manifest": "f3p-cpu-accel-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-npu-smoke-arm64-v1.tar.gz",
+      "bytes": 61704,
+      "sha256": "214e781c2eee4f19bf9d263d74c32ce045ad0c25fbf03a92576729a9b6d2a824",
+      "checksum_manifest": "f3p-npu-smoke-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-npu-linear-arm64-v1.tar.gz",
+      "bytes": 641031,
+      "sha256": "a0d0238b6fa92817165ab314087c23ac2d891f9a79c9dfd84414a4e0018d2c70",
+      "checksum_manifest": "f3p-npu-linear-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-npu-fc-pad-arm64-v1.tar.gz",
+      "bytes": 266291,
+      "sha256": "9434fb95d10d934738593677deebed5666d7c09d1d657eda5b8d1ef0fe292090",
+      "checksum_manifest": "f3p-npu-fc-pad-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-real-weight-arm64-v1.tar.gz",
+      "bytes": 352766,
+      "sha256": "33e307341cb0a99bfd50582da5d044c1b251b0bc16ecc5fac92ca7cbcc15286a",
+      "checksum_manifest": "f3p-real-weight-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-quantized-native-arm64-v1.tar.gz",
+      "bytes": 112058,
+      "sha256": "406cd5ff90aa8cbfc0bd35b8c0497128a1d2c61e848c70c699677aa4029b681e",
+      "checksum_manifest": "f3p-quantized-native-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-cma-diagnostic-arm64-v1.tar.gz",
+      "bytes": 289819,
+      "sha256": "fefabc7dc05ca1791b0a752f254440b2976fd560515f5b4d3fcd372878f8c3c5",
+      "checksum_manifest": "f3p-cma-diagnostic-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-cma-replay-arm64-v1.tar.gz",
+      "bytes": 291148,
+      "sha256": "7263e3ad624216902ca8b0b59c886f6abefe81f100855d3af0b3aeb5267e801e",
+      "checksum_manifest": "f3p-cma-replay-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-fused-rul-arm64-v1.tar.gz",
+      "bytes": 434607,
+      "sha256": "282407c44cf97c6475d21f137096512032b51903cfeb14c655e5cbdc14f2a2db",
+      "checksum_manifest": "f3p-fused-rul-v1/checksums.sha256"
+    },
+    {
+      "file": "f3p-offload-rul-arm64-v1.tar.gz",
+      "bytes": 393889,
+      "sha256": "0bfcce79b8700d27ff08bd728b75bb2cbe027bee3ca8a468788aa6deea31c0cb",
+      "checksum_manifest": "f3p-offload-v1/checksums.sha256"
+    }
+  ]
+}

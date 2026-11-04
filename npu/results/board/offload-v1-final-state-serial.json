@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "cat /proc/sys/kernel/printk; grep -E \"CmaTotal|CmaFree\" /proc/meminfo; test -e /dev/hard_npu && test -e /dev/soft_npu && test -e /dev/cma_mem && echo npu_devices=present; sync",
+      "output": "8\t4\t1\t7\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\nnpu_devices=present",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

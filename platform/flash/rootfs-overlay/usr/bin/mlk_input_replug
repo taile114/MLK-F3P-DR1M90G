@@ -1,0 +1,57 @@
+#!/bin/sh
+# 输入设备热插拔处理，由 udev 规则 /etc/udev/rules.d/60-input-hotplug.rules 调用。
+#
+# 看板的 evdevmouse/evdevkeyboard 插件在进程启动时枚举一次 /dev/input，应用运行
+# 中接入的鼠标或键盘不会被打开，表现为鼠标无响应。新增事件节点时重启看板，让
+# 插件重新枚举。
+#
+# 同一次插拔会产生多个 event 节点（鼠标接口、键盘接口各一个），用锁把这一批
+# 事件合并成一次重启：第一个事件持有锁并完成重启，其余事件直接返回。
+# 应用已经打开有效事件节点时不重启，避免插入第二个设备打断正在进行的运行。
+
+set -u
+
+# udev 的 RUN 不带常规 PATH，显式给出 BusyBox 工具位置。
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export PATH
+
+LOCK=/tmp/mlk_input_replug.lock
+APP_COMM=mlk_ps_local
+
+mkdir "$LOCK" 2>/dev/null || exit 0
+
+finish()
+{
+    rmdir "$LOCK" 2>/dev/null
+}
+
+# BusyBox 没有 pgrep，按 /proc 的 comm 找看板进程（与 S99qtapp 一致）。
+pid=
+for _dir in /proc/[0-9]*; do
+    [ -r "$_dir/comm" ] || continue
+    _comm=
+    read -r _comm < "$_dir/comm"
+    if [ "$_comm" = "$APP_COMM" ]; then
+        pid=${_dir#/proc/}
+        break
+    fi
+done
+if [ -z "$pid" ]; then
+    finish
+    exit 0
+fi
+
+# 已经打开的节点不再触发热插拔；" (deleted)" 表示设备已拔出，不算有效输入。
+for _fd in /proc/"$pid"/fd/*; do
+    _tgt=$(readlink "$_fd" 2>/dev/null) || continue
+    case "$_tgt" in
+    *"(deleted)"*) continue ;;
+    /dev/input/event*) finish; exit 0 ;;
+    esac
+done
+
+if [ -x /etc/init.d/S99qtapp ]; then
+    /etc/init.d/S99qtapp restart >/dev/null 2>&1
+fi
+finish
+exit 0

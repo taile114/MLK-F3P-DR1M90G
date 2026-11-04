@@ -1,0 +1,32 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "Linux buildroot 6.1.111-rt42 #3 SMP PREEMPT Thu Nov 20 17:58:46 PST 2025 aarch64 GNU/Linux\r\nconsole=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=7 root=/dev/mmcblk0p2 rootwait rootfstype=ext4 rw\r\n/dev/root on / type ext4 (rw,relatime)\r\ndevtmpfs on /dev type devtmpfs (rw,relatime,size=440184k,nr_inodes=110046,mode=755)\r\nproc on /proc type proc (rw,relatime)\r\ndevpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=666)\r\ntmpfs on /dev/shm type tmpfs (rw,relatime,mode=777)\r\ntmpfs on /tmp type tmpfs (rw,relatime)\r\ntmpfs on /run type tmpfs (rw,nosuid,nodev,relatime,mode=755)\r\nsysfs on /sys type sysfs (rw,relatime)\r\ncrw-------    1 root     root       10,   0 Jan  1 00:00 \u001b[1;35m/dev/cma_mem\u001b[m\r\ncrw-rw----    1 root     video      29,   0 Jan  1 00:00 \u001b[1;35m/dev/fb0\u001b[m\r\ncrw-------    1 root     root      238,   0 Jan  1 00:00 \u001b[1;35m/dev/hard_npu\u001b[m",
+      "command": "uname -a; cat /proc/cmdline; mount | head -8; ls -l /dev/fb0 /dev/hard_npu /dev/cma_mem"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "mlk_ps_local running (pid 264)\r\n1920,1080\r\nMemTotal:        1013044 kB\r\nMemAvailable:     955152 kB\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB",
+      "command": "/etc/init.d/S99qtapp status || true; cat /sys/class/graphics/fb0/virtual_size; grep -E 'MemTotal:|MemAvailable:|CmaTotal:|CmaFree:' /proc/meminfo"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "weights.bin: OK\r\nweights.tsv: OK\r\nqparams_ff6.tsv: OK\r\ninput_f32.bin: OK\r\nlibmlk_rul.so: OK\r\nmodel.json: OK\r\ntotal 32\r\n-rwxr-xr-x    1 root     root         25000 Oct 21  2026 \u001b[1;32mcheck_engine\u001b[m\r\nlrwxrwxrwx    1 root     root            24 Oct 21  2026 \u001b[1;36minput_f32.bin\u001b[m -> \u001b[0;0m../mlk_rul/input_f32.bin\u001b[m\r\nlrwxrwxrwx    1 root     root            24 Oct 21  2026 \u001b[1;36mlibmlk_rul.so\u001b[m -> \u001b[0;0m../mlk_rul/libmlk_rul.so\u001b[m\r\nlrwxrwxrwx    1 root     root            21 Oct 21  2026 \u001b[1;36mmodel.json\u001b[m -> \u001b[0;0m../mlk_rul/model.json\u001b[m\r\nlrwxrwxrwx    1 root     root            26 Oct 21  2026 \u001b[1;36mqparams_ff6.tsv\u001b[m -> \u001b[0;0m../mlk_rul/qparams_ff6.tsv\u001b[m\r\n-rw-r--r--    1 root     root           736 Oct 21  2026 \u001b[0;0mreference_f32.bin\u001b[m\r\nlrwxrwxrwx    1 root     root            22 Oct 21  2026 \u001b[1;36mweights.bin\u001b[m -> \u001b[0;0m../mlk_rul/weights.bin\u001b[m\r\nlrwxrwxrwx    1 root     root            22 Oct 21  2026 \u001b[1;36mweights.tsv\u001b[m -> \u001b[0;0m../mlk_rul/weights.tsv\u001b[m",
+      "command": "cd /opt/mlk_rul && sha256sum -c checksums.sha256; ls -l /opt/mlk_rul-validation; tail -30 /tmp/mlk_ps_local.log 2>/dev/null || true"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "[    0.604792] anlogic-vdma-fb 80100000.vdmafb: vdmafb probe\r\n[    0.612752] anlogic-vdma-fb 80100000.vdmafb: fb_phy = 0x17d00000\r\n[    0.620021] of_dma_find_controller: can't find DMA controller /soc/vdma@80200000\r\n[    0.620043] anlogic-vdma-fb 80100000.vdmafb: Failed to request vdma channel\r\n[    0.626988] anlogic-vdma-fb 80100000.vdmafb: vdmafb_vdma_init fail\r\n[    0.726323] anlogic-dma 80200000.vdma: Anlogic AXI VDMA Engine Driver Probed\r\n[    0.733442] anlogic-dma 80200000.vdma: WARN: Device release is not defined so it is not safe to unbind this driver while in use\r\n[    0.964072] misc cma_mem: registered.\r\n[    0.964170] hard_npu 63f00000.hard_npu: drv_hard_npu_probe( (____ptrval____))\r\n[    0.964254] hard_npu 63f00000.hard_npu: find irq num: 41\r\n[    0.964289] hard_npu 63f00000.hard_npu: devm_ioremap_resource return (____ptrval____)\r\n[    0.964297] hard_npu 63f00000.hard_npu: mem start addr: 63f00000\r\n[    0.964304] hard_npu 63f00000.hard_npu: mem size: 1048576\r\n[    0.980323] anlogic-vdma-fb 80100000.vdmafb: vdmafb probe\r\n[    0.987444] anlogic-vdma-fb 80100000.vdmafb: fb_phy = 0x17d00000\r\n[    1.111166] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: disabled.\r\n[    1.291282] EXT4-fs (mmcblk0p2): re-mounted. Quota mode: disabled.\r\n[    2.813835] EXT4-fs (mmcblk1p2): recovery complete\r\n[    2.819924] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: disabled.\r\n 41:          0          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "command": "dmesg | grep -E 'vdma|framebuffer|fb0|hard_npu|cma_mem|EXT4-fs' | tail -25; cat /proc/interrupts | grep -E 'npu|NPU' || true"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

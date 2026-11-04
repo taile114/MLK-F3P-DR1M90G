@@ -1,0 +1,15 @@
+# 板测顶层（board_test_top）引脚约束：只有系统时钟与板上四只 LED。
+#
+# 时钟与 LED 的管脚、电平标准取自 fpga_pin.adc：
+#   I_sysclk  H16，底板 100 MHz 系统时钟，3.3 V（BANK 与 fpga_top 同）
+#   O_led[0]  T19、O_led[1] R19：上拉至 VCC_ADJ（BANK32，默认 1.8 V），取 LVCMOS18
+#   O_led[2]  J15、O_led[3] M20：上拉至 VCC_3V3（BANK33），取 LVCMOS33
+# 板测顶层没有传感器与串口端口，故不引用 fpga_pin.adc（其中 I_uart_rx /
+# O_spi_* / IO_iic_* / I_int1 在本设计里不存在）。
+
+set_pin_assignment { I_sysclk } { LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+
+set_pin_assignment { O_led[0] } { LOCATION = T19; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[1] } { LOCATION = R19; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[2] } { LOCATION = J15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[3] } { LOCATION = M20; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }

@@ -1,0 +1,28 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "command": "date -u -s '2026-10-21 10:22:02'; mount | grep mmcblk; /etc/init.d/S99qtapp status",
+      "operation": "command",
+      "output": "Wed Oct 21 10:22:02 UTC 2026\r\n/dev/mmcblk0p2 on /mnt/mmcblk0p2 type ext4 (rw,relatime)\r\n/dev/mmcblk0p1 on /mnt/mmcblk0p1 type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)\r\n/dev/mmcblk1p1 on /mnt/mmcblk1p1 type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)\r\n/dev/mmcblk1p2 on /mnt/mmcblk1p2 type ext4 (rw,relatime)\r\nmlk_ps_local running (pid 264)"
+    },
+    {
+      "verified": true,
+      "local_path": "E:/competion/code/out/validate_ff6_on_board.sh",
+      "sha256": "524739c955bf9e493d223a9698385a94131721514ee64b7e350157e40c3c867e",
+      "operation": "upload",
+      "bytes": 809,
+      "remote_path": "/tmp/validate-ff6-app.sh"
+    },
+    {
+      "exit_code": 0,
+      "command": "sh /tmp/validate-ff6-app.sh > /data/mlk_f3p/ff6-validation-console.log 2>&1 & echo validation_pid=$!",
+      "operation": "command",
+      "output": "validation_pid=307"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

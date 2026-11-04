@@ -1,0 +1,73 @@
+{
+  "scope": "Combined soc_hdmi image: standalone FF6 hybrid reload validation; Qt stopped for the standalone test and restored afterwards. HDMI, sensor DMA ring and automatic hardware inference observed together in Qt; prolonged stress remains pending.",
+  "image": {
+    "pl_sha256": "88733d39eeed32b703dd5b0aad98b3c63a52024b3fe548cb887c8d88deef2657",
+    "boot_sha256": "7fe00ab567682c2371e6ccc8444ccb2bae77bc010460b96f7f1cb3d149681c8a",
+    "dtb_sha256": "73b2d30849b1b8325ca9f5e1e7d7fbdd76f139c6fc1d65d48412a8568f2186f4",
+    "kernel": "6.1.111-rt42",
+    "pl_id": "0x504c0102",
+    "rootfs_sha256": "c52f5d4e7ae37b6fc2636a7a04345eca77165c631df42f8426ae7cf59b39dd29"
+  },
+  "command": "LD_LIBRARY_PATH=/opt/armnn_lib/lib:/opt/qt_play/qt_lib/lib /opt/mlk_rul-validation/check_engine /opt/mlk_rul-validation hybrid 2",
+  "source": "check_engine CSV and stderr captured over the PS UART; CSV line endings normalized to LF",
+  "exit_code": 0,
+  "csv": "combined-soc-ff6-hybrid.csv",
+  "csv_sha256": "af95c69d96a7cf7eda61526baf89929fc2f296b7f9864ae2df529baba6e1e23b",
+  "backend": 2,
+  "reloads": 2,
+  "windows_per_reload": 184,
+  "windows_total": 368,
+  "infer_us": {
+    "mean": 42887.85597826087,
+    "min": 42731,
+    "max": 43102
+  },
+  "max_abs_error_vs_fp32": 0.04857254028,
+  "reload_predictions_identical": true,
+  "cma_bytes": [
+    {
+      "reload": 0,
+      "before": 0,
+      "stable": 233472,
+      "after": 0
+    },
+    {
+      "reload": 1,
+      "before": 0,
+      "stable": 233472,
+      "after": 0
+    }
+  ],
+  "devices": [
+    "/dev/hard_npu",
+    "/dev/soft_npu",
+    "/dev/cma_mem",
+    "/dev/pl_ctrl",
+    "/dev/fb0"
+  ],
+  "qt_coexistence_observations": {
+    "framebuffer": [
+      1920,
+      1080
+    ],
+    "dma_ctrl": "0x00000108",
+    "dma_base": "0x3ef00000",
+    "sensor_faults": 0,
+    "speed_online": true,
+    "speed_err_count": 0,
+    "hard_npu_irq_count": 20776,
+    "soft_npu_irq_count": 0,
+    "hard_npu_interrupt_3s": {
+      "before": 47432,
+      "after": 47530,
+      "delta": 98
+    }
+  },
+  "limits": [
+    "FF6 executes quantized branches on the hard NPU; soft-NPU IRQ and datapath are not exercised by this model.",
+    "Sensor reference calibration, dynamic speed accuracy, long-duration coexistence, full-rate storage and live-sensor model input remain separate acceptance items."
+  ],
+  "frozen_reference_csv": "../../../host/tests/results/ff6/board-ff6.csv",
+  "max_difference_from_verified_ff6": 0.0,
+  "matches_verified_ff6_predictions_exactly": true
+}

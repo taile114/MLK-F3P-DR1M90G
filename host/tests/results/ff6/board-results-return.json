@@ -1,0 +1,21 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "mlk_ps_local stopped (pid 264)\r\ncpu_result=passed\r\nff6_result=passed\r\ntar: invalid option -- 'z'\r\nBusyBox v1.35.0 (2025-11-23 21:49:12 PST) multi-call binary.\r\n\r\nUsage: tar c|x|t [-ahvokO] [-f TARFILE] [-C DIR] [-T FILE] [-X FILE] [LONGOPT]... [FILE]...\r\n\r\nCreate, extract, or list files from a tar file\r\n\r\n\tc\tCreate\r\n\tx\tExtract\r\n\tt\tList\r\n\t-f FILE\tName of TARFILE ('-' for stdin/out)\r\n\t-C DIR\tChange to DIR before operation\r\n\t-v\tVerbose\r\n\t-O\tExtract to stdout\r\n\t-o\tDon't restore user:group\r\n\t-k\tDon't replace existing files\r\n\t-a\t(De)compress based on extension\r\n\t-h\tFollow symlinks\r\n\t-T FILE\tFile with names to include\r\n\t-X FILE\tFile with glob patterns to exclude\r\n\t--exclude PATTERN\tGlob pattern to exclude\r\n\t--overwrite\t\tReplace existing files\r\n\t--strip-components NUM\tNUM of leading components to strip\r\n\t--no-recursion\t\tDon't descend in directories\r\n\t--numeric-owner\t\tUse numeric user:group\r\n\t--no-same-permissions\tDon't restore access permissions\r\n\t--to-command COMMAND\tPipe files to COMMAND\r\nmlk_ps_local started (pid 328, pidfile /var/run/mlk_ps_local.pid)\r\nQIconvCodec::convertToUnicode: using Latin-1 for conversion, iconv_open failed\r\nQIconvCodec::convertFromUnicode: using Latin-1 for conversion, iconv_open failed\r\nQStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'\r\nmlk_ps_local running (pid 328)\r\nreload=0 cma_before=0 cma_stable=0 cma_after=0\r\nreload=1 cma_before=0 cma_stable=0 cma_after=0\r\nreload=0 cma_before=0 cma_stable=233472 cma_after=0\r\nreload=1 cma_before=0 cma_stable=233472 cma_after=0",
+      "command": "cat /data/mlk_f3p/ff6-validation-console.log; /etc/init.d/S99qtapp status; cat /data/mlk_f3p/validation/ff6-app/cpu.log; cat /data/mlk_f3p/validation/ff6-app/ff6.log",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "output": "41:      18522          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ\r\nMemAvailable:     956192 kB\r\nCmaFree:          124436 kB\r\n-sh: nc: not found\r\n/dev/mmcblk1p1 on /mnt/mmcblk1p1 type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)\r\n/dev/mmcblk1p2 on /mnt/mmcblk1p2 type ext4 (rw,relatime)",
+      "command": "cat /proc/interrupts | grep NPU; grep -E 'MemAvailable:|CmaFree:' /proc/meminfo; nc --help 2>&1 | head -5; mount | grep mmcblk1 || true",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "failed",
+  "error": "Remote exit=1: sha256sum: can't open '/data/mlk_f3p/validation/ff6-app-results.tar.gz': No such file or directory",
+  "port_released": true
+}

@@ -1,0 +1,26 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "uname -a; id; readlink -f /opt/mlk_fault; sha256sum /opt/mlk_fault/libmlk_fault.so",
+      "operation": "command",
+      "exit_code": 0,
+      "output": "Linux buildroot 6.1.111-rt42 #8 SMP PREEMPT Sat Oct 31 16:57:40 +08 2026 aarch64 GNU/Linux\r\nuid=0(root) gid=0(root) groups=0(root),10(wheel)\r\n/opt/mlk_fault-packages/f3p-fault-single-v1-3c4b13fb11100aac\r\na048ed1afb8f16ffebcb06874f9da5ccacdcb4554a13e34b2c3b35e8dcb3318a  /opt/mlk_fault/libmlk_fault.so"
+    },
+    {
+      "command": "ls -l /dev/hard_npu /dev/soft_npu /dev/cma_mem; grep Cma /proc/meminfo; cat /etc/default/mlk-inference; ps | grep mlk_ps_local",
+      "operation": "command",
+      "exit_code": 0,
+      "output": "crw-------    1 root     root       10,   0 Jan  1  1970 \u001b[1;35m/dev/cma_mem\u001b[m\r\ncrw-------    1 root     root      238,   0 Jan  1  1970 \u001b[1;35m/dev/hard_npu\u001b[m\r\ncrw-------    1 root     root      237,   0 Jan  1  1970 \u001b[1;35m/dev/soft_npu\u001b[m\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n# Controlled inference paths; explicit process environment takes precedence.\r\nMLK_FAULT_ROOT=${MLK_FAULT_ROOT:-/opt/mlk_fault}\r\nMLK_FAULT_EVAL_ROOT=${MLK_FAULT_EVAL_ROOT:-/data/fault-eval}\r\n# Mode records intent only. Models are started manually in the application.\r\nMLK_INFERENCE_MODE=${MLK_INFERENCE_MODE:-off}\r\n  428 root     /opt/qt_play/mlk_ps_local --kiosk\r\n  900 root     grep mlk_ps_local"
+    },
+    {
+      "command": "ls -l /usr/bin/fault_check /opt/armnn_lib/lib/libarmnn.so*; df -k /opt /tmp; ip -4 addr",
+      "operation": "command",
+      "exit_code": 0,
+      "output": "lrwxrwxrwx    1 root     root            14 Oct 31 17:50 \u001b[1;36m/opt/armnn_lib/lib/libarmnn.so\u001b[m -> \u001b[0;0mlibarmnn.so.32\u001b[m\r\nlrwxrwxrwx    1 root     root            16 Oct 31 17:50 \u001b[1;36m/opt/armnn_lib/lib/libarmnn.so.32\u001b[m -> \u001b[0;0mlibarmnn.so.32.1\u001b[m\r\n-rw-r--r--    1 root     root      13824312 Oct 31 17:50 \u001b[0;0m/opt/armnn_lib/lib/libarmnn.so.32.1\u001b[m\r\n-rwxr-xr-x    1 root     root         51872 Oct 31  2026 \u001b[1;32m/usr/bin/fault_check\u001b[m\r\nFilesystem           1K-blocks      Used Available Use% Mounted on\r\n/dev/root             29809536    514808  27755144   2% /\r\ntmpfs                   505916        80    505836   0% /tmp\r\n1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000\r\n    inet 127.0.0.1/8 scope host lo\r\n       valid_lft forever preferred_lft forever"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

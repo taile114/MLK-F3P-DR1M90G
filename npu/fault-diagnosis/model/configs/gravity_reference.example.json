@@ -1,0 +1,11 @@
+{
+  "gravity_reference_id": "replace-with-reviewed-level-reference-id",
+  "reference_vector_g": null,
+  "offset_g": null,
+  "gain": null,
+  "calibration_id": null,
+  "horizontal_verified": false,
+  "calibration_verified": false,
+  "sensor_mount_verified": false,
+  "scope": "Template only. Fill measured calibration fields and place this entry under preprocessing.mount_pose.gravity_references using gravity_reference_id as the key."
+}

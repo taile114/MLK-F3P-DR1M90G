@@ -1,0 +1,18 @@
+{
+  "schema": "mlk.fault.runtime_check.v1",
+  "root": "/opt/mlk_fault",
+  "samples": 360,
+  "backend_requested": 2,
+  "backend_reported": 2,
+  "class_correct": 360,
+  "joint_correct": 356,
+  "class_accuracy": 1,
+  "joint_accuracy": 0.988889,
+  "macro_class_accuracy": 1,
+  "reference_mismatch": 0,
+  "mean_infer_us": 4955.8,
+  "median_infer_us": 4945,
+  "p95_infer_us": 5038,
+  "max_infer_us": 5159,
+  "confusion_target_by_prediction": [[66,0,0,0,0],[0,75,0,0,0],[0,0,80,0,0],[0,0,0,58,0],[0,0,0,0,81]]
+}

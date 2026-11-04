@@ -1,0 +1,36 @@
+{
+  "status": "fusion_and_paired_replays_verified",
+  "weights_and_quantization_frozen": true,
+  "validation_samples": 184,
+  "warmup_per_process": 5,
+  "paired_rounds": 3,
+  "mean_forward_us": {
+    "reference": 195328.08552536237,
+    "neon": 44427.641528985514,
+    "cpu_quantized": 45262.79751630434,
+    "hybrid": 44965.308487318835
+  },
+  "reference_to_fused_cpu_ratio": 4.396544106396607,
+  "reference_to_fused_hybrid_ratio": 4.343972989320178,
+  "fused_FP32_max_reference_error": 8.106231689453125e-06,
+  "fused_hybrid_CMA_bytes": 118784,
+  "fused_FP32_timed_cpp_new_calls": 0,
+  "fused_hybrid_NPU_layers": 2,
+  "NPU_integer_outputs_independently_checked": 14040,
+  "NPU_integer_max_error_lsb": 1,
+  "raw_board_files_verified": 457,
+  "serial_port_released": true,
+  "kernel_console_loglevel_restored": true,
+  "compiler_VM_cleanly_stopped": true,
+  "training_executed": false,
+  "new_held_out_test_inference_executed": false,
+  "application_accuracy_acceptance": "TBD",
+  "continuation_document": "docs/operator-fusion-validation.md",
+  "board_program_root": "/mnt/mmcblk0p2/npu-tests/fused-v3",
+  "remaining": [
+    "Application prediction-period/accuracy acceptance",
+    "Long-duration and repeated load/unload pressure test",
+    "PS inference-interface integration",
+    "Analyze new fused hotspots before enlarging NPU partitions"
+  ]
+}

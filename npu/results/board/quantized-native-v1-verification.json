@@ -1,0 +1,150 @@
+{
+  "status": "blocked_by_cma_allocation_failure",
+  "runs": {
+    "first/baseline": {
+      "samples": 1,
+      "requested_samples": 1,
+      "exit_code": 0,
+      "failure": null,
+      "mode": "baseline",
+      "rmse": 3.5419998168945312,
+      "mae": 3.5419998168945312,
+      "fp32_reference_rmse": 1.9073486328125e-06,
+      "fp32_reference_max_abs": 1.9073486328125e-06,
+      "quantized_pc_reference_max_abs": 0.008428573608398438,
+      "mean_forward_us": 234072.693,
+      "NPU_graph_layers": 0,
+      "NPU_profiled_first_window_events": 0,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 0,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD"
+    },
+    "first/cpu_quantized": {
+      "samples": 1,
+      "requested_samples": 1,
+      "exit_code": 0,
+      "failure": null,
+      "mode": "cpu_quantized",
+      "rmse": 3.533571243286133,
+      "mae": 3.533571243286133,
+      "fp32_reference_rmse": 0.00843048095703125,
+      "fp32_reference_max_abs": 0.00843048095703125,
+      "quantized_pc_reference_max_abs": 0.0,
+      "mean_forward_us": 234685.353,
+      "NPU_graph_layers": 0,
+      "NPU_profiled_first_window_events": 0,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 0,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD"
+    },
+    "first/hybrid": {
+      "samples": 1,
+      "requested_samples": 1,
+      "exit_code": 0,
+      "failure": null,
+      "mode": "hybrid",
+      "rmse": 3.5609378814697266,
+      "mae": 3.5609378814697266,
+      "fp32_reference_rmse": 0.0189361572265625,
+      "fp32_reference_max_abs": 0.0189361572265625,
+      "quantized_pc_reference_max_abs": 0.02736663818359375,
+      "mean_forward_us": 246266.462,
+      "NPU_graph_layers": 2,
+      "NPU_profiled_first_window_events": 2,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 3,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD"
+    },
+    "validation184/baseline": {
+      "samples": 184,
+      "requested_samples": 184,
+      "exit_code": 0,
+      "failure": null,
+      "mode": "baseline",
+      "rmse": 2.465939977330293,
+      "mae": 1.9771148530037508,
+      "fp32_reference_rmse": 2.8784507262446674e-06,
+      "fp32_reference_max_abs": 7.62939453125e-06,
+      "quantized_pc_reference_max_abs": 0.011632919311523438,
+      "mean_forward_us": 201251.93073369563,
+      "NPU_graph_layers": 0,
+      "NPU_profiled_first_window_events": 0,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 0,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD",
+      "after_first_window_diagnostic_us": {
+        "mean": 201065.37296721316,
+        "p50": 201035.942,
+        "p95": 201664.196
+      }
+    },
+    "validation184/cpu_quantized": {
+      "samples": 184,
+      "requested_samples": 184,
+      "exit_code": 0,
+      "failure": null,
+      "mode": "cpu_quantized",
+      "rmse": 2.4657099791730293,
+      "mae": 1.976996009764464,
+      "fp32_reference_rmse": 0.004611367846656466,
+      "fp32_reference_max_abs": 0.011632084846496582,
+      "quantized_pc_reference_max_abs": 0.0016841888427734375,
+      "mean_forward_us": 200280.07486956517,
+      "NPU_graph_layers": 0,
+      "NPU_profiled_first_window_events": 0,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 0,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD",
+      "after_first_window_diagnostic_us": {
+        "mean": 200093.4667431694,
+        "p50": 200077.952,
+        "p95": 200815.154
+      }
+    },
+    "validation184/hybrid": {
+      "samples": 91,
+      "requested_samples": 184,
+      "exit_code": 2,
+      "failure": "CMA allocation failed during repeated inference",
+      "mode": "hybrid",
+      "rmse": 2.349412768951386,
+      "mae": 1.915515124142825,
+      "fp32_reference_rmse": 0.018565501212555905,
+      "fp32_reference_max_abs": 0.030548095703125,
+      "quantized_pc_reference_max_abs": 0.03175544738769531,
+      "mean_forward_us": 212264.6351758242,
+      "NPU_graph_layers": 2,
+      "NPU_profiled_first_window_events": 2,
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 273,
+        "SOFT_NPU_IRQ": 0
+      },
+      "application_accuracy_acceptance": "TBD",
+      "after_first_window_diagnostic_us": {
+        "mean": 211936.21276666666,
+        "p50": 209920.6225,
+        "p95": 227195.13395000002
+      }
+    }
+  },
+  "hybrid_first_window_verified": true,
+  "full_model_hybrid_validation_replay_verified": false,
+  "NPU_branches": [
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ],
+  "test_dataset_opened": false,
+  "training_executed": false,
+  "production_accuracy_accepted": false,
+  "formal_warmed_performance_benchmark": false
+}

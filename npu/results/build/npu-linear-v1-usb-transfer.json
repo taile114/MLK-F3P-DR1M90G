@@ -1,0 +1,29 @@
+{
+  "archive": "f3p-npu-linear-arm64-v1.tar.gz",
+  "bytes": 641031,
+  "sha256": "a0d0238b6fa92817165ab314087c23ac2d891f9a79c9dfd84414a4e0018d2c70",
+  "source_verified": true,
+  "usb_read_back_verified": true,
+  "disk_number": 2,
+  "disk_serial": "990006044030",
+  "usb_device": "aigo W381",
+  "usb_volume": "F:",
+  "usb_filesystem": "FAT32",
+  "usb_health_status": "Warning",
+  "one_new_file_authorized": true,
+  "old_files_modified": false,
+  "old_files_deleted": false,
+  "filesystem_repair_executed": false,
+  "volume_cache_flushed": true,
+  "safe_ejection_pending": false,
+  "disk_device_instance": "USBSTOR\\DISK&VEN_AIGO&PROD_W381&REV_PMAP\\9000435880929064&0",
+  "usb_parent_instance": "USB\\VID_3535&PID_6300\\9000435880929064",
+  "physical_linear_npu_tested": false,
+  "safe_ejection": {
+    "device_instance": "USB\\VID_3535&PID_6300\\9000435880929064",
+    "configuration_manager_code": 0,
+    "veto_type": 0,
+    "veto_name": "",
+    "safe_ejection_accepted": true
+  }
+}

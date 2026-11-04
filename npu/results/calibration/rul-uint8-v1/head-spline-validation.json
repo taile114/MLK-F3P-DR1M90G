@@ -1,0 +1,14 @@
+{
+  "rmse": 2.4657094060602303,
+  "mae": 1.976999700555335,
+  "reference_rmse": 0.004605985253465558,
+  "reference_max_abs": 0.011632323265075684,
+  "reference_mean_abs": 0.003768254395412362,
+  "branches": [
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ],
+  "validation_samples": 184,
+  "training_executed": false,
+  "test_dataset_opened": false
+}

@@ -1,0 +1,23 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "console_ready\r\n1760747 /mnt/mmcblk0p2/npu-tests/cma-replay-evidence-v1.tar.gz",
+      "operation": "command",
+      "command": "printf \"console_ready\\n\"; wc -c /mnt/mmcblk0p2/npu-tests/cma-replay-evidence-v1.tar.gz",
+      "exit_code": 0
+    },
+    {
+      "sha256": "c786170f13517c9ad3135683b31974cf21c02b1af64a704494c0b46a95a4fa6b",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/cma-replay-evidence-v1.tar.gz",
+      "chunk_bytes": 65536,
+      "verified": true,
+      "bytes": 1760747,
+      "operation": "download",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\cma-replay-evidence-v1.tar.gz"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

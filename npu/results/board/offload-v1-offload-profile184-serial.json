@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "result=inference_completed mode=neon samples=184 warmup=5 max_reference_error=8.106231689e-06 mismatches=0 rmse=2.465940142 mae=1.97711497 mean_forward_us=44133.66272 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0 operation_profile=1\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_profile_19700101_000417_4190",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh run.sh profile 0",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

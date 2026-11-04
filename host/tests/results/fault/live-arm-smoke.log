@@ -1,0 +1,7 @@
+find: ‘standard output’: Broken pipe
+find: write error
+a7f3465ea429b0e460e853e87619b0e48b7203a520dc8164abaa8797c4f541f5  /home/uisrc/mlk-fault-integration/live-arm64/mlk_ps_local
+U7  PL  v1.3
+This plugin does not support propagateSizeHints()
+qt_sockets_ready=1 bounded_exit=124
+arm_loader_and_application_initialization_passed

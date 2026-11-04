@@ -1,0 +1,80 @@
+{
+  "feature_version": "motor_stable23_v1",
+  "sensor_order": [
+    "Current 1",
+    "Current 2",
+    "Current 3",
+    "Voltage 1",
+    "Voltage 2",
+    "Voltage 3",
+    "Accelerometer 1",
+    "Accelerometer 2",
+    "Microphone",
+    "Tachometer",
+    "Temperature"
+  ],
+  "feature_order": [
+    "mean",
+    "sample_std",
+    "root_amplitude",
+    "rms",
+    "abs_peak",
+    "skewness",
+    "kurtosis",
+    "crest_factor",
+    "clearance_factor",
+    "shape_factor",
+    "impulse_factor",
+    "spectral_mean_power",
+    "spectral_power_variance",
+    "spectral_power_skewness",
+    "spectral_power_kurtosis",
+    "frequency_centroid_hz",
+    "frequency_std_hz",
+    "frequency_rms_hz",
+    "frequency_shape_hz",
+    "frequency_ratio",
+    "frequency_cv",
+    "frequency_skewness",
+    "frequency_kurtosis"
+  ],
+  "sample_rate_hz": 10240.0,
+  "segment_length": 10000,
+  "segment_stride": 10000,
+  "window": 10,
+  "window_stride": 1,
+  "split_motors": {
+    "2": "train",
+    "3": "train",
+    "5": "train",
+    "6": "val",
+    "7": "test"
+  },
+  "raw_boundaries": "never cross a CSV boundary during signal feature extraction",
+  "history": "10 valid observations; known quarantined gaps allowed and explicitly indexed; never crosses motors",
+  "cycle_basis": "one observed dated test session per cycle for the five selected motors",
+  "rul_definition": "terminal_observed_cycle_id - window_end_cycle_id",
+  "endpoint_limit": "terminal recorded session is the run-to-failure endpoint convention, not an exact failure timestamp",
+  "normalization": "train-only per-sensor/per-feature min-max in float64, then float32; no val/test clipping",
+  "constant_train_features": "zeroed in every split; threshold 1e-10 * max(1,abs(train extrema))",
+  "missing": "causal forward fill at most 10 samples/channel and runs <=3; no leading missing; otherwise quarantine",
+  "document_masks": "LHS of annotated intervals mapped to nominal two 10000-sample slots per chronological CSV; quarantine, no future copy",
+  "short_files": "only complete 10000-sample segments retained; partial tails quarantined, no zero padding",
+  "spectral": "demean; rfft; power abs(fft)^2/N^2; double non-DC/non-Nyquist bins; DC=0; frequencies Hz",
+  "formula_changes": [
+    "single-sided AC spectrum for all 12 spectral features",
+    "spectral power skewness/kurtosis normalized by power variance",
+    "frequency moments normalized by total spectral power",
+    "constant/zero-energy channels have zero undefined central and frequency moments"
+  ],
+  "notes": [
+    "Motor2 has 28 dated sessions, versus 27 in the local summary; no cycle inferred by dividing file count by four",
+    "Motor6 has five records on 2011-08-22, all assigned to the same session",
+    "Motor7 final filename date is 2012-06-08 after 2011-12-19; preserved verbatim and not interpreted as extra aging cycles",
+    "Requires new training; not feature-identical to the recovered full_fft_23_features pipeline"
+  ],
+  "source": {
+    "processing_record": "E:\\competion\\code\\fkp-dvgt\\data\\数据处理过程记录-Motor.docx",
+    "run_to_failure_reference": "https://papers.phmsociety.org/index.php/ijphm/article/download/2285/1267"
+  }
+}

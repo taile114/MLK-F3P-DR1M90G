@@ -1,0 +1,1 @@
+result=inference_completed mode=scalar samples=184 warmup=5 max_reference_error=1.049041748e-05 mismatches=0 rmse=2.465940091 mae=1.977115041 mean_forward_us=268120.8416 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0

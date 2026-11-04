@@ -1,0 +1,3 @@
+result=inference_completed mode=neon samples=1 warmup=5 max_reference_error=3.814697266e-06 mismatches=0 rmse=3.54199791 mae=3.54199791 mean_forward_us=226831.779 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0 operation_profile=1
+6bea234a783715ff87c991a20a8117696b118d3ae0a50675e54ce5b59aaedff6  /home/uisrc/f3p-offload-v2/bin/rul_offload
+result=compiled_and_fp32_checked

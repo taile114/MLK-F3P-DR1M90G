@@ -1,0 +1,18 @@
+{
+  "status": "boot_and_minimal_u8_smoke_passed",
+  "serial_port": "COM4",
+  "kernel": "6.1.111-rt42 #3",
+  "devices": [
+    "/dev/hard_npu",
+    "/dev/soft_npu",
+    "/dev/cma_mem"
+  ],
+  "runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce",
+  "u8_npu_iterations": 3,
+  "u8_npu_max_error_lsb": 1,
+  "hard_npu_irq_delta": 3,
+  "soft_npu_irq_delta": 0,
+  "full_hybrid_replay_after_this_restore_verified": false,
+  "serial_evidence": "restored-sd-v2-smoke-serial.json",
+  "sd_restoration": "../build/npu-sd-card-restoration-v2.json"
+}

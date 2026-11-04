@@ -1,0 +1,30 @@
+{
+  "disk_device": "/dev/sdb",
+  "disk_serial": "121220160204",
+  "disk_bytes": 31299993600,
+  "partitions": {
+    "boot": "FAT32, start sector 2048, 202752 sectors",
+    "rootfs": "ext4, start sector 204800"
+  },
+  "disk_written": true,
+  "filesystem_checks_passed": true,
+  "boot_files_readback_match": true,
+  "model_files_readback_verified": true,
+  "qt_executable_readback_match": true,
+  "execution_plan": "ff6",
+  "model_sha256": {
+    "weights.bin": "0a61767a0b324fd032db6857424b0857dd9dff75979bee25384b928a75905f02",
+    "weights.tsv": "59c8879b5d7b147b274d153b428791ae2e0013e1197f658617b026d88053e0a4",
+    "qparams_ff6.tsv": "2dbc8345140e49d5f03f69f092e1b852e1a5bea97256d1e74c767337de2d3a1c",
+    "input_f32.bin": "3dd7218b2ff59da7431527fa88fef955d08a4aa73589787fb0f97f7672d9d3a7",
+    "libmlk_rul.so": "6fc35de42a75d15c621c9a2a49b4d48ec2287585c959dedd543d52502ebfe7de"
+  },
+  "active_pl": "paired_vendor_npu_hdmi",
+  "project_merged_bitstream_setup_wns_ns": -0.133,
+  "hardware_boot_verified": true,
+  "hdmi_resolution": [
+    1920,
+    1080
+  ],
+  "qt_local_ff6_rul_updates_verified": true
+}

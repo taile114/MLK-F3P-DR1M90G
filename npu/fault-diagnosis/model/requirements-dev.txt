@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8,<10
+onnx>=1.17,<2
+onnxruntime>=1.20,<2

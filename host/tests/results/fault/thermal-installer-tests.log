@@ -1,0 +1,8 @@
+test_asset_mismatch_rejected_before_switch (test_install_update.InstallerTest) ... ok
+test_install_and_idempotent (test_install_update.InstallerTest) ... ok
+test_service_failure_restores_application_and_runtime (test_install_update.InstallerTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.897s
+
+OK

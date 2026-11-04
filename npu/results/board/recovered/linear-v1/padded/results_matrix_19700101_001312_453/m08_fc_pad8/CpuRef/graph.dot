@@ -1,0 +1,13 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerName : linear_input\lLayerType : Input\lBackendID : CpuRef\l}"];
+    1 [label="{Constant|Guid : 1\lLayerName : linear_weights\lLayerType : Constant\lBackendID : CpuRef\l}"];
+    2 [label="{Constant|Guid : 2\lLayerName : zero_bias\lLayerType : Constant\lBackendID : CpuRef\l}"];
+    3 [label="{FullyConnected|BiasEnabled : true\lTransposeWeightMatrix : true\lConstantWeights : true\lGuid : 3\lLayerName : linear_fc\lLayerType : FullyConnected\lBackendID : CpuRef\l}"];
+    4 [label="{Output|Guid : 4\lLayerName : linear_output\lLayerType : Output\lBackendID : CpuRef\l}"];
+    0 -> 3 [label=< [11,64] >];
+    1 -> 3 [label=< [16,64] >];
+    2 -> 3 [label=< [16] >];
+    3 -> 4 [label=< [11,16] >];
+}

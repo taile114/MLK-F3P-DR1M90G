@@ -1,0 +1,21 @@
+case=logical_and requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.38 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    2|CpuAcc  |LogicalBinary             0.01KB(0.01KB)      |0.01KB(0.01KB)      |0.02KB(0.02KB)      
+Info: ******************************************************************************************************
+stage=optimize passed
+stage=load passed
+Info: Execution time: 2.73 ms.
+element=0 actual=0 expected=0 raw_boolean=0
+element=1 actual=0 expected=0 raw_boolean=0
+element=2 actual=0 expected=0 raw_boolean=0
+element=3 actual=1 expected=1 raw_boolean=1
+element=4 actual=0 expected=0 raw_boolean=0
+element=5 actual=1 expected=1 raw_boolean=1
+result=passed case=logical_and max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

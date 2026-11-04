@@ -1,0 +1,13 @@
+progress=30/360
+progress=60/360
+progress=90/360
+progress=120/360
+progress=150/360
+progress=180/360
+progress=210/360
+progress=240/360
+progress=270/360
+progress=300/360
+progress=330/360
+progress=360/360
+result=replay_completed mode=cpu samples=360 max_fp32_error=6.675720215e-06 max_quantized_error=0.1069555283 mean_forward_us=76185.55792

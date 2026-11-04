@@ -1,0 +1,1 @@
+result=branch_completed layer=tvgtformer_blocks.0.feed_forward_temp.2.spline_weight layout=fc rows=11 input_features=1260 output_features=12 cpu_neon_us=820.1715 npu_boundary_us=894.708 max_integer_lsb=1 branch_rmse=0.0200407569 branch_max_abs=0.03443574905 capture_cpu_error=0 input_clipped=0 output_saturated=0 cma_bytes=73728

@@ -1,0 +1,441 @@
+{
+  "status": "qemu_cpu_mixed_full_replay_passed",
+  "execution_environment": "QEMU AArch64 6.2 with vendor Arm NN 32.1.0",
+  "backend_preferences": [
+    "CpuAcc",
+    "CpuRef"
+  ],
+  "full_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 8.58306884765625e-06,
+    "rmse": 3.2562667131254135,
+    "mae": 2.771934077233979
+  },
+  "layer_controls": {
+    "CpuRef": {
+      "cases": {
+        "relu": 0,
+        "less": 0,
+        "greater_equal": 0,
+        "broadcast_less": 0,
+        "logical_and": 0,
+        "comparison_and": 0,
+        "cast_bool_float": 40,
+        "float_less_via_ceil": 0,
+        "float_greater_equal_via_ceil": 0,
+        "float_less_boundaries": 0,
+        "spline_gate_float": 0,
+        "batch_matmul_2d": 0,
+        "batch_matmul_3d": 0,
+        "einsum_via_fc": 0,
+        "reduce_l2_decomposed": 0
+      },
+      "unexpected_failures": 0
+    },
+    "CpuAcc": {
+      "cases": {
+        "relu": 0,
+        "less": 0,
+        "greater_equal": 0,
+        "broadcast_less": 0,
+        "logical_and": 0,
+        "comparison_and": 0,
+        "cast_bool_float": 50,
+        "float_less_via_ceil": 40,
+        "float_greater_equal_via_ceil": 40,
+        "float_less_boundaries": 40,
+        "spline_gate_float": 40,
+        "batch_matmul_2d": 0,
+        "batch_matmul_3d": 0,
+        "einsum_via_fc": 0,
+        "reduce_l2_decomposed": 0
+      },
+      "unexpected_failures": 0
+    },
+    "CpuAcc,CpuRef": {
+      "cases": {
+        "relu": 0,
+        "less": 0,
+        "greater_equal": 0,
+        "broadcast_less": 0,
+        "logical_and": 0,
+        "comparison_and": 0,
+        "cast_bool_float": 50,
+        "float_less_via_ceil": 0,
+        "float_greater_equal_via_ceil": 0,
+        "float_less_boundaries": 0,
+        "spline_gate_float": 0,
+        "batch_matmul_2d": 0,
+        "batch_matmul_3d": 0,
+        "einsum_via_fc": 0,
+        "reduce_l2_decomposed": 0
+      },
+      "unexpected_failures": 0
+    }
+  },
+  "backend_assignment": {
+    "graph_node_counts": {
+      "CpuAcc": 2448,
+      "CpuRef": 120
+    },
+    "compute_node_counts": {
+      "CpuAcc": 1724,
+      "CpuRef": 60
+    },
+    "note": "Node counts are not FLOP proportions or runtime speedup; graph assignment and execution profiling are separate evidence.",
+    "segments": [
+      {
+        "segment": 0,
+        "graph_node_counts": {
+          "CpuAcc": 1093,
+          "CpuRef": 60
+        },
+        "compute_node_counts": {
+          "CpuAcc": 770,
+          "CpuRef": 30
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 1,
+            "Constant": 288,
+            "Transpose": 7,
+            "Reshape": 99,
+            "Activation": 49,
+            "ElementwiseBinary": 441,
+            "MemCopy": 30,
+            "FullyConnected": 46,
+            "Slice": 101,
+            "Concat": 4,
+            "Reduce": 6,
+            "BatchMatMul": 10,
+            "Softmax": 7,
+            "Output": 4
+          },
+          "CpuRef": {
+            "MemCopy": 30,
+            "ElementwiseUnary": 30
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 768,
+          "CpuRef": 30
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonTransposeWorkload_Execute_#595",
+            "NeonReshapeWorkload_Execute_#596",
+            "NeonReshapeWorkload_Execute_#597",
+            "NeonReshapeWorkload_Execute_#598",
+            "NeonReshapeWorkload_Execute_#599",
+            "NeonReshapeWorkload_Execute_#600"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#648",
+            "RefElementwiseUnaryWorkload_Execute_#649",
+            "RefElementwiseUnaryWorkload_Execute_#941",
+            "RefElementwiseUnaryWorkload_Execute_#942",
+            "RefElementwiseUnaryWorkload_Execute_#943",
+            "RefElementwiseUnaryWorkload_Execute_#944"
+          ]
+        }
+      },
+      {
+        "segment": 1,
+        "graph_node_counts": {
+          "CpuAcc": 383,
+          "CpuRef": 16
+        },
+        "compute_node_counts": {
+          "CpuAcc": 271,
+          "CpuRef": 8
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 3,
+            "Constant": 99,
+            "Reshape": 43,
+            "Transpose": 5,
+            "Activation": 15,
+            "Softmax": 7,
+            "ElementwiseBinary": 142,
+            "MemCopy": 8,
+            "FullyConnected": 24,
+            "Slice": 24,
+            "Reduce": 4,
+            "BatchMatMul": 6,
+            "Concat": 1,
+            "Output": 2
+          },
+          "CpuRef": {
+            "MemCopy": 8,
+            "ElementwiseUnary": 8
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 270,
+          "CpuRef": 8
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonTransposeWorkload_Execute_#221",
+            "NeonReshapeWorkload_Execute_#222",
+            "NeonActivationWorkload_Execute_#223",
+            "NeonReshapeWorkload_Execute_#224",
+            "NeonReshapeWorkload_Execute_#225",
+            "NeonActivationWorkload_Execute_#226"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#269",
+            "RefElementwiseUnaryWorkload_Execute_#270",
+            "RefElementwiseUnaryWorkload_Execute_#340",
+            "RefElementwiseUnaryWorkload_Execute_#341",
+            "RefElementwiseUnaryWorkload_Execute_#440",
+            "RefElementwiseUnaryWorkload_Execute_#441"
+          ]
+        }
+      },
+      {
+        "segment": 2,
+        "graph_node_counts": {
+          "CpuAcc": 383,
+          "CpuRef": 16
+        },
+        "compute_node_counts": {
+          "CpuAcc": 271,
+          "CpuRef": 8
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 3,
+            "Constant": 99,
+            "Reshape": 43,
+            "Transpose": 5,
+            "Activation": 15,
+            "Softmax": 7,
+            "ElementwiseBinary": 142,
+            "MemCopy": 8,
+            "FullyConnected": 24,
+            "Slice": 24,
+            "Reduce": 4,
+            "BatchMatMul": 6,
+            "Concat": 1,
+            "Output": 2
+          },
+          "CpuRef": {
+            "MemCopy": 8,
+            "ElementwiseUnary": 8
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 270,
+          "CpuRef": 8
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonTransposeWorkload_Execute_#221",
+            "NeonReshapeWorkload_Execute_#222",
+            "NeonActivationWorkload_Execute_#223",
+            "NeonReshapeWorkload_Execute_#224",
+            "NeonReshapeWorkload_Execute_#225",
+            "NeonActivationWorkload_Execute_#226"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#269",
+            "RefElementwiseUnaryWorkload_Execute_#270",
+            "RefElementwiseUnaryWorkload_Execute_#340",
+            "RefElementwiseUnaryWorkload_Execute_#341",
+            "RefElementwiseUnaryWorkload_Execute_#440",
+            "RefElementwiseUnaryWorkload_Execute_#441"
+          ]
+        }
+      },
+      {
+        "segment": 3,
+        "graph_node_counts": {
+          "CpuAcc": 383,
+          "CpuRef": 16
+        },
+        "compute_node_counts": {
+          "CpuAcc": 271,
+          "CpuRef": 8
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 3,
+            "Constant": 99,
+            "Reshape": 43,
+            "Transpose": 5,
+            "Activation": 15,
+            "Softmax": 7,
+            "ElementwiseBinary": 142,
+            "MemCopy": 8,
+            "FullyConnected": 24,
+            "Slice": 24,
+            "Reduce": 4,
+            "BatchMatMul": 6,
+            "Concat": 1,
+            "Output": 2
+          },
+          "CpuRef": {
+            "MemCopy": 8,
+            "ElementwiseUnary": 8
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 270,
+          "CpuRef": 8
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonTransposeWorkload_Execute_#221",
+            "NeonReshapeWorkload_Execute_#222",
+            "NeonActivationWorkload_Execute_#223",
+            "NeonReshapeWorkload_Execute_#224",
+            "NeonReshapeWorkload_Execute_#225",
+            "NeonActivationWorkload_Execute_#226"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#269",
+            "RefElementwiseUnaryWorkload_Execute_#270",
+            "RefElementwiseUnaryWorkload_Execute_#340",
+            "RefElementwiseUnaryWorkload_Execute_#341",
+            "RefElementwiseUnaryWorkload_Execute_#440",
+            "RefElementwiseUnaryWorkload_Execute_#441"
+          ]
+        }
+      },
+      {
+        "segment": 4,
+        "graph_node_counts": {
+          "CpuAcc": 144,
+          "CpuRef": 8
+        },
+        "compute_node_counts": {
+          "CpuAcc": 100,
+          "CpuRef": 4
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 2,
+            "Constant": 37,
+            "Reshape": 12,
+            "Transpose": 2,
+            "Activation": 7,
+            "ElementwiseBinary": 61,
+            "MemCopy": 4,
+            "FullyConnected": 4,
+            "Slice": 12,
+            "Reduce": 2,
+            "Output": 1
+          },
+          "CpuRef": {
+            "MemCopy": 4,
+            "ElementwiseUnary": 4
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 100,
+          "CpuRef": 4
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonTransposeWorkload_Execute_#95",
+            "NeonReshapeWorkload_Execute_#96",
+            "NeonReshapeWorkload_Execute_#97",
+            "NeonReshapeWorkload_Execute_#98",
+            "NeonActivationWorkload_Execute_#99",
+            "NeonReshapeWorkload_Execute_#100"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#124",
+            "RefElementwiseUnaryWorkload_Execute_#125",
+            "RefElementwiseUnaryWorkload_Execute_#187",
+            "RefElementwiseUnaryWorkload_Execute_#188"
+          ]
+        }
+      },
+      {
+        "segment": 5,
+        "graph_node_counts": {
+          "CpuAcc": 62,
+          "CpuRef": 4
+        },
+        "compute_node_counts": {
+          "CpuAcc": 41,
+          "CpuRef": 2
+        },
+        "layer_types_by_backend": {
+          "CpuAcc": {
+            "Input": 1,
+            "Constant": 17,
+            "Activation": 3,
+            "Reshape": 3,
+            "ElementwiseBinary": 27,
+            "MemCopy": 2,
+            "FullyConnected": 2,
+            "Slice": 6,
+            "Output": 1
+          },
+          "CpuRef": {
+            "MemCopy": 2,
+            "ElementwiseUnary": 2
+          }
+        },
+        "execution_event_counts": {
+          "CpuAcc": 41,
+          "CpuRef": 2
+        },
+        "execution_profile_examples": {
+          "CpuAcc": [
+            "NeonActivationWorkload_Execute_#53",
+            "NeonReshapeWorkload_Execute_#54",
+            "NeonMultiplicationWorkload_Execute_#55",
+            "NeonSubtractionWorkload_Execute_#56",
+            "NeonReshapeWorkload_Execute_#57",
+            "NeonSubtractionWorkload_Execute_#58"
+          ],
+          "CpuRef": [
+            "RefElementwiseUnaryWorkload_Execute_#76",
+            "RefElementwiseUnaryWorkload_Execute_#77"
+          ]
+        }
+      }
+    ]
+  },
+  "first_sample_boundary_comparison": [
+    {
+      "boundary": 0,
+      "elements": 1540,
+      "max_absolute_error": 1.430511474609375e-06
+    },
+    {
+      "boundary": 1,
+      "elements": 1680,
+      "max_absolute_error": 2.6226043701171875e-06
+    },
+    {
+      "boundary": 2,
+      "elements": 1540,
+      "max_absolute_error": 2.6226043701171875e-06
+    },
+    {
+      "boundary": 3,
+      "elements": 1680,
+      "max_absolute_error": 4.254281520843506e-06
+    },
+    {
+      "boundary": 4,
+      "elements": 64,
+      "max_absolute_error": 3.814697265625e-06
+    }
+  ],
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "weights_sha256": "0a61767a0b324fd032db6857424b0857dd9dff75979bee25384b928a75905f02",
+  "native_binary_sha256": "947d65fcefbacd8aab606cfc350087a3a4ca6f34878ee19973618f4fda4ce64f",
+  "weights_and_replay_identical_to_physical_cpuref_baseline": true,
+  "physical_f3p_mixed_verified": false,
+  "npu_requested": false,
+  "quantized": false,
+  "timing_note": "QEMU timing is not physical-board performance or a real speedup measurement; profile captures first window only."
+}

@@ -1,0 +1,42 @@
+{
+  "evidence": "User-provided physical F3P serial log, including df and /proc/mounts",
+  "board_result_directory": "/root/f3p-native-layer-probe-v2/results_CpuAcc_19700101_004543_324",
+  "backend": "CpuAcc",
+  "archive_sha256": "205f6e4251e6eccf4f0560918d18858d0d3890d36d77a86e5cd136100609281a",
+  "raw_exit_codes": {
+    "relu": 0,
+    "less": 70,
+    "greater_equal": 70,
+    "broadcast_less": 70,
+    "logical_and": 0,
+    "cast_bool_float": 50,
+    "float_less_via_ceil": 40,
+    "float_greater_equal_via_ceil": 40,
+    "float_less_boundaries": 40,
+    "spline_gate_float": 40,
+    "batch_matmul_2d": 0,
+    "batch_matmul_3d": 0,
+    "einsum_via_fc": 0,
+    "reduce_l2_decomposed": 0
+  },
+  "interpretation": {
+    "comparison_cases": "The v2 test compares raw Boolean bytes with integer 1. CpuAcc emits 255 for observed true results. This is a representation mismatch; the updated truth-value checker passes these controls under QEMU. Updated physical-board tests remain pending.",
+    "ceil": "CpuAcc-only optimization fails; CpuRef fallback is required for this runtime.",
+    "bool_cast": "CpuAcc optimizer accepts the request but workload preparation rejects the tensor type at load. Preference fallback is not a guarantee against load-stage errors. Full native RUL uses no Boolean cast.",
+    "npu_execution_verified": false
+  },
+  "storage": {
+    "root_device": "/dev/root",
+    "root_fstype": "ext4",
+    "root_options": "rw,relatime",
+    "root_size_df_h": "7.0G",
+    "root_available_df_h": "6.2G",
+    "root_directory_mount": "No separate /root mount in /proc/mounts; /root resides on the ext4 root filesystem",
+    "ram_backed_paths": [
+      "/tmp",
+      "/run",
+      "/dev/shm"
+    ],
+    "usb_mount": "/dev/sda1 on /mnt/usb, vfat, read-only"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "motor_stable23_v1",
+  "dtype": "little_endian_float32",
+  "shape": [
+    165,
+    23,
+    110
+  ],
+  "one_sample_shape": [
+    1,
+    23,
+    110
+  ],
+  "bytes_per_sample": 10120,
+  "normalization_already_applied": true,
+  "rul_unit": "observed_aging_test_session",
+  "labels_are_not_inputs": true
+}

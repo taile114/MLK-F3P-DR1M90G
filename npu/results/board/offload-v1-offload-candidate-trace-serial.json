@@ -1,0 +1,22 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "verified": true,
+      "sha256": "e0dac7a02ccf38b0a41cd711351293ed44ccbcc57ddb63806ea61f9d4ca4afef",
+      "bytes": 792,
+      "operation": "upload",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/trace_candidates.sh",
+      "local_path": "E:/competion/code/project/npu/work/f3p-offload-v2/trace_candidates.sh"
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh trace_candidates.sh > trace-console.log 2>&1 && tail -n 6 trace-console.log",
+      "exit_code": 0,
+      "operation": "command",
+      "output": "[  900.867331] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  900.867412] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n[  909.350988] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  909.351073] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=184 warmup=5 max_reference_error=0.03915882111 mismatches=169 rmse=2.465455432 mae=1.977354379 mean_forward_us=43486.19554 timed_allocation_calls=26624 timed_allocation_bytes=903216 NPU_layers=4 max_integer_lsb=0 integer_audit=0 operation_profile=1\r\ntrace_directory=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_trace_ff4_19700101_001500_5088\r\nresult=inference_completed mode=hybrid samples=184 warmup=5 max_reference_error=0.5754642487 mismatches=183 rmse=2.44785904 mae=1.960779962 mean_forward_us=42961.41092 timed_allocation_calls=33280 timed_allocation_bytes=1129020 NPU_layers=5 max_integer_lsb=0 integer_audit=0 operation_profile=1\r\ntrace_directory=/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/results_trace_input_ff5_19700101_001509_5088"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

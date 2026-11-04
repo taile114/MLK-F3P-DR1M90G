@@ -1,0 +1,53 @@
+{
+  "schema": "mlk.fault.hard_npu_integer_audit.v1",
+  "convolutions": 4,
+  "outputs_checked": 89088,
+  "maximum_error_lsb": 1,
+  "actual_input_used": true,
+  "integer_accumulator": "int64",
+  "scales_fitted_again": false,
+  "weights_sha256": "0e4cf734d67a6e0babb79c76f32d7a7912787aec928e9f30ddd95a19269300af",
+  "qparams_sha256": "64c4211d098f78c8358120ae014c6c2bd63a2a2f94b95a34342f40b7b7b17e26",
+  "checks": [
+    {
+      "sample": 0,
+      "layer": 0,
+      "outputs": 49152,
+      "max_error_lsb": 1,
+      "signed_mean_error_lsb": -0.5003865559895834,
+      "different_outputs": 24595,
+      "input_sha256": "506d052694048fdecd7a397df2286ae6850ad2f14ff257410f9df95074946935",
+      "output_sha256": "c0ce266d8ec609cb31385bdcec70c62d92b3cc810e702efd73c18b97cab0f87d"
+    },
+    {
+      "sample": 0,
+      "layer": 1,
+      "outputs": 24576,
+      "max_error_lsb": 1,
+      "signed_mean_error_lsb": -0.5015055338541666,
+      "different_outputs": 12325,
+      "input_sha256": "f56a50e977b22ec5b9d529417de4c3cf62f8e2a37fdebce17d1005509d9723ce",
+      "output_sha256": "7ede1b8db73fe42a331427b79b555a01f6c3018be331c14be152b0ac94f82359"
+    },
+    {
+      "sample": 0,
+      "layer": 2,
+      "outputs": 12288,
+      "max_error_lsb": 1,
+      "signed_mean_error_lsb": -0.5054524739583334,
+      "different_outputs": 6211,
+      "input_sha256": "195474171edc820cf9dee0d067c77f059d438aaf98280aa526d1c2fb63f430c4",
+      "output_sha256": "66f85366846b0024171df8f164ebebf4fc9b1ba31a0a0a9529b8c1fa50dd23ea"
+    },
+    {
+      "sample": 0,
+      "layer": 3,
+      "outputs": 3072,
+      "max_error_lsb": 1,
+      "signed_mean_error_lsb": -0.4967447916666667,
+      "different_outputs": 1526,
+      "input_sha256": "88d4bb2bba5dd8bb1c33d82f1964bce4a2b57560a3953288e86e7aadf6947cb9",
+      "output_sha256": "655bd3d8b6afc6866a3d5a1b142a249f459313fca2e2e6bc89c69a32384f3019"
+    }
+  ]
+}

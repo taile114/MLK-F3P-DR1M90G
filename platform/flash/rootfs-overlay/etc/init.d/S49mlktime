@@ -1,0 +1,37 @@
+#!/bin/sh
+pidfile=/var/run/chrony/chronyd.pid
+monitor=/var/run/mlk-time-monitor.pid
+case "$1" in
+    start)
+        mkdir -p /var/run/chrony /var/lib/chrony /var/lib/mlk
+        chmod 700 /var/run/chrony /var/lib/chrony
+        if ! [ -f "$pidfile" ] || ! kill -0 "$(cat "$pidfile")" 2>/dev/null; then
+            chronyd -f /etc/chrony.conf || exit 1
+        fi
+        if [ -f "$monitor" ] && kill -0 "$(cat "$monitor")" 2>/dev/null; then exit 0; fi
+        (
+            ticks=0
+            while :; do
+                if mlk_time_status >/dev/null 2>&1; then
+                    echo network > /var/run/mlk-time-source
+                    if [ "$ticks" -eq 0 ]; then date -u +%s > /var/lib/mlk/lasttime; fi
+                elif [ "$(cat /var/run/mlk-time-source 2>/dev/null)" = network ]; then
+                    echo holdover > /var/run/mlk-time-source
+                fi
+                ticks=$(( (ticks + 1) % 12 ))
+                sleep 5
+            done
+        ) </dev/null >/dev/null 2>&1 &
+        echo $! > "$monitor" ;;
+    stop)
+        for file in "$monitor" "$pidfile"; do
+            [ -f "$file" ] || continue
+            kill "$(cat "$file")" 2>/dev/null || true
+            rm -f "$file"
+        done
+        if [ "$(cat /var/run/mlk-time-source 2>/dev/null)" = network ]; then
+            echo holdover > /var/run/mlk-time-source
+        fi ;;
+    restart) "$0" stop; "$0" start ;;
+    *) echo "usage: $0 {start|stop|restart}" >&2; exit 1 ;;
+esac

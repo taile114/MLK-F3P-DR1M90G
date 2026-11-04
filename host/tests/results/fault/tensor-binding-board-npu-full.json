@@ -1,0 +1,38 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "grep Cma /proc/meminfo; grep -i npu /proc/interrupts",
+      "exit_code": 0,
+      "output": "CmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:         12          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "operation": "command"
+    },
+    {
+      "command": "if LD_LIBRARY_PATH=/opt/armnn_lib/lib fault_check /opt/mlk_fault --backend npu --data /data/fault-eval --report /tmp/fault-fixed-npu360-1.json --predictions /tmp/fault-fixed-npu360-1.csv > /tmp/fault-fixed-npu360-1.log 2>&1; then tail -n 2 /tmp/fault-fixed-npu360-1.log; else tail -n 24 /tmp/fault-fixed-npu360-1.log; false; fi",
+      "exit_code": 0,
+      "output": "[  275.808984] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  275.809075] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nInfo: Shutdown time: 0.23 ms.\r\n{\"result\":\"completed\",\"samples\":360,\"class_correct\":360,\"joint_correct\":356,\"reference_mismatch\":0,\"backend\":2,\"mean_infer_us\":5188.272,\"report\":\"/tmp/fault-fixed-npu360-1.json\"}",
+      "operation": "command"
+    },
+    {
+      "command": "cat /tmp/fault-fixed-npu360-1.json; grep Cma /proc/meminfo; grep -i npu /proc/interrupts",
+      "exit_code": 0,
+      "output": "{\r\n  \"schema\": \"mlk.fault.runtime_check.v1\",\r\n  \"root\": \"/opt/mlk_fault\",\r\n  \"samples\": 360,\r\n  \"backend_requested\": 2,\r\n  \"backend_reported\": 2,\r\n  \"class_correct\": 360,\r\n  \"joint_correct\": 356,\r\n  \"class_accuracy\": 1,\r\n  \"joint_accuracy\": 0.988889,\r\n  \"macro_class_accuracy\": 1,\r\n  \"reference_mismatch\": 0,\r\n  \"mean_infer_us\": 5188.27,\r\n  \"median_infer_us\": 5160,\r\n  \"p95_infer_us\": 5261,\r\n  \"max_infer_us\": 7876,\r\n  \"confusion_target_by_prediction\": [[66,0,0,0,0],[0,75,0,0,0],[0,0,80,0,0],[0,0,0,58,0],[0,0,0,0,81]]\r\n}\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:       1452          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "operation": "command"
+    },
+    {
+      "command": "if LD_LIBRARY_PATH=/opt/armnn_lib/lib fault_check /opt/mlk_fault --backend npu --data /data/fault-eval --report /tmp/fault-fixed-npu360-2.json --predictions /tmp/fault-fixed-npu360-2.csv > /tmp/fault-fixed-npu360-2.log 2>&1; then tail -n 2 /tmp/fault-fixed-npu360-2.log; else tail -n 24 /tmp/fault-fixed-npu360-2.log; false; fi",
+      "exit_code": 0,
+      "output": "[  278.323106] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  278.323187] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nInfo: Shutdown time: 0.23 ms.\r\n{\"result\":\"completed\",\"samples\":360,\"class_correct\":360,\"joint_correct\":356,\"reference_mismatch\":0,\"backend\":2,\"mean_infer_us\":4955.803,\"report\":\"/tmp/fault-fixed-npu360-2.json\"}",
+      "operation": "command"
+    },
+    {
+      "command": "cat /tmp/fault-fixed-npu360-2.json; grep Cma /proc/meminfo; grep -i npu /proc/interrupts",
+      "exit_code": 0,
+      "output": "{\r\n  \"schema\": \"mlk.fault.runtime_check.v1\",\r\n  \"root\": \"/opt/mlk_fault\",\r\n  \"samples\": 360,\r\n  \"backend_requested\": 2,\r\n  \"backend_reported\": 2,\r\n  \"class_correct\": 360,\r\n  \"joint_correct\": 356,\r\n  \"class_accuracy\": 1,\r\n  \"joint_accuracy\": 0.988889,\r\n  \"macro_class_accuracy\": 1,\r\n  \"reference_mismatch\": 0,\r\n  \"mean_infer_us\": 4955.8,\r\n  \"median_infer_us\": 4945,\r\n  \"p95_infer_us\": 5038,\r\n  \"max_infer_us\": 5159,\r\n  \"confusion_target_by_prediction\": [[66,0,0,0,0],[0,75,0,0,0],[0,0,80,0,0],[0,0,0,58,0],[0,0,0,0,81]]\r\n}\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:       2892          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

@@ -1,0 +1,8 @@
+case=ceil dtype=Float32 requested_backend=Alnpu cpu_fallback_allowed=false inference_requested=false
+Warning: WARNING: Layer of type ElementwiseUnary is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type ElementwiseUnary is not supported on any preferred backend [Alnpu ]
+Warning: WARNING: Layer of type Output is not supported on requested backend Alnpu for input data type Float32 and output data type Float32 (reason: Input tensor dimension not supported,  can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Output is not supported on any preferred backend [Alnpu ]
+result=optimize_rejected error=Failed to assign a backend to each layer

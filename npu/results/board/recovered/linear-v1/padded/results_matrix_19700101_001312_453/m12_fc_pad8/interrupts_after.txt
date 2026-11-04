@@ -1,0 +1,34 @@
+           CPU0       CPU1       
+ 11:      18621       4704     GICv3  27 Level     arch_timer
+ 13:          0          0     GICv3  78 Level     dw:dmac-1
+ 14:          2          0     GICv3  96 Level     f8414000.i2c0
+ 15:          0          0     GICv3  97 Level     f8415000.i2c1
+ 20:          0          0     GICv3  69 Level     f8419000.dma-controller
+ 21:          0          0     GICv3  70 Level     f8419000.dma-controller
+ 22:          0          0     GICv3  71 Level     f8419000.dma-controller
+ 23:          0          0     GICv3  72 Level     f8419000.dma-controller
+ 24:          0          0     GICv3  73 Level     f8419000.dma-controller
+ 25:          0          0     GICv3  74 Level     f8419000.dma-controller
+ 26:          0          0     GICv3  75 Level     f8419000.dma-controller
+ 27:          0          0     GICv3  76 Level     f8419000.dma-controller
+ 28:          0          0     GICv3  77 Level     f8419000.dma-controller
+ 29:      48209          0     GICv3 116 Level     anlogic-dma-controller
+ 30:        340          0     GICv3 103 Level     ttyS0
+ 31:          0          0     GICv3  80 Level     f804e000.spi
+ 34:          0          0     GICv3  90 Level     eth0
+ 35:    6474743          0     GICv3  88 Level     f8180000.usb, dwc2_hsotg:usb1
+ 36:          0          0     GICv3  58 Edge      f8410000.watchdog
+ 38:         16          0     GICv3  56 Level     f840b000.adc
+ 39:        474          0     GICv3  94 Level     mmc0
+ 40:        579          0     GICv3  95 Level     mmc1
+ 41:        501          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+ 43:          0          0     GICv3 145 Level     JPU_CODEC_IRQ
+IPI0:       386        369       Rescheduling interrupts
+IPI1:     40914     159975       Function call interrupts
+IPI2:         0          0       CPU stop interrupts
+IPI3:         0          0       CPU stop (for crash dump) interrupts
+IPI4:         0          0       Timer broadcast interrupts
+IPI5:         0          0       IRQ work interrupts
+IPI6:         0          0       CPU wake-up interrupts
+Err:          0

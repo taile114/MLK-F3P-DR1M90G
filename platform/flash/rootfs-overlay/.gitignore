@@ -1,0 +1,16 @@
+# Staged app bundles (e.g. host/ps-local Qt binary + qt_lib) are not committed.
+/opt/qt_play/*
+!/opt/qt_play/.gitkeep
+
+# FPGA manager 在线加载用的码流是构建产物，不入库。
+/lib/firmware/*
+!/lib/firmware/.gitkeep
+/opt/mlk_rul/
+/opt/armnn_lib/
+/opt/mlk_rul-validation/
+
+# 故障运行包与评估集由 stage_fault.sh / build_runtime.py 生成，体积大不入库。
+/opt/mlk_fault
+/opt/mlk_fault-packages/
+/data/
+/opt/mlk_fault.previous

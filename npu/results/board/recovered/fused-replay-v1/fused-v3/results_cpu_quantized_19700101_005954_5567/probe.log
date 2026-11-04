@@ -1,0 +1,1 @@
+result=inference_completed mode=cpu_quantized samples=184 warmup=5 max_reference_error=0.01163196564 mismatches=142 rmse=2.465704044 mae=1.976990787 mean_forward_us=45009.43692 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0

@@ -1,0 +1,9 @@
+/work/
+/training/.venv/
+/training/raw/
+/training/data/
+/training/outputs/*
+!/training/outputs/motor_stable23_v1_gpu/
+!/training/outputs/motor_stable23_v1_gpu_test/
+!/training/outputs/motor_stable23_v1_onnx/
+!/training/outputs/motor_stable23_v1_onnx_opset13/

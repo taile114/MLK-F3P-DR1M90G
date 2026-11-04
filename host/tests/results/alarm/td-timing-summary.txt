@@ -1,0 +1,73 @@
+Created by          : Tang Dynasty Release_2026.2
+                    : Copyright (c) 2012-2026 Anlogic Inc.
+Generated           : Sat Oct 24 22:43:38 2026
+
+Top Model           : soc_hdmi_top
+Device              : DR1M90GEG400
+Speed               : 2
+STA coverage        : 99.90%
+Constraint File     : /home/lfour/Projects/MLK-F3P-DR1M90G/fpga/uisrc/out/soc_hdmi/timing_hdmi.sdc;
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min
+------------------------------------
+Slow     | yes      yes
+Fast     | yes      yes
+
+
+Timing Status
+--------------------
+	SWNS: 0.004ns, STNS: 0.000ns
+	HWNS: 0.000ns, HTNS: 0.000ns
+	Period Check WNS: 8.000ns
+
+
+Clock Summary
+--------------------
+
+       Clock-Id:       C-Freq       Fanout   Clock-Name
+--------------------------------------------------------------------------------
+           clk0:      100.000        27016   system/PLL_0/dr1_phy_pll_3a04da50d99b_Inst/u_DR1_PHY_PLL.clkc[0]
+           clk1:      120.000          838   system/PLL_0/dr1_phy_pll_3a04da50d99b_Inst/u_DR1_PHY_PLL.clkc[1]
+           clk2:      150.000          388   system/PLL_0/dr1_phy_pll_3a04da50d99b_Inst/u_DR1_PHY_PLL.clkc[2]
+           clk3:      148.450          275   system/video_timing_generator_v01_1/video_timing_generator_v01_dd045705834d_Inst/dr1_pll_vtc_Inst/u_DR1_PHY_PLL.clkc[0]
+           clk4:      742.250           34   system/PLL_1/dr1_phy_pll_2d86d31852c0_Inst/u_DR1_PHY_PLL.clkc[0]
+           clk5:       50.000            4   p2f_clk0
+           clk6:      100.000            0   system/ARM_Processor_System_0/ARM_Processor_System_02d012f09551_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp0_axi_aclk
+           clk7:      100.000            0   system/ARM_Processor_System_0/ARM_Processor_System_02d012f09551_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.master_gp1_axi_aclk
+           clk8:      120.000            0   system/ARM_Processor_System_0/ARM_Processor_System_02d012f09551_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.slave_hp0_axi_aclk
+           clk9:      100.000            0   system/ARM_Processor_System_0/ARM_Processor_System_02d012f09551_Inst/DR1_PHY_PROCESSOR_SYSTEM_Inst.slave_hp1_axi_aclk
+--------------------------------------------------------------------------------
+
+       Name            Type         Rise(ns)   Fall(ns)          C-Period(ns)     C-Freq(MHz)          R-Period(ns)     R-Freq(MHz)         SWNS(ns)   STNS(ns)         HWNS(ns)   HTNS(ns)         Skew(ns)           Fanout        Max-Level        CC-From    CC-To
+       clk0       User GCLK            0.000      5.000                10.000         100.000                 9.513         105.119            0.487      0.000            0.022      0.000            0.421            27016               10             no       no
+       clk1   Inferred GCLK            0.000      4.166                 8.333         120.000                 7.015         142.552            1.318      0.000            0.023      0.000            0.260              838                7             no       no
+       clk2   Inferred GCLK            0.000      3.333                 6.667         150.000                 5.332         187.547            1.335      0.000            0.026      0.000            0.261              388                5             no       no
+       clk3   Inferred GCLK            4.902      1.534                 6.736         148.450                 6.058         165.071            0.678      0.000            0.048      0.000            0.316              275                7             no       no
+       clk4       User GCLK            0.861      0.187                 1.347         742.250                 1.343         744.602            0.004      0.000            0.000      0.000            0.332               34                1             no       no
+       clk5   Inferred GCLK            0.000     10.000                20.000          50.000                20.000          50.000            0.000      0.000            0.000      0.000            0.000                4                0             no       no
+       clk6           local            0.000      5.000                10.000         100.000                10.000         100.000            0.000      0.000            0.000      0.000            0.000                0                0             no       no
+       clk7           local            0.000      5.000                10.000         100.000                10.000         100.000            0.000      0.000            0.000      0.000            0.000                0                0             no       no
+       clk8           local            0.000      4.166                 8.333         120.000                 8.333         120.000            0.000      0.000            0.000      0.000            0.000                0                0             no       no
+       clk9           local            0.000      5.000                10.000         100.000                10.000         100.000            0.000      0.000            0.000      0.000            0.000                0                0             no       no
+
+Notes
+----------
+C-Period  :  constraint period
+C-Freq    :  constraint freq
+R-Period  :  report min period
+R-Freq    :  report fmax
+CC-From   :  has path(s) from cross-domain clock
+CC-To     :  has path(s) to cross-domain clock
+
+
+*   Clock R-Period data only takes intra-clock timing. SWNS/STNS/HWNS/HTNS take both intra-clock and inter-clock timing.
+*   If there is mismatch between R-Period and SWNS, check inter-clock timing of this clock as capture clock.
+*   SWNS/STNS/HWNS/HTNS of timing exception (SMCP/SMD) only counted in global Timing Status, not counted in Clock Summary.

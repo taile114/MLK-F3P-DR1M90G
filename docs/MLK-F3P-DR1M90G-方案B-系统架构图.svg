@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1170" viewBox="0 0 2000 1170">
+  <defs>
+    <marker id="ah-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5A6472"/></marker>
+    <marker id="ah-t" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F7A8C"/></marker>
+    <marker id="ah-n" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2E7D32"/></marker>
+    <marker id="ah-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#12325B"/></marker>
+    <marker id="ah-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
+    <style>
+      text { font-family:"Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",
+              "WenQuanYi Zen Hei",sans-serif; }
+    </style>
+  </defs>
+  <rect width="2000" height="1170" fill="#FFFFFF"/>
+  <text x="70" y="74" font-size="34" fill="#12325B" font-weight="bold" text-anchor="start">方案 B 系统架构：核心板 + 传感器载板 + 市售电机整套</text>
+  <text x="70" y="122" font-size="24" fill="#5A6472" font-weight="normal" text-anchor="start">传感器载板与核心板经 P1.2 单点共地；电机整套独立运行，不与核心板共地、不通信</text>
+  <path d="M 350,334 L 350,412" fill="none" stroke="#5A6472" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-g)"/>
+  <path d="M 600,560 L 900,560" fill="none" stroke="#12325B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-b)"/>
+  <path d="M 900,560 L 600,560" fill="none" stroke="#12325B" stroke-width="3.5" marker-end="url(#ah-b)" stroke-linecap="round"/>
+  <path d="M 1560,396 L 1640,386" fill="none" stroke="#1F7A8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-t)"/>
+  <path d="M 1560,646 L 1640,646" fill="none" stroke="#1F7A8C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-t)"/>
+  <path d="M 350,722 L 350,828 L 900,828 L 900,880" fill="none" stroke="#2E7D32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-n)"/>
+  <path d="M 1450,790 L 1450,880" fill="none" stroke="#12325B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-b)"/>
+  <path d="M 160,880 L 160,724" fill="none" stroke="#C0392B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#ah-r)"/>
+  <rect x="100" y="196" width="500" height="138" rx="16" fill="#EEF3FB" stroke="#7C97C0" stroke-width="2.5"/>
+  <text x="350.0" y="242" font-size="28" fill="#12325B" font-weight="bold" text-anchor="middle">电脑 / USB 5V</text>
+  <text x="350.0" y="306.0" font-size="20" fill="#5A6472" text-anchor="middle">传感器载板独立供电（不挂大负载）</text>
+  <rect x="301.0" y="353" width="98.0" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="350" y="376" font-size="20" fill="#5A6472" text-anchor="middle">USB-C 5V</text>
+  <rect x="100" y="412" width="500" height="310" rx="16" fill="#EDF7F1" stroke="#6FAE86" stroke-width="3.5"/>
+  <text x="350.0" y="459" font-size="29" fill="#12325B" font-weight="bold" text-anchor="middle">传感器载板 MLK-F3P-DR1M90G</text>
+  <text x="126" y="523.0" font-size="20" fill="#1B2430">• J1 USB-C → F1(PTC) → +5V</text>
+  <text x="126" y="554.0" font-size="20" fill="#1B2430">• J2 (2×8)：8×+5V / 8×GND</text>
+  <text x="126" y="585.0" font-size="20" fill="#1B2430">• H1：+3V3 抽头（核心板 J12.1 → P1.1）</text>
+  <text x="126" y="616.0" font-size="20" fill="#1B2430">• U1 / U2：霍尔电流端（选用）</text>
+  <text x="126" y="647.0" font-size="20" fill="#1B2430">• P1 (2×13) ⇄ 核心板 J12</text>
+  <text x="126" y="700" font-size="20" fill="#2E7D32" font-weight="bold" text-anchor="start">全板单域共地（经 P1.2）</text>
+  <rect x="900" y="320" width="660" height="470" rx="16" fill="#EEF3FB" stroke="#7C97C0" stroke-width="3.5"/>
+  <text x="1230.0" y="366" font-size="28" fill="#12325B" font-weight="bold" text-anchor="middle">核心板 MLK-F3P-DR1M90G</text>
+  <text x="926" y="440" font-size="22" fill="#12325B" font-weight="bold" text-anchor="start">J12  PL-GPIO（BANK13，3V3）</text>
+  <text x="926" y="472" font-size="20" fill="#5A6472" font-weight="normal" text-anchor="start">1=VCC_CEP1   2=GND   3–26=CEP1_1P…12N</text>
+  <text x="926" y="532" font-size="22" fill="#12325B" font-weight="bold" text-anchor="start">HDMI OUT（JH1）</text>
+  <text x="926" y="564" font-size="20" fill="#5A6472" font-weight="normal" text-anchor="start">→ 本地显示器</text>
+  <text x="926" y="624" font-size="22" fill="#12325B" font-weight="bold" text-anchor="start">CAN0TX / CAN0RX（3V3）</text>
+  <text x="926" y="656" font-size="20" fill="#5A6472" font-weight="normal" text-anchor="start">⇄ 编码器（24V 供电取电机侧）</text>
+  <text x="926" y="716" font-size="22" fill="#12325B" font-weight="bold" text-anchor="start">电机驱动 / 调速</text>
+  <text x="926" y="748" font-size="20" fill="#5A6472" font-weight="normal" text-anchor="start">不经过本板（市售整套自带）</text>
+  <rect x="1640" y="262" width="330" height="222" rx="16" fill="#FDF6EA" stroke="#CBA164" stroke-width="2.5"/>
+  <text x="1805.0" y="308" font-size="28" fill="#12325B" font-weight="bold" text-anchor="middle">编码器</text>
+  <text x="1674" y="372.0" font-size="20" fill="#1B2430">• 测速 / 角度 / 方向</text>
+  <text x="1674" y="403.0" font-size="20" fill="#1B2430">• CAN 直连核心板 J11</text>
+  <text x="1674" y="434.0" font-size="20" fill="#1B2430">• 24V 供电取电机侧</text>
+  <rect x="1640" y="566" width="330" height="190" rx="16" fill="#EEF3FB" stroke="#7C97C0" stroke-width="2.5"/>
+  <text x="1805.0" y="612" font-size="28" fill="#12325B" font-weight="bold" text-anchor="middle">本地显示器</text>
+  <text x="1702" y="676.0" font-size="20" fill="#1B2430">• HDMI 输出（JH1）</text>
+  <text x="1702" y="707.0" font-size="20" fill="#1B2430">• 用电脑屏幕代替</text>
+  <rect x="790" y="880" width="780" height="212" rx="16" fill="#FDF6EA" stroke="#CBA164" stroke-width="3.5"/>
+  <text x="1180.0" y="927" font-size="29" fill="#12325B" font-weight="bold" text-anchor="middle">传感器小模块（市售）</text>
+  <text x="854" y="991.0" font-size="20" fill="#1B2430">• 温度传感器 · 振动传感器 · 电流传感器（霍尔） · 声光报警</text>
+  <text x="854" y="1022.0" font-size="20" fill="#1B2430">• 供电：J2 的 +5V / GND；信号：跳线到 P1 的 PL IO</text>
+  <rect x="100" y="880" width="610" height="246" rx="16" fill="#FCEFEF" stroke="#C97A72" stroke-width="3.5"/>
+  <text x="405.0" y="925" font-size="27" fill="#C0392B" font-weight="bold" text-anchor="middle">被测电机整套（市售，独立运行）</text>
+  <text x="140" y="989.0" font-size="20" fill="#1B2430">• 24V 电源 + 调速器 + 755 有刷电机</text>
+  <text x="140" y="1020.0" font-size="20" fill="#1B2430">• 不画板 · 自带调速 · 不共地、不通信</text>
+  <text x="140" y="1051.0" font-size="20" fill="#1B2430">• 测电流可选：霍尔模块串联 U1 / U2</text>
+  <text x="126" y="1106" font-size="20" fill="#C0392B" font-weight="bold" text-anchor="start">⚠ 额定 5.2A / 堵转 36A：必须粗线（≥18AWG）+ 螺钉端子</text>
+  <rect x="664.5546875" y="515" width="170.890625" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="750" y="538" font-size="20" fill="#12325B" text-anchor="middle">P1 ⇄ J12（26P）</text>
+  <rect x="645.953125" y="543" width="208.09375" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="750" y="566" font-size="20" fill="#5A6472" text-anchor="middle">3V3 / GND / 24×PL IO</text>
+  <rect x="1577.109375" y="371" width="53.78125" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="1604" y="394" font-size="20" fill="#1F7A8C" text-anchor="middle">CAN</text>
+  <rect x="1574.140625" y="615" width="63.71875" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="1606" y="638" font-size="20" fill="#1F7A8C" text-anchor="middle">HDMI</text>
+  <rect x="628" y="767" width="194.9375" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="636" y="790" font-size="20" fill="#2E7D32" text-anchor="start">J2: 8×+5V / 8×GND</text>
+  <rect x="1393.4375" y="795" width="113.125" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="1450" y="818" font-size="20" fill="#12325B" text-anchor="middle">P1 的 PL IO</text>
+  <rect x="174.0" y="789" width="176.0" height="30" fill="#FFFFFF" opacity="0.94"/>
+  <text x="262" y="812" font-size="20" fill="#C0392B" text-anchor="middle">霍尔电流（选用）</text>
+</svg>

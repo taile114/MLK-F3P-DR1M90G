@@ -1,0 +1,6 @@
+sample=179 prediction=0.3265508413 reference=0.3265510798 absolute_error=2.384185791e-07
+sample=183 prediction=0.7044889927 reference=0.7044879198 absolute_error=1.072883606e-06
+result=inference_completed samples=184 max_reference_error=7.629394531e-06 mismatches=0 rmse=2.465939977 mae=1.977114853 mean_forward_us=195639.4239
+rul_unit=observed_aging_test_session
+warmup=5 timed_allocation_calls=3843944 timed_allocation_bytes=153174112 quantized_branches=0 accuracy_acceptance=TBD
+exit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_005837_5470

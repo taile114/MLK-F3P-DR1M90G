@@ -1,0 +1,1 @@
+console=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=8 mtdparts=alspinor:1M(boot),-(data)

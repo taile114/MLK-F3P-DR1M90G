@@ -1,0 +1,152 @@
+% Formula bodies can be copied individually into MathType TeX input.
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath,amssymb}
+\begin{document}
+% (1) current
+\begin{equation}
+I=(\mathrm{ADC}_{\mathrm{code}}-\mathrm{zero}_{\mathrm{code}})\times0.00125
+\tag{1}
+\end{equation}
+式中，I为电机电流，单位A；ADC\_code为ADS1115单端原始码，zero\_code为零电流校准码。0.00125 A/LSB由125 μV/LSB的ADC尺度与100 mV/A的霍尔灵敏度换算得到。
+
+% (2) rpm
+\begin{equation}
+n=\frac{\Delta C_{\mathrm{raw}}\times60\times1000}{4096\times100}
+\tag{2}
+\end{equation}
+式中，n为有符号转速，单位rpm；ΔC\_raw为100 ms测速窗内的编码器计数增量；4096为每转计数，60和1000分别完成分钟及毫秒单位换算。
+
+% (3) stats1
+\begin{equation}
+\mu=\frac{1}{N}\sum_{i=1}^{N}x_i,\quad\mathrm{RMS}=\sqrt{\frac{1}{N}\sum_{i=1}^{N}x_i^2},\quad\mathrm{PP}=\max(x)-\min(x)
+\tag{3}
+\end{equation}
+式中，x\_i为窗口内第i个样本，N为样本数；μ为均值，RMS为均方根，PP为峰峰值。统计结果随输入通道采用对应的原始码或物理量单位。
+
+% (4) stats2
+\begin{equation}
+\sigma^2=\frac{1}{N}\sum_{i=1}^{N}(x_i-\mu)^2,\quad\mathrm{CF}=\frac{\max|x|}{\mathrm{RMS}},\quad K=\frac{\frac{1}{N}\sum_{i=1}^{N}(x_i-\mu)^4}{\sigma^4}
+\tag{4}
+\end{equation}
+式中，σ²为总体方差，σ为标准差，CF为峰值因子，K为Pearson峭度；max|x|为窗口内绝对峰值，μ、x\_i和N与前式相同。CF和K为无量纲量。
+
+% (5) fft
+\begin{equation}
+X[k]=\frac{1}{N}\sum_{n=0}^{N-1}x[n]w[n]\exp\left(-\frac{\mathrm{j}2\pi kn}{N}\right),\quad f[k]=\frac{kf_s}{N}
+\tag{5}
+\end{equation}
+式中，x[n]为第n个时域样本，w[n]为窗函数，N为FFT点数；j为虚数单位，k为频点索引，X[k]为经1/N缩放的复频谱，f\_s为采样率，f[k]为频率，单位Hz。
+
+% (6) class
+\begin{equation}
+p(c\mid x)=\frac{\exp(z_c)}{\sum_{j=0}^{4}\exp(z_j)},\quad c^*=\mathop{\operatorname{argmax}}_c p(c\mid x)
+\tag{6}
+\end{equation}
+式中，x为窗口特征，z\_c为类别c的原始输出，p(c|x)为softmax分数；c=0～4依次表示正常、过载、欠压、过热和电机倾斜，c*为最终选定类别。
+
+% (7) ordinal
+\begin{equation}
+q_{j,k}=\operatorname{sigmoid}(s_j-\theta_{j,k}),\quad P(g=1,2,3)=(1-q_{j,1},q_{j,1}-q_{j,2},q_{j,2})
+\tag{7}
+\end{equation}
+式中，j表示已选异常类别，s\_j为其等级潜在分数，θ\_j,k为第k个有序阈值，k=1、2；q\_j,k表示等级超过k的概率，g为严重度等级，P给出1～3级的概率分布。
+
+% (8) grade
+\begin{equation}
+g_j=1+\mathbf{1}[q_{j,1}\ge0.5]+\mathbf{1}[q_{j,2}\ge0.5]
+\tag{8}
+\end{equation}
+式中，g\_j为异常类别j的输出等级；1[·]为指示函数，条件成立取1，否则取0。两个有序阈值共同将等级分为1、2、3级。
+
+% (9) cls_loss
+\begin{equation}
+L_{\mathrm{cls}}=-\frac{\sum_{i=1}^{B}w_{c_i}\log p_{i,c_i}}{\sum_{i=1}^{B}w_{c_i}}
+\tag{9}
+\end{equation}
+式中，B为批次样本数，c\_i为样本i的真实类别，p\_i,c\_i为该类别预测分数，w\_c\_i为由训练集类别频数计算的权重；L\_cls为加权交叉熵。
+
+% (10) ord_loss
+\begin{equation}
+L_{\mathrm{ord}}=-\frac{1}{2B_F}\sum_{i\in F}\sum_{k=1}^{2}\left[t_{i,k}\log q_{i,k}+(1-t_{i,k})\log(1-q_{i,k})\right]
+\tag{10}
+\end{equation}
+式中，F为批次内具备有效等级标签的异常样本集合，B\_F为其样本数，t\_i,k为是否超过等级阈值k的二值标签，q\_i,k为真实故障类别对应的累计等级概率；L\_ord为有序分级二元交叉熵。
+
+% (11) loss
+\begin{equation}
+L=L_{\mathrm{cls}}+0.5L_{\mathrm{ord}},\quad t_{i,k}=\mathbf{1}[g_i>k]
+\tag{11}
+\end{equation}
+式中，L为故障模型总训练损失，0.5为分级损失权重，g\_i为真实故障等级。正常样本参与分类损失，异常样本在所属故障的等级头上接受分级监督；批次无有效等级标签时，分级损失记为0。
+
+% (12) prf
+\begin{equation}
+P=\frac{TP}{TP+FP},\quad R=\frac{TP}{TP+FN},\quad F_1=\frac{2PR}{P+R}
+\tag{12}
+\end{equation}
+式中，P为精确率，R为召回率，F\_1为二者的调和平均；TP、FP、FN分别为目标类别的正确识别数、误识别数和漏识别数。宏平均F\_1对五类F\_1取算术平均。
+
+% (13) kan
+\begin{equation}
+y_o=\sum_i w_{b,oi}\operatorname{SiLU}(x_i)+\sum_i\sum_k w_{s,oik}B_{i,k}(x_i)
+\tag{13}
+\end{equation}
+式中，x\_i和y\_o分别为输入与输出分量；w\_b,oi为基础分支权重，w\_s,oik为样条分支权重，B\_i,k为输入i对应的第k个B样条基函数，SiLU为基础激活函数。
+
+% (14) pcc
+\begin{equation}
+\operatorname{PCC}(u,v)=\frac{(u-\bar u)\cdot(v-\bar v)}{\|u-\bar u\|\|v-\bar v\|+\varepsilon}
+\tag{14}
+\end{equation}
+式中，u、v为参与相关计算的两个特征向量，ū、v̄为其均值，·为内积，‖·‖为欧氏范数，ε为数值稳定项；PCC为Pearson相关系数。
+
+% (15) attention
+\begin{equation}
+S=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right),\quad G=\operatorname{softmax}(\operatorname{ReLU}(A))
+\tag{15}
+\end{equation}
+式中，Q、K、V分别为查询、键、值矩阵，K^T为转置，d\_k为单头键向量维度；S为归一化注意力矩阵，A为相关图邻接矩阵，G为归一化图先验，ReLU用于保留非负图关系。
+
+% (16) aggregate
+\begin{equation}
+H=\operatorname{softmax}[(1-\lambda)S+\lambda G]V
+\tag{16}
+\end{equation}
+式中，λ为图先验融合系数，本模型取0.5；H为融合注意力对值矩阵V加权后的输出，softmax沿聚合节点维度归一化。
+
+% (17) rul
+\begin{equation}
+\mathrm{RUL}=c_{\mathrm{terminal}}-c_{\mathrm{window,end}}
+\tag{17}
+\end{equation}
+式中，c\_terminal为该电机最后观测老化批次编号，c\_window,end为当前历史窗口末次观测批次编号；RUL为两者之差，单位为剩余观测老化试验轮次。
+
+% (18) mse
+\begin{equation}
+L_{\mathrm{MSE}}=\frac{1}{B}\sum_{i=1}^{B}(\hat y_i-y_i)^2
+\tag{18}
+\end{equation}
+式中，B为当前批次样本数，y\_i为真实剩余轮次，ŷ\_i为预测轮次；L\_MSE为训练均方误差，单位为轮²。每轮训练损失按样本数加权汇总。
+
+% (19) quant
+\begin{equation}
+q=\operatorname{clip}\left(\operatorname{round}(x/s)+z,q_{\min},q_{\max}\right),\quad x\approx s(q-z)
+\tag{19}
+\end{equation}
+式中，x为浮点数值，q为量化整数，s为量化尺度，z为零点；round为取整，clip为范围截断，q\_min、q\_max为对应整数类型的上下界。
+
+% (20) errors
+\begin{equation}
+\mathrm{MAE}=\frac{1}{n}\sum_{i=1}^{n}|\hat y_i-y_i|,\quad\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2}
+\tag{20}
+\end{equation}
+式中，n为评估窗口数，y\_i和ŷ\_i分别为窗口i的真实与预测剩余轮次；MAE为平均绝对误差，RMSE为均方根误差，二者单位均为轮。
+
+% (21) mape
+\begin{equation}
+\mathrm{MAPE}=\frac{100\%}{n_+}\sum_{i\in I_+}\frac{|\hat y_i-y_i|}{|y_i|},\quad I_+=\{i:y_i\ne0\}
+\tag{21}
+\end{equation}
+式中，I\_+为真实标签非零的评估窗口集合，n\_+为该集合样本数；MAPE为平均绝对百分比误差，单位为%。分段结果按相应寿命区间内的窗口统计。
+
+\end{document}

@@ -1,0 +1,9 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    1 [label="{Activation|Function : ReLu\lA : 0.000000\lB : 0.000000\lGuid : 1\lLayerType : Activation\lBackendID : CpuAcc\l}"];
+    2 [label="{Output|Guid : 2\lLayerType : Output\lBackendID : CpuAcc\l}"];
+    0 -> 1 [label=< [2,3] >];
+    1 -> 2 [label=< [2,3] >];
+}

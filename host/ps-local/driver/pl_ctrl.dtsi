@@ -1,0 +1,50 @@
+/* Polling-only node for the merged HDMI + sensor SoC.
+ * GIC ID is still REF; do not add interrupts until the actual routing is
+ * confirmed on hardware. The driver tolerates a missing IRQ line.
+ *
+ * This fragment applies to the vendor kernel tree, whose base
+ * arch/arm64/boot/dts/anlogic/anlogic-dr1m90.dts declares
+ * `reserved_memory: reserved-memory` and `soc: soc`. A DTS without those
+ * labels can use the path form `&{/reserved-memory} { ... }` instead.
+ *
+ * PL sensor DMA buffer (docs/PL-PS接口约定.md §4.4). The HP1 write channel
+ * fills this window and the PS reads it back non-cached. The address is fixed
+ * because PS programs it through DMA_BASE_HI / DMA_BASE_LO and userspace reads
+ * the same value (`plctl dma --base`); platform/flash/build_hdmi_dtb.sh
+ * generates the identical node and re-validates it against the vendor DTB.
+ *
+ * Placement: the vendor DTB used by platform/flash/build_hdmi_dtb.sh reports
+ * 1 GiB of DDR at 0x0 and a 128 MiB linux,cma limited to the low 512 MiB, so
+ * the top of DDR is free for this window. 0x3EF0_0000..0x3EFF_FFFF ends 16 MiB
+ * below the DDR top, which stays clear of the relocated U-Boot image (~1 MiB),
+ * its PSCI stacks and CONFIG_SYS_NONCACHED_MEMORY in the top ~4 MiB of DDR
+ * (resident after hand-off), and it is 4 KiB and 8-byte aligned: 256 blocks of
+ * 4096 B, one block per DMA_BYTES transfer, so a 4096 B write never crosses a
+ * 4 KiB boundary.
+ *
+ * no-map is required, not reusable: the kernel must never hand this window to
+ * the page cache or the buddy allocator, and an unmapped range makes a
+ * /dev/mem mmap non-cached on arm64 (phys_mem_access_prot() returns
+ * pgprot_noncached() when pfn_is_map_memory() is false). The PL side performs
+ * no cache maintenance, so the PS must read through a non-cached mapping only:
+ * the driver takes base/size from memory-region (of_reserved_mem_lookup() or
+ * of_address_to_resource()) and maps it with memremap(MEMREMAP_WC) /
+ * ioremap_wc(), or userspace maps /dev/mem at the same physical address with
+ * MAP_SHARED. of_reserved_mem_device_init() does not apply to a plain no-map
+ * region.
+ */
+&reserved_memory {
+    sensor_dma: sensor-dma-buffer@3ef00000 {
+        no-map;
+        reg = <0x0 0x3ef00000 0x0 0x100000>;
+    };
+};
+
+&soc {
+    pl_ctrl: pl-ctrl@80000000 {
+        compatible = "mlk,pl-ctrl-1.0";
+        reg = <0x0 0x80000000 0x0 0x10000>;
+        memory-region = <&sensor_dma>;
+        status = "okay";
+    };
+};

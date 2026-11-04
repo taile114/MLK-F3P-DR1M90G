@@ -1,0 +1,17 @@
+verified: /home/uisrc/mlk-fault-integration/runtime
+verified: /home/uisrc/mlk-fault-integration/stage-test/opt/mlk_fault-packages/.stage-vneNGS
+Staged fault package: /opt/mlk_fault-packages/f3p-fault-single-v1-3c4b13fb11100aac; previous version retained when present
+verified: /home/uisrc/mlk-fault-integration/runtime-v2
+verified: /home/uisrc/mlk-fault-integration/stage-test/opt/mlk_fault-packages/.stage-BK55ra
+Staged fault package: /opt/mlk_fault-packages/f3p-fault-single-v1-staging-test-3c52ce126ec7ec8f; previous version retained when present
+verified: /home/uisrc/mlk-fault-integration/runtime-v2
+verified: /home/uisrc/mlk-fault-integration/stage-test/opt/mlk_fault-packages/.stage-snktaF
+verified: /home/uisrc/mlk-fault-integration/stage-test/opt/mlk_fault-packages/f3p-fault-single-v1-staging-test-3c52ce126ec7ec8f
+Staged fault package: /opt/mlk_fault-packages/f3p-fault-single-v1-staging-test-3c52ce126ec7ec8f; previous version retained when present
+Traceback (most recent call last):
+  File "/home/uisrc/mlk-fault-integration/host/ps-local/fault-inference/tools/verify_runtime.py", line 69, in <module>
+    verify(args.root, args.aarch64)
+  File "/home/uisrc/mlk-fault-integration/host/ps-local/fault-inference/tools/verify_runtime.py", line 48, in verify
+    raise ValueError("asset checksum mismatch: " + name)
+ValueError: asset checksum mismatch: weights.bin
+staging, previous version, idempotence, tamper rejection and config precedence passed

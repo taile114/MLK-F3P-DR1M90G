@@ -1,0 +1,6 @@
+case=inspect requested_backend=CpuRef cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.70 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+result=runtime_inspected inference_requested=false
+Info: Shutdown time: 0.02 ms.

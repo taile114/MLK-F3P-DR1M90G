@@ -1,0 +1,6 @@
+#!/bin/sh
+# Success means a recent, selected network source and <1 s residual correction.
+chronyc -h /var/run/chrony/chronyd.sock waitsync 1 1 0 1 >/dev/null 2>&1 || exit 1
+chronyc -h /var/run/chrony/chronyd.sock -c sources 2>/dev/null |
+    awk -F, '$1 == "^" && $2 == "*" && $7 ~ /^[0-9]+$/ && $7 <= 300 { good=1 } END { exit !good }' || exit 1
+echo network

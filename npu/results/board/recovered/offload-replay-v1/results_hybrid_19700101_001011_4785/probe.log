@@ -1,0 +1,1 @@
+result=inference_completed mode=hybrid samples=10 warmup=5 max_reference_error=0.04057312012 mismatches=10 rmse=4.408046883 mae=4.365846634 mean_forward_us=43144.9263 timed_allocation_calls=2352 timed_allocation_bytes=82188 NPU_layers=6 max_integer_lsb=1 integer_audit=1 operation_profile=0

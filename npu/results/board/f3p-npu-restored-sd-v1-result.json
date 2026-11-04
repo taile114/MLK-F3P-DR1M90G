@@ -1,0 +1,58 @@
+{
+  "scope": "User-provided physical F3P serial output after restoring SD boot files; raw result files not yet recovered",
+  "kernel": "Linux buildroot 6.1.111-rt42 #3 SMP PREEMPT Thu Nov 20 17:58:46 PST 2025 aarch64 GNU/Linux",
+  "physical_boot_after_restore_verified": true,
+  "devices": {
+    "/dev/cma_mem": [
+      10,
+      0
+    ],
+    "/dev/hard_npu": [
+      238,
+      0
+    ],
+    "/dev/soft_npu": [
+      237,
+      0
+    ]
+  },
+  "sd_boot_mount": "/mnt/mmcblk0p1",
+  "sd_data_mount": "/mnt/mmcblk0p2",
+  "registered_backends": [
+    "CpuAcc",
+    "Alnpu",
+    "CpuRef",
+    "ALRef"
+  ],
+  "package_internal_checksums_ok": 27,
+  "runs": {
+    "CpuRef": {
+      "exit_code": 0,
+      "iterations": 3,
+      "mismatches": 0,
+      "max_error_lsb": 0,
+      "mean_enqueue_us": 1511.58
+    },
+    "Alnpu": {
+      "exit_code": 0,
+      "iterations": 3,
+      "mismatches": 0,
+      "max_error_lsb": 1,
+      "mean_enqueue_us": 224.81,
+      "compute_layer": "ALHardNPU"
+    }
+  },
+  "interrupts": {
+    "HARD_NPU_IRQ": {
+      "before": 0,
+      "after": 3
+    },
+    "SOFT_NPU_IRQ": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "board_results_directory": "/mnt/mmcblk0p2/npu-tests/restore-check-19700101_000244-265/f3p-npu-smoke-v1/results_u8_19700101_000430_299",
+  "hard_npu_u8_smoke_verified_from_serial": true,
+  "full_rul_npu_verified": false
+}

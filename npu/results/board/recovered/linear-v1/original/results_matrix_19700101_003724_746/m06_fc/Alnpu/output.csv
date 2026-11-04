@@ -1,0 +1,1 @@
+iteration,row,output_feature,is_padding,actual_quantized,expected_quantized,error_lsb

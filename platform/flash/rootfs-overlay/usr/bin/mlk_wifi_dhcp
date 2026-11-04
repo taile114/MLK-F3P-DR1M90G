@@ -1,0 +1,24 @@
+#!/bin/sh
+# Called by the supplicant event monitor; restrict changes to its wireless link.
+interface=$1
+case "$interface" in ''|*[!a-zA-Z0-9_.-]*) exit 1 ;; esac
+[ -d "/sys/class/net/$interface/wireless" ] || exit 1
+pidfile=/var/run/mlk-wifi-dhcp-$interface.pid
+case "$2" in
+    CONNECTED)
+        # 千兆网或 4G 已获得地址时不参与 DHCP 竞争，链路优先级由
+        # mlk_net_watch 统一执行；WiFi 自身未获地址时优先级脚本返回 none。
+        winner=$(/usr/bin/mlk_net_priority)
+        case "$winner" in
+            ethernet:*|cellular:*) exit 0 ;;
+        esac
+        if [ -f "$pidfile" ] && kill -0 "$(cat "$pidfile")" 2>/dev/null; then
+            kill -USR1 "$(cat "$pidfile")"
+        else
+            udhcpc -b -i "$interface" -p "$pidfile" -s /usr/share/udhcpc/default.script
+        fi ;;
+    DISCONNECTED)
+        if [ -f "$pidfile" ]; then
+            kill -USR2 "$(cat "$pidfile")" 2>/dev/null || true
+        fi ;;
+esac

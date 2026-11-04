@@ -1,0 +1,12 @@
+{
+  "scope": "User-provided physical-board console during first linear control invocation",
+  "package_directory": "/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1",
+  "package_checksums_passed": 533,
+  "message": "A timeout command is required for hardware controls",
+  "stage": "dependency_check",
+  "model_inference_started": false,
+  "npu_mapping_tested": false,
+  "confirmed_image_timeout_applet_available": false,
+  "compatibility_installer": "../../probe/install_timeout_compat_v1.sh",
+  "physical_retry_after_compatibility_install_verified": false
+}

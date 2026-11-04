@@ -1,0 +1,237 @@
+{
+  "scope": "Independent recomputation from physical board files",
+  "full_runs": [
+    {
+      "samples": 165,
+      "mismatches": 0,
+      "max_reference_error": 8.58306884765625e-06,
+      "rmse": 3.2562667131254135,
+      "mae": 2.771934077233979,
+      "directory": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012236_505",
+      "backend": "CpuAcc,CpuRef",
+      "mean_forward_us_from_serial": 199451.7223
+    },
+    {
+      "samples": 165,
+      "mismatches": 0,
+      "max_reference_error": 7.62939453125e-06,
+      "rmse": 3.2562665311550036,
+      "mae": 2.7719338807192715,
+      "directory": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuRef_19700101_012334_521",
+      "backend": "CpuRef",
+      "mean_forward_us_from_serial": 928101.1201
+    }
+  ],
+  "profile": {
+    "scope": "Single first-window physical CPU profile; non-Constant Workload_Execute wall-clock measurements only",
+    "directory": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490",
+    "window_forward_us_from_serial": 239449.353,
+    "nonconstant_workload_sum_us": 206184.333,
+    "workloads": [
+      {
+        "kind": "NeonFullyConnectedWorkload",
+        "us": 38208.361,
+        "calls": 124,
+        "share_of_summed_workload_percent": 18.531165993101908
+      },
+      {
+        "kind": "RefElementwiseUnaryWorkload",
+        "us": 35016.12,
+        "calls": 60,
+        "share_of_summed_workload_percent": 16.98291984192611
+      },
+      {
+        "kind": "NeonReshapeWorkload",
+        "us": 31502.520999999993,
+        "calls": 243,
+        "share_of_summed_workload_percent": 15.278814127938611
+      },
+      {
+        "kind": "NeonSubtractionWorkload",
+        "us": 21482.010000000006,
+        "calls": 280,
+        "share_of_summed_workload_percent": 10.41883720621974
+      },
+      {
+        "kind": "NeonDivisionWorkload",
+        "us": 20929.621000000003,
+        "calls": 202,
+        "share_of_summed_workload_percent": 10.150926937790176
+      },
+      {
+        "kind": "NeonSliceWorkload",
+        "us": 16846.65,
+        "calls": 191,
+        "share_of_summed_workload_percent": 8.17067415107626
+      },
+      {
+        "kind": "NeonMultiplicationWorkload",
+        "us": 14513.189999999995,
+        "calls": 282,
+        "share_of_summed_workload_percent": 7.038939277699627
+      },
+      {
+        "kind": "NeonAdditionWorkload",
+        "us": 12486.450000000003,
+        "calls": 191,
+        "share_of_summed_workload_percent": 6.055964494644702
+      },
+      {
+        "kind": "NeonActivationWorkload",
+        "us": 5008.8,
+        "calls": 104,
+        "share_of_summed_workload_percent": 2.4292825391345323
+      },
+      {
+        "kind": "NeonSoftmaxWorkload",
+        "us": 3492.6000000000004,
+        "calls": 28,
+        "share_of_summed_workload_percent": 1.6939211380333152
+      },
+      {
+        "kind": "NeonBatchMatMulWorkload",
+        "us": 3471.75,
+        "calls": 28,
+        "share_of_summed_workload_percent": 1.683808827511642
+      },
+      {
+        "kind": "NeonTransposeWorkload",
+        "us": 1582.08,
+        "calls": 24,
+        "share_of_summed_workload_percent": 0.7673133923322873
+      },
+      {
+        "kind": "NeonReduceWorkload",
+        "us": 977.4,
+        "calls": 20,
+        "share_of_summed_workload_percent": 0.474041837116693
+      },
+      {
+        "kind": "NeonConcatWorkload",
+        "us": 666.78,
+        "calls": 2,
+        "share_of_summed_workload_percent": 0.3233902354743898
+      }
+    ],
+    "segments": [
+      {
+        "segment": 0,
+        "sum_nonconstant_workload_us": 85597.081,
+        "workload_us_by_kind": {
+          "NeonTransposeWorkload": 507.33,
+          "NeonReshapeWorkload": 12955.230999999998,
+          "NeonActivationWorkload": 2188.08,
+          "NeonMultiplicationWorkload": 5809.559999999998,
+          "NeonSubtractionWorkload": 10277.520000000002,
+          "NeonDivisionWorkload": 9464.640000000003,
+          "NeonFullyConnectedWorkload": 14660.46,
+          "RefElementwiseUnaryWorkload": 13615.350000000002,
+          "NeonSliceWorkload": 7816.589999999999,
+          "NeonAdditionWorkload": 5118.93,
+          "NeonConcatWorkload": 666.78,
+          "NeonReduceWorkload": 296.31,
+          "NeonBatchMatMulWorkload": 1331.79,
+          "NeonSoftmaxWorkload": 888.51
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_0.dot"
+      },
+      {
+        "segment": 1,
+        "sum_nonconstant_workload_us": 33629.191,
+        "workload_us_by_kind": {
+          "NeonTransposeWorkload": 310.53,
+          "NeonReshapeWorkload": 5191.650000000001,
+          "NeonActivationWorkload": 781.8299999999999,
+          "NeonSoftmaxWorkload": 859.9199999999998,
+          "NeonMultiplicationWorkload": 2413.5299999999993,
+          "NeonSubtractionWorkload": 3010.500000000001,
+          "NeonDivisionWorkload": 3121.7110000000002,
+          "NeonFullyConnectedWorkload": 6819.299999999999,
+          "RefElementwiseUnaryWorkload": 5704.650000000001,
+          "NeonSliceWorkload": 2367.87,
+          "NeonAdditionWorkload": 2131.5899999999997,
+          "NeonReduceWorkload": 200.67000000000002,
+          "NeonBatchMatMulWorkload": 715.4399999999999
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_1.dot"
+      },
+      {
+        "segment": 2,
+        "sum_nonconstant_workload_us": 33865.62,
+        "workload_us_by_kind": {
+          "NeonTransposeWorkload": 330.87,
+          "NeonReshapeWorkload": 5279.969999999998,
+          "NeonActivationWorkload": 767.61,
+          "NeonSoftmaxWorkload": 904.0500000000001,
+          "NeonMultiplicationWorkload": 2409.72,
+          "NeonSubtractionWorkload": 2949.6300000000006,
+          "NeonDivisionWorkload": 3168.8400000000006,
+          "NeonFullyConnectedWorkload": 6692.909999999999,
+          "RefElementwiseUnaryWorkload": 5825.250000000001,
+          "NeonSliceWorkload": 2508.2699999999995,
+          "NeonAdditionWorkload": 2141.9400000000005,
+          "NeonReduceWorkload": 182.28000000000003,
+          "NeonBatchMatMulWorkload": 704.28
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_2.dot"
+      },
+      {
+        "segment": 3,
+        "sum_nonconstant_workload_us": 33312.93,
+        "workload_us_by_kind": {
+          "NeonTransposeWorkload": 299.1,
+          "NeonReshapeWorkload": 5263.53,
+          "NeonActivationWorkload": 760.65,
+          "NeonSoftmaxWorkload": 840.1200000000001,
+          "NeonMultiplicationWorkload": 2372.31,
+          "NeonSubtractionWorkload": 2998.23,
+          "NeonDivisionWorkload": 3067.8899999999994,
+          "NeonFullyConnectedWorkload": 6633.15,
+          "RefElementwiseUnaryWorkload": 5708.1900000000005,
+          "NeonSliceWorkload": 2356.44,
+          "NeonAdditionWorkload": 2094.3300000000004,
+          "NeonReduceWorkload": 198.75,
+          "NeonBatchMatMulWorkload": 720.24
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_3.dot"
+      },
+      {
+        "segment": 4,
+        "sum_nonconstant_workload_us": 17205.301,
+        "workload_us_by_kind": {
+          "NeonTransposeWorkload": 134.25,
+          "NeonReshapeWorkload": 2646.2699999999995,
+          "NeonActivationWorkload": 437.90999999999997,
+          "NeonMultiplicationWorkload": 1301.07,
+          "NeonSubtractionWorkload": 1715.6100000000001,
+          "NeonDivisionWorkload": 1742.13,
+          "NeonFullyConnectedWorkload": 2877.3909999999996,
+          "RefElementwiseUnaryWorkload": 4002.96,
+          "NeonSliceWorkload": 1431.03,
+          "NeonAdditionWorkload": 817.29,
+          "NeonReduceWorkload": 99.39
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_4.dot"
+      },
+      {
+        "segment": 5,
+        "sum_nonconstant_workload_us": 2574.21,
+        "workload_us_by_kind": {
+          "NeonActivationWorkload": 72.72,
+          "NeonReshapeWorkload": 165.87,
+          "NeonMultiplicationWorkload": 207.0,
+          "NeonSubtractionWorkload": 530.52,
+          "NeonDivisionWorkload": 364.41,
+          "NeonFullyConnectedWorkload": 525.15,
+          "RefElementwiseUnaryWorkload": 159.72,
+          "NeonSliceWorkload": 366.44999999999993,
+          "NeonAdditionWorkload": 182.37
+        },
+        "graph_file": "results/board/recovered/cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490/segment_5.dot"
+      }
+    ],
+    "fully_connected_share_percent": 18.531165993101908,
+    "limits": "Profiled first window includes first-call kernel preparation and profiling overhead. Summed workload fractions are not steady-state end-to-end fractions or whole-model NPU speedup."
+  },
+  "rul_model_npu_verified": false
+}

@@ -1,0 +1,130 @@
+qemu-aarch64 version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.32)
+Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers
+sysroot=/home/uisrc/uisrc-lab-anlogic/tools/aarch64-linux/bin/../aarch64-linux-gnu/libc
+--- relu exit_code=0 ---
+element=0 actual=0 expected=0
+element=1 actual=0 expected=0
+element=2 actual=0 expected=0
+element=3 actual=0.5 expected=0.5
+element=4 actual=1 expected=1
+element=5 actual=2 expected=2
+result=passed case=relu max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.15 ms.
+--- less exit_code=0 ---
+element=0 actual=1 expected=1
+element=1 actual=0 expected=0
+element=2 actual=1 expected=1
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=0 expected=0
+result=passed case=less max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.33 ms.
+--- greater_equal exit_code=0 ---
+element=0 actual=0 expected=0
+element=1 actual=1 expected=1
+element=2 actual=0 expected=0
+element=3 actual=0 expected=0
+element=4 actual=1 expected=1
+element=5 actual=1 expected=1
+result=passed case=greater_equal max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.29 ms.
+--- broadcast_less exit_code=0 ---
+element=6 actual=0 expected=0
+element=7 actual=0 expected=0
+element=8 actual=0 expected=0
+element=9 actual=0 expected=0
+element=10 actual=0 expected=0
+element=11 actual=0 expected=0
+result=passed case=broadcast_less max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.26 ms.
+--- logical_and exit_code=0 ---
+element=0 actual=0 expected=0
+element=1 actual=0 expected=0
+element=2 actual=0 expected=0
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=1 expected=1
+result=passed case=logical_and max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.32 ms.
+--- cast_bool_float exit_code=40 ---
+Info: ArmNN v32.1.0
+Info: Initialization time: 10.89 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Warning: WARNING: Layer of type Cast is not supported on requested backend CpuRef for input data type Boolean and output data type Float32 (reason: Reference cast: input is not a supported type
+), falling back to the next backend.
+Warning: ERROR: Layer of type Cast is not supported on any preferred backend [CpuRef ]
+Info: Shutdown time: 0.33 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- float_less_via_ceil exit_code=0 ---
+element=0 actual=1 expected=1
+element=1 actual=0 expected=0
+element=2 actual=1 expected=1
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=0 expected=0
+result=passed case=float_less_via_ceil max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.33 ms.
+--- float_greater_equal_via_ceil exit_code=0 ---
+element=0 actual=0 expected=0
+element=1 actual=1 expected=1
+element=2 actual=0 expected=0
+element=3 actual=0 expected=0
+element=4 actual=1 expected=1
+element=5 actual=1 expected=1
+result=passed case=float_greater_equal_via_ceil max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.61 ms.
+--- float_less_boundaries exit_code=0 ---
+element=2 actual=1 expected=1
+element=3 actual=0 expected=0
+element=4 actual=0 expected=0
+element=5 actual=1 expected=1
+element=6 actual=0 expected=0
+element=7 actual=0 expected=0
+result=passed case=float_less_boundaries max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.46 ms.
+--- spline_gate_float exit_code=0 ---
+element=0 actual=0 expected=0
+element=1 actual=1 expected=1
+element=2 actual=1 expected=1
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=0 expected=0
+result=passed case=spline_gate_float max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.71 ms.
+--- batch_matmul_2d exit_code=0 ---
+stage=load passed
+Info: Execution time: 14.09 ms.
+element=0 actual=-2 expected=-2
+element=1 actual=13 expected=13
+element=2 actual=-2 expected=-2
+element=3 actual=31 expected=31
+result=passed case=batch_matmul_2d max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.31 ms.
+--- batch_matmul_3d exit_code=0 ---
+stage=load passed
+Info: Execution time: 18.28 ms.
+element=0 actual=-2 expected=-2
+element=1 actual=13 expected=13
+element=2 actual=-2 expected=-2
+element=3 actual=31 expected=31
+result=passed case=batch_matmul_3d max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.80 ms.
+--- einsum_via_fc exit_code=0 ---
+element=0 actual=5 expected=5
+element=1 actual=5 expected=5
+element=2 actual=-2 expected=-2
+element=3 actual=13 expected=13
+element=4 actual=13 expected=13
+element=5 actual=-2 expected=-2
+result=passed case=einsum_via_fc max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.62 ms.
+--- reduce_l2_decomposed exit_code=0 ---
+Info: ******************************************************************************************************
+stage=optimize passed
+stage=load passed
+Info: Execution time: 14.66 ms.
+element=0 actual=5 expected=5
+element=1 actual=13 expected=13
+result=passed case=reduce_l2_decomposed max_absolute_error=0 mismatches=0
+Info: Shutdown time: 1.03 ms.
+unexpected_failures=0

@@ -1,0 +1,108 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "/etc/init.d/S99qtapp start",
+      "operation": "command",
+      "output": "mlk_ps_local started (pid 2221, pidfile /var/run/mlk_ps_local.pid)",
+      "exit_code": 0
+    },
+    {
+      "command": "sleep 1; ps | grep mlk_ps_local; cat /sys/class/graphics/fb0/virtual_size; sha256sum /opt/qt_play/mlk_ps_local /opt/mlk_rul/model.json; ls -l /run/mlk-fault.sock; cat /etc/init.d/S99qtapp",
+      "operation": "command",
+      "output": "QIconvCodec::convertToUnicode: using Latin-1 for conversion, iconv_open failed\r\nQIconvCodec::convertFromUnicode: using Latin-1 for conversion, iconv_open failed\r\nQStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'\r\nU7 ??????\r\n 2221 root     /opt/qt_play/mlk_ps_local --kiosk\r\n 2230 root     grep mlk_ps_local\r\n1920,1080\r\n0df57fa0d4aa4002deca8f15f1293ad0d81b6d0d2d826436e616411c051ca400  /opt/qt_play/mlk_ps_local\r\n4ae5798021df30eace49d3ff35a1015edac15b536828cfdef1a58749420100f1  /opt/mlk_rul/model.json\r\nsrwx------    1 root     root             0 Oct 31 18:07 \u001b[1;35m/run/mlk-fault.sock\u001b[m\r\n#!/bin/sh\r\n# Start/stop the PS-local Qt HMI.\r\n#\r\n# The application owns the PL sensor DMA ring (/dev/pl_ctrl + /dev/mem), so stop\r\n# sends SIGTERM first: the Qt event loop exits, the window is destroyed and\r\n# pl_dma_ring_stop() writes RING|STOP to DMA_CTRL. SIGKILL is a last resort and\r\n# leaves the ring started. Both branches then verify DMA_CTRL through plctl and\r\n# clear the ring when it is still busy, so the stop result does not depend on the\r\n# application releasing the engine itself.\r\n\r\nPIDFILE=/var/run/mlk_ps_local.pid\r\nAPP_COMM=mlk_ps_local\r\nTERM_WAIT=5\r\n\r\n# /var/run may be missing on a minimal rootfs.\r\nif ! mkdir -p \"${PIDFILE%/*}\" 2>/dev/null; then\r\n    PIDFILE=/tmp/mlk_ps_local.pid\r\nfi\r\n\r\n# Print the pid of the running application: pidfile first, then a /proc comm\r\n# scan so a manually started instance is found as well. BusyBox has no\r\n# pgrep/pkill, so neither is used.\r\nrunning_pid()\r\n{\r\n    _pid=\r\n    if [ -r \"$PIDFILE\" ]; then\r\n        read -r _pid < \"$PIDFILE\"\r\n    fi\r\n    case \"$_pid\" in\r\n    ''|*[!0-9]*) _pid= ;;\r\n    esac\r\n    if [ -n \"$_pid\" ] && [ -r \"/proc/$_pid/comm\" ]; then\r\n        _comm=\r\n        read -r _comm < \"/proc/$_pid/comm\"\r\n        if [ \"$_comm\" = \"$APP_COMM\" ]; then\r\n            echo \"$_pid\"\r\n            return 0\r\n        fi\r\n    fi\r\n    for _dir in /proc/[0-9]*; do\r\n        [ -r \"$_dir/comm\" ] || continue\r\n        _comm=\r\n        read -r _comm < \"$_dir/comm\"\r\n        if [ \"$_comm\" = \"$APP_COMM\" ]; then\r\n            echo \"${_dir#/proc/}\"\r\n            return 0\r\n        fi\r\n    done\r\n    return 1\r\n}\r\n\r\nstart()\r\n{\r\n    [ -x /opt/qt_play/run_arm_app.sh ] || exit 0\r\n    _pid=$(running_pid)\r\n    if [ -n \"$_pid\" ]; then\r\n        echo \"$APP_COMM already running (pid $_pid)\"\r\n        return 0\r\n    fi\r\n    rm -f \"$PIDFILE\" 2>/dev/null\r\n    # exec keeps one pid across run_arm_app.sh and mlk_ps_local.\r\n    (\r\n        cd /opt/qt_play || exit 1\r\n        exec ./run_arm_app.sh\r\n    ) &\r\n    _pid=$!\r\n    if echo \"$_pid\" > \"$PIDFILE\" 2>/dev/null; then\r\n        echo \"$APP_COMM started (pid $_pid, pidfile $PIDFILE)\"\r\n    else\r\n        echo \"$APP_COMM started (pid $_pid); pidfile $PIDFILE not writable\" >&2\r\n    fi\r\n}\r\n\r\n# Clear a DMA ring the application left started. plctl owns the register\r\n# offsets and bit positions (host/ps-local/driver/pl_ctrl_uapi.h), so the script\r\n# does not repeat them: \"ring-stop\" issues the graceful STOP and writes\r\n# DMA_CTRL back as 0 even when the application was killed.\r\nclear_ring()\r\n{\r\n    command -v plctl >/dev/null 2>&1 || return 0\r\n    if plctl ring-stop >/dev/null 2>&1; then\r\n        echo \"cleared PL sensor DMA ring\"\r\n        return 0\r\n    fi\r\n    # Fallback for a rootfs whose plctl predates ring-stop: DMA_CTRL=0x90,\r\n    # BUSY bit 8, RING bit 3, STOP bit 4 (see pl_ctrl_uapi.h).\r\n    _val=$(plctl read 0x90 2>/dev/null | tr -d ' \\r')\r\n    _hex=${_val##*=0x}\r\n    case \"$_hex\" in\r\n    ''|*[!0-9a-fA-F]*) return 0 ;;\r\n    esac\r\n    if [ \"$(( (0x$_hex >> 8) & 1 ))\" -eq 1 ]; then\r\n        plctl write 0x90 0x18 >/dev/null 2>&1\r\n        plctl write 0x90 0x0 >/dev/null 2>&1\r\n        echo \"cleared PL sensor DMA ring ($(plctl read 0x90 2>/dev/null))\"\r\n        return 0\r\n    fi\r\n    if [ \"$(( 0x$_hex ))\" -ne 0 ]; then\r\n        plctl write 0x90 0x0 >/dev/null 2>&1\r\n        echo \"cleared idle DMA control ($(plctl read 0x90 2>/dev/null))\"\r\n    fi\r\n    return 0\r\n}\r\n\r\nstop()\r\n{\r\n    _pid=$(running_pid)\r\n    if [ -z \"$_pid\" ]; then\r\n        rm -f \"$PIDFILE\" 2>/dev/null\r\n        echo \"$APP_COMM not running\"\r\n        return 0\r\n    fi\r\n    kill -TERM \"$_pid\" 2>/dev/null\r\n    _waited=0\r\n    while [ \"$_waited\" -lt \"$TERM_WAIT\" ]; do\r\n        if ! kill -0 \"$_pid\" 2>/dev/null; then\r\n            rm -f \"$PIDFILE\" 2>/dev/null\r\n            echo \"$APP_COMM stopped (pid $_pid)\"\r\n            clear_ring\r\n            return 0\r\n        fi\r\n        sleep 1\r\n        _waited=$((_waited + 1))\r\n    done\r\n    if kill -0 \"$_pid\" 2>/dev/null; then\r\n        echo \"$APP_COMM did not exit within ${TERM_WAIT}s; sending SIGKILL (pid $_pid)\" >&2\r\n        kill -KILL \"$_pid\" 2>/dev/null\r\n        _waited=0\r\n        while [ \"$_waited\" -lt 2 ] && kill -0 \"$_pid\" 2>/dev/null; do\r\n            sleep 1\r\n            _waited=$((_waited + 1))\r\n        done\r\n        rm -f \"$PIDFILE\" 2>/dev/null\r\n        echo \"warning: $APP_COMM ignored SIGTERM and was killed (pid $_pid)\" >&2\r\n        clear_ring\r\n        return 1\r\n    fi\r\n    rm -f \"$PIDFILE\" 2>/dev/null\r\n    echo \"$APP_COMM stopped (pid $_pid)\"\r\n    clear_ring\r\n    return 0\r\n}\r\n\r\nrestart()\r\n{\r\n    stop\r\n    start\r\n}\r\n\r\nstatus()\r\n{\r\n    _pid=$(running_pid)\r\n    if [ -n \"$_pid\" ]; then\r\n        echo \"$APP_COMM running (pid $_pid)\"\r\n        return 0\r\n    fi\r\n    echo \"$APP_COMM not running\"\r\n    return 3\r\n}\r\n\r\ncase \"$1\" in\r\n  start) start ;;\r\n  stop) stop ;;\r\n  restart) restart ;;\r\n  status) status ;;\r\n  *)\r\n    echo \"usage: $0 {start|stop|restart|status}\" >&2\r\n    exit 1\r\n    ;;\r\nesac\r\nexit $?",
+      "exit_code": 0
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu3.json",
+      "chunk_bytes": 65536,
+      "bytes": 485,
+      "remote_path": "/tmp/fault-fixed-npu3.json",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "862f0eb8e4d9e8167665cc12d8697ed3c58b87130ab877c57034685cdc088953",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu3.log",
+      "chunk_bytes": 65536,
+      "bytes": 3147,
+      "remote_path": "/tmp/fault-fixed-npu3.log",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "90ad37b5758eb80e3415b6974dadc600de2b11f1d82e2bf61299a0fa9c9debb2",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-1.json",
+      "chunk_bytes": 65536,
+      "bytes": 506,
+      "remote_path": "/tmp/fault-fixed-npu360-1.json",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "f6656ebea1774956977b0dfd39585d577d5f55a402a8bd5201d3a6f02f28c37a",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-1.csv",
+      "chunk_bytes": 65536,
+      "bytes": 9627,
+      "remote_path": "/tmp/fault-fixed-npu360-1.csv",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "f96f6c095ae1ffd8189745c99df504e662f0aa59d9170c095ef83ae0c29e68e5",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-1.log",
+      "chunk_bytes": 65536,
+      "bytes": 47425,
+      "remote_path": "/tmp/fault-fixed-npu360-1.log",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "451a28ee9220a8cebd7eca6c6a8bd31ca82620bf4a60af36010b2526b4c5cc6c",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-2.json",
+      "chunk_bytes": 65536,
+      "bytes": 505,
+      "remote_path": "/tmp/fault-fixed-npu360-2.json",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "ec8f7f0898be115ffc5dce80cd7c322d14a93c83f12c92547f6a9b6bbf26aad5",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-2.csv",
+      "chunk_bytes": 65536,
+      "bytes": 9627,
+      "remote_path": "/tmp/fault-fixed-npu360-2.csv",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "ccbdeec4bce44eb569114187a4af40eacdcc89122f9fa30deb71308265c749ae",
+      "verified": true
+    },
+    {
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:\\competion\\code\\out\\mlk-fault\\consttensor-fix\\board-npu360-2.log",
+      "chunk_bytes": 65536,
+      "bytes": 47425,
+      "remote_path": "/tmp/fault-fixed-npu360-2.log",
+      "kernel_console_level_during_chunk": 1,
+      "operation": "download",
+      "sha256": "68b6aafb4c53fc40138d5769cb92c05b043486993760678ece24bd63ad66d7fb",
+      "verified": true
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

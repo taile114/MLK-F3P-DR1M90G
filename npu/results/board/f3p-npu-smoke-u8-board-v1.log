@@ -1,0 +1,79 @@
+# sh run.sh inspect
+results=/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_inspect_19700101_003303_299 runtime=/opt/armnn_lib/lib
+[ 1984.395829] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1984.395932] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- backend=CpuRef case=inspect exit_code=0 ---
+case=inspect requested_backend=CpuRef cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.70 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+result=runtime_inspected inference_requested=false
+Info: Shutdown time: 0.02 ms.
+--- NPU interrupt snapshots ---
+ 41:          0          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+ 41:          0          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+exit_code=0 results=/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_inspect_19700101_003303_299
+# sh run.sh u8
+results=/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_u8_19700101_003311_321 runtime=/opt/armnn_lib/lib
+[ 1992.523411] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1992.523511] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- backend=CpuRef case=u8 exit_code=0 ---
+case=u8 requested_backend=CpuRef cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.67 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed shape=1,8,8,8 layout=NCHW kernel=3,3 input_scale=0.25 weight_scale=0.125 output_scale=0.25 output_offset=128
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)
+Info: ------------------------------------------------------------------------------------------------------
+Info:    3|CpuRef  |Convolution2d             0.00KB(0.00KB)      |0.50KB(0.50KB)      |0.50KB(0.50KB)
+Info: [ 1992.626031] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+****************************************************************[ 1992.626133] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+**************************************
+stage=optimize passed graph_has_requested_backend=true
+Info:
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=0B
+
+stage=load passed
+Info: Execution time: 1.55 ms.
+iteration=0 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1651.74
+Info: Execution time: 1.42 ms.
+iteration=1 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1465.35
+Info: Execution time: 1.37 ms.
+iteration=2 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1422.12
+result=passed case=u8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 mean_enqueue_us=1513.07 npu_requested=false
+Info: Shutdown time: 0.03 ms.
+--- backend=Alnpu case=u8 exit_code=0 ---
+case=u8 requested_backend=Alnpu cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.74 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed shape=1,8,8,8 layout=NCHW kernel=3,3 input_scale=0.25 weight_scale=0.125 output_scale=0.25 output_offset=128
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |0.50KB(0.50KB)      |0.50KB(0.50KB)
+Info: ******************************************************************************************************
+stage=optimize passed graph_has_requested_backend=true
+Info:
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=1.88KB
+
+stage=load passed
+Info: Execution time: 0.24 ms.
+iteration=0 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=337.62
+Info: Execution time: 0.12 ms.
+iteration=1 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=162.48
+Info: Execution time: 0.11 ms.
+iteration=2 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=156.72
+result=passed case=u8 backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 mean_enqueue_us=218.94 npu_requested=true
+Info: Shutdown time: 0.04 ms.
+--- NPU interrupt snapshots ---
+ 41:          0          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+ 41:          3          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+exit_code=0 results=/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_u8_19700101_003311_321

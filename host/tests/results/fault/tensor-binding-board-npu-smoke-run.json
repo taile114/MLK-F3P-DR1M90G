@@ -1,0 +1,26 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "CmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:          0          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ\r\n 1926 root     grep mlk_ps_local",
+      "operation": "command",
+      "command": "grep Cma /proc/meminfo; grep -i npu /proc/interrupts; ps | grep mlk_ps_local; true",
+      "exit_code": 0
+    },
+    {
+      "output": "[  242.206732] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  242.206811] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n\r\nInfo: ******************************************************************************************************\r\nInfo: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  \r\nInfo: ------------------------------------------------------------------------------------------------------\r\nInfo:   56|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |3.00KB(4.00KB)      |3.00KB(4.00KB)      \r\nInfo: ******************************************************************************************************\r\nInfo: \r\n\r\n Memory Usage Info: after Load Network(id=3), CMA Mem Usage: weight=44.76KB\r\n\r\nInfo: Execution time: 0.27 ms.\r\nInfo: Execution time: 0.16 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Execution time: 0.29 ms.\r\nInfo: Execution time: 0.16 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Execution time: 0.27 ms.\r\nInfo: Execution time: 0.16 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Execution time: 0.15 ms.\r\nInfo: Shutdown time: 0.04 ms.\r\n{\"result\":\"completed\",\"samples\":3,\"class_correct\":3,\"joint_correct\":3,\"reference_mismatch\":0,\"backend\":2,\"mean_infer_us\":4944.000,\"report\":\"/tmp/fault-fixed-npu3.json\"}",
+      "operation": "command",
+      "command": "if LD_LIBRARY_PATH=/opt/armnn_lib/lib fault_check /opt/mlk_fault --backend npu --data /data/fault-eval --limit 3 --report /tmp/fault-fixed-npu3.json > /tmp/fault-fixed-npu3.log 2>&1; then tail -n 24 /tmp/fault-fixed-npu3.log; else tail -n 36 /tmp/fault-fixed-npu3.log; false; fi",
+      "exit_code": 0
+    },
+    {
+      "output": "{\r\n  \"schema\": \"mlk.fault.runtime_check.v1\",\r\n  \"root\": \"/opt/mlk_fault\",\r\n  \"samples\": 3,\r\n  \"backend_requested\": 2,\r\n  \"backend_reported\": 2,\r\n  \"class_correct\": 3,\r\n  \"joint_correct\": 3,\r\n  \"class_accuracy\": 1,\r\n  \"joint_accuracy\": 1,\r\n  \"macro_class_accuracy\": 1,\r\n  \"reference_mismatch\": 0,\r\n  \"mean_infer_us\": 4944,\r\n  \"median_infer_us\": 4912,\r\n  \"p95_infer_us\": 5020,\r\n  \"max_infer_us\": 5020,\r\n  \"confusion_target_by_prediction\": [[3,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]\r\n}\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB\r\n 41:         12          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ",
+      "operation": "command",
+      "command": "cat /tmp/fault-fixed-npu3.json; grep Cma /proc/meminfo; grep -i npu /proc/interrupts",
+      "exit_code": 0
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

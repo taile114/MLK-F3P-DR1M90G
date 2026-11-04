@@ -1,0 +1,129 @@
+{
+  "status": "data_checks_passed",
+  "feature_version": "motor_stable23_v1",
+  "source_csv_count": 537,
+  "raw_rows": 10738200,
+  "segment_count": 1074,
+  "kept_segments": 937,
+  "quarantined_segments": 137,
+  "quarantine_reasons": {
+    "document_annotated_sensor_corruption": 136,
+    "incomplete_10000_sample_segment": 1
+  },
+  "forward_filled_values": 0,
+  "constant_train_feature_count": 0,
+  "self_checks": {
+    "zero_signal": "pass",
+    "constant_signal": "pass",
+    "known_frequency": "pass",
+    "frequency_scale_invariance": "pass",
+    "determinism": "pass",
+    "causal_missing_rules": "pass"
+  },
+  "motors": {
+    "2": {
+      "split": "train",
+      "csv_files": 108,
+      "observed_cycles": 28,
+      "valid_segments": 186,
+      "quarantined_segments": 30,
+      "samples": 177,
+      "terminal_date": "20120106"
+    },
+    "3": {
+      "split": "train",
+      "csv_files": 103,
+      "observed_cycles": 26,
+      "valid_segments": 182,
+      "quarantined_segments": 24,
+      "samples": 173,
+      "terminal_date": "20111216"
+    },
+    "5": {
+      "split": "train",
+      "csv_files": 110,
+      "observed_cycles": 28,
+      "valid_segments": 202,
+      "quarantined_segments": 18,
+      "samples": 193,
+      "terminal_date": "20120203"
+    },
+    "6": {
+      "split": "val",
+      "csv_files": 109,
+      "observed_cycles": 27,
+      "valid_segments": 193,
+      "quarantined_segments": 25,
+      "samples": 184,
+      "terminal_date": "20111226"
+    },
+    "7": {
+      "split": "test",
+      "csv_files": 107,
+      "observed_cycles": 27,
+      "valid_segments": 174,
+      "quarantined_segments": 40,
+      "samples": 165,
+      "terminal_date": "20120608"
+    }
+  },
+  "splits": {
+    "train": {
+      "samples": 543,
+      "shape": [
+        543,
+        10,
+        11,
+        23
+      ],
+      "dtype": "float32",
+      "label_min": 0.0,
+      "label_max": 26.0,
+      "input_min": 0.0,
+      "input_max": 1.0,
+      "fraction_outside_train_minmax": 0.0,
+      "motor_ids": [
+        2,
+        3,
+        5
+      ]
+    },
+    "val": {
+      "samples": 184,
+      "shape": [
+        184,
+        10,
+        11,
+        23
+      ],
+      "dtype": "float32",
+      "label_min": 0.0,
+      "label_max": 25.0,
+      "input_min": -73.45169067382812,
+      "input_max": 4.629428863525391,
+      "fraction_outside_train_minmax": 0.006646330984705275,
+      "motor_ids": [
+        6
+      ]
+    },
+    "test": {
+      "samples": 165,
+      "shape": [
+        165,
+        10,
+        11,
+        23
+      ],
+      "dtype": "float32",
+      "label_min": 0.0,
+      "label_max": 25.0,
+      "input_min": -0.17813892662525177,
+      "input_max": 1.6104363203048706,
+      "fraction_outside_train_minmax": 0.0057348185411426516,
+      "motor_ids": [
+        7
+      ]
+    }
+  },
+  "source_code_sha256": "ef602243ff979622ea3be2b8eee124ada17412ce9a146fb79ea0053327598238"
+}

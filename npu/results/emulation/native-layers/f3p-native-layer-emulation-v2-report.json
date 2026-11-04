@@ -1,0 +1,82 @@
+{
+  "execution_environment": "QEMU AArch64 6.2 in Ubuntu development VM, vendor Arm NN 32.1.0",
+  "physical_f3p_v2_verified": false,
+  "same_vendor_runtime": true,
+  "numeric_cases_passed": 13,
+  "max_observed_numeric_error": 0,
+  "known_unsupported_controls": 1,
+  "unexpected_failures": 0,
+  "cases": [
+    {
+      "case": "relu",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "less",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "greater_equal",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "broadcast_less",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "logical_and",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "cast_bool_float",
+      "exit_code": 40,
+      "expected": true
+    },
+    {
+      "case": "float_less_via_ceil",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "float_greater_equal_via_ceil",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "float_less_boundaries",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "spline_gate_float",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "batch_matmul_2d",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "batch_matmul_3d",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "einsum_via_fc",
+      "exit_code": 0,
+      "expected": true
+    },
+    {
+      "case": "reduce_l2_decomposed",
+      "exit_code": 0,
+      "expected": true
+    }
+  ],
+  "archive_sha256": "205f6e4251e6eccf4f0560918d18858d0d3890d36d77a86e5cd136100609281a"
+}

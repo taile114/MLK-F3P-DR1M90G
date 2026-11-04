@@ -1,0 +1,313 @@
+{
+  "architecture": "fault_mtl_f3p_cnn2d_single_v3",
+  "input_profile": "base6",
+  "task_definition": "bench_fault_single_v1",
+  "label_contract_version": "fault_labels_v2_operator_v1",
+  "preprocessing_version": "base6_native_blocks_short_context_v2",
+  "temperature_rule": "case_temp_35_40_45_v1",
+  "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+  "tilt_rule_status": "REF",
+  "fault_order": [
+    "overload",
+    "undervoltage",
+    "overtemperature",
+    "mount_tilt"
+  ],
+  "input_shapes": {
+    "time_frequency": [
+      8,
+      64,
+      48
+    ],
+    "spectrum": [
+      3,
+      769
+    ],
+    "vibration_stats": [
+      12
+    ],
+    "mount_pose": [
+      8
+    ],
+    "fast_state": [
+      6,
+      40
+    ],
+    "slow_state": [
+      9,
+      60
+    ]
+  },
+  "mount_pose_channels": [
+    "g_x",
+    "g_y",
+    "g_z",
+    "tilt_deg",
+    "g_norm",
+    "coverage",
+    "valid_pose",
+    "age_pose"
+  ],
+  "fusion_dimension": 224,
+  "fast_state_dimension": 240,
+  "slow_state_dimension": 540,
+  "mount_pose_dimension": 8,
+  "temperature_head_policy": "mechanical_heads_temperature_blind_v1",
+  "classification_mode": "single_label",
+  "classification_contract": "single_primary_fault_v1",
+  "class_order": [
+    "normal",
+    "overload",
+    "undervoltage",
+    "overtemperature",
+    "mount_tilt"
+  ],
+  "classification_dimension": 5,
+  "severity_dimension": 4,
+  "output_dimension": 9,
+  "status": "single_fault_gpu_training_and_inference_completed",
+  "output_contract": {
+    "classification": "five-way softmax argmax",
+    "normal_grade": 0,
+    "fault_grade": [
+      1,
+      2,
+      3
+    ],
+    "reported_fault_count_per_abnormal_window": 1,
+    "grade_source": "only the selected fault ordinal head"
+  },
+  "dataset": {
+    "partitions": {
+      "train": 1063,
+      "val": 360,
+      "test": 360
+    },
+    "primary_class_counts": {
+      "train": {
+        "normal": 183,
+        "overload": 225,
+        "undervoltage": 239,
+        "overtemperature": 174,
+        "mount_tilt": 242
+      },
+      "val": {
+        "normal": 66,
+        "overload": 75,
+        "undervoltage": 80,
+        "overtemperature": 58,
+        "mount_tilt": 81
+      },
+      "test": {
+        "normal": 66,
+        "overload": 75,
+        "undervoltage": 80,
+        "overtemperature": 58,
+        "mount_tilt": 81
+      }
+    },
+    "physical_windows_and_splits_unchanged": true,
+    "feature_values_unchanged": true,
+    "normalization_parameters_unchanged": true,
+    "normalization_fit_only_train": true,
+    "original_multilabel_unknowns_preserved_in_source_fields": true,
+    "time_support_and_dma_blocks_disjoint": true,
+    "all_26_sources_in_each_partition": true,
+    "original_source_files_unchanged": true,
+    "original_source_files_verified": 265
+  },
+  "training": {
+    "device": "cuda:0",
+    "epochs": 25,
+    "best_epoch": 21,
+    "seed": 42,
+    "first_loss": 0.9567916752660975,
+    "last_loss": 0.07695384854998659,
+    "criterion": "five-class cross entropy plus true-primary ordinal loss",
+    "structure": {
+      "parameters": 257137,
+      "fixed_padding_weights": 720,
+      "conv_linear_weights": 256416,
+      "cnn_mac_per_window": 12386304,
+      "linear_mac_per_window": 259744
+    }
+  },
+  "test": {
+    "class_order": [
+      "normal",
+      "overload",
+      "undervoltage",
+      "overtemperature",
+      "mount_tilt"
+    ],
+    "windows": 360,
+    "correct": 360,
+    "classification_accuracy": 1.0,
+    "fault_only_classification_accuracy": 1.0,
+    "grade_e2e_accuracy": 0.9863945578231292,
+    "grade_accuracy_given_correct_class": 0.9863945578231292,
+    "class_and_grade_accuracy": 0.9888888888888889,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        66,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        80,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        58,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        81
+      ]
+    ],
+    "unavailable_windows": 0,
+    "per_class": {
+      "normal": {
+        "support": 66,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "overload": {
+        "support": 75,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "undervoltage": {
+        "support": 80,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "overtemperature": {
+        "support": 58,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "mount_tilt": {
+        "support": 81,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "output_records_checked": 360,
+  "multiple_predicted_faults": 0,
+  "temperature_invariance": {
+    "scope": "raw mechanical/normal class logits and mechanical grade scores; global softmax competes with overtemperature",
+    "split": "val",
+    "samples": 64,
+    "temperature_shift_c": 50,
+    "mechanical_class_logits_max_abs_change": 0.0,
+    "mechanical_grade_logits_max_abs_change": 0.0,
+    "softmax_probability_max_abs_change": 0.5048574209213257
+  },
+  "prediction_examples": {
+    "normal": {
+      "window_id": "deeff82ae3d7a7a03b471e5e",
+      "valid": true,
+      "fault": "normal",
+      "fault_name": "正常",
+      "grade": 0,
+      "confidence": 0.9999758005142212
+    },
+    "fault": {
+      "window_id": "eabcdea3bfae3d596fa1ec99",
+      "valid": true,
+      "fault": "overload",
+      "fault_name": "过载",
+      "grade": 2,
+      "confidence": 0.9998445510864258
+    }
+  },
+  "automated_tests": {
+    "tests": 96,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_report": "runs/tests-single-class.xml",
+  "validation_scope": "within_record_time_block_holdout; shared source sessions/date/device; not independent trial acceptance",
+  "test_used_for_this_run_gradients_or_early_stopping": false,
+  "same_holdout_previously_observed_in_development": true,
+  "independent_trial_test_available": false,
+  "final_training": false,
+  "acceptance_verified": false,
+  "board_export_performed": false,
+  "artifacts": {
+    "cache/active_selection_single_v1/dataset_manifest.json": "46b40adec7e253e183c849831a687814e08cd522e3c0894c673602883835511e",
+    "cache/active_selection_single_v1/preprocess.json": "b5b9152f223ec97b08c32e68a26d84068dc89da6a30f1f1a6f7d254749c1450e",
+    "cache/active_selection_single_v1/primary_labels.csv": "d09e5406bd697a88029328cfcae6259df1ff7afab275eb3cb9a3216c69c5560a",
+    "cache/active_selection_single_v1/split_blocks.csv": "637bd20c56a19203c5981b94fbfca58bf2fd5ce7f9744b53663e9e184fccf41a",
+    "runs/active_selection_single_v1_seed42/best.pt": "727801db99d9eaa0795cd481af0204e6de55449f5b8e9d7037fc0f0c20e95226",
+    "runs/active_selection_single_v1_seed42/summary.json": "6bbeff8498a8e9728ee299c1f3a24f0357f8f59a2e273c457fa86d768596663c",
+    "runs/active_selection_single_v1_seed42/test/metrics.json": "2b9bc195355f35beca3fb5c31d7db045dd2f2804a89b57accb9b6ac1a1fcfd3f",
+    "runs/active_selection_single_v1_seed42/test/predictions.jsonl": "e9a4c3db139ba82f707f4631338625ee1bdaea6e0670f6f02f310873106f1efe",
+    "runs/active_selection_single_v1_seed42/example_prediction.json": "6534237a07be48243a3bf2a4aa25e1a16068ec3d435be9f5505fb809d227d8ea",
+    "runs/tests-single-class.xml": "58ec908f49a0361069a8ad373bab4789b51be4769b468d845e9832c5dc18e854"
+  },
+  "source_sha256": {
+    "fault_mtl/__init__.py": "781145d8b502b2d2db83518b392524bdf0ff6eb319c8bab804e55d2b74dd96aa",
+    "fault_mtl/adapt_legacy.py": "4ced0e5e4a9364a2f09050585f068963e1ae6d5df7ae0dc5b2dc6a114f1af827",
+    "fault_mtl/check_gpu.py": "678acc1aff643b6c3668a38930a9976bd8138e4610968f4ea1286b8a76725426",
+    "fault_mtl/dataset.py": "84813364385aaf3e4a8d49851e2e3d73a262abe74fcf2a15edea620cc40b772d",
+    "fault_mtl/evaluate.py": "9adab2420f38841a44e26fdb2a3c6e1e3e018eaaf7b531a65df5fcbd35729fde",
+    "fault_mtl/exploratory.py": "e709b87917dd975a5baafbacfd3530f83cf835029037ae840c055463980cc247",
+    "fault_mtl/export.py": "73d73b29de921aefe109ed284a58443a4d0612ea4e55d7d3d31334706977fd0c",
+    "fault_mtl/losses.py": "5efe22a37bade16da23679173abbd09de4eaa25ad1f9fdac0d5034ef98359d16",
+    "fault_mtl/metrics.py": "abb05bcdeee2d00b63970d20241e00a203a991b602e471cc70b3df8d343fcf50",
+    "fault_mtl/model.py": "0ae55ba657a9cc682b1ce893ea21e7798c7876fc52e8668f667e3cabf5a7279a",
+    "fault_mtl/mount_pose.py": "98cba6149fec5c41d7c8b207eaa67d592d2e6814fb6fa5bdabac069178dfbb12",
+    "fault_mtl/predict.py": "9c1928dad2952125987cdda61db54123523085ed4d0b3fdd177b21f766e07d8d",
+    "fault_mtl/prepare_dataset.py": "847a684df0b5555278a6ac62350ef93c4741ff4318d11f17059f7fa6d0171574",
+    "fault_mtl/prepare_selection.py": "32c0da067d959181c020e3209e859e3ec7e96d3fb12eadf2dcfdfffebe5030b6",
+    "fault_mtl/prepare_single_class.py": "e35651f5e4ae745044539d6fa9246ac52a5796aecda2db7ca0b1be5df1298adf",
+    "fault_mtl/preprocessing.py": "808e1297851ae7dd754b54bda3188a1646003a959fef584df997c79e9405ef94",
+    "fault_mtl/schema.py": "8a9b256a89658cf9d462a1d59420ff7456a3ce00c23099548e1778a91f9f5441",
+    "fault_mtl/train.py": "883d12c37368802060bae940f7097d8c54b788100caaaa229f765af00ee19a4d",
+    "fault_mtl/validate.py": "b11184b453b0c9343f9872079fa3ba0b8f753d376a5eb758318db09ccde017d2",
+    "tests/conftest.py": "e3fa76ff5cdc36dac6ce0ebd307a1bf69b340297bd6e0ac812193a4b2e40cc91",
+    "tests/test_device.py": "d2129b6662bf04089a68f4e7b7298fb4799e4ea2d932fa7ec14e04d869572aad",
+    "tests/test_exploratory.py": "8ca273a49a2842b1b0db2948537bdeca50de099fcafd6c8599b5a45bf1267020",
+    "tests/test_model.py": "91c3e2a047644ba6299f0daf9465455df61b2a7a89a394392c1be6b45e11d7cc",
+    "tests/test_mount_pose.py": "482543e7cb9f96691fd78c4919b1cbff6d3d22d79c90878aee1f03c4e18d6227",
+    "tests/test_pipeline.py": "8ddccf51ae0b48a92dbab6d49e54178aa0dee6a61a9506aa17e2e9bae143ee9b",
+    "tests/test_preprocessing.py": "a3e89d37284424d2befd36dce2e2300451a7355a5e0606983e74198234cea7d7",
+    "tests/test_selection.py": "b2488fc0056270ab2ac09e2c57e0466629e4632cc25eca824c7a98910b4c5910",
+    "tests/test_single_class.py": "e5effd665e0fc718e09632dfa491af35fcf31498ad04d35fee740b56739c693e",
+    "tests/test_v2_compatibility.py": "fa9c3eaf9c6c17607ee997e4332cd4bec1aff233004cb7cbba745b97ac61e47a",
+    "README.md": "baa5fe47f610cc7c264db85195ba648469f682dbe92da16822c5ac047fbbfd92",
+    "单故障训练与推断.md": "da2c04c13c61f0ce5e80591d7de788a8dccdd075b0a24b318e3355459e07b5d2",
+    "快速训练说明.md": "5a4c7bd33014a3199cf42abda435e70a1c7ade004a1f5e631bc4370000d4bbc8",
+    "../data/README.md": "84881fcc623297a19ed668cbe35871677ac8a33bf27f6bd8aa2baa085874dac5",
+    "../设计方案.md": "867036609fda7d4cbd58a4c7f527bfb00ba34a1672c46e0561922b5653443aad"
+  }
+}

@@ -1,0 +1,11 @@
+# Linux build and board scripts must remain executable by Unix shells after Windows checkout.
+*.sh text eol=lf
+platform/flash/rootfs-overlay/etc/default/mlk-inference text eol=lf
+# Keep source identities used by the paired SDK regression stable across checkouts.
+host/ps-local/fault-inference/engine/fault_engine.cpp text eol=lf
+host/ps-local/fault-inference/check/test_tensor_binding.cpp text eol=lf
+# Raw acceptance evidence is hashed byte for byte, including serial line endings.
+host/tests/results/fault/** -text -whitespace
+host/ps-local/fault-inference/delivery/*.sha256 text eol=lf
+# Frozen reference fixtures are hashed byte for byte on both Windows and Linux.
+host/tests/fixtures/fault-preprocess/** -text -whitespace

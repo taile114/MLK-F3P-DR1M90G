@@ -1,0 +1,28 @@
+{
+  "schema": "mlk.fault.offline_delivery_validation.v1",
+  "test_samples": 360,
+  "calibration_split": "train",
+  "calibration_windows": 1063,
+  "program_sha256": "492b68d2a8ffd894abc2f445e43fbd35a7f4bacd0617b76b4380091ab97940b1",
+  "source_sha256": "b8198e35ef86343911f74f55cbb5d2fb3979f13b639aae3c55cc3d7e761be2c4",
+  "vendor_runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce",
+  "full_emulation_modes": [
+    "cpu",
+    "quantized",
+    "armnn_ref"
+  ],
+  "quantized_class_correct": 360,
+  "quantized_class_and_grade_correct": 355,
+  "independent_integer_output_bytes_verified": 276480,
+  "negative_verifier_checks": [
+    "failed_exit",
+    "truncated_output",
+    "modified_integer_output",
+    "false_npu_attribution"
+  ],
+  "npu_graph_emulation": "unavailable: Alnpu is not registered without board hardware",
+  "physical_npu_verified": false,
+  "npu_speedup_verified": false,
+  "raw_sensor_preprocessing_on_board": false,
+  "host_integration": false
+}

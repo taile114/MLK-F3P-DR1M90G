@@ -1,0 +1,19 @@
+case=batch_matmul_3d requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.35 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    2|CpuAcc  |BatchMatMul               0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.06KB(0.06KB)      
+Info: ******************************************************************************************************
+stage=optimize passed
+stage=load passed
+Info: Execution time: 0.45 ms.
+element=0 actual=-2 expected=-2
+element=1 actual=13 expected=13
+element=2 actual=-2 expected=-2
+element=3 actual=31 expected=31
+result=passed case=batch_matmul_3d max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

@@ -1,0 +1,29 @@
+Built /home/uisrc/f3p-npu-smoke-v1/bin/npu_smoke
+--- u8 exit_code=0 ---
+Info: Execution time: 18.32 ms.
+iteration=0 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=19022.284
+Info: Execution time: 3.25 ms.
+iteration=1 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=3553.209
+Info: Execution time: 3.17 ms.
+iteration=2 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=3362.074
+result=passed case=u8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 mean_enqueue_us=8645.855667 npu_requested=false
+Info: Shutdown time: 0.52 ms.
+--- u8_s8 exit_code=0 ---
+Info: Execution time: 12.99 ms.
+iteration=0 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=14746.02
+Info: Execution time: 3.52 ms.
+iteration=1 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=3650.79
+Info: Execution time: 2.93 ms.
+iteration=2 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=3134.799
+result=passed case=u8_s8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 mean_enqueue_us=7177.203 npu_requested=false
+Info: Shutdown time: 0.50 ms.
+--- s8 exit_code=0 ---
+Info: Execution time: 14.63 ms.
+iteration=0 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=16648.508
+Info: Execution time: 3.42 ms.
+iteration=1 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=3576.763
+Info: Execution time: 2.37 ms.
+iteration=2 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=2495.043
+result=passed case=s8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 mean_enqueue_us=7573.438 npu_requested=false
+Info: Shutdown time: 0.54 ms.
+stage=build_and_cpu_control_finished unexpected_failures=0

@@ -1,0 +1,88 @@
+architecture: fault_mtl_f3p_cnn2d_v2
+input_profile: base6
+task_definition: bench_fault_sim_v2
+temperature_rule: case_temp_35_40_45_v1
+tilt_rule: mount_tilt_3_6_10_ref_v1
+tilt_rule_status: REF
+fault_order:
+- overload
+- undervoltage
+- overtemperature
+- mount_tilt
+seed: 42
+model:
+  dropout: 0.2
+  temperature_isolation: true
+preprocessing:
+  version: base6_native_blocks_short_context_v2
+  vibration_rate_hz: 1600
+  highpass_hz: 0.5
+  lowpass_pass_hz: 600.0
+  lowpass_stop_hz: 780.0
+  lowpass_pass_loss_db: 0.5
+  lowpass_stop_attenuation_db: 60.0
+  filter_warmup_s: 10.0
+  vibration_gap_s: 0.02
+  state_gap_s: 0.5
+  temperature_max_age_s: 6.0
+  state_min_coverage: 0.95
+  timestamp_jitter_fraction: 0.25
+  current_lowpass_hz: 4.0
+  current_warmup_s: 2.0
+  log_epsilon: 1.0e-10
+  mount_pose:
+    version: mount_pose_native_ref_v1
+    min_coverage: null
+    max_age_s: null
+    max_half_mean_delta_g: null
+    min_vector_norm_g: 1.0e-06
+    gravity_references: {}
+  mode: exploratory_native_blocks
+  min_native_block_samples: 64
+  native_fft_min_size: 512
+  exploratory_acceleration_limit_g: 16.0
+  min_blocks_per_window: 12
+  min_tf_valid_fraction: 0.45
+  min_fast_valid_fraction: 0.75
+  min_slow_valid_fraction: 0.6
+  slow_bin_min_span_s: 0.2
+  pose_max_age_s: 1.5
+  reference_duration_s: 30
+  window_stride_s: 2
+  state_context_s: 4
+  level_reference: null
+  partition_count: 5
+  split_ratios:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+  spectrum_method: duration-weighted independent Hann native-block PSD; frequency
+    interpolation only
+  time_frequency_method: native-block band powers in 47 real-time bins across the
+    last 4 seconds
+  missing_policy: retain elapsed time; invalid state cells and TF columns zero only
+    after normalization
+training:
+  batch_size: 32
+  max_epochs: 25
+  warmup_epochs: 2
+  learning_rate: 0.001
+  min_learning_rate: 1.0e-05
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  patience: 6
+  ordinal_weight: 0.5
+  positive_weight_cap: 5.0
+  num_workers: 0
+  device: cuda:0
+  selection_metric: masked_tasks
+  cpu_threads: 2
+evaluation:
+  classification_thresholds:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  bootstrap_samples: 2000
+  fault_confirm_windows: 2
+  recovery_confirm_windows: 3

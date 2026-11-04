@@ -1,0 +1,2 @@
+s8 CpuRef 0
+s8 Alnpu 40

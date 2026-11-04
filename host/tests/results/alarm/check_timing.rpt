@@ -1,0 +1,199 @@
+Table of Contents
+-----------------
+1. checking no clock(0) (HIGH)
+2. checking clock definition(0) (HIGH)
+3. checking dummy node(2) (HIGH)
+4. checking invalid constraint(0) (HIGH)
+5. checking pll clock constraints(3) (HIGH)
+6. checking combinational loops(0) (HIGH)
+7. checking soft fifo timing exception constraints(0) (HIGH)
+8. checking no path constraints(0) (MEDIUM)
+9. checking shadowed/ignored timing exception constraints(0) (MEDIUM)
+10. checking no input delay(6) (MEDIUM)
+11. checking no output delay(16) (MEDIUM)
+12. checking partial input delay(0) (MEDIUM)
+13. checking partial output delay(0) (MEDIUM)
+14. checking abnormal input delay(0) (MEDIUM)
+
+
+1. checking nets with no clock driven. (HIGH)
+---------------------------------------------
+2. checking clock definition problems. (HIGH)
+---------------------------------------------
+2.1 There are 0 leaf clock pins driven by multiple clocks. (HIGH)
+
+
+2.2 There are 0 clocks created on internal clock network. (HIGH)
+
+
+2.3 There are 0 unexpandable clock sets. (HIGH)
+
+
+2.4 There are 0 local clocks. (HIGH)
+
+
+2.5 There are 0 generated clocks that are not connected to their master clocks. (HIGH)
+
+
+3. checking dummy nodes. (HIGH)
+---------------------------------------------
+There are 2 nodes are dangling. (HIGH)
+
+DummyNode in Model: DR1_PHY_ERAM
+	system/AXI4_Stream_to_Video_Out_0/alc_axi4s_vid_out_972cbcb2fd70_Inst/inst/COUPLER_INST/generate_async_fifo$FIFO_INST/ram_inst/memory_syn_15.orsta
+	system/AXI4_Stream_to_Video_Out_0/alc_axi4s_vid_out_972cbcb2fd70_Inst/inst/COUPLER_INST/generate_async_fifo$FIFO_INST/ram_inst/memory_syn_15.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_39.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_57.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_21.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_51.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_69.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_81.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_87.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_93.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_99.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_63.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_27.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_45.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_102.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_75.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_15.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/GEN_SPRT_FOR_MM2S$MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF$GEN_LINEBUFFER$GEN_ASYNC_FIFO$LB_BUILT_IN$I_LINEBUFFER_FIFO/al_async_fifo/ram_inst/memory_syn_33.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/GEN_DATA_CNTL_FIFO$I_DATA_CNTL_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orsta
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/GEN_DATA_CNTL_FIFO$I_DATA_CNTL_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_58.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO$I_STS_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_16.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO$I_ADDR_QUAL_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orsta
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO$I_ADDR_QUAL_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF$I_RD_SF/INCLUDE_DRE_CNTL$I_DRE_CNTL_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orsta
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_SRL_FIFO$I_SYNC_FIFO/ram_inst/memory_syn_17.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF$I_RD_SF/I_DATA_FIFO/ram_inst/memory_syn_56.orsta
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF$I_RD_SF/I_DATA_FIFO/ram_inst/memory_syn_56.orstb
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF$I_RD_SF/I_DATA_FIFO/ram_inst/memory_syn_15.orsta
+	system/VDMA_0/VDMA_63adc97de4db_Inst/u_vdma_top/I_PRMRY_DATAMOVER/GEN_MM2S_FULL$I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF$I_RD_SF/I_DATA_FIFO/ram_inst/memory_syn_15.orstb
+	system/X_sensor/X_sensor/X_samples/S_mem_syn_98.orstb
+	system/X_sensor/X_sensor/X_samples/S_mem_syn_16.orsta
+	system/X_sensor/X_sensor/X_samples/S_mem_syn_16.orstb
+	system/X_sensor/X_sensor/X_samples/S_mem_syn_57.orsta
+	system/X_sensor/X_sensor/X_samples/S_mem_syn_57.orstb
+
+DummyNode in Model: DR1_PHY_LSLICE
+	system/X_npu/video_npu_top_77b8d5bfaa14_Inst/soft_npu_top_77b8d5bfaa14/u_clp/awaddr_reg[11]_syn_2.ofa
+
+4. checking invalid constraints. (HIGH)
+---------------------------------------------
+There are 0 invalid constraints. (HIGH)
+
+
+5. checking PLL clocks. (HIGH)
+---------------------------------------------
+PLL inst: system/PLL_0/dr1_phy_pll_3a04da50d99b_Inst/u_DR1_PHY_PLL
+{
+	There are 0 clock pins that have no clock constraints. (HIGH)
+
+
+	There are 0 clocks whose clock frequency do not match the PLL setting. (HIGH)
+
+
+}
+
+PLL inst: system/PLL_1/dr1_phy_pll_2d86d31852c0_Inst/u_DR1_PHY_PLL
+{
+	There are 0 clock pins that have no clock constraints. (HIGH)
+
+
+	There are 2 clocks whose clock frequency do not match the PLL setting. (HIGH)
+
+		Clock Name: system/video_timing_generator_v01_1/video_timing_generator_v01_dd045705834d_Inst/dr1_pll_vtc_Inst/u_DR1_PHY_PLL.clkc[0], Pin Name: system/PLL_1/dr1_phy_pll_2d86d31852c0_Inst/u_DR1_PHY_PLL.refclk, Constraint Frequency(MHz): 148.456057, PLL Setting Frequency(MHz): 148.500000
+		Clock Name: system/PLL_1/dr1_phy_pll_2d86d31852c0_Inst/u_DR1_PHY_PLL.clkc[0], Pin Name: system/PLL_1/dr1_phy_pll_2d86d31852c0_Inst/u_DR1_PHY_PLL.clkc[0], Constraint Frequency(MHz): 742.400024, PLL Setting Frequency(MHz): 742.500000
+
+}
+
+PLL inst: system/video_timing_generator_v01_1/video_timing_generator_v01_dd045705834d_Inst/dr1_pll_vtc_Inst/u_DR1_PHY_PLL
+{
+	There are 0 clock pins that have no clock constraints. (HIGH)
+
+
+	There is 1 clock whose clock frequency does not match the PLL setting. (HIGH)
+
+		Clock Name: system/video_timing_generator_v01_1/video_timing_generator_v01_dd045705834d_Inst/dr1_pll_vtc_Inst/u_DR1_PHY_PLL.clkc[0], Pin Name: system/video_timing_generator_v01_1/video_timing_generator_v01_dd045705834d_Inst/dr1_pll_vtc_Inst/u_DR1_PHY_PLL.clkc[0], Constraint Frequency(MHz): 148.500000, PLL Setting Frequency(MHz): 148.484848
+
+}
+
+6. checking combinational loops. (HIGH)
+---------------------------------------------
+There are 0 combinational loops. (HIGH)
+
+
+7. checking soft fifo set_max_delay constraints. (HIGH)
+---------------------------------------------
+There are 0 max-delay datapath-only paths that are part of the provided async clock paths, whereas the timing between other registers is not relaxed or ignored. (HIGH)
+
+
+8. checking no path constraints. (MEDIUM)
+---------------------------------------------
+There are 0 constraints that have no timing paths. (MEDIUM)
+
+
+9. checking path exception constraints shadowed/ignored by other constraints. (MEDIUM)
+---------------------------------------------
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+		         1            1            0            0   set_max_delay 10.000 -datapath_only -from [get_regs {*}] -to [get_ports {O_alarm}]
+		         1            1            0            0   set_max_delay 10.000 -datapath_only -from [get_ports {I_rs485_rx}] -to [get_regs {*}]
+		         2            2            0            0   set_max_delay 10.000 -datapath_only -from [get_regs {*}] -to [get_ports {O_rs485_tx O_rs485_de}]
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+10. checking no input delay (MEDIUM)
+--------------------------
+There are 6 input ports that with no input delay specified. (MEDIUM)
+
+	IO_iic_scl
+	IO_iic_sda
+	IO_spi_sdio
+	I_int1
+	I_rs485_rx
+	I_uart_rx
+
+11. checking no output delay (MEDIUM)
+--------------------------
+There are 16 output ports that with no output delay specified. (MEDIUM)
+
+	IO_iic_scl
+	IO_iic_sda
+	IO_spi_sdio
+	O_alarm
+	O_hdmi_clk_p
+	O_hdmi_tx_p[2]
+	O_hdmi_tx_p[1]
+	O_hdmi_tx_p[0]
+	O_led[3]
+	O_led[2]
+	O_led[1]
+	O_led[0]
+	O_rs485_de
+	O_rs485_tx
+	O_spi_cs_n
+	O_spi_sclk
+
+12. checking partial input delay (MEDIUM)
+--------------------------
+There are 0 input ports with partial input delay specified. (MEDIUM)
+
+
+13. checking partial output delay (MEDIUM)
+--------------------------
+There are 0 output ports with partial output delay specified. (MEDIUM)
+
+
+14. checking abnormal set_input_delay constraints. (MEDIUM)
+---------------------------------------------
+There are 0 abnormal set_input_delay constraints. (MEDIUM)

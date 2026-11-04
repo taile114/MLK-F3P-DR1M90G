@@ -1,0 +1,13 @@
+********* Start testing of WindowTest *********
+Config: Using QtTest library 5.13.2, Qt 5.13.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 5.3.1 20160406 (Red Hat 5.3.1-6))
+PASS   : WindowTest::initTestCase()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support raise()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support raise()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::actualWindowsExchangeControl()
+PASS   : WindowTest::cleanupTestCase()
+Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 760ms
+********* Finished testing of WindowTest *********

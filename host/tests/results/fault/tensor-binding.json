@@ -1,0 +1,234 @@
+{
+  "schema": "mlk.fault.tensor_binding_acceptance.v1",
+  "cause": "ConstTensor requires constant TensorInfo for read-only input bindings in paired Arm NN 32.1.0",
+  "change": "All four InputLayer bindings use IsConstant=true; writable outputs use false",
+  "library_sha256": "57282f7ad231829cb4bd09deccb306412351e9e9ce284908b14e623405e56ef7",
+  "runtime_manifest_sha256": "8bbaf69bc054a253f2e7e6ef47ade121bf8dfe8c622b4025add20acaa6d4ff58",
+  "source_sha256": {
+    "host/ps-local/fault-inference/engine/fault_engine.cpp": "048796c82be16712b7b4f8211cdba022f815bd118bdbae01a2b2836131381a88",
+    "host/ps-local/fault-inference/check/test_tensor_binding.cpp": "2e08d2e90a318abb2b6eb9e69a449118ffd706e387cd3f93004e88bf30e58aec",
+    "host/ps-local/fault-inference/build_arm.sh": "76cea4751e0b3683327e666fd307a3cd67ca38ad356699637a30fecccbda9317"
+  },
+  "paired_sdk_regression": {
+    "old_exception_reproduced": true,
+    "four_production_bindings_accepted": true,
+    "qemu_cpu_smoke_samples": 3,
+    "reference_mismatch": 0
+  },
+  "board": {
+    "kernel": "6.1.111-rt42 #8",
+    "armnn": "32.1.0",
+    "serial": "COM4 115200 8N1",
+    "smoke": {
+      "schema": "mlk.fault.runtime_check.v1",
+      "root": "/opt/mlk_fault",
+      "samples": 3,
+      "backend_requested": 2,
+      "backend_reported": 2,
+      "class_correct": 3,
+      "joint_correct": 3,
+      "class_accuracy": 1,
+      "joint_accuracy": 1,
+      "macro_class_accuracy": 1,
+      "reference_mismatch": 0,
+      "mean_infer_us": 4944,
+      "median_infer_us": 4912,
+      "p95_infer_us": 5020,
+      "max_infer_us": 5020,
+      "confusion_target_by_prediction": [
+        [
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "npu_rounds": [
+      {
+        "schema": "mlk.fault.runtime_check.v1",
+        "root": "/opt/mlk_fault",
+        "samples": 360,
+        "backend_requested": 2,
+        "backend_reported": 2,
+        "class_correct": 360,
+        "joint_correct": 356,
+        "class_accuracy": 1,
+        "joint_accuracy": 0.988889,
+        "macro_class_accuracy": 1,
+        "reference_mismatch": 0,
+        "mean_infer_us": 5188.27,
+        "median_infer_us": 5160,
+        "p95_infer_us": 5261,
+        "max_infer_us": 7876,
+        "confusion_target_by_prediction": [
+          [
+            66,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            75,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            80,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            58,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            81
+          ]
+        ]
+      },
+      {
+        "schema": "mlk.fault.runtime_check.v1",
+        "root": "/opt/mlk_fault",
+        "samples": 360,
+        "backend_requested": 2,
+        "backend_reported": 2,
+        "class_correct": 360,
+        "joint_correct": 356,
+        "class_accuracy": 1,
+        "joint_accuracy": 0.988889,
+        "macro_class_accuracy": 1,
+        "reference_mismatch": 0,
+        "mean_infer_us": 4955.8,
+        "median_infer_us": 4945,
+        "p95_infer_us": 5038,
+        "max_infer_us": 5159,
+        "confusion_target_by_prediction": [
+          [
+            66,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            75,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            80,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            58,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            81
+          ]
+        ]
+      }
+    ],
+    "npu_rounds_class_and_grade_identical": true,
+    "class_and_grade_equal_native_fp32_reference": true,
+    "alnpu_hard_nodes_per_run": 4,
+    "hard_irq_observations": [
+      12,
+      1452,
+      2892
+    ],
+    "soft_irq_observations": [
+      0,
+      0,
+      0
+    ],
+    "cma_free_kib_before_and_after_each_round": [
+      124436,
+      124436,
+      124436
+    ],
+    "resource_scope": "System CmaFree after process exit; no steady-state allocator counters or long-run acceptance",
+    "runtime_root": "/opt/mlk_fault-packages/f3p-fault-single-v1-8bbaf69bc054a253",
+    "previous_runtime_retained": true,
+    "qt_process_restored": true,
+    "framebuffer": "1920,1080",
+    "qt_binary_and_rul_manifest_hashes_preserved": true,
+    "manual_qt_evaluation_and_live_start": "pending"
+  },
+  "evidence_sha256": {
+    "tensor-binding.log": "97b8f80f6a6094aeeadef51bb7b679f429e4b607c0137347eaf2486d2d73c826",
+    "tensor-binding-board-preflight-ready.json": "0574759ae7048159a15775e4ad2a83f7717f1fe611c66b4250b165744066c61a",
+    "tensor-binding-board-update.json": "91b30d788ee97c2280162580dfe78d462408eb4d576f0a3859d2be03f6236daf",
+    "tensor-binding-board-npu-smoke-run.json": "35fe8eef4470b63236b540020ccc8eac8fe7952cbd02d1842e68cb950947fb7c",
+    "tensor-binding-board-npu-full.json": "b3f16751eaf2459cba2a517b19166eac196b4278e25acbea7428b3d30568316e",
+    "tensor-binding-board-restore-and-results.json": "2209cc46806db19c09e374fe9627f50f0916d9ca57f838bd5c4978ac304f8a19",
+    "tensor-binding-board-npu3.json": "862f0eb8e4d9e8167665cc12d8697ed3c58b87130ab877c57034685cdc088953",
+    "tensor-binding-board-npu3.log": "90ad37b5758eb80e3415b6974dadc600de2b11f1d82e2bf61299a0fa9c9debb2",
+    "tensor-binding-board-npu360-1.json": "f6656ebea1774956977b0dfd39585d577d5f55a402a8bd5201d3a6f02f28c37a",
+    "tensor-binding-board-npu360-1.csv": "f96f6c095ae1ffd8189745c99df504e662f0aa59d9170c095ef83ae0c29e68e5",
+    "tensor-binding-board-npu360-1.log": "451a28ee9220a8cebd7eca6c6a8bd31ca82620bf4a60af36010b2526b4c5cc6c",
+    "tensor-binding-board-npu360-2.json": "ec8f7f0898be115ffc5dce80cd7c322d14a93c83f12c92547f6a9b6bbf26aad5",
+    "tensor-binding-board-npu360-2.csv": "ccbdeec4bce44eb569114187a4af40eacdcc89122f9fa30deb71308265c749ae",
+    "tensor-binding-board-npu360-2.log": "68b6aafb4c53fc40138d5769cb92c05b043486993760678ece24bd63ad66d7fb"
+  },
+  "pending": [
+    "manual Qt evaluation and live start",
+    "valid real capture preprocessing",
+    "raw outputs and per-convolution comparison for this wrapper",
+    "remote PC and long-run coexistence"
+  ]
+}

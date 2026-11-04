@@ -1,0 +1,84 @@
+{
+  "scope": "Repository-contained source/data/model regeneration and saved-evidence checks; no training and no new physical-board test",
+  "native_model": {
+    "state_entries": 209,
+    "matches_deployed_baseline_files": [
+      "weights.bin",
+      "weights.tsv",
+      "src/model_config.hpp",
+      "src/native_rul.cpp",
+      "data/input_f32.bin",
+      "data/reference_f32.bin",
+      "data/labels_f32.bin"
+    ],
+    "checkpoint_first_prediction": 21.45941925048828
+  },
+  "onnx_export": {
+    "status": "passed",
+    "samples": 165,
+    "opset": 13
+  },
+  "onnx_optimized": {
+    "status": "passed",
+    "samples": 165,
+    "node_count": 1547,
+    "onnx_size_bytes": 1949217
+  },
+  "diagnostics": {
+    "models": 10,
+    "full_model_validation": [
+      {
+        "name": "10_full_shapes.onnx",
+        "checker": "passed",
+        "ort": "passed",
+        "output_shape": [
+          1,
+          1
+        ],
+        "samples": 165,
+        "max_reference_error": 7.62939453125e-06
+      },
+      {
+        "name": "11_full_shapes_typed_int64.onnx",
+        "checker": "passed",
+        "ort": "passed",
+        "output_shape": [
+          1,
+          1
+        ],
+        "samples": 165,
+        "max_reference_error": 7.62939453125e-06
+      }
+    ]
+  },
+  "compatibility": {
+    "models": 17,
+    "unsqueeze_fixes": 30,
+    "all_axis_fixes": 80,
+    "full_model_validation": [
+      {
+        "name": "90_full_unsqueeze_positive.onnx",
+        "description": "Full model: inferred tensor metadata and positive Unsqueeze axes",
+        "checker": "passed",
+        "ort": "passed",
+        "samples": 165,
+        "max_reference_error": 7.62939453125e-06,
+        "original_initializers_unchanged": 302
+      },
+      {
+        "name": "91_full_all_axes_positive.onnx",
+        "description": "Full model: inferred tensor metadata and all supported negative axis attributes normalized",
+        "checker": "passed",
+        "ort": "passed",
+        "samples": 165,
+        "max_reference_error": 7.62939453125e-06,
+        "original_initializers_unchanged": 302
+      }
+    ]
+  },
+  "repackaging": "passed using the verified AArch64 binary and saved QEMU CSV; no new ARM64 execution",
+  "shell_syntax": "sh -n passed for seven probe scripts",
+  "training_executed": false,
+  "board_test_rerun": false,
+  "npu_verified": false
+}

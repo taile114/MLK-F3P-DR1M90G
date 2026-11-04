@@ -1,0 +1,2 @@
+sample_index,prediction,reference,absolute_error,target,forward_us,allocation_calls,allocation_bytes,cma_bytes
+0,21.43906021,21.45799828,0.01893806458,25,45842.761,136,5454,118784

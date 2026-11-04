@@ -1,0 +1,22 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "upload",
+      "verified": true,
+      "local_path": "E:/competion/code/out/ff6-local-control",
+      "remote_path": "/tmp/ff6-local-control",
+      "bytes": 6152,
+      "sha256": "3af90fced3859501c24e63dfdd01fc52e2490cb13e9c957e582710464f943841"
+    },
+    {
+      "command": "chmod 755 /tmp/ff6-local-control; /tmp/ff6-local-control 1 2 > /data/mlk_f3p/validation/gui-replay.jsonl; cat /data/mlk_f3p/validation/gui-replay.jsonl",
+      "operation": "command",
+      "exit_code": 0,
+      "output": "[  684.551493] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  684.551583] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\n{\"valid\":0,\"backend\":2,\"window\":0,\"windows\":0,\"state\":1,\"rul\":0,\"infer_us\":0,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":0,\"backend\":2,\"window\":0,\"windows\":0,\"state\":1,\"rul\":0,\"infer_us\":0,\"command_status\":1,\"message\":\"\"}\r\n{\"valid\":0,\"backend\":2,\"window\":0,\"windows\":184,\"state\":2,\"rul\":0,\"infer_us\":0,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":0,\"backend\":2,\"window\":0,\"windows\":184,\"state\":3,\"rul\":0,\"infer_us\":0,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":0,\"windows\":184,\"state\":3,\"rul\":21.44358826,\"infer_us\":43480,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":0,\"windows\":184,\"state\":3,\"rul\":21.44358826,\"infer_us\":43480,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":0,\"windows\":184,\"state\":3,\"rul\":21.44358826,\"infer_us\":43480,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":1,\"windows\":184,\"state\":3,\"rul\":20.13726807,\"infer_us\":44630,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":1,\"windows\":184,\"state\":3,\"rul\":20.13726807,\"infer_us\":44630,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":1,\"windows\":184,\"state\":3,\"rul\":20.13726807,\"infer_us\":44630,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":1,\"windows\":184,\"state\":3,\"rul\":20.13726807,\"infer_us\":44630,\"command_status\":0,\"message\":\"\"}\r\n{\"valid\":1,\"backend\":2,\"window\":2,\"windows\":184,\"state\":3,\"rul\":20.73862267,\"infer_us\":45309,\"command_status\":0,\"message\":\"\"}"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

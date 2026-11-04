@@ -1,0 +1,93 @@
+{
+  "schema": "mlk.fault.offline_preparation.v1",
+  "calibration_split": "train",
+  "calibration_windows": 1063,
+  "calibration_method": "symmetric_maxabs_u8_zp128_train_only",
+  "activation_ranges": [
+    8.492461204528809,
+    7.208125114440918,
+    6.057489395141602,
+    5.350080490112305,
+    7.06436824798584
+  ],
+  "scales": [
+    [
+      0.06686977297067642,
+      0.0045010726898908615,
+      0.056756891310214996
+    ],
+    [
+      0.056756891310214996,
+      0.0022066642995923758,
+      0.04769676551222801
+    ],
+    [
+      0.04769676551222801,
+      0.0017494173953309655,
+      0.0421266183257103
+    ],
+    [
+      0.0421266183257103,
+      0.0012911745579913259,
+      0.05562494695186615
+    ]
+  ],
+  "accumulator_abs_bounds": [
+    216689,
+    1010026,
+    1678511,
+    2592327
+  ],
+  "final_training": false,
+  "acceptance_verified": false,
+  "physical_npu_verified": false,
+  "validation_scope": "within_record_time_block_holdout; shared source sessions/date/device; not independent trial acceptance",
+  "independent_validation_available": false,
+  "checkpoint_sha256": "727801db99d9eaa0795cd481af0204e6de55449f5b8e9d7037fc0f0c20e95226",
+  "splits": {
+    "val": {
+      "fp32": {
+        "samples": 360,
+        "class_correct": 360,
+        "joint_correct": 345,
+        "fault_grade_correct": 279,
+        "fault_samples": 294
+      },
+      "quantized": {
+        "samples": 360,
+        "class_correct": 360,
+        "joint_correct": 345,
+        "fault_grade_correct": 279,
+        "fault_samples": 294
+      },
+      "bn_fold_max_abs": 3.814697265625e-06,
+      "changes_vs_fp32": {
+        "class_index": 0,
+        "selected_grade": 0
+      },
+      "max_logit_abs_error": 0.08683967590332031
+    },
+    "test": {
+      "fp32": {
+        "samples": 360,
+        "class_correct": 360,
+        "joint_correct": 356,
+        "fault_grade_correct": 290,
+        "fault_samples": 294
+      },
+      "quantized": {
+        "samples": 360,
+        "class_correct": 360,
+        "joint_correct": 355,
+        "fault_grade_correct": 289,
+        "fault_samples": 294
+      },
+      "bn_fold_max_abs": 3.814697265625e-06,
+      "changes_vs_fp32": {
+        "class_index": 0,
+        "selected_grade": 1
+      },
+      "max_logit_abs_error": 0.10695648193359375
+    }
+  }
+}

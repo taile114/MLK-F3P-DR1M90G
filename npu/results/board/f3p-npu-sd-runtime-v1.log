@@ -1,0 +1,68 @@
+# ls -lh /opt/armnn_lib/lib
+total 19M
+drwxr-xr-x    3 root     root          60 Sep  8  2025 cmake
+lrwxrwxrwx    1 root     root          14 Dec  1  2025 libarmnn.so -> libarmnn.so.32
+lrwxrwxrwx    1 root     root          16 Dec 1  2025 libarmnn.so.32 -> libarmnn.so.32.1
+-rwxr-xr-x    1 root     root       13.2M Sep  8  2025 libarmnn.so.32.1
+lrwxrwxrwx    1 root     root          28 Dec  1  2025 libarmnnBasePipeServer.so -> libarmnnBasePipeServer.so.32
+lrwxrwxrwx    1 root     root          30 Dec  1  2025 libarmnnBasePipeServer.so.32 -> libarmnnBasePipeServer.so.32.1
+-rwxr-xr-x    1 root     root       26.5K Sep  8  2025 libarmnnBasePipeServer.so.32.1
+lrwxrwxrwx    1 root     root          24 Dec  1  2025 libarmnnOnnxParser.so -> libarmnnOnnxParser.so.24
+lrwxrwxrwx    1 root     root          26 Dec  1  2025 libarmnnOnnxParser.so.24 -> libarmnnOnnxParser.so.24.6
+-rwxr-xr-x    1 root     root      555.9K Sep  8  2025 libarmnnOnnxParser.so.24.6
+-rwxr-xr-x    1 root     root      419.8K Sep  8  2025 libarmnnUtils.a
+-rwxr-xr-x    1 root     root      204.0K Sep  8  2025 libfmt.a
+-rwxr-xr-x    1 root     root     1004.5K Sep  8  2025 libpipeClient.a
+-rwxr-xr-x    1 root     root      306.3K Sep  8  2025 libpipeCommon.a
+lrwxrwxrwx    1 root     root          21 Dec  1  2025 libprotobuf.so -> libprotobuf.so.23.0.0
+lrwxrwxrwx    1 root     root          21 Dec  1  2025 libprotobuf.so.23 -> libprotobuf.so.23.0.0
+-rwxr-xr-x    1 root     root        2.6M Sep  8  2025 libprotobuf.so.23.0.0
+lrwxrwxrwx    1 root     root          24 Dec  1  2025 libtimelineDecoder.so -> libtimelineDecoder.so.32
+lrwxrwxrwx    1 root     root          26 Dec 1  2025 libtimelineDecoder.so.32 -> libtimelineDecoder.so.32.1
+-rwxr-xr-x    1 root     root      257.6K Sep  8  2025 libtimelineDecoder.so.32.1
+lrwxrwxrwx    1 root     root          28 Dec  1  2025 libtimelineDecoderJson.so -> libtimelineDecoderJson.so.32
+lrwxrwxrwx    1 root     root          30 Dec  1  2025 libtimelineDecoderJson.so.32 -> libtimelineDecoderJson.so.32.1
+-rwxr-xr-x    1 root     root       54.6K Sep  8  2025 libtimelineDecoderJson.so.32.1
+# LD_LIBRARY_PATH=/opt/armnn_lib/lib /mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native
+-layers/bin/native_layers relu CpuRef
+case=relu requested_backend=CpuRef onnx_parser_used=false
+[  156.113906] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initializatio[  156.114008] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+n time: 0.77 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)
+Info: ------------------------------------------------------------------------------------------------------
+Info:    1|CpuRef  |Activation                0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)
+Info: ******************************************************************************************************
+stage=optimize passed
+Info:
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=0B
+
+stage=load passed
+Info: Execution time: 0.44 ms.
+element=0 actual=0 expected=0
+element=1 actual=0 expected=0
+element=2 actual=0 expected=0
+element=3 actual=0.5 expected=0.5
+element=4 actual=1 expected=1
+element=5 actual=2 expected=2
+result=passed case=relu max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.
+# dmesg | grep -iE 'hard_npu|soft_npu|cma_mem' | tail -n 40
+[    1.577364] misc cma_mem: registered.
+[    1.577475] hard_npu 63f00000.hard_npu: drv_hard_npu_probe( (____ptrval____))
+[    1.577554] hard_npu 63f00000.hard_npu: find irq num: 41
+[    1.577593] hard_npu 63f00000.hard_npu: devm_ioremap_resource return (____ptrval____)
+[    1.577601] hard_npu 63f00000.hard_npu: mem start addr: 63f00000
+[    1.577609] hard_npu 63f00000.hard_npu: mem size: 1048576
+[    1.577973] soft_npu 1f0000000.soft_npu: drv_soft_npu_probe( (____ptrval____))
+[    1.578034] soft_npu 1f0000000.soft_npu: find irq num: 42
+[    1.578062] soft_npu 1f0000000.soft_npu: devm_ioremap_resource return (____ptrval____)
+[    1.578071] soft_npu 1f0000000.soft_npu: mem start addr: 1f0000000
+[    1.578079] soft_npu 1f0000000.soft_npu: mem size: 65536
+[  156.113906] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[  156.114008] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000

@@ -1,0 +1,53 @@
+{
+  "application_sha256": "64571005c0b4b4efc5eb3434e17c9e1700e58c18f65b8cc7bbb198b9e126c267",
+  "library_sha256": "90d403c06d26be4516148084fdf72d607e8c7c90bbca5623161044aee4d78d44",
+  "observed_pending_orders": 3,
+  "observed_order_fault": "overload",
+  "observed_order_grades": [
+    1,
+    1,
+    1
+  ],
+  "observed_scores": [
+    0.740415,
+    0.683509,
+    0.672537
+  ],
+  "baseline_retry": {
+    "ten_rounds_three_orders_us": 1464574,
+    "source": "pre-fix workorders.cpp on Ubuntu"
+  },
+  "cached_retry": {
+    "first_round_us": 140020,
+    "ten_rounds_three_orders_us": 633,
+    "source": "same SD backup and password on Ubuntu; first pass authenticates, remaining passes reuse exact bytes"
+  },
+  "pbkdf2_iterations": 100000,
+  "cache_capacity": 32,
+  "max_batch_size": 4,
+  "max_in_flight_batches": 1,
+  "verified_in_qt": [
+    "cold decryption does not block main thread timer",
+    "repeated retry",
+    "same-size ciphertext change reauthenticated",
+    "wrong password does not reuse prior credentials",
+    "directory change suppresses late batch",
+    "ACK stops retry"
+  ],
+  "qt_passed": 18,
+  "installer_passed": 3,
+  "arm_qemu_sockets_ready": true,
+  "on_board_cpu_utilization_verified": false,
+  "on_board_npu_execution_verified": false,
+  "sd_update": {
+    "application_written_sha256": "64571005c0b4b4efc5eb3434e17c9e1700e58c18f65b8cc7bbb198b9e126c267",
+    "original_entries_verified": 3232,
+    "only_existing_file_changed": "/opt/qt_play/mlk_ps_local",
+    "backup_path": "/opt/qt_play/mlk_ps_local.before-cpu-a7f3465ea429b0e4",
+    "runtime_boot_config_and_records_unchanged": true,
+    "filesystem_check": "clean",
+    "actual_card_libraries_qemu_sockets_ready": true,
+    "physical_boot_verified": false,
+    "physical_cpu_reduction_verified": false
+  }
+}

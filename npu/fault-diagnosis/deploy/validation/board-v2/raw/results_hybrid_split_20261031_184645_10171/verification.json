@@ -1,0 +1,113 @@
+{
+  "schema": "mlk.fault.offline_verification.v1",
+  "execution": "board",
+  "mode": "hybrid_split",
+  "samples": 3,
+  "full_test_completed": false,
+  "class_correct": 3,
+  "class_accuracy": 1.0,
+  "class_and_grade_correct": 3,
+  "class_and_grade_accuracy": 1.0,
+  "fault_class_and_grade_correct": 0,
+  "fault_samples": 0,
+  "fault_class_and_grade_accuracy": null,
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "class_changes_vs_fp32": 0,
+  "grade_changes_vs_fp32": 0,
+  "max_fp32_raw_error": 0.25586366653442383,
+  "max_quantized_raw_error": 0.25502538681030273,
+  "max_cnn_lsb": 4,
+  "forward_us": {
+    "mean": 3982.99,
+    "p50": 3937.23,
+    "p95": 4080.06,
+    "max": 4095.93
+  },
+  "steady_cma_bytes": 360448,
+  "after_release_cma_bytes": 0,
+  "npu_evidence": {
+    "strict_graph": true,
+    "hard_npu_profile": true,
+    "npu_irq_increment": 24,
+    "hard_npu_irq_increment": 24,
+    "soft_npu_irq_increment": 0,
+    "runtime_hash_matched": true,
+    "integer_convolution_verified": true
+  },
+  "numeric_cpu_reference_verified": false,
+  "physical_npu_execution_verified": true,
+  "independent_accuracy_acceptance": false,
+  "hardware_speedup_verified": false,
+  "result_files_sha256": {
+    "assets.sha256": "80b9a9eceea58066e4a06eb1473d09a3e472bb1d0a078c9cc0fa04d53b878772",
+    "audit_cnn_0_1_sample0_input.bin": "506d052694048fdecd7a397df2286ae6850ad2f14ff257410f9df95074946935",
+    "audit_cnn_0_1_sample0_output.bin": "c0ce266d8ec609cb31385bdcec70c62d92b3cc810e702efd73c18b97cab0f87d",
+    "audit_cnn_1_2_sample0_input.bin": "f56a50e977b22ec5b9d529417de4c3cf62f8e2a37fdebce17d1005509d9723ce",
+    "audit_cnn_1_2_sample0_output.bin": "7ede1b8db73fe42a331427b79b555a01f6c3018be331c14be152b0ac94f82359",
+    "audit_cnn_2_3_sample0_input.bin": "195474171edc820cf9dee0d067c77f059d438aaf98280aa526d1c2fb63f430c4",
+    "audit_cnn_2_3_sample0_output.bin": "66f85366846b0024171df8f164ebebf4fc9b1ba31a0a0a9529b8c1fa50dd23ea",
+    "audit_cnn_3_4_sample0_input.bin": "88d4bb2bba5dd8bb1c33d82f1964bce4a2b57560a3953288e86e7aadf6947cb9",
+    "audit_cnn_3_4_sample0_output.bin": "655bd3d8b6afc6866a3d5a1b142a249f459313fca2e2e6bc89c69a32384f3019",
+    "cmdline.txt": "155322fd62134aa9db654c59da30220d885033c75bae4b538e07aec6d7c50895",
+    "cnn_0_1.dot": "1bedc85e539bdde7c782017904a6b705f82199a1904c1bfee70d24938c5a357f",
+    "cnn_0_1_profile.json": "ddc7ad64a296bb2f19c2c7f7f0f4f483c4cbaf6ae42f11d26a8437508724e8da",
+    "cnn_1_2.dot": "d31aa314035a7c4c66831bb34d4ca9196cce7e991835c04ce2396a37c66ede4a",
+    "cnn_1_2_profile.json": "08849d25df55b0b6f4b6a5501303597e54b8fac1e2c1f53568567ed2ab115eb0",
+    "cnn_2_3.dot": "31313c24f0a5bb5cefd85b778518b0bb43509087fc5343afef9cdc032f5ca0ce",
+    "cnn_2_3_profile.json": "b54b5ff718a93c047079e37829b821e3035924e5c550c1b7ff1352f8db093907",
+    "cnn_3_4.dot": "2270e4e6334a2858f95c0155779d45d348c2e66c812cacb13752914f26598d30",
+    "cnn_3_4_profile.json": "37aecf4ecc6adb422216ed8e87864e9c0fda95a363c3b3fe348a82bd6ae85246",
+    "cnn_output_u8.bin": "c968da8d1e133668fb281495be69ead73dbea8d3a080d7f1360c0168c710bd1e",
+    "dmesg_after.txt": "750ba8e3a2bfe4d57eaf17cd3e6736aeaf7fb1d787d778d14dfef7cb3919e5ba",
+    "dmesg_before.txt": "94ad648e5a7580032583713908303f6c813c464489eddf9423350242d2c13379",
+    "exit_code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "integer_audit.json": "a992ffdbd24c4c9bf77b7834fb1da0ac60d88292c50e474d20939aa76ac9a10c",
+    "interrupts_after.txt": "d6222c78035c2e01207526d157eca59c3ca7743094ea119a2fc5602dde57e7b6",
+    "interrupts_before.txt": "5571b8b221fcd49a8512e52090780cdfa486671addb6348adb6573d60cb7e3f7",
+    "meminfo_after.txt": "8455060b96bee6e042cb6f74d7dbd7d341bda323f0a74c8093c60f41e11a9474",
+    "meminfo_before.txt": "29cf80024949e32e1ec325b80aadb6af5e7ba8dd9416b06965bf0732f5b771ec",
+    "predictions.csv": "b46b2c0f8dbc470f102c6b7df8a67c8fe86ad34c0449ba5f5873e86b49538cab",
+    "probe.log": "c93ccd8b2273be4a91a8878adf8691226b8dde5c425538085870b347f914ab22",
+    "program.sha256": "5fce5fa519520c31b7a6a63ee35aeef5bba0cbee1288f45d8647d15fe321cdfa",
+    "raw_outputs.bin": "ce729ae7d5d2da4a672cb2a06097eea740d14ae15b68043999b0ba3b7a11be64",
+    "runtime.sha256": "907c26d5c3fe6f7665de9781106f4b0c5a766c76d25d4eb7db40049fa1af01cb",
+    "summary.json": "444640869b8e95531d0cb1f9083e97d24fb55c272837c8c4778c5492a53c9a09",
+    "uname.txt": "99f2221c9467cc4070293ad853c33e5964c8aebda08072cb558cb10d290fbc14"
+  }
+}

@@ -1,0 +1,6 @@
+QIconvCodec::convertToUnicode: using Latin-1 for conversion, iconv_open failed
+QIconvCodec::convertFromUnicode: using Latin-1 for conversion, iconv_open failed
+U7 ???????? PL ?? v1.3?
+This plugin does not support propagateSizeHints()
+card_qt_sockets_ready=1 bounded_exit=124
+card_application_readback_smoke_passed

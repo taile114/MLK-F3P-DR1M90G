@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#526777"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="650" y="745" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="30" fill="#243B53" text-anchor="middle" font-weight="bold">
+<tspan x="650" dy="0">预测类别</tspan>
+</text>
+<text x="105" y="350" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="30" fill="#243B53" text-anchor="middle" font-weight="bold">
+<tspan x="105" dy="0">真</tspan>
+<tspan x="105" dy="43.5">实</tspan>
+<tspan x="105" dy="43.5">类</tspan>
+<tspan x="105" dy="43.5">别</tspan>
+</text>
+<text x="210" y="125" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="210" dy="0">正常</tspan>
+</text>
+<text x="340" y="695" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="340" dy="0">正常</tspan>
+</text>
+<rect x="265" y="60" width="150" height="110" fill="#243B53"/>
+<text x="340" y="127" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="white" text-anchor="middle">
+<tspan x="340" dy="0">66</tspan>
+</text>
+<rect x="420" y="60" width="150" height="110" fill="#EAF1F8"/>
+<text x="495" y="127" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="495" dy="0">0</tspan>
+</text>
+<rect x="575" y="60" width="150" height="110" fill="#EAF1F8"/>
+<text x="650" y="127" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="650" dy="0">0</tspan>
+</text>
+<rect x="730" y="60" width="150" height="110" fill="#EAF1F8"/>
+<text x="805" y="127" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="805" dy="0">0</tspan>
+</text>
+<rect x="885" y="60" width="150" height="110" fill="#EAF1F8"/>
+<text x="960" y="127" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="960" dy="0">0</tspan>
+</text>
+<text x="210" y="240" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="210" dy="0">过载</tspan>
+</text>
+<text x="495" y="695" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="495" dy="0">过载</tspan>
+</text>
+<rect x="265" y="175" width="150" height="110" fill="#EAF1F8"/>
+<text x="340" y="242" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="340" dy="0">0</tspan>
+</text>
+<rect x="420" y="175" width="150" height="110" fill="#243B53"/>
+<text x="495" y="242" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="white" text-anchor="middle">
+<tspan x="495" dy="0">75</tspan>
+</text>
+<rect x="575" y="175" width="150" height="110" fill="#EAF1F8"/>
+<text x="650" y="242" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="650" dy="0">0</tspan>
+</text>
+<rect x="730" y="175" width="150" height="110" fill="#EAF1F8"/>
+<text x="805" y="242" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="805" dy="0">0</tspan>
+</text>
+<rect x="885" y="175" width="150" height="110" fill="#EAF1F8"/>
+<text x="960" y="242" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="960" dy="0">0</tspan>
+</text>
+<text x="210" y="355" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="210" dy="0">欠压</tspan>
+</text>
+<text x="650" y="695" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="650" dy="0">欠压</tspan>
+</text>
+<rect x="265" y="290" width="150" height="110" fill="#EAF1F8"/>
+<text x="340" y="357" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="340" dy="0">0</tspan>
+</text>
+<rect x="420" y="290" width="150" height="110" fill="#EAF1F8"/>
+<text x="495" y="357" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="495" dy="0">0</tspan>
+</text>
+<rect x="575" y="290" width="150" height="110" fill="#243B53"/>
+<text x="650" y="357" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="white" text-anchor="middle">
+<tspan x="650" dy="0">80</tspan>
+</text>
+<rect x="730" y="290" width="150" height="110" fill="#EAF1F8"/>
+<text x="805" y="357" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="805" dy="0">0</tspan>
+</text>
+<rect x="885" y="290" width="150" height="110" fill="#EAF1F8"/>
+<text x="960" y="357" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="960" dy="0">0</tspan>
+</text>
+<text x="210" y="470" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="210" dy="0">过热</tspan>
+</text>
+<text x="805" y="695" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="805" dy="0">过热</tspan>
+</text>
+<rect x="265" y="405" width="150" height="110" fill="#EAF1F8"/>
+<text x="340" y="472" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="340" dy="0">0</tspan>
+</text>
+<rect x="420" y="405" width="150" height="110" fill="#EAF1F8"/>
+<text x="495" y="472" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="495" dy="0">0</tspan>
+</text>
+<rect x="575" y="405" width="150" height="110" fill="#EAF1F8"/>
+<text x="650" y="472" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="650" dy="0">0</tspan>
+</text>
+<rect x="730" y="405" width="150" height="110" fill="#243B53"/>
+<text x="805" y="472" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="white" text-anchor="middle">
+<tspan x="805" dy="0">58</tspan>
+</text>
+<rect x="885" y="405" width="150" height="110" fill="#EAF1F8"/>
+<text x="960" y="472" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="960" dy="0">0</tspan>
+</text>
+<text x="210" y="585" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="210" dy="0">倾斜</tspan>
+</text>
+<text x="960" y="695" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="29" fill="#243B53" text-anchor="middle">
+<tspan x="960" dy="0">倾斜</tspan>
+</text>
+<rect x="265" y="520" width="150" height="110" fill="#EAF1F8"/>
+<text x="340" y="587" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="340" dy="0">0</tspan>
+</text>
+<rect x="420" y="520" width="150" height="110" fill="#EAF1F8"/>
+<text x="495" y="587" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="495" dy="0">0</tspan>
+</text>
+<rect x="575" y="520" width="150" height="110" fill="#EAF1F8"/>
+<text x="650" y="587" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="650" dy="0">0</tspan>
+</text>
+<rect x="730" y="520" width="150" height="110" fill="#EAF1F8"/>
+<text x="805" y="587" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="#64748b" text-anchor="middle">
+<tspan x="805" dy="0">0</tspan>
+</text>
+<rect x="885" y="520" width="150" height="110" fill="#243B53"/>
+<text x="960" y="587" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="34" fill="white" text-anchor="middle">
+<tspan x="960" dy="0">81</tspan>
+</text>
+</svg>

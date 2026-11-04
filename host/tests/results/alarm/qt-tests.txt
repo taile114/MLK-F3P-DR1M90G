@@ -1,0 +1,32 @@
+********* Start testing of WindowTest *********
+Config: Using QtTest library 5.15.19, Qt 5.15.19 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 15.3.0), nixos 26.05
+PASS   : WindowTest::initTestCase()
+QINFO  : WindowTest::physicalAlarmPolicyAndModelApi() U7 告警不可用（需要 PL 接口 v1.3）
+PASS   : WindowTest::physicalAlarmPolicyAndModelApi()
+QWARN  : WindowTest::pairingAndAutomaticListen() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::pairingAndAutomaticListen()
+SKIP   : WindowTest::hardwareRemoteWindow() Set MLK_HW_CONFIG for the opt-in physical WiFi test
+   Loc: [/home/lfour/Projects/MLK-F3P-DR1M90G/host/tests/test_windows.cpp(148)]
+QINFO  : WindowTest::actualWindowsExchangeControl() U7 告警不可用（需要 PL 接口 v1.3）
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::actualWindowsExchangeControl() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::actualWindowsExchangeControl()
+QWARN  : WindowTest::wifiControlWithoutShellCredentials() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::wifiControlWithoutShellCredentials()
+QINFO  : WindowTest::sharedAuthorityAndConflict() U7 告警不可用（需要 PL 接口 v1.3）
+QWARN  : WindowTest::sharedAuthorityAndConflict() This plugin does not support propagateSizeHints()
+QWARN  : WindowTest::sharedAuthorityAndConflict() This plugin does not support raise()
+QWARN  : WindowTest::sharedAuthorityAndConflict() This plugin does not support raise()
+QWARN  : WindowTest::sharedAuthorityAndConflict() This plugin does not support raise()
+QWARN  : WindowTest::sharedAuthorityAndConflict() This plugin does not support propagateSizeHints()
+PASS   : WindowTest::sharedAuthorityAndConflict()
+PASS   : WindowTest::cleanupTestCase()
+Totals: 7 passed, 0 failed, 1 skipped, 0 blacklisted, 27159ms
+********* Finished testing of WindowTest *********

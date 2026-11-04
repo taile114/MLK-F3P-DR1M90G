@@ -1,0 +1,22 @@
+case=einsum_via_fc requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.36 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    1|CpuAcc  |Reshape                   0.03KB(0.03KB)      |0.03KB(0.03KB)      |0.06KB(0.06KB)      
+Info:    3|CpuAcc  |FullyConnected            0.03KB(0.03KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info: ******************************************************************************************************
+stage=optimize passed
+stage=load passed
+Info: Execution time: 0.56 ms.
+element=0 actual=5 expected=5
+element=1 actual=5 expected=5
+element=2 actual=-2 expected=-2
+element=3 actual=13 expected=13
+element=4 actual=13 expected=13
+element=5 actual=-2 expected=-2
+result=passed case=einsum_via_fc max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

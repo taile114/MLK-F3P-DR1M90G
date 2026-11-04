@@ -1,0 +1,65 @@
+{
+  "scope": "Physical F3P serial controls for three quantized convolution representations; not a full RUL model test",
+  "source": "User-provided u8 serial attachment and pasted u8_s8/s8 console replies",
+  "u8_serial_log_sha256": "02117f94a50dab9691b24c6c7633dc9b3c75e72d671b585d6fc1e7b90749f3b1",
+  "archive_sha256": "214e781c2eee4f19bf9d263d74c32ce045ad0c25fbf03a92576729a9b6d2a824",
+  "cases": {
+    "u8": {
+      "CpuRef": {
+        "exit_code": 0,
+        "max_error_lsb": 0,
+        "mean_enqueue_us": 1513.07
+      },
+      "Alnpu": {
+        "exit_code": 0,
+        "max_error_lsb": 1,
+        "mean_enqueue_us": 218.94,
+        "reported_compute_layer": "ALHardNPU",
+        "cpu_fallback_allowed": false
+      },
+      "hard_irq_delta": 3,
+      "soft_irq_delta": 0,
+      "result_directory": "/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_u8_19700101_003311_321"
+    },
+    "u8_s8": {
+      "CpuRef": {
+        "exit_code": 0,
+        "max_error_lsb": 0,
+        "mismatches": 0,
+        "mean_enqueue_us": 1430.55
+      },
+      "Alnpu": {
+        "exit_code": 40,
+        "stage": "optimize",
+        "reason": "input and weights types mismatched, ALHardNPU can`t fit to alnpu"
+      },
+      "hard_irq_delta": 0,
+      "soft_irq_delta": 0,
+      "result_directory": "/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_u8_s8_19700101_003554_349"
+    },
+    "s8": {
+      "CpuRef": {
+        "exit_code": 0,
+        "max_error_lsb": 0,
+        "mismatches": 0,
+        "mean_enqueue_us": 1486.3
+      },
+      "Alnpu": {
+        "exit_code": 40,
+        "stage": "optimize",
+        "reason": "QAsymmS8 Convolution2d not supported on Alnpu"
+      },
+      "hard_irq_delta": 0,
+      "soft_irq_delta": 0,
+      "result_directory": "/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_s8_19700101_003601_374"
+    }
+  },
+  "hardware_hard_npu_u8_convolution_verified": true,
+  "soft_npu_execution_verified": false,
+  "supported_tested_representation": "QAsymmU8 activation/output and QAsymmU8 weights; Signed32 bias",
+  "limitations": "Type coverage applies to this tested 3x3 convolution and current vendor runtime, not all operators, layouts or signed representations",
+  "board_result_files_retrieved": true,
+  "rul_model_on_npu_verified": false,
+  "training_executed": false,
+  "recovered_verification": "f3p-npu-smoke-recovered-v1-verification.json"
+}

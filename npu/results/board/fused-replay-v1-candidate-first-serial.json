@@ -1,0 +1,34 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "output": "",
+      "command": "test ! -e /mnt/mmcblk0p2/npu-tests/fused-v2 && mkdir /mnt/mmcblk0p2/npu-tests/fused-v2",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "verified": true,
+      "operation": "upload",
+      "bytes": 230557,
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-fused-v2-board.tar.gz",
+      "sha256": "be2812f6d9cfb30ed7c949319f7966b6f12b76e4b78bbf50ced3ac78b566574f",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/fused-v2/update.tar.gz"
+    },
+    {
+      "output": "bin/rul_fused: OK\r\nbin/rul_reference_bench: OK\r\nbin/timeout: OK\r\nbuild.sh: OK\r\nfixtures/base.bin: OK\r\nfixtures/grid.bin: OK\r\nfixtures/input.bin: OK\r\nfixtures/meta.txt: OK\r\nfixtures/spline.bin: OK\r\nqparams_head.tsv: OK\r\nrun.sh: OK\r\nsrc/allocation_probe.hpp: OK\r\nsrc/fused_ops.hpp: OK\r\nsrc/fused_quantized_fc.hpp: OK\r\nsrc/model_config.hpp: OK\r\nsrc/native_rul_cma.cpp: OK\r\nsrc/native_rul_fused.cpp: OK\r\nsrc/native_rul_reference_bench.cpp: OK\r\nweights.sha256: OK\r\nweights.bin: OK\r\nweights.tsv: OK\r\nresult=stem_checked rows=105 features=3 max_error=2.384185791e-07 mismatches=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v2/results_stem_19700101_005045_4024",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v2 && gzip -dc update.tar.gz | tar -xf - && chmod +x bin/* && sha256sum -c checksums.sha256 && for f in data weights.bin weights.tsv; do ln -s ../cma-fixed-v2/$f $f; done && sha256sum -c weights.sha256 && sh run.sh stem",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "output": "[ 3047.462105] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 3047.462190] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=1 warmup=5 max_reference_error=0.01893806458 mismatches=1 rmse=3.560939789 mae=3.560939789 mean_forward_us=45630.87 timed_allocation_calls=136 timed_allocation_bytes=5454 NPU_layers=2 max_integer_lsb=1 integer_audit=1\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v2/results_hybrid_19700101_005046_4040",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v2 && sh run.sh hybrid 1",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

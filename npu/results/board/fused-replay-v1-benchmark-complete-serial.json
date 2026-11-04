@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v3; if test -r benchmark.exit; then cat benchmark.exit; else echo benchmark_running; fi; tail -n 5 benchmark.tsv; for f in benchmark-round-3-*.log; do echo \"$f\"; tail -n 3 \"$f\"; done",
+      "operation": "command",
+      "output": "0\r\n2\treference\t/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_010013_5605\r\n3\tneon\t/mnt/mmcblk0p2/npu-tests/fused-v3/results_neon_19700101_010052_5625\r\n3\treference\t/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_010101_5644\r\n3\thybrid\t/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_010141_5666\r\n3\tcpu_quantized\t/mnt/mmcblk0p2/npu-tests/fused-v3/results_cpu_quantized_19700101_010150_5685\r\nbenchmark-round-3-cpu_quantized.log\r\nresult=inference_completed mode=cpu_quantized samples=184 warmup=5 max_reference_error=0.01163196564 mismatches=142 rmse=2.465704044 mae=1.976990787 mean_forward_us=46109.01616 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_cpu_quantized_19700101_010150_5685\r\nbenchmark-round-3-hybrid.log\r\nresult=inference_completed mode=hybrid samples=184 warmup=5 max_reference_error=0.03055000305 mismatches=182 rmse=2.467976508 mae=1.979486184 mean_forward_us=45432.65556 timed_allocation_calls=13312 timed_allocation_bytes=451608 NPU_layers=2 max_integer_lsb=0 integer_audit=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_010141_5666\r\nbenchmark-round-3-neon.log\r\nresult=inference_completed mode=neon samples=184 warmup=5 max_reference_error=8.106231689e-06 mismatches=0 rmse=2.465940142 mae=1.97711497 mean_forward_us=43949.9662 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_neon_19700101_010052_5625\r\nbenchmark-round-3-reference.log\r\nrul_unit=observed_aging_test_session\r\nwarmup=5 timed_allocation_calls=3843944 timed_allocation_bytes=153174112 quantized_branches=0 accuracy_acceptance=TBD\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_reference_19700101_010101_5644"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

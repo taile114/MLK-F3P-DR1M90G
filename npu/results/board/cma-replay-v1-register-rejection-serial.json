@@ -1,0 +1,41 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "test ! -e /mnt/mmcblk0p2/npu-tests/cma-fixed-v1 && mkdir /mnt/mmcblk0p2/npu-tests/cma-fixed-v1",
+      "output": "",
+      "operation": "command",
+      "exit_code": 0
+    },
+    {
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/cma-fixed-v1/update.tar.gz",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-cma-fixed-update-v1.tar.gz",
+      "bytes": 81246,
+      "operation": "upload",
+      "sha256": "015592281927121b3d0a6bf3df99b7a1e1b019f310ee2089b7e66d79487da4f1",
+      "verified": true
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v1 && gzip -dc update.tar.gz | tar -xf - && sha256sum -c checksums.sha256",
+      "output": "src/model_config.hpp: OK\r\nsrc/native_rul_cma.cpp: OK\r\nbin/rul_cma: OK",
+      "operation": "command",
+      "exit_code": 0
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v1 && for f in data weights.bin weights.tsv qparams_head.tsv weights.sha256 run.sh; do ln -s ../cma-v1/f3p-cma-diagnostic-v1/$f $f; done; ln -s ../../cma-v1/f3p-cma-diagnostic-v1/bin/timeout bin/timeout",
+      "output": "",
+      "operation": "command",
+      "exit_code": 0
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v1 && sha256sum -c weights.sha256 && sh run.sh hybrid 1",
+      "output": "weights.bin: OK\r\nweights.tsv: OK\r\n[  669.915799] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  669.915869] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nsegment=3 optimizer_messages=289\r\nstage=build_segment_3 passed\r\nstage=build_segment_4 begin\r\nsegment=4 physical_npu_layers=1\r\nsegment=4 optimizer_messages=110\r\nstage=build_segment_4 passed\r\nstage=build_segment_5 begin\r\nresult=failed stage=build_segment_5 error=CpuAcc already has an allocator associated with it at function RegisterAllocator [/home/rtxiao/repos/AL_armnn/scripts/source/armnn/src/armnn/BackendRegistry.cpp:118]\r\nafter_load,0,2,0,124428,0,0,0,0\r\nafter_load,0,3,0,124428,0,0,0,0\r\nafter_load,0,4,94208,124336,0,0,0,0\r\nexit_code=2 results=/mnt/mmcblk0p2/npu-tests/cma-fixed-v1/results_hybrid_19700101_001108_4266",
+      "operation": "command",
+      "exit_code": 2
+    }
+  ],
+  "status": "failed",
+  "error": "Remote command failed: exit=2",
+  "port_released": true
+}

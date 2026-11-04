@@ -1,0 +1,3 @@
+shape	mode	backend	exit_code
+c00	fc_pad8	CpuRef	0
+c00	fc_pad8	Alnpu	0

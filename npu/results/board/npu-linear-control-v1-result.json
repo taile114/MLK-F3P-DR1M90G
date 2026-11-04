@@ -1,0 +1,117 @@
+{
+  "scope": "Physical F3P console text supplied by the user, stored with LF; original result files recovered and independently verified",
+  "source_log_sha256": "a289c0f3d78645905d6b7eaed81ffa4af30e28d5e678c1b7d719cd17ea068ef0",
+  "board_results_directory": "/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_control_19700101_003232_394",
+  "package_sha256": "a0d0238b6fa92817165ab314087c23ac2d891f9a79c9dfd84414a4e0018d2c70",
+  "timeout_helper_self_checks_passed": true,
+  "runs": [
+    {
+      "shape": "c00",
+      "rows": 8,
+      "input_features": 8,
+      "output_features": 8,
+      "mapping": "fc",
+      "backend": "CpuRef",
+      "exit_code": 0,
+      "compute_layer_type": "FullyConnected",
+      "actual_backend": "CpuRef",
+      "mode": "fc",
+      "iterations": 3,
+      "max_error_lsb": 0,
+      "tolerance_lsb": 1,
+      "mismatches": 0,
+      "saturated_original_outputs": 0,
+      "mean_enqueue_us": 278.25,
+      "mean_quantize_pack_enqueue_sync_restore_us": 298.63,
+      "profiling_enabled": true,
+      "timing_is_diagnostic": true
+    },
+    {
+      "shape": "c00",
+      "rows": 8,
+      "input_features": 8,
+      "output_features": 8,
+      "mapping": "fc",
+      "backend": "Alnpu",
+      "exit_code": 0,
+      "compute_layer_type": "ALHardNPU",
+      "actual_backend": "Alnpu",
+      "mode": "fc",
+      "iterations": 3,
+      "max_error_lsb": 1,
+      "tolerance_lsb": 1,
+      "mismatches": 0,
+      "saturated_original_outputs": 0,
+      "mean_enqueue_us": 297.11,
+      "mean_quantize_pack_enqueue_sync_restore_us": 328.17,
+      "profiling_enabled": true,
+      "timing_is_diagnostic": true
+    },
+    {
+      "shape": "c00",
+      "rows": 8,
+      "input_features": 8,
+      "output_features": 8,
+      "mapping": "conv",
+      "backend": "CpuRef",
+      "exit_code": 0,
+      "compute_layer_type": "Convolution2d",
+      "actual_backend": "CpuRef",
+      "mode": "conv",
+      "iterations": 3,
+      "max_error_lsb": 0,
+      "tolerance_lsb": 1,
+      "mismatches": 0,
+      "saturated_original_outputs": 0,
+      "mean_enqueue_us": 294.62,
+      "mean_quantize_pack_enqueue_sync_restore_us": 309.3,
+      "profiling_enabled": true,
+      "timing_is_diagnostic": true
+    },
+    {
+      "shape": "c00",
+      "rows": 8,
+      "input_features": 8,
+      "output_features": 8,
+      "mapping": "conv",
+      "backend": "Alnpu",
+      "exit_code": 40,
+      "failure_stage": "optimize",
+      "error": "Failed to assign a backend to each layer"
+    }
+  ],
+  "interrupts": {
+    "HARD_NPU_IRQ": {
+      "before": 3,
+      "after": 27,
+      "delta": 24
+    },
+    "SOFT_NPU_IRQ": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    }
+  },
+  "physical_native_u8_fc_control_verified_from_serial": true,
+  "tested_conv_configuration": {
+    "input_shape": [
+      1,
+      8,
+      1,
+      8
+    ],
+    "kernel": [
+      1,
+      1
+    ],
+    "data_layout": "NCHW",
+    "Alnpu_accepted": false,
+    "global_conv1x1_support_conclusion": false
+  },
+  "board_result_files_retrieved": true,
+  "model_shape_matrix_verified": false,
+  "full_rul_npu_verified": false,
+  "timing_scope": "Three profiled iterations, no warm-up. Tiny control is slower on Alnpu than CpuRef and does not establish a full-model acceleration benefit.",
+  "native_fc_observed_enqueue_ratio_cpu_over_npu": 0.9365218269327857,
+  "recovered_file_verification": "npu-linear-recovered-v1-verification.json"
+}

@@ -1,0 +1,272 @@
+{
+  "schema": "mlk.fault.board_delivery.v2",
+  "samples": 360,
+  "execution": "physical_F3P",
+  "npu_plan": "four_hard_npu_conv3x3_cpu_relu_pool",
+  "cpu_fallback_allowed": false,
+  "program_sha256": "af5288eca32786cc3f0e5d73e159e29aadaf227af0782b7daf92dd846e4ee693",
+  "archive_sha256": "d806f5f4670e059e536d19662afe9f85ed10684e203bf4ca02c14fbfa49594df",
+  "model_weights_sha256": "0e4cf734d67a6e0babb79c76f32d7a7912787aec928e9f30ddd95a19269300af",
+  "quantization_sha256": "64c4211d098f78c8358120ae014c6c2bd63a2a2f94b95a34342f40b7b7b17e26",
+  "raw_results_archive_sha256": "87b7e80c31fdf31a4e382e7723d3875f0e2229b6b34bb56e5d51e64878d453e6",
+  "network_forward_speedup_vs_fp32_cpu": 19.1033770572065,
+  "network_forward_speedup_vs_integer_cpu": 15.11137855089011,
+  "timing_includes": [
+    "CNN input quantization",
+    "hard NPU enqueue and synchronization",
+    "CPU ReLU and MaxPool",
+    "remaining CPU network"
+  ],
+  "timing_excludes": [
+    "raw sensor preprocessing",
+    "asset loading and graph construction",
+    "warmup",
+    "class and grade decode",
+    "result and audit file IO"
+  ],
+  "model_and_quantization_fitted_again": false,
+  "physical_npu_verified": true,
+  "full_test_npu_class_correct": 360,
+  "full_test_npu_class_grade_correct": 356,
+  "npu_steady_cma_bytes": 360448,
+  "npu_after_release_cma_bytes": 0,
+  "independent_accuracy_acceptance": false,
+  "host_model_integration": false,
+  "reports": {
+    "cpu": {
+      "schema": "mlk.fault.offline_verification.v1",
+      "execution": "board",
+      "mode": "cpu",
+      "samples": 360,
+      "full_test_completed": true,
+      "class_correct": 360,
+      "class_accuracy": 1.0,
+      "class_and_grade_correct": 356,
+      "class_and_grade_accuracy": 0.9888888888888889,
+      "fault_class_and_grade_correct": 290,
+      "fault_samples": 294,
+      "fault_class_and_grade_accuracy": 0.9863945578231292,
+      "confusion_matrix": [
+        [
+          66,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          75,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          80,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          58,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          81
+        ]
+      ],
+      "class_changes_vs_fp32": 0,
+      "grade_changes_vs_fp32": 0,
+      "max_fp32_raw_error": 6.67572021484375e-06,
+      "max_quantized_raw_error": 0.10695552825927734,
+      "max_cnn_lsb": null,
+      "forward_us": {
+        "mean": 76185.557925,
+        "p50": 76102.65100000001,
+        "p95": 76446.445,
+        "max": 80400.661
+      },
+      "steady_cma_bytes": 0,
+      "after_release_cma_bytes": 0,
+      "npu_evidence": {
+        "strict_graph": false,
+        "hard_npu_profile": false,
+        "npu_irq_increment": null,
+        "hard_npu_irq_increment": null,
+        "soft_npu_irq_increment": null,
+        "runtime_hash_matched": false,
+        "integer_convolution_verified": false
+      },
+      "numeric_cpu_reference_verified": true,
+      "physical_npu_execution_verified": false,
+      "independent_accuracy_acceptance": false,
+      "hardware_speedup_verified": false
+    },
+    "hybrid_split": {
+      "schema": "mlk.fault.offline_verification.v1",
+      "execution": "board",
+      "mode": "hybrid_split",
+      "samples": 360,
+      "full_test_completed": true,
+      "class_correct": 360,
+      "class_accuracy": 1.0,
+      "class_and_grade_correct": 356,
+      "class_and_grade_accuracy": 0.9888888888888889,
+      "fault_class_and_grade_correct": 290,
+      "fault_samples": 294,
+      "fault_class_and_grade_accuracy": 0.9863945578231292,
+      "confusion_matrix": [
+        [
+          66,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          75,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          80,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          58,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          81
+        ]
+      ],
+      "class_changes_vs_fp32": 0,
+      "grade_changes_vs_fp32": 0,
+      "max_fp32_raw_error": 0.3512592315673828,
+      "max_quantized_raw_error": 0.3612556457519531,
+      "max_cnn_lsb": 5,
+      "forward_us": {
+        "mean": 3988.067538888889,
+        "p50": 3945.6000000000004,
+        "p95": 4132.071,
+        "max": 7566.33
+      },
+      "steady_cma_bytes": 360448,
+      "after_release_cma_bytes": 0,
+      "npu_evidence": {
+        "strict_graph": true,
+        "hard_npu_profile": true,
+        "npu_irq_increment": 1452,
+        "hard_npu_irq_increment": 1452,
+        "soft_npu_irq_increment": 0,
+        "runtime_hash_matched": true,
+        "integer_convolution_verified": true
+      },
+      "numeric_cpu_reference_verified": false,
+      "physical_npu_execution_verified": true,
+      "independent_accuracy_acceptance": false,
+      "hardware_speedup_verified": false
+    },
+    "quantized": {
+      "schema": "mlk.fault.offline_verification.v1",
+      "execution": "board",
+      "mode": "quantized",
+      "samples": 360,
+      "full_test_completed": true,
+      "class_correct": 360,
+      "class_accuracy": 1.0,
+      "class_and_grade_correct": 355,
+      "class_and_grade_accuracy": 0.9861111111111112,
+      "fault_class_and_grade_correct": 289,
+      "fault_samples": 294,
+      "fault_class_and_grade_accuracy": 0.9829931972789115,
+      "confusion_matrix": [
+        [
+          66,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          75,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          80,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          58,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          81
+        ]
+      ],
+      "class_changes_vs_fp32": 0,
+      "grade_changes_vs_fp32": 1,
+      "max_fp32_raw_error": 0.10695648193359375,
+      "max_quantized_raw_error": 6.67572021484375e-06,
+      "max_cnn_lsb": 0,
+      "forward_us": {
+        "mean": 60265.198266666666,
+        "p50": 60232.740999999995,
+        "p95": 60359.069449999995,
+        "max": 61793.13
+      },
+      "steady_cma_bytes": 0,
+      "after_release_cma_bytes": 0,
+      "npu_evidence": {
+        "strict_graph": false,
+        "hard_npu_profile": false,
+        "npu_irq_increment": null,
+        "hard_npu_irq_increment": null,
+        "soft_npu_irq_increment": null,
+        "runtime_hash_matched": false,
+        "integer_convolution_verified": false
+      },
+      "numeric_cpu_reference_verified": true,
+      "physical_npu_execution_verified": false,
+      "independent_accuracy_acceptance": false,
+      "hardware_speedup_verified": false
+    }
+  },
+  "hardware_speedup_verified": true,
+  "existing_host_service_restored": true,
+  "serial_port_released": true,
+  "restored_system_sha256": "ccd9a3a066c40966128e76960de62c9eebc60d8f9b8b0f95c0a8effe60257146"
+}

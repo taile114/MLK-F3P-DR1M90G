@@ -1,0 +1,62 @@
+{
+  "scope": "User-provided serial output from physical F3P; boot, device initialization, backend registry and CPU Relu control",
+  "source_logs": {
+    "f3p-npu-sd-boot-v1.log": "d473a86abe17b23b731b4ae58f6bf6a94df00d961135dae6cc8ad9a4330edce3",
+    "f3p-npu-sd-runtime-v1.log": "7ff7e208e8c2b1650986edecfe72d4b40f18565aef32c19e06b322a5021ba4ff"
+  },
+  "kernel": "Linux buildroot 6.1.111-rt42 #3 SMP PREEMPT Thu Nov 20 17:58:46 PST 2025 aarch64 GNU/Linux",
+  "cmdline": "console=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=8 mtdparts=alspinor:1M(boot),-(data)",
+  "physical_sd_boot_verified": true,
+  "rootfs": "paired initramfs loaded by inspected vendor boot script",
+  "devices": {
+    "/dev/cma_mem": {
+      "type": "character",
+      "major": 10,
+      "minor": 0
+    },
+    "/dev/hard_npu": {
+      "type": "character",
+      "major": 238,
+      "minor": 0
+    },
+    "/dev/soft_npu": {
+      "type": "character",
+      "major": 237,
+      "minor": 0
+    }
+  },
+  "kernel_initialization": {
+    "cma_registered": true,
+    "hard_npu_probed": true,
+    "soft_npu_probed": true,
+    "hard_npu_irq": 41,
+    "soft_npu_irq": 42,
+    "runtime_register_mapping_logged": true
+  },
+  "runtime": {
+    "directory": "/opt/armnn_lib/lib",
+    "version": "32.1.0",
+    "registered_backends": [
+      "CpuAcc",
+      "Alnpu",
+      "CpuRef",
+      "ALRef"
+    ],
+    "cpu_relu_control": {
+      "backend": "CpuRef",
+      "passed": true,
+      "max_absolute_error": 0,
+      "mismatches": 0
+    }
+  },
+  "mounted_storage": {
+    "sd_boot": "/mnt/mmcblk0p1",
+    "sd_second_partition": "/mnt/mmcblk0p2",
+    "eMMC_root": "/mnt/mmcblk1p2",
+    "eMMC_boot": "/mnt/mmcblk1p1"
+  },
+  "sd_second_partition_available_display": "26.7G",
+  "hardware_npu_workload_verified": false,
+  "rul_model_on_npu_verified": false,
+  "note": "CpuRef Relu and register mapping are not proof of hardware inference; forced Alnpu convolution is the next control"
+}

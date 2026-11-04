@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.pt binary
+*.onnx binary
+*.npz binary
+*.bin binary
+*.png binary
+*.gz binary
+*.tar.gz binary
+*.sha256 text eol=lf
+# Frozen source, datasets and evidence retain their original bytes and hashes.
+training/** -text -whitespace
+results/** -text -whitespace
+training/README.md text eol=lf
+training/TRAINING_ENV.md text eol=lf

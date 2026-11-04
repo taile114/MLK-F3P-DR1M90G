@@ -1,0 +1,38 @@
+{
+  "model_id": "motor_stable23_v1",
+  "dataset": "val184",
+  "input_shape": [
+    1,
+    23,
+    110
+  ],
+  "rul_unit": "observed_aging_test_session",
+  "scope": "standalone application C ABI; HDMI/PL/NPU coexistence pending matching v1.1 bitstream and boot artifacts",
+  "measurements": {
+    "qemu-cpu.csv": {
+      "samples": 368,
+      "reloads": 2,
+      "max_absolute_reference_error": 8.106231689e-06,
+      "repeated_predictions_equal": true
+    },
+    "board-cpu.csv": {
+      "samples": 368,
+      "reloads": 2,
+      "max_absolute_reference_error": 8.106231689e-06,
+      "repeated_predictions_equal": true
+    },
+    "board-hybrid.csv": {
+      "samples": 368,
+      "reloads": 2,
+      "max_absolute_reference_error": 0.03055000305,
+      "repeated_predictions_equal": true
+    }
+  },
+  "tested_engine_sha256": "3463ac481eba6dede4d28b8c7e5beb63c259c3aa273a5c835d651c8e1697dc33",
+  "hardware_irq_delta": 1134,
+  "software_irq_delta": 0,
+  "cma_free_kib_before": 124436,
+  "cma_free_kib_after": 124404,
+  "cma_acceptance": "32 KiB system-wide difference observed; long-running resource/coexistence acceptance pending; no leak-free claim",
+  "hybrid_precision_acceptance": "TBD; max reference deviation is reported, not an application acceptance threshold"
+}

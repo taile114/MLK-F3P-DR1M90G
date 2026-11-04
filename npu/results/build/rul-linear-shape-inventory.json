@@ -1,0 +1,1075 @@
+{
+  "scope": "Static inspection of the already deployed native graph and frozen weights; no inference, calibration or training executed",
+  "source_cpp_sha256": "d0efe1c753803342d894fca651c91aeefab813c2dd225734fe67a02eb0a55076",
+  "weight_table_sha256": "59c8879b5d7b147b274d153b428791ae2e0013e1197f658617b026d88053e0a4",
+  "fc_invocations": 124,
+  "unique_fc_shapes": 24,
+  "fc_macs_per_window": 3501280,
+  "shape_controls_to_validate": [
+    {
+      "rows": 1,
+      "input_features": 64,
+      "output_features": 1,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 64,
+      "conv1x1_candidate_output_channels_padded8": 8
+    },
+    {
+      "rows": 1,
+      "input_features": 132,
+      "output_features": 64,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 136,
+      "conv1x1_candidate_output_channels_padded8": 64
+    },
+    {
+      "rows": 1,
+      "input_features": 576,
+      "output_features": 1,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 576,
+      "conv1x1_candidate_output_channels_padded8": 8
+    },
+    {
+      "rows": 1,
+      "input_features": 1188,
+      "output_features": 64,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 1192,
+      "conv1x1_candidate_output_channels_padded8": 64
+    },
+    {
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "invocations": 11,
+      "conv1x1_candidate_input_channels_padded8": 24,
+      "conv1x1_candidate_output_channels_padded8": 8
+    },
+    {
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "invocations": 11,
+      "conv1x1_candidate_input_channels_padded8": 208,
+      "conv1x1_candidate_output_channels_padded8": 8
+    },
+    {
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "invocations": 18,
+      "conv1x1_candidate_input_channels_padded8": 16,
+      "conv1x1_candidate_output_channels_padded8": 24
+    },
+    {
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 140,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 16,
+      "conv1x1_candidate_output_channels_padded8": 144
+    },
+    {
+      "rows": 11,
+      "input_features": 63,
+      "output_features": 12,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 64,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "invocations": 18,
+      "conv1x1_candidate_input_channels_padded8": 112,
+      "conv1x1_candidate_output_channels_padded8": 24
+    },
+    {
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 140,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 112,
+      "conv1x1_candidate_output_channels_padded8": 144
+    },
+    {
+      "rows": 11,
+      "input_features": 140,
+      "output_features": 12,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 144,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 11,
+      "input_features": 567,
+      "output_features": 12,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 568,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 11,
+      "input_features": 1260,
+      "output_features": 12,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 1264,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "invocations": 18,
+      "conv1x1_candidate_input_channels_padded8": 16,
+      "conv1x1_candidate_output_channels_padded8": 24
+    },
+    {
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 140,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 16,
+      "conv1x1_candidate_output_channels_padded8": 144
+    },
+    {
+      "rows": 12,
+      "input_features": 63,
+      "output_features": 11,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 64,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "invocations": 18,
+      "conv1x1_candidate_input_channels_padded8": 104,
+      "conv1x1_candidate_output_channels_padded8": 24
+    },
+    {
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 140,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 104,
+      "conv1x1_candidate_output_channels_padded8": 144
+    },
+    {
+      "rows": 12,
+      "input_features": 140,
+      "output_features": 11,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 144,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 12,
+      "input_features": 567,
+      "output_features": 11,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 568,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 12,
+      "input_features": 1260,
+      "output_features": 11,
+      "invocations": 2,
+      "conv1x1_candidate_input_channels_padded8": 1264,
+      "conv1x1_candidate_output_channels_padded8": 16
+    },
+    {
+      "rows": 110,
+      "input_features": 23,
+      "output_features": 23,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 24,
+      "conv1x1_candidate_output_channels_padded8": 24
+    },
+    {
+      "rows": 110,
+      "input_features": 207,
+      "output_features": 23,
+      "invocations": 1,
+      "conv1x1_candidate_input_channels_padded8": 208,
+      "conv1x1_candidate_output_channels_padded8": 24
+    }
+  ],
+  "invocations": [
+    {
+      "weight": "linear_x.base_weight",
+      "rows": 110,
+      "input_features": 23,
+      "output_features": 23,
+      "macs": 58190
+    },
+    {
+      "weight": "linear_x.spline_weight",
+      "rows": 110,
+      "input_features": 207,
+      "output_features": 23,
+      "macs": 523710
+    },
+    {
+      "weight": "linear_sample.0.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.0.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.1.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.1.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.2.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.2.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.3.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.3.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.4.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.4.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.5.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.5.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.6.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.6.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.7.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.7.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.8.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.8.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.9.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.9.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "linear_sample.10.base_weight",
+      "rows": 10,
+      "input_features": 23,
+      "output_features": 1,
+      "macs": 230
+    },
+    {
+      "weight": "linear_sample.10.spline_weight",
+      "rows": 10,
+      "input_features": 207,
+      "output_features": 1,
+      "macs": 2070
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_Q_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_K_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.0.linears_V_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.0.W_O_temp.base_weight",
+      "rows": 11,
+      "input_features": 63,
+      "output_features": 12,
+      "macs": 8316
+    },
+    {
+      "weight": "tvgtformer_blocks.0.W_O_temp.spline_weight",
+      "rows": 11,
+      "input_features": 567,
+      "output_features": 12,
+      "macs": 74844
+    },
+    {
+      "weight": "tvgtformer_blocks.0.feed_forward_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 140,
+      "macs": 18480
+    },
+    {
+      "weight": "tvgtformer_blocks.0.feed_forward_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 140,
+      "macs": 166320
+    },
+    {
+      "weight": "tvgtformer_blocks.0.feed_forward_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 140,
+      "output_features": 12,
+      "macs": 18480
+    },
+    {
+      "weight": "tvgtformer_blocks.0.feed_forward_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 1260,
+      "output_features": 12,
+      "macs": 166320
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.1.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.1.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_Q_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_K_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "tvgtformer_blocks.1.linears_V_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "tvgtformer_blocks.1.W_O_temp.base_weight",
+      "rows": 11,
+      "input_features": 63,
+      "output_features": 12,
+      "macs": 8316
+    },
+    {
+      "weight": "tvgtformer_blocks.1.W_O_temp.spline_weight",
+      "rows": 11,
+      "input_features": 567,
+      "output_features": 12,
+      "macs": 74844
+    },
+    {
+      "weight": "tvgtformer_blocks.1.feed_forward_temp.0.base_weight",
+      "rows": 11,
+      "input_features": 12,
+      "output_features": 140,
+      "macs": 18480
+    },
+    {
+      "weight": "tvgtformer_blocks.1.feed_forward_temp.0.spline_weight",
+      "rows": 11,
+      "input_features": 108,
+      "output_features": 140,
+      "macs": 166320
+    },
+    {
+      "weight": "tvgtformer_blocks.1.feed_forward_temp.2.base_weight",
+      "rows": 11,
+      "input_features": 140,
+      "output_features": 12,
+      "macs": 18480
+    },
+    {
+      "weight": "tvgtformer_blocks.1.feed_forward_temp.2.spline_weight",
+      "rows": 11,
+      "input_features": 1260,
+      "output_features": 12,
+      "macs": 166320
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_Q_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_K_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.0.linears_V_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.0.W_O_spat.base_weight",
+      "rows": 12,
+      "input_features": 63,
+      "output_features": 11,
+      "macs": 8316
+    },
+    {
+      "weight": "svgtformer_blocks.0.W_O_spat.spline_weight",
+      "rows": 12,
+      "input_features": 567,
+      "output_features": 11,
+      "macs": 74844
+    },
+    {
+      "weight": "svgtformer_blocks.0.feed_forward_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 140,
+      "macs": 18480
+    },
+    {
+      "weight": "svgtformer_blocks.0.feed_forward_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 140,
+      "macs": 166320
+    },
+    {
+      "weight": "svgtformer_blocks.0.feed_forward_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 140,
+      "output_features": 11,
+      "macs": 18480
+    },
+    {
+      "weight": "svgtformer_blocks.0.feed_forward_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 1260,
+      "output_features": 11,
+      "macs": 166320
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.1.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.1.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_Q_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_K_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 21,
+      "macs": 2772
+    },
+    {
+      "weight": "svgtformer_blocks.1.linears_V_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 21,
+      "macs": 24948
+    },
+    {
+      "weight": "svgtformer_blocks.1.W_O_spat.base_weight",
+      "rows": 12,
+      "input_features": 63,
+      "output_features": 11,
+      "macs": 8316
+    },
+    {
+      "weight": "svgtformer_blocks.1.W_O_spat.spline_weight",
+      "rows": 12,
+      "input_features": 567,
+      "output_features": 11,
+      "macs": 74844
+    },
+    {
+      "weight": "svgtformer_blocks.1.feed_forward_spat.0.base_weight",
+      "rows": 12,
+      "input_features": 11,
+      "output_features": 140,
+      "macs": 18480
+    },
+    {
+      "weight": "svgtformer_blocks.1.feed_forward_spat.0.spline_weight",
+      "rows": 12,
+      "input_features": 99,
+      "output_features": 140,
+      "macs": 166320
+    },
+    {
+      "weight": "svgtformer_blocks.1.feed_forward_spat.2.base_weight",
+      "rows": 12,
+      "input_features": 140,
+      "output_features": 11,
+      "macs": 18480
+    },
+    {
+      "weight": "svgtformer_blocks.1.feed_forward_spat.2.spline_weight",
+      "rows": 12,
+      "input_features": 1260,
+      "output_features": 11,
+      "macs": 166320
+    },
+    {
+      "weight": "output_layer.0.base_weight",
+      "rows": 1,
+      "input_features": 132,
+      "output_features": 64,
+      "macs": 8448
+    },
+    {
+      "weight": "output_layer.0.spline_weight",
+      "rows": 1,
+      "input_features": 1188,
+      "output_features": 64,
+      "macs": 76032
+    },
+    {
+      "weight": "output_layer.2.base_weight",
+      "rows": 1,
+      "input_features": 64,
+      "output_features": 1,
+      "macs": 64
+    },
+    {
+      "weight": "output_layer.2.spline_weight",
+      "rows": 1,
+      "input_features": 576,
+      "output_features": 1,
+      "macs": 576
+    }
+  ],
+  "NPU_FC_or_conv1x1_mapping_verified": false,
+  "padding8_is_candidate_only": true,
+  "note": "Native FC support and 1x1-convolution mapping must be checked with actual shapes before calibration; small 3x3 control does not establish either"
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 44,
+  "device": "cuda",
+  "torch": "2.8.0+cu126",
+  "numpy": "2.3.5",
+  "variant": "full",
+  "selection": "validation_rmse"
+}

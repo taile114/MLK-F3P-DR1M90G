@@ -1,0 +1,8 @@
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.

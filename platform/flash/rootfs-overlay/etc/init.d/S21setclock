@@ -1,0 +1,59 @@
+#!/bin/sh
+#
+# Seed the system clock on a board without an RTC.
+#
+# The SoC has no battery-backed clock, so Linux starts at 1970-01-01. Two
+# sources are used, in order:
+#   1. /var/lib/mlk/lasttime, the epoch saved by this script's stop action on
+#      the previous shutdown (the ext4 rootfs keeps it across power cycles).
+#   2. The newest modification time of the installed payload (application,
+#      plctl, model weights). The rootfs is repacked whenever those change, so
+#      this is the image build/flash time and is off by at most the time
+#      between the build and the first boot.
+# Neither source is a synchronization protocol. S49mlktime disciplines the
+# clock over the network; tools/sync_board_time.sh supplies a serial fallback.
+#
+# POSIX sh, busybox tools. The mtime is read with `date -r`, not `stat -c`:
+# this busybox build has no stat applet.
+
+STAMP=/var/lib/mlk/lasttime
+FLOOR=1700000000
+
+if [ "$1" = stop ]; then
+    current=$(date -u +%s)
+    if [ "$current" -gt "$FLOOR" ]; then
+        mkdir -p /var/lib/mlk
+        printf '%s\n' "$current" > "$STAMP.shutdown" && mv "$STAMP.shutdown" "$STAMP"
+    fi
+    exit 0
+fi
+
+current=$(date +%s)
+if [ "${current:-0}" -gt "$FLOOR" ]; then
+    echo "setclock: system clock already set: $(date -u)"
+    exit 0
+fi
+
+if [ -s "$STAMP" ]; then
+    saved=$(cat "$STAMP")
+    case "$saved" in
+    ''|*[!0-9]*) saved=0 ;;
+    esac
+    if [ "$saved" -gt "$FLOOR" ]; then
+        date -u -s "@$saved" >/dev/null 2>&1 &&
+            echo "setclock: restored from $STAMP: $(date -u)" && exit 0
+    fi
+fi
+
+newest=0
+for f in /opt/qt_play/mlk_ps_local /usr/bin/plctl /opt/mlk_rul/weights.bin; do
+    [ -e "$f" ] || continue
+    m=$(date -r "$f" +%s 2>/dev/null || echo 0)
+    [ "${m:-0}" -gt "$newest" ] && newest=$m
+done
+if [ "$newest" -gt "$FLOOR" ]; then
+    date -u -s "@$newest" >/dev/null 2>&1 &&
+        echo "setclock: seeded from payload mtime: $(date -u)"
+else
+    echo "setclock: no usable seed, clock stays at $(date -u)"
+fi

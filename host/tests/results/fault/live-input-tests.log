@@ -1,0 +1,54 @@
+********* Start testing of FaultTest *********
+Config: Using QtTest library 5.13.2, Qt 5.13.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 5.3.1 20160406 (Red Hat 5.3.1-6))
+PASS   : FaultTest::initTestCase()
+QINFO  : FaultTest::outboxDoesNotBlockSamplingAndInvalidatesCache() ten_cached_outbox_retries_us=507358
+PASS   : FaultTest::outboxDoesNotBlockSamplingAndInvalidatesCache()
+PASS   : FaultTest::faultJournalKeepsLogsAboveFreeSpaceThreshold()
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity time_frequency max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity spectrum max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity vibration_stats max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity mount_pose max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity fast_state max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity slow_state max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-time_frequency max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-spectrum max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-vibration_stats max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-mount_pose max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-fast_state max_abs=0
+QINFO  : FaultTest::preprocessingMatchesTrainingReference() preprocess_parity thermal-slow_state max_abs=0
+PASS   : FaultTest::preprocessingMatchesTrainingReference()
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard T=23.6 raw=0 guarded=0 masked=1
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard T=35.0 raw=0 guarded=0 masked=1
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard T=35.1 raw=0 guarded=0 masked=0
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard T=41.0 raw=0 guarded=0 masked=0
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard T=46.0 raw=0 guarded=0 masked=0
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard thermal-T=23.6 raw=3 guarded=0 masked=1
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard thermal-T=35.0 raw=3 guarded=0 masked=1
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard thermal-T=35.1 raw=3 guarded=3 masked=0
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard thermal-T=41.0 raw=3 guarded=3 masked=0
+QINFO  : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults() temperature_guard thermal-T=46.0 raw=3 guarded=3 masked=0
+PASS   : FaultTest::temperatureGuardReselectsWithoutChangingOtherFaults()
+PASS   : FaultTest::dmaRingRecoversSlowPollsAndOwnsSnapshot()
+QINFO  : FaultTest::nativeWindowGapsUseFrozenQualityGates() native_gap_window blocks=66 gaps=7 tf=0.914894 fast=0.975000 slow=1.000000
+QINFO  : FaultTest::nativeWindowGapsUseFrozenQualityGates() sparse_window blocks=19 gaps=18 tf=0.404255 rejected=tf_coverage
+PASS   : FaultTest::nativeWindowGapsUseFrozenQualityGates()
+PASS   : FaultTest::normalRecordingRetentionIsConservative()
+PASS   : FaultTest::sampleClockAndSpeedEvents()
+QWARN  : FaultTest::realFrozenDatasetAndReport() This plugin does not support propagateSizeHints()
+PASS   : FaultTest::realFrozenDatasetAndReport()
+PASS   : FaultTest::cancelBeforeWorkerStartsAndRestart()
+PASS   : FaultTest::rejectsUnsealedOrMissingAssets()
+PASS   : FaultTest::rejectsDifferentDatasetModelAndInvalidGrade()
+PASS   : FaultTest::externalOrderingExpiryAndConfirmation()
+PASS   : FaultTest::confidenceGatePreservesRawPredictionAndRequiresConsecutiveWindows()
+QINFO  : FaultTest::windowEvaluationToLiveWaitsAndCanStop() U7 告警不可用（需要 PL 接口 v1.3）
+QWARN  : FaultTest::windowEvaluationToLiveWaitsAndCanStop() This plugin does not support propagateSizeHints()
+PASS   : FaultTest::windowEvaluationToLiveWaitsAndCanStop()
+QINFO  : FaultTest::liveStreamRecordingAndLabeledReview() U7 告警不可用（需要 PL 接口 v1.3）
+QWARN  : FaultTest::liveStreamRecordingAndLabeledReview() This plugin does not support propagateSizeHints()
+QWARN  : FaultTest::liveStreamRecordingAndLabeledReview() This plugin does not support propagateSizeHints()
+QWARN  : FaultTest::liveStreamRecordingAndLabeledReview() This plugin does not support raise()
+PASS   : FaultTest::liveStreamRecordingAndLabeledReview()
+PASS   : FaultTest::cleanupTestCase()
+Totals: 18 passed, 0 failed, 0 skipped, 0 blacklisted, 30976ms
+********* Finished testing of FaultTest *********

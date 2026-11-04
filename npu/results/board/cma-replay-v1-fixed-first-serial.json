@@ -1,0 +1,40 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "command",
+      "command": "test ! -e /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && mkdir /mnt/mmcblk0p2/npu-tests/cma-fixed-v2",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/cma-fixed-v2/update.tar.gz",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-cma-fixed-update-v2.tar.gz",
+      "operation": "upload",
+      "bytes": 81292,
+      "sha256": "10731bc86999e9e1a10f86d11a68810e76a923006d99b44d45876962284cac75",
+      "verified": true
+    },
+    {
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && gzip -dc update.tar.gz | tar -xf - && sha256sum -c checksums.sha256",
+      "exit_code": 0,
+      "output": "src/model_config.hpp: OK\r\nsrc/native_rul_cma.cpp: OK\r\nbin/rul_cma: OK"
+    },
+    {
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && for f in data weights.bin weights.tsv qparams_head.tsv weights.sha256 run.sh; do ln -s ../cma-v1/f3p-cma-diagnostic-v1/$f $f; done; ln -s ../../cma-v1/f3p-cma-diagnostic-v1/bin/timeout bin/timeout",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/cma-fixed-v2 && sha256sum -c weights.sha256 && sh run.sh hybrid 1",
+      "exit_code": 0,
+      "output": "weights.bin: OK\r\nweights.tsv: OK\r\n[  792.519756] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[  792.519829] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nstage=build_segment_5 begin\r\nsegment=5 physical_npu_layers=1\r\nsegment=5 optimizer_messages=47\r\nstage=build_segment_5 passed\r\nsample=0 prediction=21.43906212 reference=21.45799828 absolute_error=0.01893615723\r\nresult=inference_completed samples=1 max_reference_error=0.01893615723 mismatches=1 rmse=3.560937881 mae=3.560937881 mean_forward_us=240530.943\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nafter_enqueue,0,5,1204224,123268,10,0,1087880,10\r\nbefore_unload,0,6,1204224,123268,10,0,1087880,10\r\nafter_unload,0,6,843776,123268,10,6,836744,4\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/cma-fixed-v2/results_hybrid_19700101_001311_5146"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

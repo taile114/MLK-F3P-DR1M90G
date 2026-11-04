@@ -1,0 +1,101 @@
+#!/bin/sh
+# 链路优先级执行器：千兆网 > 4G > WiFi。
+#
+# 每 5 秒检查一次：有线链路插上后自动拉起并获取地址；当前生效链路获得地址后
+# 删除其余链路的默认路由，避免流量按 metric 走错链路；当前生效链路失去地址时，
+# 用先前记录的网关恢复下一优先级链路的默认路由。
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+state=/var/run/mlk-net
+mkdir -p "$state"
+
+eth_ifaces() {
+    for dir in /sys/class/net/*; do
+        name=${dir##*/}
+        [ "$name" = lo ] && continue
+        [ -d "$dir/wireless" ] && continue
+        case "$name" in eth*|en*) echo "$name" ;; esac
+    done
+}
+
+all_ifaces() {
+    for dir in /sys/class/net/*; do
+        name=${dir##*/}
+        [ "$name" = lo ] && continue
+        if [ -d "$dir/wireless" ]; then echo "$name"; continue; fi
+        case "$name" in
+            eth*|en*|wwan*|ppp*|rmnet*|usb*) echo "$name" ;;
+        esac
+    done
+}
+
+has_ipv4() {
+    ip -4 addr show dev "$1" 2>/dev/null | grep -q 'inet '
+}
+
+carrier_up() {
+    [ "$(cat "/sys/class/net/$1/carrier" 2>/dev/null)" = 1 ]
+}
+
+save_gateway() {
+    gw=$(ip -4 route show default dev "$1" 2>/dev/null |
+         sed -n 's/.*via \([0-9.]*\).*/\1/p' | head -1)
+    [ -n "$gw" ] && echo "$gw" > "$state/$1.gw"
+}
+
+drop_default() {
+    for _ in 1 2 3 4; do
+        ip -4 route show default dev "$1" 2>/dev/null | grep -q . || return 0
+        ip -4 route del default dev "$1" 2>/dev/null || return 0
+    done
+}
+
+while :; do
+    # 1. 有线链路：拉起网口并在没有地址时启动 DHCP 客户端。
+    for iface in $(eth_ifaces); do
+        carrier_up "$iface" || continue
+        ip link set "$iface" up 2>/dev/null || true
+        has_ipv4 "$iface" && continue
+        # PPPoE 拨号时网口不取 DHCP 地址。
+        if [ -f /var/lib/mlk/pppoe.conf ] && grep -q '^enabled=1' /var/lib/mlk/pppoe.conf 2>/dev/null; then
+            continue
+        fi
+        # 系统已由 dhcpcd 管理有线接口，避免再起一个客户端。
+        if pidof dhcpcd >/dev/null 2>&1; then
+            continue
+        fi
+        pidfile="$state/$iface.dhcp.pid"
+        if [ -f "$pidfile" ] && kill -0 "$(cat "$pidfile")" 2>/dev/null; then
+            continue
+        fi
+        udhcpc -b -i "$iface" -p "$pidfile" \
+               -s /usr/share/udhcpc/default.script >/dev/null 2>&1 || true
+    done
+
+    # 2. 记录各链路当前默认网关；默认路由被本脚本删除后仍可据此恢复。
+    for iface in $(all_ifaces); do
+        has_ipv4 "$iface" || continue
+        save_gateway "$iface"
+    done
+
+    # 3. 只保留当前生效链路的默认路由。
+    winner=$(/usr/bin/mlk_net_priority)
+    case "$winner" in
+        none) : ;;
+        *:*)
+            iface=${winner#*:}
+            for other in $(all_ifaces); do
+                [ "$other" = "$iface" ] && continue
+                has_ipv4 "$other" || continue
+                drop_default "$other"
+            done
+            if ! ip -4 route show default dev "$iface" 2>/dev/null | grep -q .; then
+                if [ -f "$state/$iface.gw" ]; then
+                    ip -4 route add default via "$(cat "$state/$iface.gw")" \
+                        dev "$iface" 2>/dev/null || true
+                fi
+            fi
+            ;;
+    esac
+
+    sleep 5
+done

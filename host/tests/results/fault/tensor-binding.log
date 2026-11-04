@@ -1,0 +1,6 @@
+built: /home/uisrc/mlk-fault-integration/build-aarch64/libmlk_fault.so /home/uisrc/mlk-fault-integration/build-aarch64/fault_check
+PASS: SDK rejection reproduced; four production input/output bindings accepted
+{"result":"completed","samples":3,"class_correct":3,"joint_correct":3,"reference_mismatch":0,"backend":1,"mean_infer_us":545228.333,"report":"/tmp/mlk-fault-fixed-cpu.json"}
+/home/uisrc/mlk-fault-integration/build-aarch64/libmlk_fault.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=94487767e7887e8bd66ad709b4a8a1f4771efd3f, with debug_info, not stripped
+57282f7ad231829cb4bd09deccb306412351e9e9ce284908b14e623405e56ef7  /home/uisrc/mlk-fault-integration/build-aarch64/libmlk_fault.so
+paired_sdk_tensor_binding_regression_and_cpu_smoke_passed

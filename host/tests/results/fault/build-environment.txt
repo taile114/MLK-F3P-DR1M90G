@@ -1,0 +1,9 @@
+aarch64-linux-gnu-g++ (Linaro GCC 7.5-2019.12) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+qemu-aarch64 version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.32)
+Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers
+5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce  /home/uisrc/f3p-rul-probe/vendor/armnn/lib/libarmnn.so.32.1
+5.13.2

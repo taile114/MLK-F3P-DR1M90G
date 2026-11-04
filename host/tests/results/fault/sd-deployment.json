@@ -1,0 +1,141 @@
+{
+  "schema": "mlk.fault.sd_deployment.v1",
+  "disk": {
+    "Number": 2,
+    "SerialNumber": "121220160204",
+    "BusType": "USB",
+    "Size": 31299993600,
+    "IsBoot": false,
+    "IsSystem": false
+  },
+  "partition_layout": [
+    {
+      "PartitionNumber": 1,
+      "Offset": 1048576,
+      "Size": 103809024,
+      "DriveLetter": "F"
+    },
+    {
+      "PartitionNumber": 2,
+      "Offset": 104857600,
+      "Size": 31195136000,
+      "DriveLetter": "\u0000"
+    }
+  ],
+  "archive_sha256": "677eccaa7afd381aa0504310d9f82dac21c0e7018c564f84cfccaa038b5dd106",
+  "write": {
+    "disk_serial": "121220160204",
+    "mode": "userspace_file_update",
+    "formatted": false,
+    "partition_table_modified": false,
+    "boot_files_modified": false,
+    "rul_and_user_files_preserved": true,
+    "preserved_files_checked": 1561,
+    "written_files": {
+      "opt/qt_play/mlk_ps_local": "0df57fa0d4aa4002deca8f15f1293ad0d81b6d0d2d826436e616411c051ca400",
+      "usr/bin/fault_check": "c72393f27789d2f0c2ca8f4902c99ec33d32b79f52c98f4b05d209f8675376e7",
+      "opt/qt_play/run_arm_app.sh": "538a3be5aebd3cdce30edef40b133c7a406c510f9d240f8c7a138a9389d98b65",
+      "etc/default/mlk-inference": "0a97773cbc8e6e99fed777d84dbcaa5bc2bc433283278cbd83571f22f2443502"
+    },
+    "runtime_target": "/opt/mlk_fault-packages/f3p-fault-single-v1-3c4b13fb11100aac",
+    "evaluation_target": "/data/fault-evalsets/f3p-fault-single-v1-e9ec422a3bb8939d",
+    "on_card_backup": "opt/mlk_fault-backups/f3p-fault-single-v1-3c4b13fb11100aac-e7dad06c26/previous-files.tar.gz",
+    "hardware_boot_verified": false
+  },
+  "readback": {
+    "disk_serial": "121220160204",
+    "readback": "remounted_read_only",
+    "written_payload_files": 14,
+    "payload_sha256": {
+      "/opt/mlk_fault/libmlk_fault.so": "a048ed1afb8f16ffebcb06874f9da5ccacdcb4554a13e34b2c3b35e8dcb3318a",
+      "/opt/mlk_fault/weights.tsv": "3ad9ac617450b94913bf2e43c1c79548b58d2a8f8c60d7c39a5e3cd375fbcc8f",
+      "/opt/mlk_fault/thresholds.bin": "6bddf73d5e4b8b4fab67d5c625738cdcee25c3aeeea7831cf10c96c44b25002e",
+      "/opt/mlk_fault/qparams.tsv": "64c4211d098f78c8358120ae014c6c2bd63a2a2f94b95a34342f40b7b7b17e26",
+      "/opt/mlk_fault/weights.bin": "0e4cf734d67a6e0babb79c76f32d7a7912787aec928e9f30ddd95a19269300af",
+      "/opt/mlk_fault/preprocess.json": "e4b5aa1ba7b8fc01879c666fb08affa3692b09cac3a1de799fbcf22ce4abea32",
+      "/opt/mlk_fault/model.json": "3c4b13fb11100aac838bcb1d16fefc33a79efbded9b46185d0e06e45b1c0a0a8",
+      "/data/fault-eval/test_index.csv": "daf6117907b2cea9c8a06e626ca7e1d849d2a7de59f5ab2a307edb55113ba81e",
+      "/data/fault-eval/test_inputs.bin": "e9ec422a3bb8939d40159dc9d08cbd97c83539d41418b8def8b14248506095a4",
+      "/data/fault-eval/evalset.json": "931e6775ef7180808551fbdb045a612fb4d6efa8192565b409e018aa24a7e250",
+      "/opt/qt_play/mlk_ps_local": "0df57fa0d4aa4002deca8f15f1293ad0d81b6d0d2d826436e616411c051ca400",
+      "/usr/bin/fault_check": "c72393f27789d2f0c2ca8f4902c99ec33d32b79f52c98f4b05d209f8675376e7",
+      "/opt/qt_play/run_arm_app.sh": "538a3be5aebd3cdce30edef40b133c7a406c510f9d240f8c7a138a9389d98b65",
+      "/etc/default/mlk-inference": "0a97773cbc8e6e99fed777d84dbcaa5bc2bc433283278cbd83571f22f2443502"
+    },
+    "boot_hashes_unchanged": true,
+    "partition_table_unchanged": true,
+    "armnn_unchanged": true,
+    "kernel_device_tree_and_bitstream_unchanged": true,
+    "physical_board_boot_verified": false,
+    "unmounted_before_return": true
+  },
+  "on_card_qemu_cpu_smoke": {
+    "schema": "mlk.fault.runtime_check.v1",
+    "root": "/home/uisrc/mlk-fault-sd-deploy/mnt/root/opt/mlk_fault",
+    "samples": 3,
+    "backend_requested": 1,
+    "backend_reported": 1,
+    "class_correct": 3,
+    "joint_correct": 3,
+    "class_accuracy": 1,
+    "joint_accuracy": 1,
+    "macro_class_accuracy": 1,
+    "reference_mismatch": 0,
+    "mean_infer_us": 575130,
+    "median_infer_us": 613625,
+    "p95_infer_us": 632838,
+    "max_infer_us": 632838,
+    "confusion_target_by_prediction": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "filesystem": {
+    "tools": "e2fsprogs 1.47.3 built in isolated Ubuntu workspace",
+    "committed_journal_replayed": true,
+    "metadata_undo_files_retained": true,
+    "deleted_zero_data_inode_records_corrected": [
+      1308176,
+      1308191
+    ],
+    "final_readonly_e2fsck_exit": 0
+  },
+  "synced_and_unmounted": true,
+  "temporary_connection_rules_removed": true,
+  "physical_board_boot_verified": false,
+  "physical_npu_execution_verified": false,
+  "windows_backup": "out/mlk-fault/sd-deploy/original-files.tar.gz"
+}

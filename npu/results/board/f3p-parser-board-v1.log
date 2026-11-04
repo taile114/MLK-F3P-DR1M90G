@@ -1,0 +1,242 @@
+# sh run_diagnostics.sh
+results=/root/f3p-parser-diagnostics-v1/results_19700101_005243_349
+--- 00_relu ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/00_relu.onnx
+stage=parse passed
+input=x dtype=1 shape=[1,23,110] bytes=10120
+output=y dtype=1 shape=[1,23,110] bytes=10120
+result=parse_passed inference_not_requested
+exit_code=0
+--- 01_transpose_raw ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/01_transpose_raw.onnx
+stage=parse passed
+input=features dtype=1 shape=[1,23,110] bytes=10120
+output=/Transpose_output_0 dtype=1 shape=[1,110,23] bytes=10120
+result=parse_passed inference_not_requested
+exit_code=0
+--- 02_reshape_raw ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/02_reshape_raw.onnx
+Segmentation fault
+exit_code=139
+--- 02_reshape_typed_int64 ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/02_reshape_typed_int64.onnx
+Segmentation fault
+exit_code=139
+--- 03_unsqueeze_raw ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/03_unsqueeze_raw.onnx
+Segmentation fault
+exit_code=139
+--- 03_unsqueeze_typed_int64 ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/03_unsqueeze_typed_int64.onnx
+Segmentation fault
+exit_code=139
+--- 04_less_raw ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/04_less_raw.onnx
+Warning: there is bool tensor in initializer of onnx
+Segmentation fault
+exit_code=139
+--- 04_less_typed_int64 ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/04_less_typed_int64.onnx
+Warning: there is bool tensor in initializer of onnx
+Segmentation fault
+exit_code=139
+--- 10_full_shapes ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/10_full_shapes.onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+result=failed stage=parse error='CHECKED_INT32(int64Axes[i])' must be non-negative, received: -1 at  at function ParseUnsqueeze [/home/rtxiao/repos/AL_armnn/scripts/source/armnn/src/armnnOnnxParser/OnnxParser.cpp:4449]
+exit_code=20
+--- 11_full_shapes_typed_int64 ---
+stage=parse begin model=/root/f3p-parser-diagnostics-v1/models/11_full_shapes_typed_int64.onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+Warning: there is bool tensor in initializer of onnx
+result=failed stage=parse error='CHECKED_INT32(int64Axes[i])' must be non-negative, received: -1 at  at function ParseUnsqueeze [/home/rtxiao/repos/AL_armnn/scripts/source/armnn/src/armnnOnnxParser/OnnxParser.cpp:4449]
+exit_code=20
+--- summary ---
+00_relu 0
+01_transpose_raw 0
+02_reshape_raw 139
+02_reshape_typed_int64 139
+03_unsqueeze_raw 139
+03_unsqueeze_typed_int64 139
+04_less_raw 139
+04_less_typed_int64 139
+10_full_shapes 20
+11_full_shapes_typed_int64 20
+results=/root/f3p-parser-diagnostics-v1/results_19700101_005243_349

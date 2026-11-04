@@ -1,0 +1,24 @@
+case=u8_s8 requested_backend=CpuRef cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.69 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed shape=1,8,8,8 layout=NCHW kernel=3,3 input_scale=0.25 weight_scale=0.125 output_scale=0.25 output_offset=128
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    3|CpuRef  |Convolution2d             0.00KB(0.00KB)      |0.50KB(0.50KB)      |0.50KB(0.50KB)      
+Info: ******************************************************************************************************
+stage=optimize passed graph_has_requested_backend=true
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=0B
+
+stage=load passed
+Info: Execution time: 1.48 ms.
+iteration=0 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1561.5
+Info: Execution time: 1.33 ms.
+iteration=1 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1371.33
+Info: Execution time: 1.31 ms.
+iteration=2 output_elements=512 max_error_lsb=0 mismatches=0 enqueue_us=1358.82
+result=passed case=u8_s8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 mean_enqueue_us=1430.55 npu_requested=false
+Info: Shutdown time: 0.03 ms.

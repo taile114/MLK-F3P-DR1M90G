@@ -1,0 +1,322 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x411fd040]
+[    0.000000] Linux version 6.1.111-rt42 (uisrc@ubuntu) (aarch64-linux-gnu-gcc (Linaro GCC 7.5-2019.12) 7.5.0, GNU ld (Linaro_Binutils-2019.12) 2.28.2.20170706) #3 SMP PREEMPT Thu Nov 20 17:58:46 PST 2025
+[    0.000000] Machine model: Anlogic, DR1M90 FPSoc
+[    0.000000] earlycon: uart0 at MMIO32 0x00000000f8401000 (options '')
+[    0.000000] printk: bootconsole [uart0] enabled
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x0000000017c00000, size 128 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x000000003fffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000003fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000003fffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] percpu: Embedded 21 pages/cpu s48744 r8192 d29080 u86016
+[    0.000000] pcpu-alloc: s48744 r8192 d29080 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258048
+[    0.000000] Kernel command line: console=ttyS0,115200n8 earlycon=uart,mmio32,0xf8401000 loglevel=8 mtdparts=alspinor:1M(boot),-(data)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 806368K/1048576K available (9984K kernel code, 1374K rwdata, 3116K rodata, 1600K init, 581K bss, 111136K reserved, 131072K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=2.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 160 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x00000000dd040000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 33.33MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x7b00c4bad, max_idle_ns: 440795202744 ns
+[    0.000000] sched_clock: 56 bits at 33MHz, resolution 30ns, wraps every 2199023255551ns
+[    0.008206] Console: colour dummy device 80x25
+[    0.012686] Calibrating delay loop (skipped), value calculated using timer frequency.. 66.66 BogoMIPS (lpj=133333)
+[    0.023005] pid_max: default: 32768 minimum: 301
+[    0.027823] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.035206] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.044355] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.051581] cblist_init_generic: Setting shift to 1 and lim to 1.
+[    0.057726] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.064938] cblist_init_generic: Setting shift to 1 and lim to 1.
+[    0.071160] rcu: Hierarchical SRCU implementation.
+[    0.075951] rcu: 	Max phase no-delay instances is 1000.
+[    0.081464] EFI services will not be available.
+[    0.086229] smp: Bringing up secondary CPUs ...
+[    0.091238] Detected VIPT I-cache on CPU1
+[    0.091334] GICv3: CPU1: found redistributor 1 region 0:0x00000000dd060000
+[    0.091382] CPU1: Booted secondary processor 0x0000000001 [0x411fd040]
+[    0.091491] smp: Brought up 1 node, 2 CPUs
+[    0.112959] SMP: Total of 2 processors activated.
+[    0.117655] CPU features: detected: 32-bit EL0 Support
+[    0.122800] CPU features: detected: CRC32 instructions
+[    0.127998] CPU: All CPU(s) started at EL1
+[    0.132085] alternatives: applying system-wide alternatives
+[    0.138926] devtmpfs: initialized
+[    0.146647] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.156384] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+[    0.168748] DMI not present or invalid.
+[    0.173251] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.180196] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.187330] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.195163] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.203118] audit: initializing netlink subsys (disabled)
+[    0.208736] audit: type=2000 audit(0.136:1): state=initialized audit_enabled=0 res=1
+[    0.209174] thermal_sys: Registered thermal governor 'fair_share'
+[    0.216462] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.222536] thermal_sys: Registered thermal governor 'step_wise'
+[    0.228808] ASID allocator initialised with 65536 entries
+[    0.256665] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.263466] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.269760] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.276524] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.282772] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.289534] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.295780] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.302542] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.309759] dw_dmac f804d000.ahb_dma: WARN: Device release is not defined so it is not safe to unbind this driver while in use
+[    0.321501] dw_dmac f804d000.ahb_dma: DesignWare DMA Controller, 8 channels
+[    0.329080] SCSI subsystem initialized
+[    0.333052] usbcore: registered new interface driver usbfs
+[    0.338564] usbcore: registered new interface driver hub
+[    0.343891] usbcore: registered new device driver usb
+[    0.349808] mc: Linux media interface: v0.10
+[    0.354119] videodev: Linux video capture interface: v2.00
+[    0.359637] pps_core: LinuxPPS API ver. 1 registered
+[    0.364587] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.373698] PTP clock support registered
+[    0.377991] FPGA manager framework
+[    0.382204] vgaarb: loaded
+[    0.385233] clocksource: Switched to clocksource arch_sys_counter
+[    0.399216] NET: Registered PF_INET protocol family
+[    0.404298] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.413418] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.421836] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.429580] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.437393] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.444828] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.451267] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.457908] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.465115] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.471170] RPC: Registered named UNIX socket transport module.
+[    0.477091] RPC: Registered udp transport module.
+[    0.481785] RPC: Registered tcp transport module.
+[    0.486477] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.492903] PCI: CLS 0 bytes, default 64
+[    0.497176] Trying to unpack rootfs image as initramfs...
+[    0.503397] workingset: timestamp_bits=62 max_order=18 bucket_order=0
+[    0.521484] NFS: Registering the id_resolver key type
+[    0.526675] Key type id_resolver registered
+[    0.530951] Key type id_legacy registered
+[    0.535022] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.541748] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.549263] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.610343] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    0.621834] anlogic-vdma-fb 80100000.vdmafb: vdmafb probe
+[    0.630357] anlogic-vdma-fb 80100000.vdmafb: fb_phy = 0x17d00000
+[    0.638200] of_dma_find_controller: can't find DMA controller /soc/vdma@80200000
+[    0.645704] anlogic-vdma-fb 80100000.vdmafb: Failed to request vdma channel
+[    0.652708] anlogic-vdma-fb 80100000.vdmafb: vdmafb_vdma_init fail
+[    0.660374] anlogic-dynclk 80101000.axi_dynclk: Dynamic clock driver: input=50000000 Hz, output=150000000 Hz
+[    0.670321] Simplified PLL calculation: input=50000000 Hz, target=150000000 Hz
+[    0.677631] PLL parameters calculated successfully:
+[    0.682553] anlogic-dynclk 80101000.axi_dynclk: PLL config: VCO=900000000 Hz, N=1, M=18.0000, C=6
+[    0.691448] anlogic-dynclk 80101000.axi_dynclk: Output: expected=150000000 Hz, actual=150000000 Hz, error=0 ppm, duty=50%
+[    0.702409] PLL write: reg=0x04, value=0x00
+[    0.706614] PLL write: reg=0x12, value=0x91
+[    0.710867] PLL write: reg=0x10, value=0x00
+[    0.715093] PLL write: reg=0x11, value=0x00
+[    0.719386] PLL write: reg=0x27, value=0x05
+[    0.723623] PLL write: reg=0x24, value=0x03
+[    0.727908] anlogic-dynclk 80101000.axi_dynclk: PLL configured successfully
+[    0.736191] dma-pl330 f8419000.dma-controller: WARN: Device release is not defined so it is not safe to unbind this driver while in use
+[    0.748945] dma-pl330 f8419000.dma-controller: Loaded driver for PL330 DMAC-341330
+[    0.756650] dma-pl330 f8419000.dma-controller: 	DBUFF-16x16bytes Num_Chans-8 Num_Peri-4 Num_Events-16
+[    0.766286] anlogic-dma 80200000.vdma: Anlogic AXI VDMA Engine Driver Probed
+[    0.773679] anlogic-dma 80200000.vdma: WARN: Device release is not defined so it is not safe to unbind this driver while in use
+[    0.788846] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    0.796572] printk: console [ttyS0] disabled
+[    0.821324] f8401000.serial: ttyS0 at MMIO 0xf8401000 (irq = 30, base_baud = 3125000) is a U6_16550A
+[    0.830880] printk: console [ttyS0] enabled
+[    0.830894] printk: bootconsole [uart0] disabled
+[    0.832428] printk: console [ttyS0] printing thread started
+[    0.844791] brd: module loaded
+[    0.859807] loop: module loaded
+[    0.861158] al-qspi f804e000.spi: registered master spi0
+[    0.867731] spi spi0.0: setup mode 0, 8 bits/w, 50000000 Hz max --> 0
+[    0.868034] spi-nor spi0.0: found gd25q256, expected gd25lb256e
+[    0.869271] spi-nor spi0.0: gd25q256 (32768 Kbytes)
+[    0.869379] 2 cmdlinepart partitions found on MTD device alspinor
+[    0.869389] Creating 2 MTD partitions on "alspinor":
+[    0.869397] 0x000000000000-0x000000100000 : "boot"
+[    0.870579] 0x000000100000-0x000002000000 : "data"
+[    0.871649] al-qspi f804e000.spi: registered child spi0.0
+[    0.873363] CAN device driver interface
+[    1.035830] dwc-eth-dwmac f8100000.ethernet0: User ID: 0x10, Synopsys ID: 0x52
+[    1.035863] dwc-eth-dwmac f8100000.ethernet0: 	DWMAC4/5
+[    1.035872] dwc-eth-dwmac f8100000.ethernet0: DMA HW capability register supported
+[    1.035880] dwc-eth-dwmac f8100000.ethernet0: RX Checksum Offload Engine supported
+[    1.035887] dwc-eth-dwmac f8100000.ethernet0: TX Checksum insertion supported
+[    1.035894] dwc-eth-dwmac f8100000.ethernet0: TSO supported
+[    1.035900] dwc-eth-dwmac f8100000.ethernet0: Enable RX Mitigation via HW Watchdog Timer
+[    1.035926] dwc-eth-dwmac f8100000.ethernet0: Enabled RFS Flow TC (entries=10)
+[    1.035938] dwc-eth-dwmac f8100000.ethernet0: TSO feature enabled
+[    1.035946] dwc-eth-dwmac f8100000.ethernet0: Using 32/32 bits DMA host/device width
+[    1.542526] Freeing initrd memory: 73996K
+[    1.558359] dwc2 f8180000.usb: supply vusb_d not found, using dummy regulator
+[    1.558513] dwc2 f8180000.usb: supply vusb_a not found, using dummy regulator
+[    1.560555] dwc2 f8180000.usb: DWC OTG Controller
+[    1.560581] dwc2 f8180000.usb: new USB bus registered, assigned bus number 1
+[    1.560608] dwc2 f8180000.usb: irq 35, io mem 0xf8180000
+[    1.560790] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    1.560803] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.560813] usb usb1: Product: DWC OTG Controller
+[    1.560821] usb usb1: Manufacturer: Linux 6.1.111-rt42 dwc2_hsotg
+[    1.560829] usb usb1: SerialNumber: f8180000.usb
+[    1.561417] hub 1-0:1.0: USB hub found
+[    1.561459] hub 1-0:1.0: 1 port detected
+[    1.562488] usbcore: registered new interface driver uas
+[    1.562559] usbcore: registered new interface driver usb-storage
+[    1.562893] i2c_dev: i2c /dev entries driver
+[    1.563288] pca954x 0-0074: probe failed
+[    1.563391] usbcore: registered new interface driver uvcvideo
+[    1.563695] dw_wdt f8410000.watchdog: No valid TOPs array specified
+[    1.564277] sdhci: Secure Digital Host Controller Interface driver
+[    1.564282] sdhci: Copyright(c) Pierre Ossman
+[    1.564285] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.565090] usbcore: registered new interface driver usbhid
+[    1.565097] usbhid: USB HID core driver
+[    1.565407] pl353-smc f841a000.memory-controller: no matching children
+[    1.565573] adc f840b000.adc: The ADC using internal reference voltage
+[    1.565582] adc f840b000.adc: The ADC resolution is 12 bits
+[    1.565588] adc f840b000.adc: The ADC input signal is unipolar
+[    1.577364] misc cma_mem: registered.
+[    1.577475] hard_npu 63f00000.hard_npu: drv_hard_npu_probe( (____ptrval____))
+[    1.577554] hard_npu 63f00000.hard_npu: find irq num: 41
+[    1.577593] hard_npu 63f00000.hard_npu: devm_ioremap_resource return (____ptrval____)
+[    1.577601] hard_npu 63f00000.hard_npu: mem start addr: 63f00000
+[    1.577609] hard_npu 63f00000.hard_npu: mem size: 1048576
+[    1.577973] soft_npu 1f0000000.soft_npu: drv_soft_npu_probe( (____ptrval____))
+[    1.578034] soft_npu 1f0000000.soft_npu: find irq num: 42
+[    1.578062] soft_npu 1f0000000.soft_npu: devm_ioremap_resource return (____ptrval____)
+[    1.578071] soft_npu 1f0000000.soft_npu: mem start addr: 1f0000000
+[    1.578079] soft_npu 1f0000000.soft_npu: mem size: 65536
+[    1.578408] jpu f8460000.jpu: jpu_probe( (____ptrval____))
+[    1.578822] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    1.579298] gre: GRE over IPv4 demultiplexor driver
+[    1.579303] ip_gre: GRE over IPv4 tunneling driver
+[    1.580548] IPv4 over IPsec tunneling driver
+[    1.581563] NET: Registered PF_INET6 protocol family
+[    1.583234] Segment Routing with IPv6
+[    1.583280] In-situ OAM (IOAM) with IPv6
+[    1.583895] NET: Registered PF_PACKET protocol family
+[    1.583910] NET: Registered PF_KEY protocol family
+[    1.583916] can: controller area network core
+[    1.584038] NET: Registered PF_CAN protocol family
+[    1.584044] can: raw protocol
+[    1.584052] can: broadcast manager protocol
+[    1.584062] can: netlink gateway - max_hops=1
+[    1.584404] Key type dns_resolver registered
+[    1.592329] Key type encrypted registered
+[    1.602626] of-fpga-region soc:base_fpga_region: FPGA Region probed
+[    1.602747] anlogic-vdma-fb 80100000.vdmafb: vdmafb probe
+[    1.605324] mmc0: SDHCI controller on f8049000.mmc [f8049000.mmc] using ADMA
+[    1.605396] mmc1: SDHCI controller on f804a000.mmc [f804a000.mmc] using ADMA
+[    1.611136] anlogic-vdma-fb 80100000.vdmafb: fb_phy = 0x17d00000
+[    1.642088] mmc0: new high speed SDHC card at address 0001
+[    1.642682] mmcblk0: mmc0:0001 MSSD0 29.2 GiB 
+[    1.643700]  mmcblk0: p1 p2
+[    1.654910] mmc1: new high speed MMC card at address 0001
+[    1.655437] mmcblk1: mmc1:0001 IS008G 7.30 GiB 
+[    1.656643]  mmcblk1: p1 p2
+[    1.657268] mmcblk1boot0: mmc1:0001 IS008G 4.00 MiB 
+[    1.657880] mmcblk1boot1: mmc1:0001 IS008G 4.00 MiB 
+[    1.658339] mmcblk1rpmb: mmc1:0001 IS008G 4.00 MiB, chardev (239:0)
+[    1.675407] Console: switching to colour frame buffer device 240x67
+[    1.723697] of_cfs_init
+[    1.723785] of_cfs_init: OK
+[    1.723913] clk: Disabling unused clocks
+[    1.724867] Freeing unused kernel memory: 1600K
+[    1.755696] Checked W+X mappings: passed, no W+X pages found
+[    1.755725] Run /init as init process
+[    1.755731]   with arguments:
+[    1.755733]     /init
+[    1.755736]   with environment:
+[    1.755739]     HOME=/
+[    1.755741]     TERM=linux
+[    1.870968] usb 1-1: new high-speed USB device number 2 using dwc2
+[    2.077510] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[    2.077535] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    2.077545] usb 1-1: Product: USB 2.0 Hub
+[    2.078014] hub 1-1:1.0: USB hub found
+[    2.078082] hub 1-1:1.0: 4 ports detected
+[    2.465243] usb 1-1.1: new high-speed USB device number 3 using dwc2
+[    2.666094] usb 1-1.1: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[    2.666109] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.666118] usb 1-1.1: Product: AIC Wlan
+[    2.666126] usb 1-1.1: Manufacturer: aicsemi
+[    2.666134] usb 1-1.1: SerialNumber: 20220103
+[    2.777247] random: crng init done
+[    2.786155] udevd[133]: starting eudev-3.2.11
+[    3.098398] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    3.186547] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Quota mode: disabled.
+[    3.186737] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    3.524892] EXT4-fs (mmcblk0p2): recovery complete
+[    3.530169] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: disabled.
+[    3.857481] ipms_canfd f8408000.can can0: bit-timing not yet defined
+[    3.857851] ipms_canfd f8409000.can can1: bit-timing not yet defined
+[    3.859589] dwc-eth-dwmac f8100000.ethernet0 eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[    3.886893] dwc-eth-dwmac f8100000.ethernet0 eth0: PHY [stmmac-0:00] driver [YT8531 Gigabit Ethernet] (irq=POLL)
+[    3.899666] dwmac4: Master AXI performs any burst length
+[    3.899686] dwc-eth-dwmac f8100000.ethernet0 eth0: No Safety Features support found
+[    3.899708] dwc-eth-dwmac f8100000.ethernet0 eth0: IEEE 1588-2008 Advanced Timestamp supported
+[    3.899999] dwc-eth-dwmac f8100000.ethernet0 eth0: registered PTP clock
+[    3.900665] dwc-eth-dwmac f8100000.ethernet0 eth0: configuring for phy/rgmii link mode
+[  156.113906] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[  156.114008] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+[ 1286.358590] usb 1-1.1: USB disconnect, device number 3
+[ 1286.681248] usb 1-1.1: new high-speed USB device number 4 using dwc2
+[ 1286.882091] usb 1-1.1: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[ 1286.882107] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1286.882117] usb 1-1.1: Product: AIC Wlan
+[ 1286.882125] usb 1-1.1: Manufacturer: aicsemi
+[ 1286.882133] usb 1-1.1: SerialNumber: 20220103
+[ 1318.169249] usb 1-1.4: new high-speed USB device number 5 using dwc2
+[ 1318.370852] usb 1-1.4: New USB device found, idVendor=3535, idProduct=6300, bcdDevice= 1.10
+[ 1318.370869] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1318.370879] usb 1-1.4: Product: W381    
+[ 1318.370887] usb 1-1.4: Manufacturer: aigo    
+[ 1318.370895] usb 1-1.4: SerialNumber: 9000435880929064
+[ 1318.371511] usb-storage 1-1.4:1.0: USB Mass Storage device detected
+[ 1318.371962] scsi host0: usb-storage 1-1.4:1.0
+[ 1319.390365] scsi 0:0:0:0: Direct-Access     aigo     W381             PMAP PQ: 0 ANSI: 6
+[ 1319.391054] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[ 1319.664022] sd 0:0:0:0: [sda] 245760000 512-byte logical blocks: (126 GB/117 GiB)
+[ 1319.664970] sd 0:0:0:0: [sda] Write Protect is off
+[ 1319.664980] sd 0:0:0:0: [sda] Mode Sense: 45 00 00 00
+[ 1319.665742] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[ 1319.672110]  sda: sda1
+[ 1319.672858] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[ 1984.395829] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1984.395932] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+[ 1992.523411] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1992.523511] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+[ 1992.626031] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1992.626133] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000

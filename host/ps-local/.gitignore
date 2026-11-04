@@ -1,0 +1,11 @@
+*.o
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile
+!driver/Makefile
+.qmake.stash
+mlk_ps_local
+/build-*/
+fault-inference/build-*/

@@ -1,0 +1,5 @@
+shape	mode	backend	exit_code
+c00	fc	CpuRef	0
+c00	fc	Alnpu	0
+c00	conv	CpuRef	0
+c00	conv	Alnpu	40

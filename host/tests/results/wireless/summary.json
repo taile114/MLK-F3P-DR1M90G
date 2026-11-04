@@ -1,0 +1,51 @@
+{
+  "transport": "AtoL WiFi / UDP 8000",
+  "boardAddress": "192.168.211.14",
+  "pcAddress": "192.168.211.16",
+  "kernel": "6.1.111-rt42",
+  "psLocalSha256": "9e92fc77b3fd65b81cd5f7ec31b59eef98486fe56468ede152c03b8587b81dac",
+  "wifiModules": {
+    "aic_load_fw.ko": "3a0f2c80019eeb1a1c6661724be15b157fe0a078d2789e368eaf184bbacd51f3",
+    "aic8800_fdrv.ko": "62cff44b10a6d5c43169f18e2604f1d872ab7651d87f90f1f65d3df71204838a"
+  },
+  "wifiBuffers": "CONFIG_PREALLOC_RX_SKB=n, CONFIG_PREALLOC_TXQ=n",
+  "ecdh": "ecdh.json",
+  "windowTests": {
+    "loopbackPassed": 5,
+    "physicalPskPassed": 3,
+    "physicalEcdhPassed": 3,
+    "fourChannels": true,
+    "encryptedRecordRoundtrip": true,
+    "wrongRecordPasswordRejected": true,
+    "connectionTimeoutAndRecovery": true
+  },
+  "workOrders": {
+    "syntheticId": "wifi-link-test",
+    "boardDurableSave": true,
+    "pcEncryptedSave": true,
+    "boardStoredAck": true,
+    "removedFromActiveBoardDirectory": true
+  },
+  "networkTime": {
+    "implementation": "Chrony 4.1 client",
+    "selectedSource": "ntp.aliyun.com",
+    "transportVerified": "WiFi",
+    "networkOverridesSerialPlus90Seconds": true,
+    "serialFallbackWithoutNtp": true,
+    "networkRecoveredAfterFallback": true,
+    "observedSystemOffsetSeconds": 0.000856588,
+    "priorityFreshnessSeconds": 300,
+    "displayTimezone": "CST-8"
+  },
+  "memoryAvailableKb": {
+    "sampleDuringTransfer": 935576,
+    "sampleWithFinalPcWindow": 934024
+  },
+  "limits": [
+    "4G enumeration and SIM/APN dialling not verified",
+    "Short WiFi test; long-duration motor acquisition validation remains separate",
+    "sequenceGaps counts the authenticated UDP stream, not PL DMA blocks"
+  ],
+  "rootfsSha256": "7ea127187a92d3c156bfa0ea0f5800d75f6c7aaae79e9f4b6dc01d73de6decfe",
+  "autoConnect": "autoconnect.json"
+}

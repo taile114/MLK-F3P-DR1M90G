@@ -1,0 +1,2 @@
+# 保留厂商 UART 核的原始字节与换行（ISO-8859 / CRLF）。
+uisrc/03_ip/uiuart_rx.v -text

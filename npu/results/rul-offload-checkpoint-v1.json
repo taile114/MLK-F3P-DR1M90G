@@ -1,0 +1,78 @@
+{
+  "state": "additional_offload_validation_completed",
+  "frozen_checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "prototype_directory": "/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2",
+  "deployment_archive": "artifacts/f3p-offload-rul-arm64-v1.tar.gz",
+  "raw_files": 1513,
+  "integer_outputs_checked": 266344,
+  "integer_max_error_lsb": 1,
+  "full_validation_samples": 184,
+  "paired_rounds": 3,
+  "paired_modes": 5,
+  "application_accuracy_acceptance": "TBD",
+  "summary": {
+    "ff4": {
+      "mean_us": 43916.60478623188,
+      "min_round_mean_us": 43009.72135326087,
+      "max_round_mean_us": 44423.67728804347,
+      "rmse": 2.4654554319680657,
+      "mae": 1.9773543786,
+      "max_fp32_delta": 0.03915882100000001,
+      "cma_bytes": 131072,
+      "speedup_vs_neon": 1.0137457689352354
+    },
+    "ff6": {
+      "mean_us": 43358.2249981884,
+      "min_round_mean_us": 42829.799288043476,
+      "max_round_mean_us": 44393.079896739124,
+      "rmse": 2.467897199984191,
+      "mae": 1.9802044488853263,
+      "max_fp32_delta": 0.04857254000000033,
+      "cma_bytes": 233472,
+      "speedup_vs_neon": 1.026801080761577
+    },
+    "head2": {
+      "mean_us": 44534.36755797102,
+      "min_round_mean_us": 44046.00580978261,
+      "max_round_mean_us": 45500.38447282609,
+      "rmse": 2.467976507661169,
+      "mae": 1.9794861837880433,
+      "max_fp32_delta": 0.03054999999999808,
+      "cma_bytes": 118784,
+      "speedup_vs_neon": 0.999683496798081
+    },
+    "input_ff5": {
+      "mean_us": 41848.54867391304,
+      "min_round_mean_us": 41339.709701086955,
+      "max_round_mean_us": 42734.27194565217,
+      "rmse": 2.4478590403658487,
+      "mae": 1.960779962341848,
+      "max_fp32_delta": 0.5754642490000013,
+      "cma_bytes": 192512,
+      "speedup_vs_neon": 1.063842682692504
+    },
+    "neon": {
+      "mean_us": 44520.27228804348,
+      "min_round_mean_us": 44076.07086413044,
+      "max_round_mean_us": 45405.03094021739,
+      "rmse": 2.465940141849494,
+      "mae": 1.977114969883152,
+      "max_fp32_delta": 8.10600000011874e-06,
+      "cma_bytes": 0,
+      "speedup_vs_neon": 1.0
+    }
+  },
+  "remaining": [
+    "Package the selected ff6 plan into the host C ABI engine and seal its manifest",
+    "Define application precision/latency acceptance",
+    "Evaluate the frozen application choice on the held-out test set",
+    "Long-duration and repeated-load/unload checks",
+    "Validate host display and HDMI/PL/NPU coexistence"
+  ],
+  "training_executed": false,
+  "test_dataset_opened": false,
+  "serial_port_released": true,
+  "selected_execution_plan": "ff6",
+  "selected_npu_branch_count": 6,
+  "application_engine_adaptation": "pending; current host engine accepts two head branches only"
+}

@@ -1,0 +1,39 @@
+{
+  "evidence": "User-provided physical F3P serial output; per-window CSV and board-side file hashes not independently retrieved",
+  "status": "physical_f3p_full_replay_passed",
+  "package": "f3p-native-rul-arm64-v1.tar.gz",
+  "host_archive_sha256": "5c940835bcbd428e9fb4509df26c34b5a2d40cdbf03ffb19667a14e3ba0d5e65",
+  "backend": "CpuRef",
+  "onnx_parser_used": false,
+  "host_gelu": "std::erf",
+  "network_segments_built": 6,
+  "first_window": {
+    "board_result_directory": "/root/f3p-native-rul-v1/results_19700101_000426_283",
+    "samples": 1,
+    "prediction": 21.45942116,
+    "reference": 21.45941925,
+    "max_reference_error": 1.907348633e-06,
+    "mismatches": 0,
+    "rmse": 3.540578842,
+    "mae": 3.540578842,
+    "mean_forward_us": 934595.05,
+    "exit_code": 0
+  },
+  "full_replay": {
+    "board_result_directory": "/root/f3p-native-rul-v1/results_19700101_000452_295",
+    "samples": 165,
+    "max_reference_error": 7.629394531e-06,
+    "mismatches": 0,
+    "rmse": 3.256266531,
+    "mae": 2.771933881,
+    "mean_forward_us": 923880.3768,
+    "exit_code": 0
+  },
+  "comparison_tolerance": {"atol": 0.0001, "rtol": 0.0001},
+  "rul_unit": "observed_aging_test_session",
+  "physical_f3p_full_model_verified": true,
+  "npu_execution_tested": false,
+  "quantized": false,
+  "timing_note": "Diagnostic full-forward timing includes six native network segments and host GELU; first window also includes debug tensor writes. Not a warmed-up performance benchmark.",
+  "artifact_note": "Original deployed v1 archive and internal verification manifest are unchanged; the internal manifest records pre-deployment QEMU verification."
+}

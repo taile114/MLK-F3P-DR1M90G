@@ -1,0 +1,13 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerName : linear_input\lLayerType : Input\lBackendID : CpuRef\l}"];
+    1 [label="{Constant|Guid : 1\lLayerName : linear_weights\lLayerType : Constant\lBackendID : CpuRef\l}"];
+    2 [label="{Constant|Guid : 2\lLayerName : zero_bias\lLayerType : Constant\lBackendID : CpuRef\l}"];
+    3 [label="{Convolution2d|OutputChannels : 23\lFilterWidth : 1\lFilterHeight : 1\lPadding(T,L,B,R) : (0,0,0,0)\lStride(X,Y) : (1,1)\lDilation(X,Y) : (1,1)\lBiasEnabled : true\lDataLayout : NCHW\lGuid : 3\lLayerName : linear_as_conv1x1\lLayerType : Convolution2d\lBackendID : CpuRef\l}"];
+    4 [label="{Output|Guid : 4\lLayerName : linear_output\lLayerType : Output\lBackendID : CpuRef\l}"];
+    0 -> 3 [label=< [1,207,1,110] >];
+    1 -> 3 [label=< [23,207,1,1] >];
+    2 -> 3 [label=< [23] >];
+    3 -> 4 [label=< [1,23,1,110] >];
+}

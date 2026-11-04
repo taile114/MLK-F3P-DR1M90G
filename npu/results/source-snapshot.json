@@ -1,0 +1,620 @@
+{
+  "description": "Byte-identical source copies collected before repository path integration; model/data/evidence/archive files remain unchanged. Tool path updates are documented in the repository.",
+  "files": [
+    {
+      "path": "training/fkp_dvgt/__init__.py",
+      "source": "fkp-dvgt/fkp_dvgt/__init__.py",
+      "sha256": "f5b75d9b5944c1677fdcada22d9859b6163d73a561d8e554ada813717647378a"
+    },
+    {
+      "path": "training/fkp_dvgt/cli.py",
+      "source": "fkp-dvgt/fkp_dvgt/cli.py",
+      "sha256": "f331b1f2b4fcb93c808905cebafd8bce2c92a6ed8f545d56ca9037f9323c35cb"
+    },
+    {
+      "path": "training/fkp_dvgt/config.py",
+      "source": "fkp-dvgt/fkp_dvgt/config.py",
+      "sha256": "afd937301ae7cdda348316216657c3cbea377cd69995cdee3ca6399968ce8574"
+    },
+    {
+      "path": "training/fkp_dvgt/data.py",
+      "source": "fkp-dvgt/fkp_dvgt/data.py",
+      "sha256": "93c4c9504d0a40bc6c0015b945c5314684324ae288c779e7cb4203b6e57b2ed2"
+    },
+    {
+      "path": "training/fkp_dvgt/engine.py",
+      "source": "fkp-dvgt/fkp_dvgt/engine.py",
+      "sha256": "1abfb2f894517e8b146fee6d23c51948d8056b6697842383348efa75021fcd51"
+    },
+    {
+      "path": "training/fkp_dvgt/features.py",
+      "source": "fkp-dvgt/fkp_dvgt/features.py",
+      "sha256": "8264d0dd12dda2413dd9c3725677c9977b743bea802836b7d8b42ebda121e3a4"
+    },
+    {
+      "path": "training/fkp_dvgt/graph.py",
+      "source": "fkp-dvgt/fkp_dvgt/graph.py",
+      "sha256": "27d6a469ea92f71ac9c9ab082b27bc9c173c1a9c52beb9d49ca4993194b594de"
+    },
+    {
+      "path": "training/fkp_dvgt/interpret.py",
+      "source": "fkp-dvgt/fkp_dvgt/interpret.py",
+      "sha256": "5fecc5ecd0eb63e98a631246a671f3399af77e76876147399e9cc43655c0c0c7"
+    },
+    {
+      "path": "training/fkp_dvgt/metrics.py",
+      "source": "fkp-dvgt/fkp_dvgt/metrics.py",
+      "sha256": "ce8ba60adc464feea2ca554c85610c4dbb43cf24a228539418fdbb4b68e79c72"
+    },
+    {
+      "path": "training/fkp_dvgt/model.py",
+      "source": "fkp-dvgt/fkp_dvgt/model.py",
+      "sha256": "bca461a3269e6379ce999ad462a66b0108386537880121da18b12616e9a112e3"
+    },
+    {
+      "path": "training/fkp_dvgt/plotting.py",
+      "source": "fkp-dvgt/fkp_dvgt/plotting.py",
+      "sha256": "675e38d31de114c72d13462a7f0a3461b7f2d573ebc3dcc97c82ee865ecf767a"
+    },
+    {
+      "path": "training/fkp_dvgt/preprocess.py",
+      "source": "fkp-dvgt/fkp_dvgt/preprocess.py",
+      "sha256": "484b05397ff9d468ed18c1915cf8c4da22bd98127d70f95c906a8ee8ecf01df0"
+    },
+    {
+      "path": "training/fkp_dvgt/uncertainty.py",
+      "source": "fkp-dvgt/fkp_dvgt/uncertainty.py",
+      "sha256": "1179c3c5d54bdaa3ee2f7a18dc7db80ee42f64647658311f0ecd477ad5d693f4"
+    },
+    {
+      "path": "training/tools/check_training_env.py",
+      "source": "fkp-dvgt/tools/check_training_env.py",
+      "sha256": "8192cdd910ab6ef0588e755826d86dfba627eb59671e73cf2036ddb71e624190"
+    },
+    {
+      "path": "training/tools/export_onnx.py",
+      "source": "fkp-dvgt/tools/export_onnx.py",
+      "sha256": "ee4b2b171ea48fcb13dc5125e28f97a1dbe4987454cd7adbe7d3a08a9bba8be6"
+    },
+    {
+      "path": "training/tools/optimize_onnx.py",
+      "source": "fkp-dvgt/tools/optimize_onnx.py",
+      "sha256": "1cc210e45aa10349ce50fbaf59ed22c08eda823ff186e712677df87b0068fae3"
+    },
+    {
+      "path": "training/tools/prepare_motor_dataset.py",
+      "source": "fkp-dvgt/tools/prepare_motor_dataset.py",
+      "sha256": "ef602243ff979622ea3be2b8eee124ada17412ce9a146fb79ea0053327598238"
+    },
+    {
+      "path": "training/tools/validate_motor_dataset.py",
+      "source": "fkp-dvgt/tools/validate_motor_dataset.py",
+      "sha256": "d98af25887ec442dc310a1080de2c57d69cc22378f635e119452d7cc4debd42e"
+    },
+    {
+      "path": "training/main.py",
+      "source": "fkp-dvgt/main.py",
+      "sha256": "77b4d57c3c976e841604ee95bd2b3c54f3fcdb8bf67a9f4104857dcae4764329"
+    },
+    {
+      "path": "training/requirements-export.lock.txt",
+      "source": "fkp-dvgt/requirements-export.lock.txt",
+      "sha256": "9c0fbe859533b7f86854748fbecab28a6feb0a454a40bee5029c2f3f39f31abf"
+    },
+    {
+      "path": "training/requirements-export.txt",
+      "source": "fkp-dvgt/requirements-export.txt",
+      "sha256": "c8cbeb6018acaec5e982ffb1a92cc04ead17e0f130f5a2f066ff8a502950b9bb"
+    },
+    {
+      "path": "training/requirements-training.lock.txt",
+      "source": "fkp-dvgt/requirements-training.lock.txt",
+      "sha256": "6482124717046e41e6645a1a7be858339a1c40a0dcd6962e7d7575b4d060dc42"
+    },
+    {
+      "path": "training/requirements-training.txt",
+      "source": "fkp-dvgt/requirements-training.txt",
+      "sha256": "f0dc17e82a93b7a492b36f26f880b85617454d3f99cd9e311189d5f606bb9ffb"
+    },
+    {
+      "path": "training/requirements.txt",
+      "source": "fkp-dvgt/requirements.txt",
+      "sha256": "21354d718796566d80ea2ab73081da53c020515c1aebf2a370721af0e1177c6e"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/board_replay/input_contract.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/board_replay/input_contract.json",
+      "sha256": "9246df043971a37bf467a3975036af7e8beb52213c5981535642730e8f800341"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/board_replay/test_input_f32.bin",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/board_replay/test_input_f32.bin",
+      "sha256": "8521c0b786cd42c14b1df70d5c8806af2810c06b0f04ff6f6a6c44d4eaff21bb"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/board_replay/test_labels.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/board_replay/test_labels.csv",
+      "sha256": "2d6e6da67c627b3ce05365d382949f73ba65d4b6861b55489cc7b61149ab3261"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/cycle_map.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/cycle_map.csv",
+      "sha256": "0361b03b39ee5e0dac46b64b69b043141e5f9fb3fa7726f586c9b7abd9f9e11d"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/delivery_manifest.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/delivery_manifest.csv",
+      "sha256": "6b69e3471ef54a1e07ef4e208870ee5e052e4661b2d047e2a57f259a77a700b3"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/document_quality_masks.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/document_quality_masks.json",
+      "sha256": "9b74d5e4836238f49d199d8b778adaa460b45babe165986da0d51c1d7d6c9ca9"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/features/Motor2.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/features/Motor2.npz",
+      "sha256": "8769f0a976625f7134720ab05458e36ee9926221f8d840c520d2cc3df740d0a2"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/features/Motor3.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/features/Motor3.npz",
+      "sha256": "629f11df104d4e2dc090bcfb7b403997b754c9b668d22b87dfb02872231e6913"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/features/Motor5.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/features/Motor5.npz",
+      "sha256": "6422d43bbcfdec7548062f9c4461a9d7891b476c6daa2e3089f480a1ea26fb1a"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/features/Motor6.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/features/Motor6.npz",
+      "sha256": "82f861c88575c86373240fa23f8b0dd64a4f268a48fe8c66ef9496b3eb5ec749"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/features/Motor7.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/features/Motor7.npz",
+      "sha256": "e6926a156cb1ba9e14ddbb57db1c50889c78f51cbf67f8c6d3c8eb654f4366a7"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/file_inventory.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/file_inventory.csv",
+      "sha256": "9b15fec6f6fb66606a69e7ad153e4d2eed9b291231530f05bed15a56c69a75a1"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/normalization.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/normalization.npz",
+      "sha256": "c973253ff21a4aabb82efc11331fc3bcd55cc5802355c30a843fdf271c6fae00"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/preprocessing.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/preprocessing.json",
+      "sha256": "742319b576b7e577ab08656f2d8f846235c06e2546e381dadd84101f10f803d6"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/processing_environment.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/processing_environment.json",
+      "sha256": "86b502d7fba6a38357c122fd483632cb4381fbfb1d0c0532560960d4f1f8dd69"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/quality_report.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/quality_report.json",
+      "sha256": "ddbb9934db6760a761ee311d8f45a05cf54dca6d3cfcec3932ca8b5b14acb221"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/README.md",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/README.md",
+      "sha256": "481a6330ab3008fbe9db794dbc53bd658de40205c47f11554f7081f0f2a503b5"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/sample_index.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/sample_index.csv",
+      "sha256": "d2ce7142e84446a3dcf7f4f86c8f62d6373fe78363dc8523a81b574810ab1454"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/segment_quality.csv",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/segment_quality.csv",
+      "sha256": "6f2ea9326f2d633a0268fae50500002a332609f0647c0b564d3c505e73269886"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/test.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/test.npz",
+      "sha256": "d3135604c0ea01369afe4fd4fd44d04e734f0ad157015cf2886f1ffe0aab71eb"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/train.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/train.npz",
+      "sha256": "dbfc589e3f770f11385218da2ab27a4689a190e0b75c8b2c50b814dc580f0289"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/training_validation.json",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/training_validation.json",
+      "sha256": "9b8e07256cad283536770381a12e3bf27f3c6852ab0a1e18a07467a15db5794a"
+    },
+    {
+      "path": "training/processed/run_to_failure_5motors_v1/val.npz",
+      "source": "fkp-dvgt/processed/run_to_failure_5motors_v1/val.npz",
+      "sha256": "032ed664d10b47147e21698f3320ca48b2eedcec3f230554e572fa3c7803c3d2"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu/best.pt",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu/best.pt",
+      "sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu/config.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu/config.json",
+      "sha256": "fd8346fae5329d12084928fcefd737ef99632eb1747e78c26f13e9f035b4b1fb"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu/history.jsonl",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu/history.jsonl",
+      "sha256": "d430f3a6c04643819035bd9a53bd0b00001ac2ae90323cd136ee78c6437f4d2e"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu/run.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu/run.json",
+      "sha256": "e4f318ee769cec4b97110cd7656bc531a85bde7e0dc3fec58a0a273d00ae718e"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu_test/inference.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu_test/inference.json",
+      "sha256": "c4cef2e3a6e316a26b703c9e228b89a3037a023e61394d672bd275fec515edd9"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu_test/metrics.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu_test/metrics.json",
+      "sha256": "2f8f81a43cc19ce2f291b426bdf830434aaacb1e7ceeffd5941a565e2fccde16"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu_test/predictions.npz",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu_test/predictions.npz",
+      "sha256": "6f450b31d3c514c7aa713ecff20229e4d9aca8485362b461ef2ed1c51122d25c"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_gpu_test/predictions.png",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_gpu_test/predictions.png",
+      "sha256": "12fb6059a15db13726c9bac262069feff32fdae0068b82aa07fd11691ab71f97"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/artifact_manifest.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/artifact_manifest.json",
+      "sha256": "e1263586aa1e167f4745142a5f5a6c9771a5af720242eb1b8f7ce9445926d5da"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/f3p_parser_static_check.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/f3p_parser_static_check.json",
+      "sha256": "d54de50d99290da7d82b53a669ecfb396a0f81474b3705e3e73bf809a83adf69"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/input_contract.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/input_contract.json",
+      "sha256": "fab6105dcd48ea9a70241ab2696981f49bf77897d1e0501e2df7ac6e7c49891a"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/node_inventory.csv",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/node_inventory.csv",
+      "sha256": "0557485d5896cd743d5e1533b98b424544af07f522144a9398134f8ff6149952"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/normalization.npz",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/normalization.npz",
+      "sha256": "c973253ff21a4aabb82efc11331fc3bcd55cc5802355c30a843fdf271c6fae00"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/optimization_report.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/optimization_report.json",
+      "sha256": "264428ee87b65ab38dc861113c9b56ad07df12bd7c511db02b87d708ee32e59c"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/predictions.npz",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/predictions.npz",
+      "sha256": "2924c177b9327c939dc497e6321326ee93a580d3826641d8d4d6e5f9daa9d2e6"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/preprocessing.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/preprocessing.json",
+      "sha256": "742319b576b7e577ab08656f2d8f846235c06e2546e381dadd84101f10f803d6"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/README.md",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/README.md",
+      "sha256": "4104fc64b1b8962036ba033569d096af7047d69d71d8859184486507b1a310d9"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/rul_fp32.onnx",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/rul_fp32.onnx",
+      "sha256": "b9eac7e3a7902931b638126a4e824b10472f4248c7f26e76ac1c0af1cde091b4"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx/training_config.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx/training_config.json",
+      "sha256": "fd8346fae5329d12084928fcefd737ef99632eb1747e78c26f13e9f035b4b1fb"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/artifact_manifest.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/artifact_manifest.json",
+      "sha256": "6cdbad1f241a1ccc818b29579974fc0a9a54d79724677e473ec5b290216ab417"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/export_report.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/export_report.json",
+      "sha256": "0ec4e22bc74196b301a6f4785ced8463bfc40fd4a82f4b81f42dbaca1f80f0eb"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/input_contract.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/input_contract.json",
+      "sha256": "fab6105dcd48ea9a70241ab2696981f49bf77897d1e0501e2df7ac6e7c49891a"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/node_inventory.csv",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/node_inventory.csv",
+      "sha256": "2edcec08d8b9894ab8f5ff23c045d74ce18314b5cb8b11a477781281d4ac0602"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/normalization.npz",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/normalization.npz",
+      "sha256": "c973253ff21a4aabb82efc11331fc3bcd55cc5802355c30a843fdf271c6fae00"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/predictions.csv",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/predictions.csv",
+      "sha256": "f5d2f8da84b9485238dcc1dd9067146ade07320ba7bf5b5c8c081764977c3de3"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/predictions.npz",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/predictions.npz",
+      "sha256": "175abf14b69e9c533f988e964a01ec45a8266aa0ac8f563eb042b33dee290759"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/preprocessing.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/preprocessing.json",
+      "sha256": "742319b576b7e577ab08656f2d8f846235c06e2546e381dadd84101f10f803d6"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/README.md",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/README.md",
+      "sha256": "0a54d0b5bd1704221e7b2f2e261ecd236ef7161a8b78e4741c81d4c92693b5ad"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/rul_fp32.onnx",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/rul_fp32.onnx",
+      "sha256": "7f71864cc748991f65fafba0a5b2748dd296d7283ec9ffff56b1925896a75b00"
+    },
+    {
+      "path": "training/outputs/motor_stable23_v1_onnx_opset13/training_config.json",
+      "source": "fkp-dvgt/outputs/motor_stable23_v1_onnx_opset13/training_config.json",
+      "sha256": "fd8346fae5329d12084928fcefd737ef99632eb1747e78c26f13e9f035b4b1fb"
+    },
+    {
+      "path": "artifacts/f3p-rul-probe-arm64.tar.gz",
+      "source": "out/f3p-rul-probe-arm64.tar.gz",
+      "sha256": "febd37b91d4a17aac6d8aca48faadf9ac9ddab106ee96146288a6a9e2ad9e5ba"
+    },
+    {
+      "path": "artifacts/f3p-parser-diagnostics-v1.tar.gz",
+      "source": "out/f3p-parser-diagnostics-v1.tar.gz",
+      "sha256": "cc379fe69640fe0a329b2ca83a13021190f83774f60409dc701ae6c0f821426c"
+    },
+    {
+      "path": "artifacts/f3p-parser-compat-v2.tar.gz",
+      "source": "out/f3p-parser-compat-v2.tar.gz",
+      "sha256": "879aea9e283ef2da236dfbbea02e41c8680595a0efd3f695ba40a91c8959cfff"
+    },
+    {
+      "path": "artifacts/f3p-native-layer-probe-arm64-v2.tar.gz",
+      "source": "out/f3p-native-layer-probe-arm64-v2.tar.gz",
+      "sha256": "205f6e4251e6eccf4f0560918d18858d0d3890d36d77a86e5cd136100609281a"
+    },
+    {
+      "path": "artifacts/f3p-native-rul-arm64-v1.tar.gz",
+      "source": "out/f3p-native-rul-arm64-v1.tar.gz",
+      "sha256": "5c940835bcbd428e9fb4509df26c34b5a2d40cdbf03ffb19667a14e3ba0d5e65"
+    },
+    {
+      "path": "results/board/f3p-parser-board-v1.log",
+      "source": "out/f3p-parser-board-v1.log",
+      "sha256": "09188ee2b47ff489748ce14aa7171cfd93d5906844d99684bc3bc88fd5a56e86"
+    },
+    {
+      "path": "results/board/f3p-parser-compat-v2-board-result.json",
+      "source": "out/f3p-parser-compat-v2-board-result.json",
+      "sha256": "bb60e55bdf1e61e017d1e20ddc1a2c0a16a9d85fe21cd8b37357fbc1eb3904d5"
+    },
+    {
+      "path": "results/board/f3p-native-layer-board-v1.log",
+      "source": "out/f3p-native-layer-board-v1.log",
+      "sha256": "bf9b48847deb62ff9e844d2529f481959de8567a1fbf6a8bf557f2408b814a45"
+    },
+    {
+      "path": "results/board/f3p-native-layer-board-v2-result.json",
+      "source": "out/f3p-native-layer-board-v2-result.json",
+      "sha256": "3f2d08920a52b2152262ddb3840d8e4afb418f067ae3cb0d65641d61b6225e76"
+    },
+    {
+      "path": "results/board/f3p-native-rul-board-v1-result.json",
+      "source": "out/f3p-native-rul-board-v1-result.json",
+      "sha256": "f0bcc9a06a9e050aa07ae62aa09dd9e77b6c7fe8005915fee08b56ac2a8be9c3"
+    },
+    {
+      "path": "results/emulation/native-layers/f3p-native-layer-emulation-v2-report.json",
+      "source": "out/f3p-native-layer-emulation-v2-report.json",
+      "sha256": "3182f6fbb144eb9d64885a194e1bde16db4cc8a6b3cf87a7bf80765387e278b3"
+    },
+    {
+      "path": "results/emulation/native-layers/f3p-native-layer-emulate-v2.log",
+      "source": "out/f3p-native-layer-emulate-v2.log",
+      "sha256": "ec4fd3cc8372a89384ececd575dda73de09e55f2ef6d1ba79aa845008c1eca77"
+    },
+    {
+      "path": "results/emulation/native-rul/verification.json",
+      "source": "out/f3p-native-rul-v1/verification.json",
+      "sha256": "d10d00cded7f27577f8c43ff84c06d40b052a218b6810a4c306accd62189ac1a"
+    },
+    {
+      "path": "results/emulation/native-rul/preparation.json",
+      "source": "out/f3p-native-rul-v1/preparation.json",
+      "sha256": "14a12fe89d2cbdfdd7bee228c53ce50d35ff9c34af807063c9ec4a3628c61bf4"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/a_spat.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/a_spat.bin",
+      "sha256": "91f6e8eb58dbe62173d30c95dd7e2add64fca8de6fd31764e7c337c1363b33a4"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/a_temp.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/a_temp.bin",
+      "sha256": "4b7770646a449b066cbef951fb809534524f0ef289197561f3186ea497311c35"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/exit_code.txt",
+      "source": "out/f3p-native-rul-v1/emulation_all/exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/pre_gelu_0.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/pre_gelu_0.bin",
+      "sha256": "cab10b10162eb2f7240f8b6cca33057e4fbd18ffca64dae7fb18df076cf53030"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/pre_gelu_1.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/pre_gelu_1.bin",
+      "sha256": "8d3af28851ab38f1235eb9854dde8a76b9ba442f00bdd12d8ad31865b1d66ac3"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/pre_gelu_2.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/pre_gelu_2.bin",
+      "sha256": "fa469dfe79ac04bd6258042c3d6d47387bebf9c9d6f718543affc0a669626112"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/pre_gelu_3.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/pre_gelu_3.bin",
+      "sha256": "c236bcbc0829535a9f9e70b8085a2d16ff5c6308c0b5f886969d47a77e9befab"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/pre_gelu_4.bin",
+      "source": "out/f3p-native-rul-v1/emulation_all/pre_gelu_4.bin",
+      "sha256": "7fe6a929a2ffaa947d3a688bb1dc29972c733655808533a7f5e98c3abeb4f930"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/predictions.csv",
+      "source": "out/f3p-native-rul-v1/emulation_all/predictions.csv",
+      "sha256": "bbc1cb5c296bf00e437d3c16bc66758736b6ef14109c01cea72bd23339a4f640"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_all/probe.log",
+      "source": "out/f3p-native-rul-v1/emulation_all/probe.log",
+      "sha256": "bd5a4b22d6f991e7c981dd5d180e7a3776fdf62e00e6117fcc099d9302b3399a"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/a_spat.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/a_spat.bin",
+      "sha256": "91f6e8eb58dbe62173d30c95dd7e2add64fca8de6fd31764e7c337c1363b33a4"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/a_temp.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/a_temp.bin",
+      "sha256": "4b7770646a449b066cbef951fb809534524f0ef289197561f3186ea497311c35"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/exit_code.txt",
+      "source": "out/f3p-native-rul-v1/emulation_first/exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/pre_gelu_0.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/pre_gelu_0.bin",
+      "sha256": "cab10b10162eb2f7240f8b6cca33057e4fbd18ffca64dae7fb18df076cf53030"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/pre_gelu_1.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/pre_gelu_1.bin",
+      "sha256": "8d3af28851ab38f1235eb9854dde8a76b9ba442f00bdd12d8ad31865b1d66ac3"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/pre_gelu_2.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/pre_gelu_2.bin",
+      "sha256": "fa469dfe79ac04bd6258042c3d6d47387bebf9c9d6f718543affc0a669626112"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/pre_gelu_3.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/pre_gelu_3.bin",
+      "sha256": "c236bcbc0829535a9f9e70b8085a2d16ff5c6308c0b5f886969d47a77e9befab"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/pre_gelu_4.bin",
+      "source": "out/f3p-native-rul-v1/emulation_first/pre_gelu_4.bin",
+      "sha256": "7fe6a929a2ffaa947d3a688bb1dc29972c733655808533a7f5e98c3abeb4f930"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/predictions.csv",
+      "source": "out/f3p-native-rul-v1/emulation_first/predictions.csv",
+      "sha256": "576802d0ff4c6ecdc492515ef99e8dbdf332c0c288250d11e48d2f66be1c8078"
+    },
+    {
+      "path": "results/emulation/native-rul/emulation_first/probe.log",
+      "source": "out/f3p-native-rul-v1/emulation_first/probe.log",
+      "sha256": "7492a4094abefcdb4b975a16728054fc78044b55c7fd057d7b0131eab7bc1596"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/first_native_boundary_comparison.json",
+      "source": "out/f3p-native-rul-v1/pc_reference/first_native_boundary_comparison.json",
+      "sha256": "af1e9378ffa8e23ba3aad722dac81edab448ed973c81382f7f3d1639cd2fbac8"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/pre_gelu_0.bin",
+      "source": "out/f3p-native-rul-v1/pc_reference/pre_gelu_0.bin",
+      "sha256": "43d30bc52882a2268f09c9233fa0f52ff09dceb9022d99c1a8b167aa645cfaf1"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/pre_gelu_1.bin",
+      "source": "out/f3p-native-rul-v1/pc_reference/pre_gelu_1.bin",
+      "sha256": "60ec7dd26e2b6b0b18940bf464ad2d36acf8d34f3767ddfb90302537c362deac"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/pre_gelu_2.bin",
+      "source": "out/f3p-native-rul-v1/pc_reference/pre_gelu_2.bin",
+      "sha256": "cb97663003b469c86b670eea50acb82708e4157740ddf55bb1ca27cd18bdf59e"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/pre_gelu_3.bin",
+      "source": "out/f3p-native-rul-v1/pc_reference/pre_gelu_3.bin",
+      "sha256": "7c50713119bf643ed94001becf68df07375f0dd31a24e68f06210a7ac008ae41"
+    },
+    {
+      "path": "results/emulation/native-rul/pc_reference/pre_gelu_4.bin",
+      "source": "out/f3p-native-rul-v1/pc_reference/pre_gelu_4.bin",
+      "sha256": "9e6b7b1c8078a8bece86bc686b175e406bbc0098c60da088dcf559f9a0208edf"
+    },
+    {
+      "path": "results/build/native-rul-build-info.txt",
+      "source": "out/f3p-native-rul-v1/build_info.txt",
+      "sha256": "507f0705697c12b57d2962f3fde06df423c90aeb5c73195dd71757adc4a2dbbf"
+    },
+    {
+      "path": "results/build/native-rul-build.log",
+      "source": "out/f3p-native-rul-build-v1.log",
+      "sha256": "d37626afbf0f3dc89e6b59a1b2af83536d0ba7ebe3c05f3404afa129c4018ba9"
+    },
+    {
+      "path": "results/build/parser-probe-build-info.txt",
+      "source": "out/f3p-rul-probe-arm64-build-info.txt",
+      "sha256": "76ab6a08c91176886c344606f4b557b2a7f0a6d1c7508d93a1bd7bac4204be51"
+    },
+    {
+      "path": "results/build/native-layer-build.log",
+      "source": "out/f3p-native-layer-build-v1.log",
+      "sha256": "1994f1a5b0ab27f0fc1a43d4b296b0e6e5e4ae16f5a3758ec9f35a7fff1b5ec3"
+    },
+    {
+      "path": "tools/prepare_parser_diagnostics.py",
+      "source": "out/prepare_parser_diagnostics.py",
+      "sha256": "a7e343d1f86b763f8d88bc3b336d4768a1071e2f2f42a75b4c7538055787293b"
+    },
+    {
+      "path": "tools/prepare_parser_compat_v2.py",
+      "source": "out/prepare_parser_compat_v2.py",
+      "sha256": "4ded2a0b931081cd1423d935eb2f74ae7a83a720923d0be0e928aa90a8dfa78c"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+mode=fc_pad8 rows=1 input_features=576 output_features=1 physical_input_features=576 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.64 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=2 requantization_divisor=64 zero_bias=true physical_input_bytes=576 physical_output_bytes=8
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |0.01KB(0.01KB)      |0.01KB(0.01KB)      
+Info: ******************************************************************************************************
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+stage=optimize passed compute_layers=1
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=8.89KB
+
+stage=load passed
+Info: Execution time: 0.25 ms.
+iteration=0 max_error_lsb=1 mismatches=0 enqueue_us=355.86 quantize_pack_enqueue_sync_restore_us=504.96
+Info: Execution time: 0.11 ms.
+iteration=1 max_error_lsb=1 mismatches=0 enqueue_us=161.82 quantize_pack_enqueue_sync_restore_us=184.02
+Info: Execution time: 0.12 ms.
+iteration=2 max_error_lsb=0 mismatches=0 enqueue_us=163.71 quantize_pack_enqueue_sync_restore_us=185.64
+result=passed mode=fc_pad8 backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=227.13 mean_quantize_pack_enqueue_sync_restore_us=291.54 profiling_enabled=true timing_is_diagnostic=true
+Info: Shutdown time: 0.03 ms.

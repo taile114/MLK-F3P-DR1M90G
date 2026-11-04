@@ -1,0 +1,10 @@
+#!/bin/sh
+# Bind only an explicitly enabled device-tree node; unavailable PL remains unavailable.
+case "$1" in
+  start)
+    module="/lib/modules/$(uname -r)/extra/pl_ctrl.ko"
+    [ -f "$module" ] || exit 0
+    [ -d /sys/module/pl_ctrl ] || insmod "$module"
+    ;;
+esac
+exit 0

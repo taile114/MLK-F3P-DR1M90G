@@ -1,0 +1,40 @@
+{
+  "status": "full_validation_hybrid_replay_and_cma_stability_verified",
+  "calibration_and_checkpoint_unchanged": true,
+  "validation_samples_per_full_mode": 184,
+  "modes": [
+    "baseline",
+    "cpu_quantized",
+    "hybrid"
+  ],
+  "NPU_branches": [
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ],
+  "full_model_all_branches_on_NPU": false,
+  "hybrid_physical_NPU_graph_layers": 2,
+  "hybrid_hard_IRQ_delta": 552,
+  "CMA_bytes_after_first_and_last_window": 1204224,
+  "CMA_allocator_calls_after_first_and_last_window": 10,
+  "raw_board_files_retrieved_and_verified": 266,
+  "full_hybrid_replay_reference_max_abs": 0.030548095703125,
+  "hybrid_validation_rmse": 2.467951068686404,
+  "application_accuracy_acceptance": "TBD",
+  "formal_warmed_performance_benchmark": false,
+  "training_executed": false,
+  "new_held_out_test_inference_executed": false,
+  "serial_port_released": true,
+  "compiler_VM_cleanly_stopped": true,
+  "board_program_root": "/mnt/mmcblk0p2/npu-tests/cma-fixed-v2",
+  "board_replay_archive": "/mnt/mmcblk0p2/npu-tests/cma-replay-evidence-v1.tar.gz",
+  "continuation_document": "docs/rul-quantization-validation.md",
+  "independent_verifier": "tools/verify_cma_replay.py",
+  "remaining_work": [
+    "Define application accuracy and prediction-period acceptance",
+    "Warm repeated performance benchmarking",
+    "Repeated load/unload and long-duration pressure testing",
+    "Additional real NPU branches if end-to-end benefit warrants",
+    "Freeze plan before independent held-out test evaluation",
+    "PS application integration"
+  ]
+}

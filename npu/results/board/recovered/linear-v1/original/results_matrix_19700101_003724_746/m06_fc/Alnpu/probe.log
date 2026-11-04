@@ -1,0 +1,24 @@
+mode=fc rows=11 input_features=12 output_features=21 physical_input_features=12 physical_output_features=21 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.72 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=132 physical_output_bytes=231
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |0.23KB(0.23KB)      |0.23KB(0.23KB)      
+Info: ******************************************************************************************************
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+stage=optimize passed compute_layers=1
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=1.02KB
+
+stage=load passed
+Error: filter_OC = 21 
+Error: [HARDNPU]Waiting for interrupt timeout
+[HARDNPU]Waiting for interrupt timeout
+Error: An error occurred attempting to execute a workload: [HARDNPU] CRASHED,reconfig the NPU and retry or contact the AL team
+Info: Execution time: 1029.83 ms.
+Info: Shutdown time: 0.25 ms.
+result=failed stage=inference error=EnqueueWorkload failed

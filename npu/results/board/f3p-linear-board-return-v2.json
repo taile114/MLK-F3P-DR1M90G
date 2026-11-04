@@ -1,0 +1,19 @@
+{
+  "scope": "Hash-verified board archive returned via user-authorized USB additions; original bytes recovered to repository",
+  "board_archive": "/mnt/mmcblk0p2/npu-tests/f3p-npu-linear-board-return-19700101_001447-837.tar",
+  "archive_bytes": 12525056,
+  "archive_sha256": "2f6ae961f47122c7054eb1a863f35699e4648ba0f314b8e69c0613218ce9fc63",
+  "host_archive": "work/linear-board-return-v2/f3p-npu-linear-board-return-19700101_001447-837.tar",
+  "usb_read_back_hash_matches_board": true,
+  "host_copy_hash_matches_board": true,
+  "nested_archive_sha256": "e1c43b9f8cc903bc9246ca5e465d603032ad8b0d84f4de6c9cc1d4810b13ce40",
+  "recovered_files": 1356,
+  "recovered_bytes": 10608484,
+  "file_inventory": "linear-v1-recovered-files-sha256.json",
+  "verification": "npu-linear-recovered-v1-verification.json",
+  "usb_new_result_files_authorized": true,
+  "usb_old_files_deleted": false,
+  "usb_filesystem_repaired": false,
+  "usb_safe_ejection_accepted": true,
+  "usb_safe_ejection_code": 0
+}

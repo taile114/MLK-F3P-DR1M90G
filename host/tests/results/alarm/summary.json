@@ -1,0 +1,57 @@
+{
+  "scope": "local simulation and build; no board deployment",
+  "pl_interface": "v1.3 / 0x504c0103",
+  "model_api": 1,
+  "hardware": {
+    "status": "not_run",
+    "reason": "coreboard powered off; deployment and physical LED/buzzer checks deferred"
+  },
+  "rtl": {
+    "regression_cases": 58,
+    "regression_pass": true,
+    "alarm_checks": 421,
+    "axi_checks": 2582,
+    "lint": "Verilator -Wall: pass",
+    "synthesis": "Yosys synth/check: 0 problems, no latches"
+  },
+  "qt": {
+    "passed": 7,
+    "failed": 0,
+    "skipped": 1,
+    "skipped_scope": "opt-in physical WiFi window test"
+  },
+  "builds": {
+    "ps_local_arm64": "pass",
+    "pl_ctrl_linux_module": "pass",
+    "mlk_fault_arm64": "pass",
+    "remote_pc_native": "pass",
+    "td": "pass_with_constraint_warnings; functional candidate",
+    "rootfs": "pass: 28 AArch64 ELF files and dependencies checked",
+    "boot_bin": "packaged functional candidate; not flashed"
+  },
+  "sha256": {
+    "fpga/uisrc/01_rtl/soc/alarm_sequencer.sv": "4652d858e4a99c9b5c325e72f4a42371010442128bcd14f06f349f67d9b68c31",
+    "host/ps-local/build-arm/mlk_ps_local": "a81602d2587fb3ac043b8577bbf2eb4428a5fc8ca304d85853dfd387629fc1a5",
+    "host/ps-local/driver/pl_ctrl.ko": "4f8f94b2eef507e55590a4f431e69a397474c5d828b0f1454a638d8a3d380e98",
+    "host/ps-local/build-arm/mlk-fault": "aff2844f00de2e2af5cc3ff6a637a87372f26cd62f46a49f3ee25a175127a474",
+    "host/remote-pc/mlk_udp_host": "b47f90c53465d7b2982d0d3d57e0623a16ee5cddc871b55c94a8c0f175ad7840",
+    "fpga/uisrc/out/soc_hdmi/soc_hdmi.bit": "8887599c4e27314024a9b5921e25398b46dfaab98ab45eeea45770f4275805a2",
+    "platform/flash/vendor/boards/DR1M/buildroot/images/rootfs/rootfs.tar.gz": "e7fc2f88e929b60423f57cd483fc13353f4cd3f3d816e37d3bc356e5e9dbf4ac",
+    "platform/flash/vendor/boards/DR1M/buildroot/images/boot/BOOT.bin": "e0642f4d6f60f3e8113de0f24aef34ea27f340a68df23f0e6eb5903d383c1bce"
+  },
+  "timing": {
+    "setup_wns_ns": 0.004,
+    "hold_wns_ns": 0.0,
+    "sta_coverage_percent": 99.9,
+    "no_clock": 0,
+    "invalid_constraints": 0,
+    "combinational_loops": 0,
+    "pll_frequency_mismatches": 3,
+    "production_signoff": false,
+    "note": "3 HDMI PLL frequency checks remain; no board deployment or physical alarm evidence"
+  },
+  "packaging": {
+    "rootfs_matches_app_driver_cli_bitstream": true,
+    "paired_device_private_configuration_in_image": false
+  }
+}

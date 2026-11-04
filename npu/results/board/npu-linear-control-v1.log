@@ -1,0 +1,40 @@
+/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/compat_timeout_v1/timeout: OK
+run_compat.sh: OK
+timeout_compat: deadline_reached; signal=15
+timeout_self_checks=passed
+test_directory=/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1
+results=/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_control_19700101_003232_394 runtime=/opt/armnn_lib/lib group=control
+[ 1953.342220] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1953.342319] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- shape=c00 B=8 I=8 O=8 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=278.25 mean_quantize_pack_enqueue_sync_restore_us=298.63 profiling_enabled=true timing_is_diagnostic=true
+[ 1953.438118] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1953.438210] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- shape=c00 B=8 I=8 O=8 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=297.11 mean_quantize_pack_enqueue_sync_restore_us=328.17 profiling_enabled=true timing_is_diagnostic=true
+[ 1953.575796] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1953.575891] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- shape=c00 B=8 I=8 O=8 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=294.62 mean_quantize_pack_enqueue_sync_restore_us=309.3 profiling_enabled=true timing_is_diagnostic=true
+[ 1953.680275] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000
+[ 1953.680371] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000
+--- shape=c00 B=8 I=8 O=8 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=8 input_features=8 output_features=8 physical_input_features=8 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.69 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=64 physical_output_bytes=64
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- interrupt snapshots ---
+ 41:          3          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+ 41:         27          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+result=capability_survey_completed passed_backend_runs=3 optimize_rejections=1 full_rul_npu_verified=false results=/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_control_19700101_003232_394

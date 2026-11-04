@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "frozen_delivery_checks": {
+    "status": "passed",
+    "archives": 14,
+    "internal_checksums": 1220,
+    "unchanged_source_copies": 121,
+    "python_files": 39,
+    "shell_files": 26,
+    "relative_links": 313
+  },
+  "fusion_raw_files_verified": 457,
+  "fusion_independent_verifier": "fusion_and_paired_replays_verified",
+  "NPU_integer_outputs_verified": 14040,
+  "NPU_integer_max_error_lsb": 1,
+  "paired_benchmark_rounds": 3,
+  "validation_samples_per_full_run": 184,
+  "checkpoint_sha256_unchanged": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "new_training_executed": false,
+  "new_held_out_test_inference_executed": false,
+  "serial_port_released": true,
+  "kernel_console_loglevel_restored": true,
+  "compiler_VM_cleanly_stopped": true,
+  "powershell_serial_script_parse": "passed",
+  "git_diff_whitespace_check": "passed",
+  "application_accuracy_acceptance": "TBD"
+}

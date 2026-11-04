@@ -1,0 +1,18 @@
+{
+  "scope": "QEMU execution of original BusyBox extracted from the paired vendor SD initramfs; archive tools only",
+  "busybox_version": "1.35.0 (2025-11-23 21:49:12 PST)",
+  "busybox_sha256": "52bce92f6b964faf806373d69499c6624e217440cecdb40c751dbdda94154e4a",
+  "board_reported_tar_z_supported": false,
+  "available_decompressors": [
+    "gzip",
+    "gunzip",
+    "zcat"
+  ],
+  "tested_command": "gzip -dc f3p-npu-smoke-arm64-v1.tar.gz | tar -xf -",
+  "pipeline_exit_code": 0,
+  "internal_checksum_ok": 27,
+  "checksum_exit_code": 0,
+  "deployed_archive_modified": false,
+  "source_log_sha256": "f9dcc1271d1da70c89174347cbe74123e6cbc80c607f5b337a8ca9d04ab0b85d",
+  "npu_execution_tested": false
+}

@@ -1,0 +1,31 @@
+{
+  "version": "motor_stable23_v1",
+  "input_name": "features",
+  "input_shape": [
+    1,
+    23,
+    110
+  ],
+  "input_dtype": "little_endian_float32",
+  "input_bytes": 10120,
+  "source_sample_shape": [
+    10,
+    11,
+    23
+  ],
+  "layout_conversion": "reshape [10,11,23] to [110,23], then transpose to [23,110]",
+  "normalization_inside_model": false,
+  "normalization_file": "normalization.npz",
+  "already_normalized_inputs_must_not_be_normalized_again": true,
+  "output_name": "rul",
+  "output_shape": [
+    1,
+    1
+  ],
+  "output_dtype": "float32",
+  "rul_unit": "observed_aging_test_session",
+  "labels_are_not_inputs": true,
+  "preprocessing_config": "preprocessing.json",
+  "quantized": false,
+  "f3p_runtime_verified": false
+}

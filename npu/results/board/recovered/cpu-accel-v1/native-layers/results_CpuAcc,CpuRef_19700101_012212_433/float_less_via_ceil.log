@@ -1,0 +1,27 @@
+case=float_less_via_ceil requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.38 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Warning: WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    2|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info:   13|CpuRef  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    3|CpuRef  |ElementwiseUnary          0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:   14|CpuAcc  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    4|CpuAcc  |Activation                0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info: ******************************************************************************************************
+optimizer_message=WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+stage=optimize passed
+stage=load passed
+Info: Execution time: 2.47 ms.
+element=0 actual=1 expected=1
+element=1 actual=0 expected=0
+element=2 actual=1 expected=1
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=0 expected=0
+result=passed case=float_less_via_ceil max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

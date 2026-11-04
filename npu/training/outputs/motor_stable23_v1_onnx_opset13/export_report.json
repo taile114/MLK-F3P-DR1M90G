@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "checkpoint": "E:\\competion\\code\\fkp-dvgt\\outputs\\motor_stable23_v1_gpu\\best.pt",
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "verification_data": "E:\\competion\\code\\fkp-dvgt\\processed\\run_to_failure_5motors_v1\\test.npz",
+  "verification_data_sha256": "d3135604c0ea01369afe4fd4fd44d04e734f0ad157015cf2886f1ffe0aab71eb",
+  "example_data": "E:\\competion\\code\\fkp-dvgt\\processed\\run_to_failure_5motors_v1\\train.npz",
+  "versions": {
+    "torch": "2.8.0+cu126",
+    "numpy": "2.3.5",
+    "onnx": "1.19.1",
+    "onnxruntime": "1.23.2"
+  },
+  "python": "3.12.14 (main, Sep  1 2026, 14:17:39) [MSC v.1944 64 bit (AMD64)]",
+  "export_settings": {
+    "opset": 13,
+    "dynamo": false,
+    "device": "cpu",
+    "fixed_batch_size": 1,
+    "training": false,
+    "graph_probability": 0.0,
+    "atol": 0.0001,
+    "rtol": 0.0001
+  },
+  "export_warnings": [
+    "DeprecationWarning: The feature will be removed. Please remove usage of this function",
+    "DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter will be the default. To switch now, set dynamo=True in torch.onnx.export. This new exporter supports features like exporting LLMs with DynamicCache. We encourage you to try it and share feedback to help improve the experience. Learn more about the new export logic: https://pytorch.org/docs/stable/onnx_dynamo.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html.",
+    "TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!"
+  ],
+  "onnx_checker_passed": true,
+  "onnx_ir_version": 7,
+  "opset_imports": [
+    {
+      "domain": "",
+      "version": 13
+    }
+  ],
+  "inputs": [
+    {
+      "name": "features",
+      "shape": [
+        1,
+        23,
+        110
+      ],
+      "dtype": "FLOAT"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "rul",
+      "shape": [
+        1,
+        1
+      ],
+      "dtype": "FLOAT"
+    }
+  ],
+  "operator_counts": {
+    "Add": 292,
+    "And": 62,
+    "Cast": 62,
+    "Concat": 7,
+    "Constant": 1738,
+    "ConstantOfShape": 2,
+    "Div": 399,
+    "Einsum": 62,
+    "Equal": 2,
+    "Erf": 5,
+    "Expand": 2,
+    "Gather": 11,
+    "GreaterOrEqual": 62,
+    "Identity": 770,
+    "Less": 62,
+    "MatMul": 90,
+    "Mul": 444,
+    "Pow": 8,
+    "ReduceL2": 2,
+    "ReduceMean": 18,
+    "Relu": 2,
+    "Reshape": 124,
+    "Sigmoid": 38,
+    "Slice": 372,
+    "Softmax": 26,
+    "Sqrt": 8,
+    "Sub": 382,
+    "Transpose": 22,
+    "Unsqueeze": 49,
+    "Where": 2
+  },
+  "node_count": 5125,
+  "onnx_size_bytes": 2485042,
+  "onnx_sha256": "7f71864cc748991f65fafba0a5b2748dd296d7283ec9ffff56b1925896a75b00",
+  "samples_verified": 165,
+  "pytorch_vs_onnx": {
+    "allclose": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "max_absolute_error": 6.67572021484375e-06,
+    "mean_absolute_error": 2.012108311508641e-06,
+    "rmse_between_predictions": 2.472829901298372e-06,
+    "worst_sample_index": 100,
+    "worst_reference": 10.192054748535156,
+    "worst_actual": 10.192048072814941
+  },
+  "pytorch_metrics": {
+    "rmse": 3.2562668323516846,
+    "mae": 2.7719342708587646,
+    "n": 165
+  },
+  "onnx_metrics": {
+    "rmse": 3.2562668323516846,
+    "mae": 2.7719340324401855,
+    "n": 165
+  },
+  "pytorch_vs_onnx_optimized": {
+    "allclose": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "max_absolute_error": 6.67572021484375e-06,
+    "mean_absolute_error": 2.017888155850497e-06,
+    "rmse_between_predictions": 2.5276697081625615e-06,
+    "worst_sample_index": 91,
+    "worst_reference": 8.394083976745605,
+    "worst_actual": 8.39407730102539
+  },
+  "saved_reference_vs_pytorch_cpu": {
+    "allclose": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "max_absolute_error": 8.106231689453125e-06,
+    "mean_absolute_error": 2.1154230291193183e-06,
+    "rmse_between_predictions": 2.754459319514091e-06,
+    "worst_sample_index": 137,
+    "worst_reference": 6.1828789710998535,
+    "worst_actual": 6.182887077331543
+  },
+  "protected_sources_unchanged": true,
+  "protected_source_sha256": {
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\__init__.py": "f5b75d9b5944c1677fdcada22d9859b6163d73a561d8e554ada813717647378a",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\cli.py": "f331b1f2b4fcb93c808905cebafd8bce2c92a6ed8f545d56ca9037f9323c35cb",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\config.py": "afd937301ae7cdda348316216657c3cbea377cd69995cdee3ca6399968ce8574",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\data.py": "93c4c9504d0a40bc6c0015b945c5314684324ae288c779e7cb4203b6e57b2ed2",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\engine.py": "1abfb2f894517e8b146fee6d23c51948d8056b6697842383348efa75021fcd51",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\features.py": "8264d0dd12dda2413dd9c3725677c9977b743bea802836b7d8b42ebda121e3a4",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\graph.py": "27d6a469ea92f71ac9c9ab082b27bc9c173c1a9c52beb9d49ca4993194b594de",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\interpret.py": "5fecc5ecd0eb63e98a631246a671f3399af77e76876147399e9cc43655c0c0c7",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\metrics.py": "ce8ba60adc464feea2ca554c85610c4dbb43cf24a228539418fdbb4b68e79c72",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\model.py": "bca461a3269e6379ce999ad462a66b0108386537880121da18b12616e9a112e3",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\plotting.py": "675e38d31de114c72d13462a7f0a3461b7f2d573ebc3dcc97c82ee865ecf767a",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\preprocess.py": "484b05397ff9d468ed18c1915cf8c4da22bd98127d70f95c906a8ee8ecf01df0",
+    "E:\\competion\\code\\fkp-dvgt\\fkp_dvgt\\uncertainty.py": "1179c3c5d54bdaa3ee2f7a18dc7db80ee42f64647658311f0ecd477ad5d693f4",
+    "E:\\competion\\code\\fkp-dvgt\\outputs\\motor_stable23_v1_gpu\\best.pt": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+    "E:\\competion\\code\\fkp-dvgt\\processed\\run_to_failure_5motors_v1\\preprocessing.json": "742319b576b7e577ab08656f2d8f846235c06e2546e381dadd84101f10f803d6",
+    "E:\\competion\\code\\fkp-dvgt\\processed\\run_to_failure_5motors_v1\\normalization.npz": "c973253ff21a4aabb82efc11331fc3bcd55cc5802355c30a843fdf271c6fae00"
+  },
+  "f3p_runtime_verified": false,
+  "quantized": false
+}

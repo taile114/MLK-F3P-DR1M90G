@@ -1,0 +1,4 @@
+iteration,row,output_feature,is_padding,actual_quantized,expected_quantized,error_lsb
+0,0,0,0,127,127,0
+1,0,0,0,118,118,0
+2,0,0,0,138,138,0

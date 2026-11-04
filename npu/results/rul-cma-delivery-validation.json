@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "frozen_delivery_checks": {
+    "status": "passed",
+    "archives": 13,
+    "internal_checksums": 1194,
+    "unchanged_source_copies": 121,
+    "python_files": 38,
+    "shell_files": 22,
+    "relative_links": 281
+  },
+  "current_CMA_replay_independently_recomputed": "full_validation_hybrid_replay_and_cma_stability_verified",
+  "current_CMA_raw_files_verified": 266,
+  "full_validation_samples_per_mode": 184,
+  "new_training_executed": false,
+  "new_held_out_test_inference_executed": false,
+  "checkpoint_sha256_unchanged": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "powershell_serial_script_parse": "passed",
+  "git_diff_whitespace_check": "passed",
+  "serial_chunked_download_sha256": "c786170f13517c9ad3135683b31974cf21c02b1af64a704494c0b46a95a4fa6b",
+  "serial_port_released": true,
+  "compiler_VM_cleanly_stopped": true,
+  "formal_warmed_performance_benchmark": false,
+  "application_accuracy_acceptance": "TBD"
+}

@@ -1,0 +1,36 @@
+case=spline_gate_float requested_backend=CpuAcc,CpuRef onnx_parser_used=false
+stage=construct passed
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.35 ms.
+available_backends=CpuRef,ALRef,CpuAcc,
+Warning: WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+Warning: WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:    4|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info:   27|CpuRef  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    8|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info:   28|CpuRef  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    5|CpuRef  |ElementwiseUnary          0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:   29|CpuAcc  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    9|CpuRef  |ElementwiseUnary          0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:   30|CpuAcc  |MemCopy                   0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    6|CpuAcc  |Activation                0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:   10|CpuAcc  |Activation                0.02KB(0.02KB)      |0.02KB(0.02KB)      |0.05KB(0.05KB)      
+Info:    7|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info:   11|CpuAcc  |ElementwiseBinary         0.05KB(0.05KB)      |0.02KB(0.02KB)      |0.07KB(0.07KB)      
+Info: ******************************************************************************************************
+optimizer_message=WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+optimizer_message=WARNING: Layer of type ElementwiseUnary is not supported on requested backend CpuAcc for input data type Float32 and output data type Float32 (reason: ), falling back to the next backend.
+stage=optimize passed
+stage=load passed
+Info: Execution time: 2.67 ms.
+element=0 actual=0 expected=0
+element=1 actual=1 expected=1
+element=2 actual=1 expected=1
+element=3 actual=1 expected=1
+element=4 actual=0 expected=0
+element=5 actual=0 expected=0
+result=passed case=spline_gate_float max_absolute_error=0 mismatches=0
+Info: Shutdown time: 0.02 ms.

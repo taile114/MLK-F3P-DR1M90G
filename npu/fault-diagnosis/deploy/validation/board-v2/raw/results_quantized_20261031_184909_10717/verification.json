@@ -1,0 +1,96 @@
+{
+  "schema": "mlk.fault.offline_verification.v1",
+  "execution": "board",
+  "mode": "quantized",
+  "samples": 360,
+  "full_test_completed": true,
+  "class_correct": 360,
+  "class_accuracy": 1.0,
+  "class_and_grade_correct": 355,
+  "class_and_grade_accuracy": 0.9861111111111112,
+  "fault_class_and_grade_correct": 289,
+  "fault_samples": 294,
+  "fault_class_and_grade_accuracy": 0.9829931972789115,
+  "confusion_matrix": [
+    [
+      66,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      75,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      80,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      58,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      81
+    ]
+  ],
+  "class_changes_vs_fp32": 0,
+  "grade_changes_vs_fp32": 1,
+  "max_fp32_raw_error": 0.10695648193359375,
+  "max_quantized_raw_error": 6.67572021484375e-06,
+  "max_cnn_lsb": 0,
+  "forward_us": {
+    "mean": 60265.198266666666,
+    "p50": 60232.740999999995,
+    "p95": 60359.069449999995,
+    "max": 61793.13
+  },
+  "steady_cma_bytes": 0,
+  "after_release_cma_bytes": 0,
+  "npu_evidence": {
+    "strict_graph": false,
+    "hard_npu_profile": false,
+    "npu_irq_increment": null,
+    "hard_npu_irq_increment": null,
+    "soft_npu_irq_increment": null,
+    "runtime_hash_matched": false,
+    "integer_convolution_verified": false
+  },
+  "numeric_cpu_reference_verified": true,
+  "physical_npu_execution_verified": false,
+  "independent_accuracy_acceptance": false,
+  "hardware_speedup_verified": false,
+  "result_files_sha256": {
+    "assets.sha256": "80b9a9eceea58066e4a06eb1473d09a3e472bb1d0a078c9cc0fa04d53b878772",
+    "cmdline.txt": "155322fd62134aa9db654c59da30220d885033c75bae4b538e07aec6d7c50895",
+    "cnn_output_u8.bin": "fbbeb3e75a8f8e133298c59a1320e4089f0a8f923d1970ed91c2e3892831342a",
+    "dmesg_after.txt": "750ba8e3a2bfe4d57eaf17cd3e6736aeaf7fb1d787d778d14dfef7cb3919e5ba",
+    "dmesg_before.txt": "750ba8e3a2bfe4d57eaf17cd3e6736aeaf7fb1d787d778d14dfef7cb3919e5ba",
+    "exit_code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "interrupts_after.txt": "a7e10a4aa3a1f496dbd45e05ed3901a1b69f1459bed41cf0d0f8b34db2dc6f49",
+    "interrupts_before.txt": "d05252797d3d37e9bc0d077bd99611bdfdd3ab17875f2087d565f6d1715190a5",
+    "meminfo_after.txt": "3b397093eee3d56d0aa543cb8727ea932c81f55c0abbc40df7972e33b78e2dd3",
+    "meminfo_before.txt": "1d5162d5686db9cf07c83e0fbe10c5fa48dc0285593c3d0668862bbe57aee648",
+    "predictions.csv": "a642effff97fdd2c99f2471145f95f49d86182690f6ebf2903ba7c9a5b5c5f9a",
+    "probe.log": "79d6fb5e3933d85b68240c01ecdab4a81a14072dd63fcb00b0c25a15c6e2fcd9",
+    "program.sha256": "5fce5fa519520c31b7a6a63ee35aeef5bba0cbee1288f45d8647d15fe321cdfa",
+    "raw_outputs.bin": "5015654d7a910e469c85ab97188c6f0c664e3c692ff3606e2af0407407d5f025",
+    "runtime.sha256": "907c26d5c3fe6f7665de9781106f4b0c5a766c76d25d4eb7db40049fa1af01cb",
+    "summary.json": "9205f394ecb8bb3624df05099868e2b5371845319aa4f5e1b41945c482843f7c",
+    "uname.txt": "99f2221c9467cc4070293ad853c33e5964c8aebda08072cb558cb10d290fbc14"
+  }
+}

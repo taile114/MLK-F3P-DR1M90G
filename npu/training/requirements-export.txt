@@ -1,0 +1,4 @@
+# Install the CUDA torch wheel as described in TRAINING_ENV.md first.
+-r requirements-training.txt
+onnx==1.19.1
+onnxruntime==1.23.2

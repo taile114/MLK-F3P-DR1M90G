@@ -1,0 +1,51 @@
+{
+  "scope": "Physical F3P matrix console and diagnostic tail provided by the user; original result files recovered and independently verified",
+  "console_log": "/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/matrix-console-19700101_003724-744.log",
+  "board_results_directory": "/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_matrix_19700101_003724_746",
+  "status": "stopped",
+  "exit_code": 60,
+  "failed_case": {
+    "shape": "m06",
+    "rows": 11,
+    "input_features": 12,
+    "output_features": 21,
+    "mapping": "fc",
+    "backend": "Alnpu",
+    "CpuRef_exit_code": 0,
+    "CpuRef_max_error_lsb": 0,
+    "CpuRef_mean_enqueue_us": 329.11,
+    "CpuRef_mean_quantize_pack_enqueue_sync_restore_us": 348.83,
+    "optimized_layer": "ALHardNPU",
+    "optimize_passed": true,
+    "load_passed": true,
+    "failure_stage": "inference",
+    "messages": [
+      "filter_OC = 21",
+      "[HARDNPU]Waiting for interrupt timeout",
+      "[HARDNPU] CRASHED,reconfig the NPU and retry or contact the AL team"
+    ],
+    "reported_execution_ms": 1029.83,
+    "CMA_weight_reported": "1.02KB"
+  },
+  "interrupts": {
+    "HARD_NPU_IRQ": {
+      "before": 771,
+      "after": 851,
+      "delta": 80
+    },
+    "SOFT_NPU_IRQ": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    }
+  },
+  "external_timeout_triggered": false,
+  "hardware_state_after_failure": "unknown; no further NPU calls until power-cycle recovery",
+  "remaining_matrix_cases_completed": false,
+  "all_24_model_shapes_supported": false,
+  "full_rul_npu_verified": false,
+  "root_cause": "Unresolved device/runtime execution limitation for the tested shape; output-channel or padding causality not established",
+  "next_probe": "Separately test mathematically equivalent native FC with zero-valued input/output padding after cold restart",
+  "board_raw_result_files_retrieved": true,
+  "recovered_file_verification": "npu-linear-recovered-v1-verification.json"
+}

@@ -1,0 +1,8 @@
+weights.bin: OK
+weights.tsv: OK
+stage=build_segment_5 passed
+sample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.541999817 mae=3.541999817 mean_forward_us=1235443.349
+rul_unit=observed_aging_test_session
+quantized_branches=0 accuracy_acceptance=TBD
+result=compiled_and_cpu_checked

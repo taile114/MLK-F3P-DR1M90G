@@ -1,0 +1,33 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "bytes": 876,
+      "operation": "upload",
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2/return_results.sh",
+      "sha256": "c290cf32913a5cbecc01dadbde810e43d59736af204316eb05d6799829fcab98",
+      "local_path": "E:/competion/code/project/npu/work/f3p-offload-v2/return_results.sh",
+      "verified": true
+    },
+    {
+      "command": "cd /mnt/mmcblk0p2/npu-tests/offload-v2/f3p-offload-v2 && sh return_results.sh",
+      "exit_code": 0,
+      "output": "5985ae480724abb27c134cc9d75f355636abde46b3c4d42f0b2e627639209c8b  ../offload-board-return-v1.tar.gz\r\n-rw-r--r--    1 root     root        4.2M Jan  1 00:15 \u001b[0;0m../offload-board-return-v1.tar.gz\u001b[m",
+      "operation": "command"
+    },
+    {
+      "kernel_console_level_during_chunk": 1,
+      "sha256": "5985ae480724abb27c134cc9d75f355636abde46b3c4d42f0b2e627639209c8b",
+      "operation": "download",
+      "chunk_bytes": 65536,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/offload-v2/offload-board-return-v1.tar.gz",
+      "verified": true,
+      "bytes": 4416219,
+      "console_level_restored_after_each_chunk": true,
+      "local_path": "E:/competion/code/project/npu/work/offload-board-return-v1.tar.gz"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

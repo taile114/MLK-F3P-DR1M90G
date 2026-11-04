@@ -1,0 +1,34 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "",
+      "command": "test ! -e /mnt/mmcblk0p2/npu-tests/fused-v1 && mkdir /mnt/mmcblk0p2/npu-tests/fused-v1"
+    },
+    {
+      "bytes": 125319,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/fused-v1/update.tar.gz",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-fused-update-v1.tar.gz",
+      "operation": "upload",
+      "verified": true,
+      "sha256": "b14d20c632f482ec71f87962e4c531c1fc27ebd8ffdb0c2cb619340741f4f0bc"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "src/fused_ops.hpp: OK\r\nsrc/model_config.hpp: OK\r\nsrc/native_rul_cma.cpp: OK\r\nsrc/native_rul_fused.cpp: OK\r\nbin/rul_fused: OK",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v1 && gzip -dc update.tar.gz | tar -xf - && sha256sum -c checksums.sha256 && for f in data weights.bin weights.tsv; do ln -s ../cma-fixed-v2/$f $f; done && mkdir result_neon_first"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "result=inference_completed mode=neon samples=1 warmup=5 max_reference_error=3.814697266e-06 mismatches=0 rmse=3.54199791 mae=3.54199791 mean_forward_us=44101.591 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v1; LD_LIBRARY_PATH=/opt/armnn_lib/lib ../cma-fixed-v2/bin/timeout -k 5 30 bin/rul_fused . 1 result_neon_first neon > result_neon_first/probe.log 2>&1; code=$?; echo \"$code\" > result_neon_first/exit_code.txt; cat result_neon_first/probe.log; test \"$code\" -eq 0"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

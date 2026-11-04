@@ -1,0 +1,85 @@
+{
+  "evidence": "User-provided serial output and independently recovered physical board CSV, DOT and profiling files",
+  "source_log_sha256": "7721a2b04a647c49ca3304a9700ec7dbcf31e2c4c0e4a175ccf9a4f84509fca1",
+  "host_archive_sha256": "b7bb155dba6672d72792ecf82d7893a509e15f4dccda61d515cdacd5a284fb66",
+  "board_internal_checksum_ok": 193,
+  "first_window_profiled": {
+    "result": "inference_completed",
+    "samples": 1,
+    "max_reference_error": 1.907348633e-06,
+    "mismatches": 0,
+    "rmse": 3.540582657,
+    "mae": 3.540582657,
+    "mean_forward_us": 239449.353,
+    "backend": "CpuAcc,CpuRef",
+    "profile_first_window": true,
+    "exit_code": 0,
+    "board_result_directory": "/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012221_490"
+  },
+  "mixed_full_replay": {
+    "result": "inference_completed",
+    "samples": 165,
+    "max_reference_error": 8.583068848e-06,
+    "mismatches": 0,
+    "rmse": 3.256266713,
+    "mae": 2.771934077,
+    "mean_forward_us": 199451.7223,
+    "backend": "CpuAcc,CpuRef",
+    "profile_first_window": false,
+    "exit_code": 0,
+    "board_result_directory": "/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012236_505"
+  },
+  "reference_full_replay": {
+    "result": "inference_completed",
+    "samples": 165,
+    "max_reference_error": 7.629394531e-06,
+    "mismatches": 0,
+    "rmse": 3.256266531,
+    "mae": 2.771933881,
+    "mean_forward_us": 928101.1201,
+    "backend": "CpuRef",
+    "profile_first_window": false,
+    "exit_code": 0,
+    "board_result_directory": "/root/f3p-cpu-accel-v1/native-rul/results_CpuRef_19700101_012334_521"
+  },
+  "comparison": {
+    "same_package_binary": true,
+    "profiling_disabled_for_both_full_runs": true,
+    "observed_reference_to_mixed_time_ratio": 4.653261999432732,
+    "observed_mean_latency_reduction_percent": 78.50969921483235,
+    "note": "Diagnostic comparison of two 165-window runs; no controlled CPU frequency, thermal state, warmup study or percentile latency measurement"
+  },
+  "layer_controls": {
+    "backend_preferences": [
+      "CpuAcc",
+      "CpuRef"
+    ],
+    "positive_controls_passed": 14,
+    "known_negative_controls": {
+      "cast_bool_float": 50
+    },
+    "raw_exit_codes": {
+      "relu": 0,
+      "less": 0,
+      "greater_equal": 0,
+      "broadcast_less": 0,
+      "logical_and": 0,
+      "comparison_and": 0,
+      "cast_bool_float": 50,
+      "float_less_via_ceil": 0,
+      "float_greater_equal_via_ceil": 0,
+      "float_less_boundaries": 0,
+      "spline_gate_float": 0,
+      "batch_matmul_2d": 0,
+      "batch_matmul_3d": 0,
+      "einsum_via_fc": 0,
+      "reduce_l2_decomposed": 0
+    }
+  },
+  "physical_f3p_mixed_verified": true,
+  "board_csv_and_profile_retrieved": true,
+  "quantized": false,
+  "npu_execution_verified": false,
+  "rul_unit": "observed_aging_test_session",
+  "recovered_verification": "f3p-cpu-mixed-recovered-v1-verification.json"
+}

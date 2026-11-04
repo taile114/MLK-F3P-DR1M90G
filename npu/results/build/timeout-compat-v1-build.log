@@ -1,0 +1,25 @@
+aarch64-linux-gnu-gcc (Linaro GCC 7.5-2019.12) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-rwxr-xr-x 1 uisrc uisrc 10208 Oct 19 02:02 /home/uisrc/f3p-timeout-compat-v1/timeout
+case=success expected=0 actual=0
+success
+case=preserve_40 expected=40 actual=40
+case=preserve_70 expected=70 actual=70
+case=signal_exit expected=143 actual=143
+case=deadline expected=124 actual=124
+timeout_compat: deadline_reached; signal=15
+case=kill_escalation expected=124 actual=124
+timeout_compat: deadline_reached; signal=15
+timeout_compat: grace_expired; signal=9
+case=missing_command expected=127 actual=127
+execvp: No such file or directory
+case=bad_arguments expected=125 actual=125
+Usage: timeout [-k KILL_SECONDS] SECONDS COMMAND [ARGS...]
+case=original_busybox expected=0 actual=0
+original_busybox_child_ok
+unexpected_failures=0
+2b5fe6bdc7c7efb6528e490f58c3e098b020a557f4539cbb89357e820090d248  /home/uisrc/f3p-timeout-compat-v1/timeout
+1076b4681f938ac50d36e2e1b71ad0b1af6d832a90e7ff2ba92948d4e46462f8  /home/uisrc/f3p-timeout-compat-v1/timeout_compat.c

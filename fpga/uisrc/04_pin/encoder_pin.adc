@@ -1,0 +1,6 @@
+# fpga_top RS485 acquisition and PL USB UART; SoC does not load this file.
+# Vendor 21_rs485 and 12_uart_loop pin assignments; J11: 4=GND, 5=A, 6=B.
+set_pin_assignment { I_rs485_rx } { LOCATION = N16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { O_rs485_tx } { LOCATION = L17; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { O_rs485_de } { LOCATION = N15; IOSTANDARD = LVCMOS33; }
+set_pin_assignment { O_uart_tx } { LOCATION = J16; IOSTANDARD = LVCMOS33; }

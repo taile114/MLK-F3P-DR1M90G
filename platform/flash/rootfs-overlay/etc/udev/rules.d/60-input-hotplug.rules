@@ -1,0 +1,4 @@
+# 输入设备热插拔：本地看板的 evdevmouse/evdevkeyboard 插件只在进程启动时枚举
+# /dev/input，应用运行中接入的鼠标或键盘不会被打开（表现为鼠标无响应）。
+# 新增事件节点时重启看板一次以重新枚举，见 /usr/bin/mlk_input_replug。
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="event*", RUN+="/usr/bin/mlk_input_replug"

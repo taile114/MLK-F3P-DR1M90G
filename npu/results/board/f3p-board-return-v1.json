@@ -1,0 +1,35 @@
+{
+  "scope": "Physical board results copied to USB, verified against board-generated SHA-256 and copied into repository",
+  "usb_device": "aigo W381",
+  "usb_filesystem": "FAT32",
+  "usb_health_status_reported": "Warning",
+  "warning_scope": "File checksums match both board archives; this is not a filesystem-wide health certification",
+  "archives": [
+    {
+      "archive": "f3p-npu-smoke-board-results-v1.tar",
+      "bytes": 413184,
+      "sha256": "c59a48f65d5d3aa3dd5f33de2cc5174b2e470d2c4d89fdc9f8fd08bec038d1a0",
+      "board_checksum_matches": true,
+      "host_copy_checksum_matches": true,
+      "recovered_files": 66,
+      "extracted_to": "results/board/recovered/npu-smoke-v1"
+    },
+    {
+      "archive": "f3p-cpu-accel-board-results-v1.tar",
+      "bytes": 3674112,
+      "sha256": "9f6a219cf92f42a1b2b9781a9c19c19e10efaff1ad9618296126ee14bc363bf3",
+      "board_checksum_matches": true,
+      "host_copy_checksum_matches": true,
+      "recovered_files": 104,
+      "extracted_to": "results/board/recovered/cpu-accel-v1"
+    }
+  ],
+  "no_usb_files_modified_during_recovery": true,
+  "usb_preservation": {
+    "read_only_check": "Windows chkdsk F: without repair flags",
+    "reported_lost_chain_allocation_kib": 512,
+    "repair_executed": false,
+    "user_decision": "Preserve the USB filesystem as-is; do not repair or add files",
+    "further_analysis_source": "SHA-256-verified host copies"
+  }
+}

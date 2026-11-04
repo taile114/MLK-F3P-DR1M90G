@@ -1,0 +1,24 @@
+{
+  "evidence": "Read-only inspection of vendor SDK sources and generated headers in the Ubuntu development VM",
+  "kernel_tree": "/home/uisrc/uisrc-lab-anlogic/sources/linux",
+  "kernel_release": "6.1.111-rt42",
+  "sdk_config": {
+    "CONFIG_NPU_MODULE": "not set",
+    "CONFIG_CMA": "y",
+    "CONFIG_DMA_CMA": "y",
+    "CONFIG_IKCONFIG": "not set"
+  },
+  "required_npu_options": [
+    "CONFIG_NPU_MODULE",
+    "CONFIG_HARD_NPU_DRIVER",
+    "CONFIG_SOFT_NPU_DRIVER",
+    "CONFIG_CMA_MEM_DRIVER"
+  ],
+  "device_tree_compatible": [
+    "anlogic,hard_npu",
+    "anlogic,soft_npu"
+  ],
+  "module_symvers_present": false,
+  "scope_note": "The SDK .config is not proof of the board's exact kernel configuration. Matching release strings alone do not establish module ABI compatibility. No modules were built/loaded and no board firmware was changed.",
+  "board_followup": "Board /proc/config.gz unavailable; previous module scan matched input path names. Exact module and device-tree inventory is deferred to check_npu.sh."
+}

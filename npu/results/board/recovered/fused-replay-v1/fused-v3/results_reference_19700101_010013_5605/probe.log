@@ -1,0 +1,42 @@
+requested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=184 profile_first_window=0 runtime_policy=per_segment cma_policy=npu_segments_only available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=build_segment_0 begin
+segment=0 optimizer_messages=30
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 optimizer_messages=8
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 optimizer_messages=8
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 optimizer_messages=8
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 optimizer_messages=4
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 optimizer_messages=2
+stage=build_segment_5 passed
+sample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06
+sample=9 prediction=20.35552979 reference=20.35552979 absolute_error=0
+sample=19 prediction=22.08405876 reference=22.08405685 absolute_error=1.907348633e-06
+sample=29 prediction=18.81482506 reference=18.81482697 absolute_error=1.907348633e-06
+sample=39 prediction=21.37691498 reference=21.37691498 absolute_error=0
+sample=49 prediction=14.52212238 reference=14.52212811 absolute_error=5.722045898e-06
+sample=59 prediction=14.94472313 reference=14.94472313 absolute_error=0
+sample=69 prediction=12.45005035 reference=12.45005512 absolute_error=4.768371582e-06
+sample=79 prediction=15.82515144 reference=15.82514381 absolute_error=7.629394531e-06
+sample=89 prediction=7.545242786 reference=7.545241833 absolute_error=9.536743164e-07
+sample=99 prediction=7.725347042 reference=7.725343704 absolute_error=3.337860107e-06
+sample=109 prediction=11.96399212 reference=11.96399117 absolute_error=9.536743164e-07
+sample=119 prediction=10.04220009 reference=10.04219818 absolute_error=1.907348633e-06
+sample=129 prediction=2.45176959 reference=2.451771021 absolute_error=1.430511475e-06
+sample=139 prediction=8.611271858 reference=8.611272812 absolute_error=9.536743164e-07
+sample=149 prediction=6.682348728 reference=6.682352066 absolute_error=3.337860107e-06
+sample=159 prediction=4.343804836 reference=4.34380579 absolute_error=9.536743164e-07
+sample=169 prediction=1.499104857 reference=1.499105453 absolute_error=5.960464478e-07
+sample=179 prediction=0.3265508413 reference=0.3265510798 absolute_error=2.384185791e-07
+sample=183 prediction=0.7044889927 reference=0.7044879198 absolute_error=1.072883606e-06
+result=inference_completed samples=184 max_reference_error=7.629394531e-06 mismatches=0 rmse=2.465939977 mae=1.977114853 mean_forward_us=194829.395
+rul_unit=observed_aging_test_session
+warmup=5 timed_allocation_calls=3843944 timed_allocation_bytes=153174112 quantized_branches=0 accuracy_acceptance=TBD

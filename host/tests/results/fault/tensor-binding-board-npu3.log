@@ -1,0 +1,52 @@
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.65 ms.
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |48.00KB(48.00KB)    |48.00KB(48.00KB)    
+Info: ******************************************************************************************************
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=73.51KB
+
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   26|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |24.00KB(24.00KB)    |24.00KB(24.00KB)    
+Info: ******************************************************************************************************
+Info: 
+
+ Memory Usage Info: after Load Network(id=1), CMA Mem Usage: weight=44.51KB
+
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   41|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |12.00KB(12.00KB)    |12.00KB(12.00KB)    
+Info: ******************************************************************************************************
+Info: 
+
+ Memory Usage Info: after Load Network(id=2), CMA Mem Usage: weight=40.76KB
+
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   56|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |3.00KB(4.00KB)      |3.00KB(4.00KB)      
+Info: ******************************************************************************************************
+Info: 
+
+ Memory Usage Info: after Load Network(id=3), CMA Mem Usage: weight=44.76KB
+
+Info: Execution time: 0.27 ms.
+Info: Execution time: 0.16 ms.
+Info: Execution time: 0.15 ms.
+Info: Execution time: 0.15 ms.
+Info: Execution time: 0.29 ms.
+Info: Execution time: 0.16 ms.
+Info: Execution time: 0.15 ms.
+Info: Execution time: 0.15 ms.
+Info: Execution time: 0.27 ms.
+Info: Execution time: 0.16 ms.
+Info: Execution time: 0.15 ms.
+Info: Execution time: 0.15 ms.
+Info: Shutdown time: 0.04 ms.
+{"result":"completed","samples":3,"class_correct":3,"joint_correct":3,"reference_mismatch":0,"backend":2,"mean_infer_us":4944.000,"report":"/tmp/fault-fixed-npu3.json"}

@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "source_model": "E:\\competion\\code\\fkp-dvgt\\outputs\\motor_stable23_v1_onnx_opset13\\rul_fp32.onnx",
+  "source_sha256": "7f71864cc748991f65fafba0a5b2748dd296d7283ec9ffff56b1925896a75b00",
+  "optimization": "ONNX Runtime ORT_ENABLE_BASIC; standard ONNX operators only",
+  "onnx_ir_version": 7,
+  "opset_imports": [
+    {
+      "domain": "",
+      "version": 13
+    }
+  ],
+  "original_node_count": 5125,
+  "node_count": 1547,
+  "operator_counts": {
+    "Add": 196,
+    "And": 30,
+    "Cast": 30,
+    "Concat": 7,
+    "Div": 207,
+    "Einsum": 62,
+    "Erf": 5,
+    "Gather": 11,
+    "GreaterOrEqual": 30,
+    "Less": 30,
+    "MatMul": 90,
+    "Mul": 242,
+    "Pow": 8,
+    "ReduceL2": 2,
+    "ReduceMean": 18,
+    "Relu": 2,
+    "Reshape": 92,
+    "Sigmoid": 30,
+    "Slice": 180,
+    "Softmax": 26,
+    "Sqrt": 8,
+    "Sub": 190,
+    "Transpose": 21,
+    "Unsqueeze": 30
+  },
+  "original_size_bytes": 2485042,
+  "onnx_size_bytes": 1949217,
+  "onnx_sha256": "b9eac7e3a7902931b638126a4e824b10472f4248c7f26e76ac1c0af1cde091b4",
+  "onnx_checker_passed": true,
+  "quantized": false,
+  "f3p_runtime_verified": false,
+  "unused_domain_imports_removed": [
+    "com.microsoft.nchwc",
+    "ai.onnx.ml",
+    "ai.onnx.training",
+    "ai.onnx.preview.training",
+    "com.microsoft",
+    "com.microsoft.experimental",
+    "org.pytorch.aten"
+  ],
+  "samples_verified": 165,
+  "pytorch_vs_optimized_onnx": {
+    "allclose": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "max_absolute_error": 7.62939453125e-06,
+    "mean_absolute_error": 2.013553272594105e-06,
+    "rmse_between_predictions": 2.513318122344125e-06,
+    "worst_sample_index": 100,
+    "worst_reference": 10.192054748535156,
+    "worst_actual": 10.192047119140625
+  },
+  "pytorch_vs_basic_session": {
+    "allclose": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "max_absolute_error": 7.62939453125e-06,
+    "mean_absolute_error": 2.013553272594105e-06,
+    "rmse_between_predictions": 2.513318122344125e-06,
+    "worst_sample_index": 100,
+    "worst_reference": 10.192054748535156,
+    "worst_actual": 10.192047119140625
+  },
+  "onnx_metrics": {
+    "rmse": 3.2562668323516846,
+    "mae": 2.7719340324401855,
+    "n": 165
+  },
+  "f3p_parser_static_check": {
+    "file": "f3p_parser_static_check.json",
+    "operators_without_literal_or_symbol": [
+      "And",
+      "Einsum",
+      "Erf",
+      "GreaterOrEqual",
+      "Less",
+      "ReduceL2"
+    ],
+    "method": "static binary string/symbol-fragment inspection; no parser or NPU execution",
+    "conclusion": "Runtime compatibility remains unverified"
+  },
+  "protected_sources_unchanged": true
+}

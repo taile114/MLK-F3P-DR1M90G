@@ -1,0 +1,18 @@
+{
+  "schema": "mlk.fault.runtime_check.v1",
+  "root": "/home/uisrc/mlk-fault-integration/runtime-thermal-guard",
+  "samples": 3,
+  "backend_requested": 1,
+  "backend_reported": 1,
+  "class_correct": 3,
+  "joint_correct": 3,
+  "class_accuracy": 1,
+  "joint_accuracy": 1,
+  "macro_class_accuracy": 1,
+  "reference_mismatch": 0,
+  "mean_infer_us": 467391,
+  "median_infer_us": 453313,
+  "p95_infer_us": 502933,
+  "max_infer_us": 502933,
+  "confusion_target_by_prediction": [[3,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+}

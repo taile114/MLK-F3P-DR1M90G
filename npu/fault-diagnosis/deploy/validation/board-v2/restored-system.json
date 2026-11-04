@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "/etc/init.d/S99qtapp status; plctl probe; cat /sys/class/graphics/fb0/virtual_size; grep -i npu /proc/interrupts; cat /proc/sys/kernel/printk; stty -g; df -h /mnt/fault-test",
+      "output": "mlk_ps_local running (pid 12214)\r\nID=0x504c0103\r\n1920,1080\r\n 41:      23574          0     GICv3 144 Level     HARD_NPU_IRQ\r\n 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ\r\n8\t4\t1\t7\r\n1500:5:1cb2:a3b:3:1c:7f:15:4:0:1:0:11:13:1a:a:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0\r\nFilesystem                Size      Used Available Use% Mounted on\r\n/dev/root                28.4G    458.5M     26.5G   2% /",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

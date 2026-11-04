@@ -1,0 +1,4 @@
+90d403c06d26be4516148084fdf72d607e8c7c90bbca5623161044aee4d78d44  /home/uisrc/mlk-fault-integration/runtime-thermal-guard/libmlk_fault.so
+PASS: SDK rejection reproduced; four production input/output bindings accepted
+{"result":"completed","samples":3,"class_correct":3,"joint_correct":3,"reference_mismatch":0,"backend":1,"mean_infer_us":467390.667,"report":"/home/uisrc/mlk-fault-integration/live-results/thermal-qemu-cpu.json"}
+thermal_engine_qemu_smoke_passed

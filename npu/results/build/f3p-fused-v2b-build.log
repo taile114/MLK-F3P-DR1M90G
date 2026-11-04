@@ -1,0 +1,11 @@
+src/native_rul_reference_bench.cpp:494:6: warning: ‘void {anonymous}::dump(const string&, const std::vector<float>&)’ defined but not used [-Wunused-function]
+ void dump(const std::string& path, const std::vector<float>& data) {
+      ^~~~
+result=stem_checked rows=105 features=3 max_error=2.384185791e-07 mismatches=0
+result=inference_completed mode=neon samples=184 warmup=5 max_reference_error=8.106231689e-06 mismatches=0 rmse=2.465940142 mae=1.97711497 mean_forward_us=214515.8497 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0
+result=inference_completed mode=cpu_quantized samples=184 warmup=5 max_reference_error=0.01163196564 mismatches=142 rmse=2.465704044 mae=1.976990787 mean_forward_us=177541.793 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0 max_integer_lsb=0 integer_audit=0
+sample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.541999817 mae=3.541999817 mean_forward_us=723885.606
+rul_unit=observed_aging_test_session
+warmup=5 timed_allocation_calls=23671 timed_allocation_bytes=1052868 quantized_branches=0 accuracy_acceptance=TBD
+result=compiled_and_validation_cpu_checked

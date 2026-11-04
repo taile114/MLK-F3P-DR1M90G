@@ -1,0 +1,7 @@
+# Frozen archives and physical-board evidence must retain their exact bytes.
+artifacts/** binary
+validation/** binary
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.md text eol=lf diff merge

@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "archives": 7,
+  "internal_checksums": 356,
+  "unchanged_source_copies": 121,
+  "python_files": 27,
+  "shell_files": 10,
+  "relative_links": 158,
+  "saved_qemu_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 7.62939453125e-06,
+    "rmse": 3.2562665311550036,
+    "mae": 2.7719338807192715
+  },
+  "saved_mixed_qemu_replay": {
+    "samples": 165,
+    "mismatches": 0,
+    "max_reference_error": 8.58306884765625e-06,
+    "rmse": 3.2562667131254135,
+    "mae": 2.771934077233979
+  },
+  "saved_mixed_board_replay": {
+    "result": "inference_completed",
+    "samples": 165,
+    "max_reference_error": 8.583068848e-06,
+    "mismatches": 0,
+    "rmse": 3.256266713,
+    "mae": 2.771934077,
+    "mean_forward_us": 199451.7223,
+    "backend": "CpuAcc,CpuRef",
+    "profile_first_window": false,
+    "exit_code": 0,
+    "board_result_directory": "/root/f3p-cpu-accel-v1/native-rul/results_CpuAcc,CpuRef_19700101_012236_505"
+  },
+  "observed_board_reference_to_mixed_time_ratio": 4.653261999432732,
+  "physical_sd_boot_verified": true,
+  "Alnpu_backend_registered": true,
+  "npu_smoke_qemu_cpu_controls": {
+    "u8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    },
+    "u8_s8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    },
+    "s8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    }
+  },
+  "physical_hard_npu_u8_convolution_verified": true,
+  "rul_model_npu_verified": false,
+  "recovered_physical_board_files": {
+    "files_verified": 170,
+    "full_cpu_replays_recomputed": 2,
+    "profiled_first_window_fc_share_percent": 18.531165993101908,
+    "npu_cases_verified": [
+      "u8",
+      "u8_s8",
+      "s8"
+    ]
+  },
+  "board_evidence": "Recovered physical CPU CSV metrics and graphs/profiles verified; hard NPU u8 graph, execution events, integer outputs and IRQ snapshots verified",
+  "training_executed": false,
+  "board_test_rerun": false,
+  "npu_verified": true,
+  "npu_verification_scope": "u8 quantized 3x3 convolution on HARD NPU only; full RUL NPU inference not verified"
+}

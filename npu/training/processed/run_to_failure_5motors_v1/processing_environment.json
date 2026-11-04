@@ -1,0 +1,8 @@
+{
+  "processing_python": "3.12.14 (main, Sep  1 2026, 14:17:39) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "validation_environment": "E:/competion/code/out/fkp-data-prep/venv/Scripts/python.exe",
+  "validation_torch": "2.8.0+cpu",
+  "original_model_sources_modified": false
+}

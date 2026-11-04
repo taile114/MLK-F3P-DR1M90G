@@ -1,0 +1,22 @@
+{
+  "archive": "f3p-npu-fc-pad-arm64-v1.tar.gz",
+  "bytes": 266291,
+  "sha256": "9434fb95d10d934738593677deebed5666d7c09d1d657eda5b8d1ef0fe292090",
+  "source_verified": true,
+  "usb_read_back_verified": true,
+  "disk_number": 2,
+  "disk_serial": "990006044030",
+  "usb_device": "aigo W381",
+  "usb_volume": "F:",
+  "usb_filesystem": "FAT32",
+  "usb_health_status": "Warning",
+  "new_test_package_authorized": true,
+  "old_files_modified": false,
+  "old_files_deleted": false,
+  "filesystem_repair_executed": false,
+  "volume_cache_flushed": true,
+  "safe_ejection_accepted": true,
+  "safe_ejection_code": 0,
+  "safe_ejection_veto": 0,
+  "physical_padded_npu_tested": false
+}

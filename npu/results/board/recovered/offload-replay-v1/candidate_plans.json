@@ -1,0 +1,32 @@
+{
+  "ff4": [
+    "tvgtformer_blocks.0.feed_forward_temp.0.spline_weight",
+    "tvgtformer_blocks.1.feed_forward_temp.0.spline_weight",
+    "svgtformer_blocks.0.feed_forward_spat.0.spline_weight",
+    "svgtformer_blocks.1.feed_forward_spat.0.spline_weight"
+  ],
+  "ff6": [
+    "tvgtformer_blocks.0.feed_forward_temp.0.spline_weight",
+    "tvgtformer_blocks.1.feed_forward_temp.0.spline_weight",
+    "svgtformer_blocks.0.feed_forward_spat.0.spline_weight",
+    "svgtformer_blocks.1.feed_forward_spat.0.spline_weight",
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ],
+  "input_ff5": [
+    "tvgtformer_blocks.0.feed_forward_temp.0.spline_weight",
+    "tvgtformer_blocks.1.feed_forward_temp.0.spline_weight",
+    "svgtformer_blocks.0.feed_forward_spat.0.spline_weight",
+    "svgtformer_blocks.1.feed_forward_spat.0.spline_weight",
+    "linear_x.spline_weight"
+  ],
+  "input_ff7": [
+    "tvgtformer_blocks.0.feed_forward_temp.0.spline_weight",
+    "tvgtformer_blocks.1.feed_forward_temp.0.spline_weight",
+    "svgtformer_blocks.0.feed_forward_spat.0.spline_weight",
+    "svgtformer_blocks.1.feed_forward_spat.0.spline_weight",
+    "linear_x.spline_weight",
+    "output_layer.0.spline_weight",
+    "output_layer.2.spline_weight"
+  ]
+}

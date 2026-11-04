@@ -1,0 +1,17 @@
+requested_backend=CpuRef onnx_parser_used=false host_gelu=std::erf samples=1
+stage=build_segment_0 begin
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+stage=build_segment_5 passed
+sample=0 prediction=21.45942116 reference=21.45941925 absolute_error=1.907348633e-06
+result=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.540578842 mae=3.540578842 mean_forward_us=3050475.19
+rul_unit=observed_aging_test_session
+first_window_exit_code=0

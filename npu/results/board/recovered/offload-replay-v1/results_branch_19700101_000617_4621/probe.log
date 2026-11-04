@@ -1,0 +1,1 @@
+result=branch_completed layer=svgtformer_blocks.1.feed_forward_spat.2.spline_weight layout=fc rows=12 input_features=1260 output_features=11 cpu_neon_us=777.423 npu_boundary_us=963.0075 max_integer_lsb=1 branch_rmse=0.03138887475 branch_max_abs=0.05529618263 capture_cpu_error=0 input_clipped=0 output_saturated=0 cma_bytes=73728

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "static_delivery": {
+    "status": "passed",
+    "archives": 15,
+    "internal_checksums": 1249,
+    "unchanged_source_copies": 121,
+    "python_files": 42,
+    "shell_files": 33,
+    "relative_links": 344
+  },
+  "raw_files_verified": 1513,
+  "independent_verifier": "offload_replays_verified",
+  "integer_outputs_checked": 266344,
+  "integer_max_lsb": 1,
+  "paired_rounds": 3,
+  "paired_full_replays": 15,
+  "validation_samples_per_full_replay": 184,
+  "original_fp32_tolerance_preserved": true,
+  "CMA_constant_per_full_replay": true,
+  "initial_and_final_CmaFree_kb": 124436,
+  "deployed_source_and_delivered_source_equal": true,
+  "delivered_binaries_equal_board_hashes": true,
+  "checkpoint_sha256_unchanged": true,
+  "new_training_executed": false,
+  "new_held_out_test_inference_executed": false,
+  "compiler_VM_cleanly_stopped": true,
+  "serial_port_released": true,
+  "console_loglevel_restored": true,
+  "application_accuracy_acceptance": "TBD"
+}

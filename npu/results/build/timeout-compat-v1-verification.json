@@ -1,0 +1,24 @@
+{
+  "scope": "QEMU AArch64 compatibility supervisor tests; no NPU inference executed",
+  "source_sha256": "1076b4681f938ac50d36e2e1b71ad0b1af6d832a90e7ff2ba92948d4e46462f8",
+  "binary_sha256": "2b5fe6bdc7c7efb6528e490f58c3e098b020a557f4539cbb89357e820090d248",
+  "binary_bytes": 10208,
+  "wrapper_sha256": "eefb71bebfc9a13cdc22c876f67048ed358828809a90ac1678f8c0b30b13d01f",
+  "installer_sha256": "fe57fde377685f32fd2ef9d2001a2a3c1c6677458ae6ec8aee89ebd6dec7b2fa",
+  "cases": 9,
+  "unexpected_failures": 0,
+  "timeout_exit_code": 124,
+  "term_signal": 15,
+  "kill_signal": 9,
+  "preserved_child_exit_codes": [
+    0,
+    40,
+    70,
+    143,
+    127
+  ],
+  "original_sd_busybox_timeout_applet_available": false,
+  "training_executed": false,
+  "physical_board_helper_verified": false,
+  "original_linear_archive_modified": false
+}

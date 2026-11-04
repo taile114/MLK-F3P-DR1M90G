@@ -1,0 +1,48 @@
+{
+  "scope": "QEMU AArch64 CPU controls using the core Arm NN library extracted from the paired SD initramfs",
+  "onnx_parser_used": false,
+  "rul_model_used": false,
+  "training_executed": false,
+  "cpu_controls": {
+    "u8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    },
+    "u8_s8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    },
+    "s8": {
+      "backend": "CpuRef",
+      "iterations": 3,
+      "output_elements": 512,
+      "checked_csv_rows": 1536,
+      "max_error_lsb": 0,
+      "mismatches": 0,
+      "exit_code": 0
+    }
+  },
+  "sdk_runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce",
+  "paired_image_runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce",
+  "sdk_and_paired_core_library_identical": true,
+  "tolerance_lsb": 1,
+  "cpu_fallback_allowed_for_Alnpu": false,
+  "physical_npu_convolution_verified": false,
+  "physical_rul_npu_execution_verified": false,
+  "binary_sha256": "250c621edeed2a1715c7e0ffad992cb9fc84b338caf318533585d207a22b2e86",
+  "sources": {
+    "src/npu_smoke.cpp": "27a2bd6f82f5eb16a6bdcf7a2c1421fa04313ecc09e3ee570139cbe6248c782b",
+    "build.sh": "134f7c52bdc42a72de2b056876da81f703e750c32a2a0d4bbcd9e3d16b505275",
+    "run.sh": "b2e3154c28bc7469390cb59662fc7f0d570b9cf784d871d0967df4280b416eb8"
+  }
+}

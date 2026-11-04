@@ -1,0 +1,10 @@
+e2fsck 1.47.3 (8-Jul-2025)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+rootfs: 5056/1905008 files (0.2% non-contiguous), 292311/7616000 blocks
+readback_verified_payloads 14
+{"result":"completed","samples":3,"class_correct":3,"joint_correct":3,"reference_mismatch":0,"backend":1,"mean_infer_us":575129.667,"report":"/home/uisrc/mlk-fault-sd-deploy/card-cpu-smoke.json"}
+sd_userspace_update_and_readback_passed

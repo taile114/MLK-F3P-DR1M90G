@@ -1,0 +1,569 @@
+{
+  "architecture": "fault_mtl_f3p_cnn2d_v2",
+  "input_profile": "base6",
+  "task_definition": "bench_fault_sim_v2",
+  "preprocessing_version": "base6_causal_tilt_ref_v2",
+  "temperature_rule": "case_temp_35_40_45_v1",
+  "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+  "tilt_rule_status": "REF",
+  "fault_order": [
+    "overload",
+    "undervoltage",
+    "overtemperature",
+    "mount_tilt"
+  ],
+  "input_shapes": {
+    "time_frequency": [
+      8,
+      64,
+      48
+    ],
+    "spectrum": [
+      3,
+      769
+    ],
+    "vibration_stats": [
+      12
+    ],
+    "mount_pose": [
+      8
+    ],
+    "fast_state": [
+      6,
+      40
+    ],
+    "slow_state": [
+      9,
+      60
+    ]
+  },
+  "mount_pose_channels": [
+    "g_x",
+    "g_y",
+    "g_z",
+    "tilt_deg",
+    "g_norm",
+    "coverage",
+    "valid_pose",
+    "age_pose"
+  ],
+  "fusion_dimension": 224,
+  "fast_state_dimension": 240,
+  "slow_state_dimension": 540,
+  "mount_pose_dimension": 8,
+  "status": "software_cpu_and_cuda_checks_passed",
+  "final_training_performed": false,
+  "npu_validation_performed": false,
+  "acceptance_accuracy_verified": false,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "pytorch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "training_device": "cuda:0",
+    "dependencies": {
+      "pytest": "9.2.0",
+      "Pygments": "2.21.0",
+      "pluggy": "1.7.0",
+      "packaging": "26.3",
+      "iniconfig": "2.3.1",
+      "colorama": "0.4.6",
+      "onnxruntime": "1.31.1",
+      "protobuf": "7.36.2",
+      "numpy": "2.3.5",
+      "flatbuffers": "25.12.19",
+      "onnx": "1.23.2",
+      "ml_dtypes": "0.6.0",
+      "typing_extensions": "4.16.0",
+      "PyYAML": "6.0.3",
+      "scipy": "1.18.1",
+      "torch": "2.11.0+cu128",
+      "fsspec": "2026.9.0",
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.4",
+      "networkx": "3.7",
+      "sympy": "1.14.0",
+      "mpmath": "1.3.0",
+      "setuptools": "81.0.0",
+      "filelock": "4.2.4"
+    }
+  },
+  "automated_tests": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gpu": {
+    "architecture": "fault_mtl_f3p_cnn2d_v2",
+    "input_profile": "base6",
+    "task_definition": "bench_fault_sim_v2",
+    "preprocessing_version": "base6_causal_tilt_ref_v2",
+    "temperature_rule": "case_temp_35_40_45_v1",
+    "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+    "tilt_rule_status": "REF",
+    "fault_order": [
+      "overload",
+      "undervoltage",
+      "overtemperature",
+      "mount_tilt"
+    ],
+    "input_shapes": {
+      "time_frequency": [
+        8,
+        64,
+        48
+      ],
+      "spectrum": [
+        3,
+        769
+      ],
+      "vibration_stats": [
+        12
+      ],
+      "mount_pose": [
+        8
+      ],
+      "fast_state": [
+        6,
+        40
+      ],
+      "slow_state": [
+        9,
+        60
+      ]
+    },
+    "mount_pose_channels": [
+      "g_x",
+      "g_y",
+      "g_z",
+      "tilt_deg",
+      "g_norm",
+      "coverage",
+      "valid_pose",
+      "age_pose"
+    ],
+    "fusion_dimension": 224,
+    "fast_state_dimension": 240,
+    "slow_state_dimension": 540,
+    "mount_pose_dimension": 8,
+    "status": "passed",
+    "purpose": "synthetic_cuda_flow_check",
+    "final_training_performed": false,
+    "environment": {
+      "python": "3.12.14",
+      "platform": "Windows-11-10.0.22631-SP0",
+      "pytorch": "2.11.0+cu128",
+      "cuda": "12.8",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "training_device": "cuda:0",
+      "dependencies": {
+        "pytest": "9.2.0",
+        "Pygments": "2.21.0",
+        "pluggy": "1.7.0",
+        "packaging": "26.3",
+        "iniconfig": "2.3.1",
+        "colorama": "0.4.6",
+        "onnxruntime": "1.31.1",
+        "protobuf": "7.36.2",
+        "numpy": "2.3.5",
+        "flatbuffers": "25.12.19",
+        "onnx": "1.23.2",
+        "ml_dtypes": "0.6.0",
+        "typing_extensions": "4.16.0",
+        "PyYAML": "6.0.3",
+        "scipy": "1.18.1",
+        "torch": "2.11.0+cu128",
+        "fsspec": "2026.9.0",
+        "Jinja2": "3.1.6",
+        "MarkupSafe": "3.0.4",
+        "networkx": "3.7",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "setuptools": "81.0.0",
+        "filelock": "4.2.4"
+      }
+    },
+    "batch_size": 32,
+    "steps": 5,
+    "precision": "float32",
+    "cpu_cuda_max_abs_errors": {
+      "class_logits": 8.195638656616211e-08,
+      "severity_scores": 8.940696716308594e-08,
+      "grade_logits": 1.1920928955078125e-07,
+      "input_valid": 0.0
+    },
+    "losses": [
+      1.0453846454620361,
+      0.9219239354133606,
+      0.7924700975418091,
+      0.6593478322029114,
+      0.545343816280365
+    ],
+    "all_branches_have_finite_nonzero_gradients": true,
+    "padding_weights_zero": true,
+    "cpu_checkpoint_reload_comparison": "passed",
+    "peak_pytorch_allocated_mib": 79.5771484375,
+    "step_seconds_including_validation_sync": [
+      0.24940719999722205,
+      0.0120682000015222,
+      0.014097600000241073,
+      0.011396199999580858,
+      0.018323499996768078
+    ],
+    "timing_scope": "synthetic batch; checks and synchronization included; not an epoch throughput benchmark"
+  },
+  "synthetic_cpu_reference": {
+    "architecture": "fault_mtl_f3p_cnn2d_v2",
+    "input_profile": "base6",
+    "task_definition": "bench_fault_sim_v2",
+    "preprocessing_version": "base6_causal_tilt_ref_v2",
+    "temperature_rule": "case_temp_35_40_45_v1",
+    "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+    "tilt_rule_status": "REF",
+    "fault_order": [
+      "overload",
+      "undervoltage",
+      "overtemperature",
+      "mount_tilt"
+    ],
+    "input_shapes": {
+      "time_frequency": [
+        8,
+        64,
+        48
+      ],
+      "spectrum": [
+        3,
+        769
+      ],
+      "vibration_stats": [
+        12
+      ],
+      "mount_pose": [
+        8
+      ],
+      "fast_state": [
+        6,
+        40
+      ],
+      "slow_state": [
+        9,
+        60
+      ]
+    },
+    "mount_pose_channels": [
+      "g_x",
+      "g_y",
+      "g_z",
+      "tilt_deg",
+      "g_norm",
+      "coverage",
+      "valid_pose",
+      "age_pose"
+    ],
+    "fusion_dimension": 224,
+    "fast_state_dimension": 240,
+    "slow_state_dimension": 540,
+    "mount_pose_dimension": 8,
+    "purpose": "shape_gradient_export_validation; synthetic data, no diagnostic accuracy claim",
+    "structure": {
+      "parameters": 257008,
+      "fixed_padding_weights": 720,
+      "conv_linear_weights": 256288,
+      "cnn_mac_per_window": 12386304,
+      "linear_mac_per_window": 195232
+    },
+    "runs": [
+      {
+        "seed": 42,
+        "steps": 3,
+        "losses": [
+          1.0483710765838623,
+          0.9520007371902466,
+          0.8734574317932129
+        ],
+        "all_branches_have_gradients": true
+      },
+      {
+        "seed": 43,
+        "steps": 3,
+        "losses": [
+          1.0471045970916748,
+          0.9255253076553345,
+          0.7988248467445374
+        ],
+        "all_branches_have_gradients": true
+      },
+      {
+        "seed": 44,
+        "steps": 3,
+        "losses": [
+          1.0441741943359375,
+          0.8978209495544434,
+          0.8039485216140747
+        ],
+        "all_branches_have_gradients": true
+      }
+    ],
+    "export": {
+      "batchnorm_folding": {
+        "max_feature_error": 2.0489096641540527e-07,
+        "max_output_error": 5.960464477539063e-08,
+        "classification_or_grade_flips": 0,
+        "rtol": 0.0001,
+        "atol": 1e-05
+      },
+      "onnx": {
+        "status": "checked_and_cpu_compared",
+        "opset": 13,
+        "nodes": [
+          "Conv",
+          "Relu",
+          "MaxPool",
+          "Conv",
+          "Relu",
+          "MaxPool",
+          "Conv",
+          "Relu",
+          "MaxPool",
+          "Conv",
+          "Relu",
+          "MaxPool"
+        ],
+        "maximum_absolute_error": 2.0489096641540527e-07,
+        "output_shape": [
+          1,
+          64,
+          4,
+          3
+        ]
+      }
+    }
+  },
+  "first_batch": {
+    "candidates": 2191,
+    "accepted": 0,
+    "availability": 0.0,
+    "rejection_counts": {
+      "current_gap": 2191,
+      "mount_pose_no_gravity_reference": 2191,
+      "mount_pose_nonpositive_timestep": 2016,
+      "mount_pose_quality_limits_unconfigured": 2191,
+      "mount_pose_vibration_gap": 2191,
+      "slow_state_coverage": 2191,
+      "speed_gap": 2191,
+      "unreviewed_current_calibrated": 2191,
+      "unreviewed_pose_mount_unchanged": 2191,
+      "unreviewed_range_reviewed": 2191,
+      "unreviewed_timestamps_verified": 2191,
+      "unreviewed_vibration_dma": 2191,
+      "vibration_gap": 2191,
+      "vibration_nonpositive_timestep": 2016,
+      "vibration_time_jitter": 2191,
+      "fast_state_coverage": 118
+    },
+    "split_assignments": {
+      "session_001": "train"
+    },
+    "independent_validation_available": false,
+    "episodes_sha256": "e89f8ac356e2f994dda0f81db797ea30125ba96befae41a1c978753e689fbbbe",
+    "sources": {
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\processed\\native_recording.npz": "9d20683adc1655ed2df0e6129958faf14f23193963c7be9099d70f52152d5533"
+    },
+    "source_block_metadata": {
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\processed\\native_metadata.json": "68cfa8609a646d2112e283d460d9adaad26f57c37ee45d44be830ac93e9b7171"
+    },
+    "label_basis": {
+      "session_001-normal_warmup": [
+        "operator_no_injection",
+        "operator_no_injection",
+        "temperature_demo_threshold",
+        "operator_confirmed_horizontal"
+      ],
+      "session_001-overtemperature_g1": [
+        "operator_no_injection",
+        "operator_no_injection",
+        "temperature_demo_threshold",
+        "operator_confirmed_horizontal"
+      ],
+      "session_001-overtemperature_g2": [
+        "operator_no_injection",
+        "operator_no_injection",
+        "temperature_demo_threshold",
+        "operator_confirmed_horizontal"
+      ]
+    }
+  },
+  "first_batch_v2_annotation": {
+    "source": "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\segments\\session_001\\episodes.jsonl",
+    "source_sha256": "dc82819667f2d26b71fec29bd70200c2e1356d588533ff436bbbd2d6971d51f4",
+    "output_sha256": "e89f8ac356e2f994dda0f81db797ea30125ba96befae41a1c978753e689fbbbe",
+    "operator_confirmed_horizontal": true,
+    "fourth_class_known_negative": true,
+    "independent_angle_measurement": false,
+    "gravity_calibration_created": false,
+    "original_files_modified": false,
+    "path": "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\segments\\session_001_v2\\episodes.v2.jsonl",
+    "original_arrays_hash_verified": {
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\processed\\native_recording.npz": "9d20683adc1655ed2df0e6129958faf14f23193963c7be9099d70f52152d5533",
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\segments\\session_001\\normal_warmup.npz": "d07ed5df0b6b1ef27cc9062a4c766c732a7248a7501b16aaf06efa691ffd2e49",
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\segments\\session_001\\overtemperature_g1.npz": "81ac71d35d4e71d074d2a163471a1e33fffd2249106de3f6e6bbfae62a5890a0",
+      "E:\\competion\\code\\project\\npu\\fault-diagnosis\\data\\segments\\session_001\\overtemperature_g2.npz": "dc80578085bb927c682923f684d6bca6261e03e77f8bbf6c7f68fedd6e1acc17"
+    }
+  },
+  "temperature_only_probe": {
+    "architecture": "fault_mtl_f3p_cnn2d_v2",
+    "input_profile": "base6",
+    "task_definition": "bench_fault_sim_v2",
+    "preprocessing_version": "base6_causal_tilt_ref_v2",
+    "temperature_rule": "case_temp_35_40_45_v1",
+    "tilt_rule": "mount_tilt_3_6_10_ref_v1",
+    "tilt_rule_status": "REF",
+    "fault_order": [
+      "overload",
+      "undervoltage",
+      "overtemperature",
+      "mount_tilt"
+    ],
+    "input_shapes": {
+      "time_frequency": [
+        8,
+        64,
+        48
+      ],
+      "spectrum": [
+        3,
+        769
+      ],
+      "vibration_stats": [
+        12
+      ],
+      "mount_pose": [
+        8
+      ],
+      "fast_state": [
+        6,
+        40
+      ],
+      "slow_state": [
+        9,
+        60
+      ]
+    },
+    "mount_pose_channels": [
+      "g_x",
+      "g_y",
+      "g_z",
+      "tilt_deg",
+      "g_norm",
+      "coverage",
+      "valid_pose",
+      "age_pose"
+    ],
+    "fusion_dimension": 224,
+    "fast_state_dimension": 240,
+    "slow_state_dimension": 540,
+    "mount_pose_dimension": 8,
+    "status": "bounded_training_flow_exercised",
+    "purpose": "temperature_only_in_sample_probe",
+    "full_base6_qualification": false,
+    "independent_validation": false,
+    "final_training": false,
+    "groups": [
+      "session_001"
+    ],
+    "samples": 36,
+    "steps": 20,
+    "temperature_grade_support": {
+      "0": 12,
+      "1": 12,
+      "2": 12,
+      "3": 0
+    },
+    "training_loss_first": 0.9500275254249573,
+    "training_loss_last": 0.31934303045272827,
+    "in_sample_eval_loss": 0.31005460023880005,
+    "temperature_rule_baseline_in_sample_accuracy": 1.0,
+    "temperature_normalization": {
+      "mean": 36.12740707397461,
+      "std": 6.019286155700684,
+      "fit_scope": "same in-sample probe windows"
+    },
+    "excluded_branches": [
+      "time_frequency",
+      "spectrum",
+      "vibration_stats",
+      "mount_pose",
+      "fast_state",
+      "I/n in slow_state"
+    ],
+    "limitations": [
+      "one session; no independent validation",
+      "no grade 3 samples",
+      "no other-fault positives",
+      "not a full-network diagnostic accuracy or acceptance result"
+    ]
+  },
+  "pose_calibration_scope": {
+    "actual_gravity_reference_created": false,
+    "reference_template": "configs/gravity_reference.example.json",
+    "actual_quality_limits": {
+      "version": "mount_pose_native_ref_v1",
+      "min_coverage": null,
+      "max_age_s": null,
+      "max_half_mean_delta_g": null,
+      "min_vector_norm_g": 1e-06,
+      "gravity_references": {}
+    },
+    "synthetic_tests": "calibrated known vectors, arbitrary reference axis, offset/gain, angle boundaries, duplicates/gaps/staleness/stability, metadata isolation, causal values and timestamps"
+  },
+  "local_full_report": "runs/v2_verification/validation_report.json",
+  "local_gpu_report": "runs/v2_gpu/gpu_verification.json",
+  "test_report": "runs/tests-v2.xml",
+  "limitations": [
+    "Single real session; operator-confirmed horizontal negatives; no tilt-positive real data.",
+    "Actual gravity reference, calibration and pose quality limits remain subject to bench qualification.",
+    "Current complete six-channel windows retain the acquisition quality exclusions.",
+    "Software and CUDA checks do not establish diagnostic accuracy, final training or Alnpu deployment."
+  ],
+  "source_sha256": {
+    "configs/base6.yaml": "1612167239c160b395eece3648963fe30e418da4303fdd8c7fd2a8625f065bc3",
+    "configs/gravity_reference.example.json": "41054d9659bebb381e85864cb4821eed9e3698b59d596e8915e35bfcbc1af8f7",
+    "cuda_install.json": "8eac0c9df0cda042c0191aa58fb2cfe90dcc8963e125d7c4d2a8967885b90fe2",
+    "fault_mtl/__init__.py": "781145d8b502b2d2db83518b392524bdf0ff6eb319c8bab804e55d2b74dd96aa",
+    "fault_mtl/adapt_legacy.py": "4ced0e5e4a9364a2f09050585f068963e1ae6d5df7ae0dc5b2dc6a114f1af827",
+    "fault_mtl/check_gpu.py": "678acc1aff643b6c3668a38930a9976bd8138e4610968f4ea1286b8a76725426",
+    "fault_mtl/dataset.py": "4cfa4bc05279362e55c721105c5820d890216431e478c44830fd317b2b4226ae",
+    "fault_mtl/evaluate.py": "d2c08df6b12dfe22e7e8958c7857f7fb70bb3e6f3aef78d8aa54344f3adef12d",
+    "fault_mtl/export.py": "04ec22d0b90b7499bd418553f188f1eafeacac33f32e0e89b891b4d4364dd7cd",
+    "fault_mtl/losses.py": "fd98f664a284b3744a5d8a202f156d757579f8d3b1d852e37139d8822150134c",
+    "fault_mtl/metrics.py": "55c9bd21eb89caaaf80bd8a4e5f312e7aa6c10dd06edb0152d1a13628a410003",
+    "fault_mtl/model.py": "1aa94bfdd215cd28dbb8be2dd3144686c2b4cb4c4cd5630b16690d5d5447003f",
+    "fault_mtl/mount_pose.py": "98cba6149fec5c41d7c8b207eaa67d592d2e6814fb6fa5bdabac069178dfbb12",
+    "fault_mtl/prepare_dataset.py": "84a3d8c5349dbade166a118ec2943153ee239bc0b20e53749d4cf8d992ec4cbf",
+    "fault_mtl/preprocessing.py": "60163102420eb7f3fb6844f5a9e83c33711b215603cbdddcc280d2cebc715e5d",
+    "fault_mtl/schema.py": "1639786cc8f2c2c87c17e91c507dcb2d50de9cfc1d41dcd75de29cfd953f9f2c",
+    "fault_mtl/train.py": "a1ef14a2feddad747a86b58eea99b4d3d7bfdd46537578599ccfb5d2a05f4154",
+    "fault_mtl/validate.py": "b11184b453b0c9343f9872079fa3ba0b8f753d376a5eb758318db09ccde017d2",
+    "README.md": "2c75fc04af15c13bc13ab2a46780c40f330512b80caf82078966cc3c2f2ec42e",
+    "requirements-dev.txt": "acfbb379b47875753294fbb66125e81398e95dab916b91cc31eb4e67543a2da3",
+    "requirements.lock.txt": "3bf8e550dff873abf140df9105635c6c3bc01effe3ba767cd86b8d949e069d2c",
+    "requirements.txt": "5e6bf0dbe75833457fe854eca1984a3ad19dd28e9fd6c2086ff7450d76697326",
+    "tests/conftest.py": "e3fa76ff5cdc36dac6ce0ebd307a1bf69b340297bd6e0ac812193a4b2e40cc91",
+    "tests/test_device.py": "d2129b6662bf04089a68f4e7b7298fb4799e4ea2d932fa7ec14e04d869572aad",
+    "tests/test_model.py": "91c3e2a047644ba6299f0daf9465455df61b2a7a89a394392c1be6b45e11d7cc",
+    "tests/test_mount_pose.py": "482543e7cb9f96691fd78c4919b1cbff6d3d22d79c90878aee1f03c4e18d6227",
+    "tests/test_pipeline.py": "8ddccf51ae0b48a92dbab6d49e54178aa0dee6a61a9506aa17e2e9bae143ee9b",
+    "tests/test_preprocessing.py": "a3e89d37284424d2befd36dce2e2300451a7355a5e0606983e74198234cea7d7",
+    "tests/test_v2_compatibility.py": "09b64689af504906dfeb42025d958294257fe6c9e8ad882da7993be3ee5778ee",
+    "tools/fetch_cuda.py": "e1378f4690df54c63d47be5890789860c0876745a5eb7a83b8e8f27150fc58bc"
+  },
+  "design_sha256": {
+    "设计方案.md": "0508d65eff57459b228a6f69b14c38c0bceb8a1d1163ddae152f760f6f8805d6",
+    "F3P部署与量化设计.md": "46cad0b17d636c5dd73f74c4db3290a2cdec27766aa563596476a35517378d62",
+    "首批数据说明.md": "ab2fe5291951986f238a11de47da6a523ce98e3b383f077abdc2a35d6d0da2c3",
+    "缺口处理方案.md": "2a728555f3267d45c8c325febb0b766a4cd73d85bea9c8ed0022b8fad9721ab1"
+  }
+}

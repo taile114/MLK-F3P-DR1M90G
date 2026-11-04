@@ -1,0 +1,322 @@
+== tb_uart_rx ==
+PASS: all 256 byte values received at 115200 baud
+PASS: sender bit periods +/-2 percent decode correctly
+PASS: short false start produces no byte
+PASS: bad stop bit is rejected and reported once
+PASS: valid byte succeeds after stop error recovery
+PASS: continuous low is reported as BREAK without a false byte
+PASS: valid byte succeeds after BREAK recovery
+PASS: reset discards an interrupted byte
+PASS: receiver resumes after reset during a byte
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+PASS: reset in each UART bit discards the interrupted byte
+PASS: each reset phase accepts the next byte after idle recovery
+RESULT tb_uart_rx: PASS=29 FAIL=0 bytes=273
+== tb_temp_parser ==
+PASS: noise before the first A is ignored
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: illegal sign/digit/dot/B/CR/LF preserves the last good sample
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: truncated frame times out once
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: new A resynchronizes a partial frame
+PASS: UART stop error invalidates the partial frame
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: UART BREAK preserves the last temperature
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: enabled stream watchdog marks old data offline
+PASS: stream timeout is reported once per outage
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: reset drops an unfinished frame and its remaining tail
+PASS: complete frame yields exactly one correct signed temperature
+PASS: valid frame establishes online status and clears current error
+PASS: frame counter resets and resumes on valid frames
+RESULT tb_temp_parser: PASS=57 FAIL=0
+== tb_temp_test ==
+PASS: power-on starts without a valid sample or error
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: back-to-back 8N1 frames need no extra byte gap
+PASS: bad ASCII grammar preserves temperature and records format error
+PASS: malformed frame changes the status and error LEDs
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: missing frame tail reaches the real 2 ms inter-byte timeout
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: a new header recovers from a partial frame over UART
+PASS: bad physical stop bit cannot create a byte or temperature
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: BREAK is detected and retains the last valid sample
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: default disabled stream timeout permits unknown reporting intervals
+PASS: reset drops a partial frame and ignores its tail
+PASS: UART frame produces one correct signed sample
+PASS: successful frame lights status/sample LEDs and clears error LED
+PASS: top-level frame counter resets and resumes
+PASS: 50 MHz CWC capture sees every byte, sample, and UART error exactly once
+RESULT tb_temp_test: PASS=40 FAIL=0 bytes=167 frames=16 debug_bytes=167 debug_frames=16
+== tb_fast ==
+  [PASS] ID 自检通过（读到 0xE5）
+  [PASS] DEVID ������������
+  [PASS] BW_RATE������� 0x0F
+  [PASS] TA_FORMAT 写入 0x4B（3 线）
+  [PASS] INT_ENABLE������� 0x80
+  [PASS] POWER_CTL������� 0x08
+  [PASS] ��������������������������������
+  [PASS] X����������������
+  [PASS] Y����������������
+  [PASS] Z����������������
+ PASS = 10   FAIL = 0
+== tb_spi_l3 ==
+  [PASS] 1 SCLK 半周期 = (CLK_DIV+1)/2
+  [PASS] �选到首个时钟 >= DELAY_CNT
+  [PASS] L3 ������������ 16 ������������
+  [PASS] 两次传输间片选高 >= 5 us
+ PASS = 4   FAIL = 0
+== tb_spi_spec ==
+  [PASS] L1 命令位序列与发送值一致
+  [PASS] L2 SCLK 半周期 100 ns，占空比 50%
+== tb_ads1115 ==
+PASS: MSB-first positive sample 0x1234
+PASS: zero sample after a new conversion
+PASS: positive full-scale code
+PASS: power-up wait is 10 ms at 100 MHz
+PASS: A0/GND, +/-4.096 V, continuous, 860 SPS
+PASS: configuration readback matches (OS masked)
+PASS: one config write for continuous streaming
+PASS: device keeps converting after config
+PASS: each two-byte read ends with ACK then NACK
+PASS: register reads use repeated START and a single STOP
+PASS: 100 kHz bus verified over more than 100 periods
+PASS: read cadence follows the 860 SPS period (~1163 us)
+PASS: config LED on, error LED off, zero errors
+RESULT tb_ads1115: PASS=13 FAIL=0 samples=3
+== tb_ads1115_faults ==
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: absent device actually withheld bus ACK
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: selected write byte was NACKed on the bus
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: selected write byte was NACKed on the bus
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: selected write byte was NACKed on the bus
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: selected write byte was NACKed on the bus
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: read address was NACKed on the bus
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: configuration mismatch is distinct from ACK failure
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: fault has the expected error code
+PASS: fault clears config status and lights error LED
+PASS: failed transaction emits no sample
+PASS: one failed acquisition increments sticky counter once
+PASS: retry yields the signed, MSB-first differential sample
+PASS: successful sample clears current error and restores config status
+PASS: error history survives successful recovery
+PASS: reset clears old sample and fault state
+PASS: fresh acquisition succeeds after reset during transfer
+PASS: sampling continues after recovery
+RESULT tb_ads1115_faults: PASS=73 FAIL=0
+== tb_encoder_uart ==
+PASS tb_encoder_uart checks=28 rx=24 errors=2 default_bit_clocks=10417
+== tb_encoder_rpm ==
+PASS tb_encoder_rpm checks=215
+== tb_encoder_modbus ==
+PASS tb_encoder_modbus checks=2762 samples=9 errors=15
+== tb_alarm_sequencer ==
+PASS alarm_sequencer checks=421
+== tb_timebase ==
+RESULT tb_timebase PASS=19 FAIL=0 cycles=800017 ticks=8 frames=7
+== tb_time_features ==
+RESULT tb_time_features N=256 PASS=138 FAIL=0 windows=17 max_busy=7084
+== tb_time_features_LOGN=9 ==
+RESULT tb_time_features N=512 PASS=266 FAIL=0 windows=33 max_busy=8364
+== tb_fft_WINDOW=0 ==
+RESULT tb_fft N=256 Hann=0 PASS=5376 FAIL=0 max_first_bin=8198
+== tb_fft ==
+RESULT tb_fft N=256 Hann=1 PASS=5376 FAIL=0 max_first_bin=8198
+== tb_fft_LOGN=9_WINDOW=0 ==
+RESULT tb_fft N=512 Hann=0 PASS=10752 FAIL=0 max_first_bin=18440
+== tb_fft_LOGN=9 ==
+RESULT tb_fft N=512 Hann=1 PASS=10752 FAIL=0 max_first_bin=18440
+== tb_axi_lite_reg ==
+RESULT tb_axi_lite_reg PASS=2582 FAIL=0 IRQ=7
+== tb_fpga_top ==
+RESULT tb_fpga_top PASS=24 FAIL=0
+== tb_encoder_top ==
+PASS tb_encoder_top checks=518 packets=3
+== tb_cdc_soc ==
+RESULT tb_cdc_soc PASS=3 FAIL=0
+== tb_sensor_soc_axi ==
+RESULT tb_sensor_soc_axi PASS=228 FAIL=0
+== tb_speed_channel ==
+== phase 1: reset values / ID / RO window
+== phase 2: FC06 configure
+== phase 3: forward 1000
+== phase 4: reverse -4096
+== phase 5: zero speed
+== phase 6: CRC error keeps last good
+== phase 7: modbus exception
+== phase 8: recovery 111612
+== phase 9: saturation both signs
+== phase 10: read consistency
+== phase 11: DMA record of a real event
+== phase 12: vibration then speed
+== phase 13: speed then vibration
+== phase 14: record drop while pending
+== phase 15: soft reset clears window
+RESULT tb_speed_channel PASS=10941 FAIL=0
+== tb_speed_soc ==
+== phase 1: reset values / ID
+== phase 2: FC06 configure over the pins
+== phase 3: forward 1000 through the real datapath
+== phase 4: reverse -1000
+== phase 5: zero speed
+== phase 6: bad CRC reply
+== phase 7: recovery 2000
+RESULT tb_speed_soc PASS=5584 FAIL=0
+== tb_vibration_fft ==
+RESULT tb_vibration_fft PASS=5 FAIL=0
+== tb_vibration_fft_WINDOW=0 ==
+RESULT tb_vibration_fft PASS=5 FAIL=0
+== tb_vibration_fft_LOGN=9 ==
+RESULT tb_vibration_fft PASS=5 FAIL=0
+== tb_vibration_fft_LOGN=9_WINDOW=0 ==
+RESULT tb_vibration_fft PASS=5 FAIL=0
+== tb_sensor_dma ==
+RESULT tb_sensor_dma PASS=3699 FAIL=0
+== tb_npu_hp1_write_mux ==
+PASS: HP1 writes, IDs, bursts, arbitration, stalls, SLVERR, reset (16 bursts)
+== tb_dma_ring_irq ==
+RESULT tb_dma_ring_irq PASS=360 FAIL=0 IRQ_RISE=5
+== tb_spectrum_window ==
+RESULT tb_spectrum_window LOGN=8 BINS=256 PASS=6776 FAIL=0
+== tb_spectrum_window_LOGN=9 ==
+RESULT tb_spectrum_window LOGN=9 BINS=512 PASS=13176 FAIL=0
+== tb_board_test ==
+ALL PASS: board_test_top 四组向量在容差内，LED 三态与故障注入均符合预期
+全部仿真完成，日志：out/sim/

@@ -1,0 +1,25 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "command",
+      "command": "tar -cf /data/mlk_f3p/validation/ff6-app-results.tar -C /data/mlk_f3p/validation/ff6-app .; wc -l /data/mlk_f3p/validation/ff6-app/cpu.csv /data/mlk_f3p/validation/ff6-app/ff6.csv; umount /mnt/mmcblk1p1; umount /mnt/mmcblk1p2",
+      "output": "369 /data/mlk_f3p/validation/ff6-app/cpu.csv\r\n      369 /data/mlk_f3p/validation/ff6-app/ff6.csv\r\n      738 total",
+      "exit_code": 0
+    },
+    {
+      "chunk_bytes": 65536,
+      "kernel_console_level_during_chunk": 1,
+      "verified": true,
+      "remote_path": "/data/mlk_f3p/validation/ff6-app-results.tar",
+      "local_path": "E:/competion/code/out/ff6-app-board-results.tar",
+      "console_level_restored_after_each_chunk": true,
+      "sha256": "79f25e6b50b53fee970f7ef11ac4892c0fd1c7d14eafb3293d95f660709f035e",
+      "bytes": 49664,
+      "operation": "download"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

@@ -1,0 +1,13 @@
+# Local classification/grading Python sources and generated model artifacts.
+*.py
+!/deploy/*.py
+*.pyc
+*.pt
+*.pth
+*.onnx
+*.npz
+*.npy
+
+# Keep dataset documentation, not captures, labels or derived datasets.
+/data/*
+!/data/README.md

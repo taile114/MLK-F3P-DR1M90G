@@ -1,0 +1,34 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "test -c /dev/hard_npu && test -d /mnt/mmcblk0p2/npu-tests/real-weights-v1-serial",
+      "exit_code": 0,
+      "operation": "command",
+      "output": ""
+    },
+    {
+      "verified": true,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/real-weights-v1-serial/real-weight-arm64.tar.gz",
+      "operation": "upload",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-real-weight-arm64-v1.tar.gz",
+      "sha256": "33e307341cb0a99bfd50582da5d044c1b251b0bc16ecc5fac92ca7cbcc15286a",
+      "bytes": 352766
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/real-weights-v1-serial' && gzip -dc real-weight-arm64.tar.gz | tar -xf -",
+      "exit_code": 0,
+      "operation": "command",
+      "output": ""
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/real-weights-v1-serial/f3p-real-weight-v1' && sha256sum -c checksums.sha256 > package-check.log && echo package_checksum_passed && sh run.sh first",
+      "exit_code": 0,
+      "operation": "command",
+      "output": "package_checksum_passed\r\n[ 1133.638805] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 1133.638901] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\ncase=w00 backend=CpuRef exit_code=0\r\ncompute_layer_type=FullyConnected actual_backend=CpuRef\r\nresult=passed samples=3 max_error_lsb=0 mismatches=0 fp32_branch_rmse=0.01677999493 fp32_branch_max_abs=0.05311504006 mean_enqueue_sync_us=350.57 full_rul_npu_verified=false\r\n[ 1133.739448] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 1133.739539] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\ncase=w00 backend=Alnpu exit_code=0\r\ncompute_layer_type=ALHardNPU actual_backend=Alnpu\r\nresult=passed samples=3 max_error_lsb=1 mismatches=0 fp32_branch_rmse=0.02409007768 fp32_branch_max_abs=0.06099021435 mean_enqueue_sync_us=378.96 full_rul_npu_verified=false\r\nresult=group_finished exit_code=0 results=/mnt/mmcblk0p2/npu-tests/real-weights-v1-serial/f3p-real-weight-v1/results_first_19700101_001852_3965"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

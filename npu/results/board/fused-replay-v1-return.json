@@ -1,0 +1,11 @@
+{
+  "archive_bytes": 1298288,
+  "archive_sha256": "f8fbd88e71fe0e10fb17cef977df43d8666858fa6ee5ed0f9ad0dae2cc768d7c",
+  "raw_files": 457,
+  "serial_port": "COM4",
+  "chunk_bytes": 65536,
+  "console_loglevel_before_and_after": 8,
+  "console_loglevel_restored": true,
+  "kernel_ring_log_retained": true,
+  "file_inventory": "fused-replay-v1-files-sha256.json"
+}

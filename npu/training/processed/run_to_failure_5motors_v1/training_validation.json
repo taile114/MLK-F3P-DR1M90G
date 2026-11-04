@@ -1,0 +1,147 @@
+{
+  "status": "pass",
+  "python": "3.12.14 (main, Sep  1 2026, 14:17:39) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.8.0+cpu",
+  "numpy": "2.3.5",
+  "device": "cpu",
+  "split_checks": {
+    "train": {
+      "samples": 543,
+      "input_shape": [
+        543,
+        23,
+        110
+      ],
+      "label_shape": [
+        543,
+        1
+      ],
+      "finite": true,
+      "motor_ids": [
+        2,
+        3,
+        5
+      ],
+      "traceability_spot_checks": "pass"
+    },
+    "val": {
+      "samples": 184,
+      "input_shape": [
+        184,
+        23,
+        110
+      ],
+      "label_shape": [
+        184,
+        1
+      ],
+      "finite": true,
+      "motor_ids": [
+        6
+      ],
+      "traceability_spot_checks": "pass"
+    },
+    "test": {
+      "samples": 165,
+      "input_shape": [
+        165,
+        23,
+        110
+      ],
+      "label_shape": [
+        165,
+        1
+      ],
+      "finite": true,
+      "motor_ids": [
+        7
+      ],
+      "traceability_spot_checks": "pass"
+    }
+  },
+  "motor_separation": "pass",
+  "board_replay_byte_comparison": "pass",
+  "one_step": {
+    "status": "pass",
+    "batch_size": 8,
+    "loss": 192.84425354003906,
+    "finite_gradients": true,
+    "parameter_updated": true,
+    "unused_parameters_in_original_forward": [
+      "fusion",
+      "linear_t.base_weight",
+      "linear_t.spline_weight"
+    ]
+  },
+  "short_training_epochs": 3,
+  "short_training_history": [
+    {
+      "epoch": 1,
+      "train_mse": 112.50322970676598,
+      "val_rmse": 7.220548629760742
+    },
+    {
+      "epoch": 2,
+      "train_mse": 53.83276287099933,
+      "val_rmse": 6.968172073364258
+    },
+    {
+      "epoch": 3,
+      "train_mse": 52.9809486571816,
+      "val_rmse": 6.477964878082275
+    }
+  ],
+  "checkpoint_reload_and_prediction": "pass",
+  "test_metrics_not_final_accuracy": {
+    "rmse": 6.2320027351379395,
+    "mae": 5.320542335510254,
+    "n": 165
+  },
+  "small_batch_capacity": {
+    "status": "pass",
+    "initial_mse": 236.98583984375,
+    "final_mse": 0.003967874217778444,
+    "ratio": 1.6743085664504477e-05,
+    "samples": 8,
+    "labels": [
+      0.0,
+      3.0,
+      7.0,
+      10.0,
+      13.0,
+      17.0,
+      20.0,
+      26.0
+    ],
+    "steps": 50,
+    "dropout_disabled_for_this_diagnostic": true,
+    "curve": [
+      {
+        "step": 25,
+        "mse": 7.669023513793945
+      },
+      {
+        "step": 50,
+        "mse": 0.003967874217778444
+      }
+    ]
+  },
+  "model_source_unchanged": true,
+  "source_sha256": {
+    "fkp_dvgt\\cli.py": "f331b1f2b4fcb93c808905cebafd8bce2c92a6ed8f545d56ca9037f9323c35cb",
+    "fkp_dvgt\\config.py": "afd937301ae7cdda348316216657c3cbea377cd69995cdee3ca6399968ce8574",
+    "fkp_dvgt\\data.py": "93c4c9504d0a40bc6c0015b945c5314684324ae288c779e7cb4203b6e57b2ed2",
+    "fkp_dvgt\\engine.py": "1abfb2f894517e8b146fee6d23c51948d8056b6697842383348efa75021fcd51",
+    "fkp_dvgt\\features.py": "8264d0dd12dda2413dd9c3725677c9977b743bea802836b7d8b42ebda121e3a4",
+    "fkp_dvgt\\graph.py": "27d6a469ea92f71ac9c9ab082b27bc9c173c1a9c52beb9d49ca4993194b594de",
+    "fkp_dvgt\\interpret.py": "5fecc5ecd0eb63e98a631246a671f3399af77e76876147399e9cc43655c0c0c7",
+    "fkp_dvgt\\metrics.py": "ce8ba60adc464feea2ca554c85610c4dbb43cf24a228539418fdbb4b68e79c72",
+    "fkp_dvgt\\model.py": "bca461a3269e6379ce999ad462a66b0108386537880121da18b12616e9a112e3",
+    "fkp_dvgt\\plotting.py": "675e38d31de114c72d13462a7f0a3461b7f2d573ebc3dcc97c82ee865ecf767a",
+    "fkp_dvgt\\preprocess.py": "484b05397ff9d468ed18c1915cf8c4da22bd98127d70f95c906a8ee8ecf01df0",
+    "fkp_dvgt\\uncertainty.py": "1179c3c5d54bdaa3ee2f7a18dc7db80ee42f64647658311f0ecd477ad5d693f4",
+    "fkp_dvgt\\__init__.py": "f5b75d9b5944c1677fdcada22d9859b6163d73a561d8e554ada813717647378a"
+  },
+  "elapsed_seconds": 43.287799899999754,
+  "purpose": "data compatibility and trainability smoke check; not a final model evaluation"
+}

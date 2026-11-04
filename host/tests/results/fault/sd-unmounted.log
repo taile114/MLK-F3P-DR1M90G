@@ -1,0 +1,5 @@
+NAME          SIZE RO FSTYPE SERIAL       MOUNTPOINT
+sdb    31299993600  1        121220160204 
+├─sdb1   103809024  1 vfat                
+└─sdb2 31195136000  1 ext4                
+synced_unmounted_temporary_rule_removed_safe_to_remove

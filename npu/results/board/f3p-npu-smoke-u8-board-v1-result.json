@@ -1,0 +1,132 @@
+{
+  "scope": "Physical F3P u8 serial summary plus independently recovered CSV, DOT, profile and interrupt snapshots",
+  "source_log_sha256": "02117f94a50dab9691b24c6c7633dc9b3c75e72d671b585d6fc1e7b90749f3b1",
+  "archive_sha256": "214e781c2eee4f19bf9d263d74c32ce045ad0c25fbf03a92576729a9b6d2a824",
+  "board_result_directory": "/mnt/mmcblk0p2/npu-tests/f3p-npu-smoke-v1/results_u8_19700101_003311_321",
+  "case": "u8",
+  "layout": "NCHW",
+  "input_output_shape": [
+    1,
+    8,
+    8,
+    8
+  ],
+  "kernel": [
+    3,
+    3
+  ],
+  "input_output_scale": 0.25,
+  "input_output_zero_point": 128,
+  "weight_scale": 0.125,
+  "input_output_type": "QAsymmU8",
+  "weight_type": "QAsymmU8",
+  "bias_type": "Signed32",
+  "runs": {
+    "CpuRef": {
+      "case": "u8",
+      "backend": "CpuRef",
+      "exit_code": 0,
+      "iterations": [
+        {
+          "iteration": 0,
+          "output_elements": 512,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "enqueue_us": 1651.74
+        },
+        {
+          "iteration": 1,
+          "output_elements": 512,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "enqueue_us": 1465.35
+        },
+        {
+          "iteration": 2,
+          "output_elements": 512,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "enqueue_us": 1422.12
+        }
+      ],
+      "max_error_lsb": 0,
+      "tolerance_lsb": 1,
+      "mismatches": 0,
+      "mean_enqueue_us": 1513.07,
+      "cpu_fallback_allowed": false,
+      "npu_requested": false,
+      "reported_compute_layer": "Convolution2d"
+    },
+    "Alnpu": {
+      "case": "u8",
+      "backend": "Alnpu",
+      "exit_code": 0,
+      "iterations": [
+        {
+          "iteration": 0,
+          "output_elements": 512,
+          "max_error_lsb": 1,
+          "mismatches": 0,
+          "enqueue_us": 337.62
+        },
+        {
+          "iteration": 1,
+          "output_elements": 512,
+          "max_error_lsb": 1,
+          "mismatches": 0,
+          "enqueue_us": 162.48
+        },
+        {
+          "iteration": 2,
+          "output_elements": 512,
+          "max_error_lsb": 1,
+          "mismatches": 0,
+          "enqueue_us": 156.72
+        }
+      ],
+      "max_error_lsb": 1,
+      "tolerance_lsb": 1,
+      "mismatches": 0,
+      "mean_enqueue_us": 218.94,
+      "cpu_fallback_allowed": false,
+      "npu_requested": true,
+      "reported_compute_layer": "ALHardNPU"
+    }
+  },
+  "interrupts": {
+    "HARD_NPU_IRQ": {
+      "irq": 41,
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        3,
+        0
+      ],
+      "total_delta": 3
+    },
+    "SOFT_NPU_IRQ": {
+      "irq": 42,
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "total_delta": 0
+    }
+  },
+  "observed_CpuRef_to_Alnpu_enqueue_time_ratio": 6.910888827989403,
+  "performance_scope": "Three profiled enqueue calls of a tiny convolution; not controlled steady-state benchmarking and not a full-model speedup",
+  "hardware_hard_npu_convolution_verified": true,
+  "soft_npu_execution_verified": false,
+  "board_csv_dot_profile_retrieved": true,
+  "rul_model_used": false,
+  "rul_model_on_npu_verified": false,
+  "other_quantization_types": "u8_s8 and s8 rejected during optimize on physical Alnpu; CPU controls passed",
+  "board_result_files_retrieved": true,
+  "recovered_verification": "f3p-npu-smoke-recovered-v1-verification.json"
+}

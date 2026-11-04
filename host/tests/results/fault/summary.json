@@ -1,0 +1,140 @@
+{
+  "schema": "mlk.fault.offline_acceptance.v1",
+  "model": "f3p-fault-single-v1",
+  "environment": {
+    "os": "Ubuntu 18.04 x86-64 VMware",
+    "compiler": "Linaro GCC 7.5-2019.12",
+    "armnn": "32.1.0",
+    "qt": "5.13.2",
+    "qemu": "6.2 user-static"
+  },
+  "aarch64_binaries": {
+    "libmlk_fault.so": {
+      "architecture": "AArch64",
+      "class": "ELF64",
+      "endian": "little",
+      "sha256": "a048ed1afb8f16ffebcb06874f9da5ccacdcb4554a13e34b2c3b35e8dcb3318a"
+    },
+    "fault_check": {
+      "architecture": "AArch64",
+      "class": "ELF64",
+      "endian": "little",
+      "sha256": "c72393f27789d2f0c2ca8f4902c99ec33d32b79f52c98f4b05d209f8675376e7",
+      "interpreter": "/lib/ld-linux-aarch64.so.1"
+    },
+    "mlk_ps_local": {
+      "architecture": "AArch64",
+      "class": "ELF64",
+      "endian": "little",
+      "sha256": "0df57fa0d4aa4002deca8f15f1293ad0d81b6d0d2d826436e616411c051ca400",
+      "interpreter": "/lib/ld-linux-aarch64.so.1"
+    }
+  },
+  "library": {
+    "strict_link_z_defs": true,
+    "needed_armnn_soname": "libarmnn.so.32",
+    "paired_library_file": "libarmnn.so.32.1",
+    "paired_library_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce",
+    "exports": [
+      "mlk_fault_abi",
+      "mlk_fault_create",
+      "mlk_fault_predict",
+      "mlk_fault_destroy"
+    ]
+  },
+  "qemu_cpu": {
+    "schema": "mlk.fault.runtime_check.v1",
+    "root": "/home/uisrc/mlk-fault-integration/runtime",
+    "samples": 360,
+    "backend_requested": 1,
+    "backend_reported": 1,
+    "class_correct": 360,
+    "joint_correct": 356,
+    "class_accuracy": 1,
+    "joint_accuracy": 0.988889,
+    "macro_class_accuracy": 1,
+    "reference_mismatch": 0,
+    "mean_infer_us": 501467,
+    "median_infer_us": 494847,
+    "p95_infer_us": 624804,
+    "max_infer_us": 717048,
+    "confusion_target_by_prediction": [
+      [
+        66,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        75,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        80,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        58,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        81
+      ]
+    ]
+  },
+  "native_vs_qemu": {
+    "samples": 360,
+    "class_or_grade_mismatches": 0
+  },
+  "qt_tests": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "real_evaluation_samples": 360,
+    "class_correct": 360,
+    "joint_correct": 356,
+    "window_size": [
+      1920,
+      1080
+    ],
+    "production_theme": true
+  },
+  "arm_qt_smoke": {
+    "api_socket_ready": true,
+    "bounded_timeout_exit": 124,
+    "scope": "dynamic loader and application initialization; no hardware acceptance"
+  },
+  "staging": {
+    "sealed_assets": true,
+    "aarch64_check": true,
+    "previous_version_retained": true,
+    "idempotent": true,
+    "tamper_rejected_without_switch": true,
+    "explicit_environment_overrides_defaults": true
+  },
+  "runtime_manifest_sha256": "3c4b13fb11100aac838bcb1d16fefc33a79efbded9b46185d0e06e45b1c0a0a8",
+  "pending": [
+    "board CPU and NPU replay",
+    "board hard NPU assignment and IRQ evidence",
+    "raw nine-output and per-convolution comparison",
+    "board CMA lifecycle",
+    "board HDMI and remote-PC integration",
+    "real capture preprocessing comparison",
+    "DMA, storage and long-run coexistence"
+  ],
+  "timing_scope": "VM and QEMU timings do not represent board performance"
+}

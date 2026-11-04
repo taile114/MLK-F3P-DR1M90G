@@ -1,0 +1,26 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "[ 3105.824500] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 3105.824586] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=10 warmup=5 max_reference_error=0.03055000305 mismatches=10 rmse=4.406728706 mae=4.364423752 mean_forward_us=45868.6115 timed_allocation_calls=784 timed_allocation_bytes=27396 NPU_layers=2 max_integer_lsb=1 integer_audit=1\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v2/results_hybrid_19700101_005144_4056",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v2 && sh run.sh hybrid 10"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "[ 3107.671892] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 3107.671983] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nresult=inference_completed mode=hybrid samples=184 warmup=5 max_reference_error=0.03055000305 mismatches=182 rmse=2.467976508 mae=1.979486184 mean_forward_us=45408.22235 timed_allocation_calls=13312 timed_allocation_bytes=451608 NPU_layers=2 max_integer_lsb=1 integer_audit=1\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v2/results_hybrid_19700101_005146_4072",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v2 && sh run.sh hybrid 0"
+    },
+    {
+      "exit_code": 0,
+      "operation": "command",
+      "output": "results_hybrid_19700101_005046_4040/predictions.csv\r\n0,21.43906021,21.45799828,0.01893806458,25,45630.87,136,5454,118784\r\nresults_hybrid_19700101_005144_4056/predictions.csv\r\n9,20.33237076,20.35552979,0.0231590271,24,45831.991,72,2438,118784\r\nresults_hybrid_19700101_005146_4072/predictions.csv\r\n183,0.7017450929,0.7044879198,0.002742826939,0,45434.16,72,2438,118784\r\nMemAvailable:     811268 kB\r\nCmaTotal:         131072 kB\r\nCmaFree:          124436 kB",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v2; for f in results_hybrid_*/predictions.csv; do echo \"$f\"; tail -n 1 \"$f\"; done; grep -E \"MemAvailable|Cma\" /proc/meminfo"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#526777"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="30" y="30" width="420" height="130" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="240.0" y="66.14" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="26" fill="#243B53" text-anchor="middle">
+<tspan x="240.0" dy="0">10次观测×11通道×23特征</tspan>
+<tspan x="240.0" dy="37.699999999999996">训练集归一化</tspan>
+<tspan x="240.0" dy="37.699999999999996">板端输入 [1,23,110]</tspan>
+</text>
+<rect x="550" y="30" width="820" height="130" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="960.0" y="84.22" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="28" fill="#243B53" text-anchor="middle">
+<tspan x="960.0" dy="0">KAN特征变换＋逐传感器23→1融合</tspan>
+<tspan x="960.0" dy="40.6">10×11矩阵＋全局节点＋位置编码 → 11×12</tspan>
+</text>
+<path d="M450,95 L550,95" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="260" width="560" height="180" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="350.0" y="318.91999999999996" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="28" fill="#243B53" text-anchor="middle">
+<tspan x="350.0" dy="0">时间视图 TVGT</tspan>
+<tspan x="350.0" dy="40.6">观测间相关图＋多头注意力</tspan>
+<tspan x="350.0" dy="40.6">KAN前馈 / 归一化 / 残差</tspan>
+</text>
+<rect x="770" y="260" width="560" height="180" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1050.0" y="318.91999999999996" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="28" fill="#243B53" text-anchor="middle">
+<tspan x="1050.0" dy="0">空间视图 SVGT</tspan>
+<tspan x="1050.0" dy="40.6">传感器相关图＋多头注意力</tspan>
+<tspan x="1050.0" dy="40.6">KAN前馈 / 归一化 / 残差</tspan>
+</text>
+<path d="M960,160 L960,205 L350,205 L350,260" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M630,350 L770,350" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1050,440 L1050,490 L350,490 L350,440" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="700" y="535" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="700" dy="0">时间与空间块交替，共2组；每视图3头，d_model=21</tspan>
+</text>
+<rect x="70" y="600" width="560" height="125" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="350.0" y="652.1049999999999" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="350.0" dy="0">展平132 → KAN64 → GELU → KAN1</tspan>
+<tspan x="350.0" dy="39.15">输出RUL：观测老化试验轮次</tspan>
+</text>
+<path d="M1330,350 L1370,350 L1370,565 L350,565 L350,600" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="770" y="600" width="560" height="125" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1050.0" y="652.1049999999999" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="1050.0" dy="0">FF6：四个前馈首层样条FC</tspan>
+<tspan x="1050.0" dy="39.15">＋两个回归头样条FC → 硬NPU</tspan>
+</text>
+<text x="700" y="805" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="28" fill="#243B53" text-anchor="middle">
+<tspan x="700" dy="0">其余样条基、图注意力与归一化等计算保留CPU路径</tspan>
+</text>
+<text x="700" y="870" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle" font-weight="bold">
+<tspan x="700" dy="0">当前部署为确定性点预测；MC Dropout及随机图区间未上板</tspan>
+</text>
+</svg>

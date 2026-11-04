@@ -1,0 +1,13 @@
+********* Start testing of FaultTest *********
+Config: Using QtTest library 5.13.2, Qt 5.13.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 5.3.1 20160406 (Red Hat 5.3.1-6))
+PASS   : FaultTest::initTestCase()
+FAIL!  : FaultTest::dmaRingRecoversSlowPollsAndOwnsSnapshot() Compared values are not the same
+   Actual   (seq)     : 3
+   Expected (expected): 1
+   Loc: [../host/tests/test_fault.cpp(69)]
+FAIL!  : FaultTest::nativeWindowGapsUseFrozenQualityGates() 'preprocessor.build(window, out, &error)' returned FALSE. (窗口质量不足：gap)
+   Loc: [../host/tests/test_fault.cpp(119)]
+PASS   : FaultTest::cleanupTestCase()
+Totals: 2 passed, 2 failed, 0 skipped, 0 blacklisted, 56ms
+********* Finished testing of FaultTest *********
+baseline_two_regressions_reproduced

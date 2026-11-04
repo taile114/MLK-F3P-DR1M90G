@@ -1,0 +1,38 @@
+requested_backend=Alnpu,CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=184 profile_first_window=1 available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=build_segment_0 begin
+segment=0 physical_npu_layers=0
+segment=0 optimizer_messages=834
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+segment=1 physical_npu_layers=0
+segment=1 optimizer_messages=289
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+segment=2 physical_npu_layers=0
+segment=2 optimizer_messages=289
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+segment=3 physical_npu_layers=0
+segment=3 optimizer_messages=289
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+segment=4 physical_npu_layers=1
+segment=4 optimizer_messages=110
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+segment=5 physical_npu_layers=1
+segment=5 optimizer_messages=47
+stage=build_segment_5 passed
+sample=0 prediction=21.43906212 reference=21.45799828 absolute_error=0.01893615723
+sample=9 prediction=20.33237076 reference=20.35552979 absolute_error=0.0231590271
+sample=19 prediction=22.07096863 reference=22.08405685 absolute_error=0.01308822632
+sample=29 prediction=18.79592133 reference=18.81482697 absolute_error=0.01890563965
+sample=39 prediction=21.36343002 reference=21.37691498 absolute_error=0.01348495483
+sample=49 prediction=14.50354767 reference=14.52212811 absolute_error=0.01858043671
+sample=59 prediction=14.92372417 reference=14.94472313 absolute_error=0.02099895477
+sample=69 prediction=12.43323708 reference=12.45005512 absolute_error=0.01681804657
+sample=79 prediction=15.81241226 reference=15.82514381 absolute_error=0.01273155212
+sample=89 prediction=7.529583931 reference=7.545241833 absolute_error=0.01565790176
+Error: cma_mem alloc failed
+Error: buff is: ".size = 0x227818, .flags = 0, .phys_addr = 0x0, .base = 0x0, .virt_addr = 0x0"
+result=failed stage=inference error=cma alloc failed

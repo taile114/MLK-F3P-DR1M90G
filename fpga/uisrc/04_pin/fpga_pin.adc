@@ -1,0 +1,37 @@
+# fpga_top 顶层引脚约束（MLK-F3P-DR1M90G / DR1M90GEG400）
+#
+# 四路传感器共用底板 100 MHz 时钟，温度、振动、电流信号在 J12 上互不共用：
+#   温度 GT-M601  UART RX
+#   振动 ADXL345  SPI SCLK / SDIO / CS_N / INT1
+#   电流 ADS1115  I2C SCL / SDA
+#   转速 RS485 与 PL USB UART 的附加约束见 encoder_pin.adc。
+#
+# J12 网络与球号取自核心板 pinlist（PL-GPIO 连接器管脚定义表），
+# J12/BANK11 固定 3.3 V，故 J12 信号均取 LVCMOS33。
+
+set_pin_assignment { I_sysclk } { LOCATION = H16; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+
+# 温度：模块 TX -> PL RX（J12.5）。空闲为高，弱上拉保证未接时为 UART 空闲。
+set_pin_assignment { I_uart_rx } { LOCATION = T9; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+
+# 振动：ADXL345 三线 SPI。
+# SDIO 为双向数据线，模块侧已有 10 k 上拉，内部上下拉关闭以避免分压。
+set_pin_assignment { O_spi_sclk  } { LOCATION = Y12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { IO_spi_sdio } { LOCATION = Y13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_spi_cs_n  } { LOCATION = U10; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { I_int1      } { LOCATION = T5;  IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+
+# 电流：ADS1115 I2C。SCL / SDA 开漏，高电平由模块侧上拉提供，内部上下拉关闭。
+set_pin_assignment { IO_iic_scl } { LOCATION = V6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { IO_iic_sda } { LOCATION = W6; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# 板上 LED：LED1/LED2 上拉至 VCC_ADJ（BANK32，发货默认 1.8 V），取 LVCMOS18；
+# LED3(J15)/LED4(M20) 上拉至 VCC_3V3（BANK33），取 LVCMOS33。
+# 硬件手册把 LED1/LED2 标为 LVCMOS33，与原理图不一致，以原理图为准。
+set_pin_assignment { O_led[0] } { LOCATION = T19; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[1] } { LOCATION = R19; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[2] } { LOCATION = J15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[3] } { LOCATION = M20; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# 声光告警：J12.11 / CEP1_5P / U7，BANK11 固定 3.3 V，高电平有效。
+set_pin_assignment { O_alarm } { LOCATION = U7; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLDOWN; }

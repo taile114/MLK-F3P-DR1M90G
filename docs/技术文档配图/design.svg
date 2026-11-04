@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="550" viewBox="0 0 1400 550">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#526777"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="25" y="45" width="300" height="145" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="175.0" y="107.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="175.0" dy="0">赛题与指标</tspan>
+<tspan x="175.0" dy="39.15">功能边界 / 验收口径</tspan>
+</text>
+<rect x="375" y="45" width="300" height="145" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="525.0" y="107.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="525.0" dy="0">硬件与接口</tspan>
+<tspan x="525.0" dy="39.15">器件 / 引脚 / 时基</tspan>
+</text>
+<rect x="725" y="45" width="300" height="145" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="875.0" y="107.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="875.0" dy="0">PL与Linux</tspan>
+<tspan x="875.0" dy="39.15">协议 / 特征 / 驱动</tspan>
+</text>
+<rect x="1075" y="45" width="300" height="145" rx="8" fill="#EAF1F8" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1225.0" y="107.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="1225.0" dy="0">应用与存储</tspan>
+<tspan x="1225.0" dy="39.15">显示 / 网络 / 加密</tspan>
+</text>
+<rect x="1075" y="315" width="300" height="145" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="1225.0" y="377.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="1225.0" dy="0">模型准备</tspan>
+<tspan x="1225.0" dy="39.15">数据 / 训练 / 校准</tspan>
+</text>
+<rect x="725" y="315" width="300" height="145" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="875.0" y="377.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="875.0" dy="0">异构移植</tspan>
+<tspan x="875.0" dy="39.15">算子 / 数值 / 资源</tspan>
+</text>
+<rect x="375" y="315" width="300" height="145" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="525.0" y="377.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="525.0" dy="0">整机验证</tspan>
+<tspan x="525.0" dy="39.15">实采 / 工单 / 长跑</tspan>
+</text>
+<rect x="25" y="315" width="300" height="145" rx="8" fill="#E9F4F0" stroke="#9AAFC1" stroke-width="2"/>
+<text x="175.0" y="377.105" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="27" fill="#243B53" text-anchor="middle">
+<tspan x="175.0" dy="0">冻结交付</tspan>
+<tspan x="175.0" dy="39.15">版本 / 文档 / 证据</tspan>
+</text>
+<path d="M325,117 L375,117" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M675,117 L725,117" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1025,117 L1075,117" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1225,190 L1225,315" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1075,387 L1025,387" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M725,387 L675,387" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M375,387 L325,387" fill="none" stroke="#526777" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="700" y="260" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="28" fill="#243B53" text-anchor="middle" font-weight="bold">
+<tspan x="700" dy="0">每项结论对应数据来源与可复核记录</tspan>
+</text>
+</svg>

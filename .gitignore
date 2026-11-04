@@ -1,0 +1,42 @@
+# vendor hardware pack
+/docs/MLK-F3P-DR1M90G-Resource/
+/docs/ADXL345/
+/docs/ADS1115/
+/docs/M601/
+/platform/baremetal-sdk/
+/platform/factory-image/
+/platform/flash/vendor/
+/host/vendor/
+
+# python
+__pycache__/
+*.pyc
+
+# agent session state
+/.omo/
+
+# editor / OS
+/.dide/
+*.swp
+.DS_Store
+
+# Anlogic TD transient files
+/fpga/uisrc/.lock.f
+/fpga/uisrc/log/
+*_Runs/
+
+# Anlogic FD transient files
+/log/
+
+# agent team session state
+/.agent-teams/
+/audit/
+
+# Local PS build staging
+/platform/flash/rootfs-overlay/lib/modules/
+/platform/flash/rootfs-overlay/usr/bin/plctl
+/platform/flash/rootfs-overlay/usr/bin/mlk-fault
+
+# 构建日志（bootgen 在仓库根会写一份）
+/bootgen.log
+/*.log

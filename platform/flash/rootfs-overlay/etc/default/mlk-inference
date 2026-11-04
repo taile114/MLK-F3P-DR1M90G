@@ -1,0 +1,5 @@
+# Controlled inference paths; explicit process environment takes precedence.
+MLK_FAULT_ROOT=${MLK_FAULT_ROOT:-/opt/mlk_fault}
+MLK_FAULT_EVAL_ROOT=${MLK_FAULT_EVAL_ROOT:-/data/fault-eval}
+# Mode records intent only. Models are started manually in the application.
+MLK_INFERENCE_MODE=${MLK_INFERENCE_MODE:-off}

@@ -1,0 +1,54 @@
+architecture: fault_mtl_f3p_cnn2d_v2
+input_profile: base6
+task_definition: bench_fault_sim_v2
+temperature_rule: case_temp_35_40_45_v1
+tilt_rule: mount_tilt_3_6_10_ref_v1
+tilt_rule_status: REF
+fault_order: [overload, undervoltage, overtemperature, mount_tilt]
+seed: 42
+model:
+  dropout: 0.2
+preprocessing:
+  version: base6_causal_tilt_ref_v2
+  # REF: frequency response, timing tolerance and calibration require bench approval.
+  vibration_rate_hz: 1600
+  highpass_hz: 0.5
+  lowpass_pass_hz: 600.0
+  lowpass_stop_hz: 780.0
+  lowpass_pass_loss_db: 0.5
+  lowpass_stop_attenuation_db: 60.0
+  filter_warmup_s: 10.0
+  vibration_gap_s: 0.02
+  state_gap_s: 0.5
+  temperature_max_age_s: 6.0
+  state_min_coverage: 0.95
+  timestamp_jitter_fraction: 0.25
+  current_lowpass_hz: 4.0
+  current_warmup_s: 2.0
+  log_epsilon: 1.0e-10
+  mount_pose:
+    version: mount_pose_native_ref_v1
+    # TBD in the design. Null values reject full inputs until reviewed settings exist.
+    min_coverage: null
+    max_age_s: null
+    max_half_mean_delta_g: null
+    min_vector_norm_g: 1.0e-6
+    gravity_references: {}
+training:
+  batch_size: 32
+  max_epochs: 150
+  warmup_epochs: 5
+  learning_rate: 0.001
+  min_learning_rate: 0.00001
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  patience: 20
+  ordinal_weight: 0.5
+  positive_weight_cap: 5.0
+  num_workers: 0
+  device: auto
+evaluation:
+  classification_thresholds: [0.5, 0.5, 0.5, 0.5]
+  bootstrap_samples: 2000
+  fault_confirm_windows: 2
+  recovery_confirm_windows: 3

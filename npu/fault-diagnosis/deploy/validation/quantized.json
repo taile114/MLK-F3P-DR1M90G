@@ -1,0 +1,83 @@
+{
+  "schema": "mlk.fault.offline_verification.v1",
+  "execution": "emulation",
+  "mode": "quantized",
+  "samples": 360,
+  "full_test_completed": true,
+  "class_correct": 360,
+  "class_accuracy": 1.0,
+  "class_and_grade_correct": 355,
+  "class_and_grade_accuracy": 0.9861111111111112,
+  "fault_class_and_grade_correct": 289,
+  "fault_samples": 294,
+  "fault_class_and_grade_accuracy": 0.9829931972789115,
+  "confusion_matrix": [
+    [
+      66,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      75,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      80,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      58,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      81
+    ]
+  ],
+  "class_changes_vs_fp32": 0,
+  "grade_changes_vs_fp32": 1,
+  "max_fp32_raw_error": 0.10695648193359375,
+  "max_quantized_raw_error": 6.67572021484375e-06,
+  "max_cnn_lsb": 0,
+  "forward_us": {
+    "mean": 170879.3798138889,
+    "p50": 172278.267,
+    "p95": 189440.044,
+    "max": 209379.743
+  },
+  "steady_cma_bytes": 0,
+  "after_release_cma_bytes": 0,
+  "npu_evidence": {
+    "strict_graph": false,
+    "hard_npu_profile": false,
+    "npu_irq_increment": null,
+    "runtime_hash_matched": false
+  },
+  "numeric_cpu_reference_verified": true,
+  "physical_npu_execution_verified": false,
+  "independent_accuracy_acceptance": false,
+  "hardware_speedup_verified": false,
+  "result_files_sha256": {
+    "cnn_output_u8.bin": "fbbeb3e75a8f8e133298c59a1320e4089f0a8f923d1970ed91c2e3892831342a",
+    "exit_code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "predictions.csv": "eeb94828c5fd2d4cf5d91edb668182fa6e81697a9926551e2718bf6cf4f6577c",
+    "probe.log": "738302058379b4703351490559b7ebfc91f3f97dc0d1b6dd8282becd7e419b1f",
+    "program.sha256": "a61de12f4a475380a494373e71f47f534a6d386d6a7ce62eb8f9078392a71f41",
+    "raw_outputs.bin": "5015654d7a910e469c85ab97188c6f0c664e3c692ff3606e2af0407407d5f025",
+    "summary.json": "333610286476e4b20158dd9a4a4d6b1a3630a0e970be176ca5a97819af79a60f"
+  }
+}

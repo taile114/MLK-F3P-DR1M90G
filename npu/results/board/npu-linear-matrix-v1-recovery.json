@@ -1,0 +1,30 @@
+{
+  "scope": "User-provided SD diagnostic archive hash and serial output after clean shutdown and full power cycle; original result files recovered and independently verified",
+  "source_failure": "npu-linear-matrix-v1-failure.json",
+  "diagnostic_archive": "/mnt/mmcblk0p2/npu-tests/linear-board-diagnostics-19700101_004256-1065.tar",
+  "diagnostic_archive_sha256": "e1c43b9f8cc903bc9246ca5e465d603032ad8b0d84f4de6c9cc1d4810b13ce40",
+  "diagnostic_archive_retrieved": true,
+  "clean_shutdown_and_full_power_cycle_reported": true,
+  "kernel": "Linux buildroot 6.1.111-rt42 #3 SMP PREEMPT Thu Nov 20 17:58:46 PST 2025 aarch64 GNU/Linux",
+  "devices": {
+    "/dev/cma_mem": {
+      "type": "character",
+      "major": 10,
+      "minor": 0
+    },
+    "/dev/hard_npu": {
+      "type": "character",
+      "major": 238,
+      "minor": 0
+    },
+    "/dev/soft_npu": {
+      "type": "character",
+      "major": 237,
+      "minor": 0
+    }
+  },
+  "computation_recovery_evidence": "npu-fc-pad-v1-staged-result.json",
+  "known_failing_unpadded_m06_rerun": false,
+  "full_rul_npu_verified": false,
+  "recovered_file_verification": "npu-linear-recovered-v1-verification.json"
+}

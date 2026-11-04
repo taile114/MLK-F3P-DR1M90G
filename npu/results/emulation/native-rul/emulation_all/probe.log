@@ -1,0 +1,33 @@
+requested_backend=CpuRef onnx_parser_used=false host_gelu=std::erf samples=165
+stage=build_segment_0 begin
+stage=build_segment_0 passed
+stage=build_segment_1 begin
+stage=build_segment_1 passed
+stage=build_segment_2 begin
+stage=build_segment_2 passed
+stage=build_segment_3 begin
+stage=build_segment_3 passed
+stage=build_segment_4 begin
+stage=build_segment_4 passed
+stage=build_segment_5 begin
+stage=build_segment_5 passed
+sample=0 prediction=21.45942116 reference=21.45941925 absolute_error=1.907348633e-06
+sample=9 prediction=21.46434975 reference=21.46434784 absolute_error=1.907348633e-06
+sample=19 prediction=21.35564613 reference=21.35564995 absolute_error=3.814697266e-06
+sample=29 prediction=18.36180305 reference=18.36180305 absolute_error=0
+sample=39 prediction=16.40875053 reference=16.40875053 absolute_error=0
+sample=49 prediction=13.26981449 reference=13.26981354 absolute_error=9.536743164e-07
+sample=59 prediction=12.58250809 reference=12.58250904 absolute_error=9.536743164e-07
+sample=69 prediction=16.83311653 reference=16.83311462 absolute_error=1.907348633e-06
+sample=79 prediction=10.34422398 reference=10.34422112 absolute_error=2.861022949e-06
+sample=89 prediction=7.285289764 reference=7.285291672 absolute_error=1.907348633e-06
+sample=99 prediction=10.17171383 reference=10.17171192 absolute_error=1.907348633e-06
+sample=109 prediction=11.28157806 reference=11.28157425 absolute_error=3.814697266e-06
+sample=119 prediction=2.194138527 reference=2.194138288 absolute_error=2.384185791e-07
+sample=129 prediction=1.897198915 reference=1.897197723 absolute_error=1.192092896e-06
+sample=139 prediction=9.582747459 reference=9.582747459 absolute_error=0
+sample=149 prediction=5.971948624 reference=5.97194767 absolute_error=9.536743164e-07
+sample=159 prediction=6.427774906 reference=6.427774429 absolute_error=4.768371582e-07
+sample=164 prediction=7.724250317 reference=7.724251747 absolute_error=1.430511475e-06
+result=inference_completed samples=165 max_reference_error=7.629394531e-06 mismatches=0 rmse=3.256266531 mae=2.771933881 mean_forward_us=2940356.673
+rul_unit=observed_aging_test_session

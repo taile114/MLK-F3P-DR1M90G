@@ -1,0 +1,32 @@
+[
+  {
+    "boundary": 0,
+    "elements": 1540,
+    "max_absolute_error": 1.3113021850585938e-06,
+    "mean_absolute_error": 2.6492136839806335e-07
+  },
+  {
+    "boundary": 1,
+    "elements": 1680,
+    "max_absolute_error": 2.86102294921875e-06,
+    "mean_absolute_error": 4.888526063950849e-07
+  },
+  {
+    "boundary": 2,
+    "elements": 1540,
+    "max_absolute_error": 2.384185791015625e-06,
+    "mean_absolute_error": 5.196760071157769e-07
+  },
+  {
+    "boundary": 3,
+    "elements": 1680,
+    "max_absolute_error": 3.814697265625e-06,
+    "mean_absolute_error": 5.732712224926217e-07
+  },
+  {
+    "boundary": 4,
+    "elements": 64,
+    "max_absolute_error": 2.86102294921875e-06,
+    "mean_absolute_error": 1.0342337191104889e-06
+  }
+]

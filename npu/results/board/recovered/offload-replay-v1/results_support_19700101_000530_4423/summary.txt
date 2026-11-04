@@ -1,0 +1,10 @@
+relu 40
+sigmoid 40
+tanh 40
+softmax 40
+ceil 40
+add 40
+sub 40
+mul 40
+div 40
+batch_matmul 40

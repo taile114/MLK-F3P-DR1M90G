@@ -1,0 +1,24 @@
+case=u8 requested_backend=Alnpu cpu_fallback_allowed=false onnx_parser_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.74 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed shape=1,8,8,8 layout=NCHW kernel=3,3 input_scale=0.25 weight_scale=0.125 output_scale=0.25 output_offset=128
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |0.50KB(0.50KB)      |0.50KB(0.50KB)      
+Info: ******************************************************************************************************
+stage=optimize passed graph_has_requested_backend=true
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=1.88KB
+
+stage=load passed
+Info: Execution time: 0.24 ms.
+iteration=0 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=337.62
+Info: Execution time: 0.12 ms.
+iteration=1 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=162.48
+Info: Execution time: 0.11 ms.
+iteration=2 output_elements=512 max_error_lsb=1 mismatches=0 enqueue_us=156.72
+result=passed case=u8 backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 mean_enqueue_us=218.94 npu_requested=true
+Info: Shutdown time: 0.04 ms.

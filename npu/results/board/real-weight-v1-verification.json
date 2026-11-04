@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "scope": "Recovered real-weight branch files; not complete-model NPU acceptance",
+  "checkpoint_sha256": "bb7cb39da623e95574e57a559f1df979e5ee5ddea75d71d079f818da108d16f2",
+  "groups": {
+    "results_all_19700101_001947_3985": {
+      "runs": [
+        {
+          "case": "w00",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.base_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 792,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.01677999492810238,
+          "fp32_branch_max_abs": 0.05311504006385803
+        },
+        {
+          "case": "w00",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.base_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 792,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.024090077678182057,
+          "fp32_branch_max_abs": 0.060990214347839355
+        },
+        {
+          "case": "w01",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.spline_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 792,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.0029588144071867706,
+          "fp32_branch_max_abs": 0.009145422838628292
+        },
+        {
+          "case": "w01",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.spline_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 792,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.0051197414808731205,
+          "fp32_branch_max_abs": 0.012334073893725872
+        },
+        {
+          "case": "w02",
+          "layer": "linear_x.base_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 7920,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.1351061420447883,
+          "fp32_branch_max_abs": 2.061356320977211
+        },
+        {
+          "case": "w02",
+          "layer": "linear_x.base_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 7920,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.13487267666262362,
+          "fp32_branch_max_abs": 2.061356320977211
+        },
+        {
+          "case": "w03",
+          "layer": "linear_x.spline_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 7920,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.004532310387261046,
+          "fp32_branch_max_abs": 0.013406779617071152
+        },
+        {
+          "case": "w03",
+          "layer": "linear_x.spline_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 7920,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.008411432556220646,
+          "fp32_branch_max_abs": 0.01917747687548399
+        },
+        {
+          "case": "w04",
+          "layer": "output_layer.0.spline_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 192,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.003256213334922594,
+          "fp32_branch_max_abs": 0.008093607611954212
+        },
+        {
+          "case": "w04",
+          "layer": "output_layer.0.spline_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 192,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.0066075038284375935,
+          "fp32_branch_max_abs": 0.013246411457657814
+        },
+        {
+          "case": "w05",
+          "layer": "output_layer.2.spline_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 24,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.00487746041128612,
+          "fp32_branch_max_abs": 0.007731005549430847
+        },
+        {
+          "case": "w05",
+          "layer": "output_layer.2.spline_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 24,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.0067695350689497575,
+          "fp32_branch_max_abs": 0.008554920554161072
+        }
+      ],
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 735,
+        "SOFT_NPU_IRQ": 0
+      }
+    },
+    "results_first_19700101_001852_3965": {
+      "runs": [
+        {
+          "case": "w00",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.base_weight",
+          "backend": "CpuRef",
+          "checked_outputs": 792,
+          "max_error_lsb": 0,
+          "fp32_branch_rmse": 0.01677999492810238,
+          "fp32_branch_max_abs": 0.05311504006385803
+        },
+        {
+          "case": "w00",
+          "layer": "tvgtformer_blocks.0.linears_Q_temp.0.base_weight",
+          "backend": "Alnpu",
+          "checked_outputs": 792,
+          "max_error_lsb": 1,
+          "fp32_branch_rmse": 0.024090077678182057,
+          "fp32_branch_max_abs": 0.060990214347839355
+        }
+      ],
+      "interrupt_delta": {
+        "HARD_NPU_IRQ": 33,
+        "SOFT_NPU_IRQ": 0
+      }
+    }
+  },
+  "real_weight_npu_cases": 6,
+  "train_only_calibration": true,
+  "test_dataset_opened": false,
+  "training_executed": false,
+  "full_rul_npu_verified": false
+}

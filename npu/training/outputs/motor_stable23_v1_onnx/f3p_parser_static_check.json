@@ -1,0 +1,197 @@
+{
+  "method": "static binary string/symbol-fragment inspection; no parser or NPU execution",
+  "limitations": "Presence does not prove support. Absence does not conclusively prove lack of support. Type, rank, attributes, variable MatMul inputs and backend assignment require actual runtime checks.",
+  "archive": "E:\\competion\\code\\ref\\F3P\\01_start\\02_start_Linux\\05_application_demo\\05-5_NPU演示\\demo\\sdk\\face_detection.tar.gz",
+  "archive_sha256": "33eb354f2cb41df81f42fe30d44898d99e2a4fcd8a69b8ae678c8622e473b82f",
+  "parser_member": "app/face_detection/libs/armnn_lib/lib/libarmnnOnnxParser.so.24.6",
+  "parser_sha256": "dcb43bc092ec283364806e563fa6aa8d2404eb7c005db44081821da405c5ce99",
+  "elf_machine": 183,
+  "elf_machine_description": "AArch64",
+  "parser_version_components": [
+    "24",
+    "6",
+    "0"
+  ],
+  "onnx_loader_confirmed_in_source": true,
+  "default_backends_confirmed_in_source": true,
+  "operators": [
+    {
+      "operator": "Add",
+      "count": 196,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "And",
+      "count": 30,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "Cast",
+      "count": 30,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Concat",
+      "count": 7,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Div",
+      "count": 207,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Einsum",
+      "count": 62,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "Erf",
+      "count": 5,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "Gather",
+      "count": 11,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "GreaterOrEqual",
+      "count": 30,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "Less",
+      "count": 30,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "MatMul",
+      "count": 90,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": false,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Mul",
+      "count": 242,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Pow",
+      "count": 8,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "ReduceL2",
+      "count": 2,
+      "exact_string_present": false,
+      "parse_symbol_fragment_present": false,
+      "status": "not_found_requires_runtime_check"
+    },
+    {
+      "operator": "ReduceMean",
+      "count": 18,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Relu",
+      "count": 2,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Reshape",
+      "count": 92,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Sigmoid",
+      "count": 30,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Slice",
+      "count": 180,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Softmax",
+      "count": 26,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Sqrt",
+      "count": 8,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Sub",
+      "count": 190,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Transpose",
+      "count": 21,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    },
+    {
+      "operator": "Unsqueeze",
+      "count": 30,
+      "exact_string_present": true,
+      "parse_symbol_fragment_present": true,
+      "status": "presence_only_not_support_proof"
+    }
+  ],
+  "operators_without_literal_or_symbol": [
+    "And",
+    "Einsum",
+    "Erf",
+    "GreaterOrEqual",
+    "Less",
+    "ReduceL2"
+  ],
+  "f3p_runtime_verified": false,
+  "alnpu_backend_assignment_verified": false
+}

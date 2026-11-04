@@ -1,0 +1,2942 @@
+{
+	"ArmNN": {
+		"optimize_measurements_#1": {
+			"type": "Event",
+			"Wall clock time_#1": {
+				"type": "Measurement",
+				"raw": [
+					8838.150000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#1": {
+				"type": "Measurement",
+				"raw": [
+					915634001.323000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#1": {
+				"type": "Measurement",
+				"raw": [
+					915642839.473000
+				],
+				"unit": "us"
+			},
+			"Optimizer_Pass_#2": {
+				"type": "Event",
+				"Wall clock time_#2": {
+					"type": "Measurement",
+					"raw": [
+						104.880000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#2": {
+					"type": "Measurement",
+					"raw": [
+						915634750.393000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#2": {
+					"type": "Measurement",
+					"raw": [
+						915634855.273000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#3": {
+				"type": "Event",
+				"Wall clock time_#3": {
+					"type": "Measurement",
+					"raw": [
+						35.310000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#3": {
+					"type": "Measurement",
+					"raw": [
+						915635161.993000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#3": {
+					"type": "Measurement",
+					"raw": [
+						915635197.303000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#4": {
+				"type": "Event",
+				"Wall clock time_#4": {
+					"type": "Measurement",
+					"raw": [
+						220.980000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#4": {
+					"type": "Measurement",
+					"raw": [
+						915635218.753000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#4": {
+					"type": "Measurement",
+					"raw": [
+						915635439.733000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_AssignBackends_#5": {
+				"type": "Event",
+				"Wall clock time_#5": {
+					"type": "Measurement",
+					"raw": [
+						1775.790000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#5": {
+					"type": "Measurement",
+					"raw": [
+						915635591.983000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#5": {
+					"type": "Measurement",
+					"raw": [
+						915637367.773000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_Pass_#6": {
+				"type": "Event",
+				"Wall clock time_#6": {
+					"type": "Measurement",
+					"raw": [
+						23.130000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#6": {
+					"type": "Measurement",
+					"raw": [
+						915637375.753000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#6": {
+					"type": "Measurement",
+					"raw": [
+						915637398.883000
+					],
+					"unit": "us"
+				}
+			},
+			"Optimizer_ApplyBackendOptimizations_#7": {
+				"type": "Event",
+				"Wall clock time_#7": {
+					"type": "Measurement",
+					"raw": [
+						2536.410000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#7": {
+					"type": "Measurement",
+					"raw": [
+						915637404.763000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#7": {
+					"type": "Measurement",
+					"raw": [
+						915639941.173000
+					],
+					"unit": "us"
+				},
+				"Optimizer_OptimizeSubgraph_#8": {
+					"type": "Event",
+					"Wall clock time_#8": {
+						"type": "Measurement",
+						"raw": [
+							104.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#8": {
+						"type": "Measurement",
+						"raw": [
+							915638062.813000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#8": {
+						"type": "Measurement",
+						"raw": [
+							915638167.063000
+						],
+						"unit": "us"
+					}
+				}
+			}
+		},
+		"loaded_network_measurements_#9": {
+			"type": "Event",
+			"Wall clock time_#9": {
+				"type": "Measurement",
+				"raw": [
+					5757.120000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#9": {
+				"type": "Measurement",
+				"raw": [
+					915658850.983000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#9": {
+				"type": "Measurement",
+				"raw": [
+					915664608.103000
+				],
+				"unit": "us"
+			},
+			"LoadNetwork_CreateWorkloads_#10": {
+				"type": "Event",
+				"Wall clock time_#10": {
+					"type": "Measurement",
+					"raw": [
+						4009.260000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#10": {
+					"type": "Measurement",
+					"raw": [
+						915659779.003000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#10": {
+					"type": "Measurement",
+					"raw": [
+						915663788.263000
+					],
+					"unit": "us"
+				}
+			},
+			"LoadNetwork_AllocateDynamicBuffers_#11": {
+				"type": "Event",
+				"Wall clock time_#11": {
+					"type": "Measurement",
+					"raw": [
+						533.490000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#11": {
+					"type": "Measurement",
+					"raw": [
+						915663838.093000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#11": {
+					"type": "Measurement",
+					"raw": [
+						915664371.583000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#12": {
+				"GUID": "7538",
+				"type": "Event",
+				"Wall clock time_#12": {
+					"type": "Measurement",
+					"raw": [
+						6.240000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#12": {
+					"type": "Measurement",
+					"raw": [
+						915664381.213000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#12": {
+					"type": "Measurement",
+					"raw": [
+						915664387.453000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#13": {
+				"GUID": "7539",
+				"type": "Event",
+				"Wall clock time_#13": {
+					"type": "Measurement",
+					"raw": [
+						8.850000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#13": {
+					"type": "Measurement",
+					"raw": [
+						915664391.053000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#13": {
+					"type": "Measurement",
+					"raw": [
+						915664399.903000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#14": {
+				"GUID": "7540",
+				"type": "Event",
+				"Wall clock time_#14": {
+					"type": "Measurement",
+					"raw": [
+						8.610000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#14": {
+					"type": "Measurement",
+					"raw": [
+						915664403.473000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#14": {
+					"type": "Measurement",
+					"raw": [
+						915664412.083000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#15": {
+				"GUID": "7541",
+				"type": "Event",
+				"Wall clock time_#15": {
+					"type": "Measurement",
+					"raw": [
+						10.200000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#15": {
+					"type": "Measurement",
+					"raw": [
+						915664415.713000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#15": {
+					"type": "Measurement",
+					"raw": [
+						915664425.913000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#16": {
+				"GUID": "7542",
+				"type": "Event",
+				"Wall clock time_#16": {
+					"type": "Measurement",
+					"raw": [
+						9.210000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#16": {
+					"type": "Measurement",
+					"raw": [
+						915664434.793000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#16": {
+					"type": "Measurement",
+					"raw": [
+						915664444.003000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#17": {
+				"GUID": "7543",
+				"type": "Event",
+				"Wall clock time_#17": {
+					"type": "Measurement",
+					"raw": [
+						9.480000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#17": {
+					"type": "Measurement",
+					"raw": [
+						915664447.753000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#17": {
+					"type": "Measurement",
+					"raw": [
+						915664457.233000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#18": {
+				"GUID": "7544",
+				"type": "Event",
+				"Wall clock time_#18": {
+					"type": "Measurement",
+					"raw": [
+						9.750000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#18": {
+					"type": "Measurement",
+					"raw": [
+						915664461.613000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#18": {
+					"type": "Measurement",
+					"raw": [
+						915664471.363000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#19": {
+				"GUID": "7545",
+				"type": "Event",
+				"Wall clock time_#19": {
+					"type": "Measurement",
+					"raw": [
+						9.450000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#19": {
+					"type": "Measurement",
+					"raw": [
+						915664474.903000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#19": {
+					"type": "Measurement",
+					"raw": [
+						915664484.353000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#20": {
+				"GUID": "7546",
+				"type": "Event",
+				"Wall clock time_#20": {
+					"type": "Measurement",
+					"raw": [
+						9.570000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#20": {
+					"type": "Measurement",
+					"raw": [
+						915664488.133000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#20": {
+					"type": "Measurement",
+					"raw": [
+						915664497.703000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#21": {
+				"GUID": "7547",
+				"type": "Event",
+				"Wall clock time_#21": {
+					"type": "Measurement",
+					"raw": [
+						9.960000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#21": {
+					"type": "Measurement",
+					"raw": [
+						915664501.273000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#21": {
+					"type": "Measurement",
+					"raw": [
+						915664511.233000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#22": {
+				"GUID": "7548",
+				"type": "Event",
+				"Wall clock time_#22": {
+					"type": "Measurement",
+					"raw": [
+						8.550000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#22": {
+					"type": "Measurement",
+					"raw": [
+						915664514.653000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#22": {
+					"type": "Measurement",
+					"raw": [
+						915664523.203000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#23": {
+				"GUID": "7549",
+				"type": "Event",
+				"Wall clock time_#23": {
+					"type": "Measurement",
+					"raw": [
+						10.560000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#23": {
+					"type": "Measurement",
+					"raw": [
+						915664526.803000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#23": {
+					"type": "Measurement",
+					"raw": [
+						915664537.363000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#24": {
+				"GUID": "7550",
+				"type": "Event",
+				"Wall clock time_#24": {
+					"type": "Measurement",
+					"raw": [
+						9.330000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#24": {
+					"type": "Measurement",
+					"raw": [
+						915664541.053000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#24": {
+					"type": "Measurement",
+					"raw": [
+						915664550.383000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#25": {
+				"GUID": "7551",
+				"type": "Event",
+				"Wall clock time_#25": {
+					"type": "Measurement",
+					"raw": [
+						9.540000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#25": {
+					"type": "Measurement",
+					"raw": [
+						915664559.533000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#25": {
+					"type": "Measurement",
+					"raw": [
+						915664569.073000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#26": {
+				"GUID": "7552",
+				"type": "Event",
+				"Wall clock time_#26": {
+					"type": "Measurement",
+					"raw": [
+						9.540000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#26": {
+					"type": "Measurement",
+					"raw": [
+						915664573.003000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#26": {
+					"type": "Measurement",
+					"raw": [
+						915664582.543000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#27": {
+				"GUID": "7553",
+				"type": "Event",
+				"Wall clock time_#27": {
+					"type": "Measurement",
+					"raw": [
+						2.700000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#27": {
+					"type": "Measurement",
+					"raw": [
+						915664586.623000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#27": {
+					"type": "Measurement",
+					"raw": [
+						915664589.323000
+					],
+					"unit": "us"
+				}
+			},
+			"NeonConstantWorkload_Execute_#28": {
+				"GUID": "7554",
+				"type": "Event",
+				"Wall clock time_#28": {
+					"type": "Measurement",
+					"raw": [
+						3.390000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#28": {
+					"type": "Measurement",
+					"raw": [
+						915664593.103000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#28": {
+					"type": "Measurement",
+					"raw": [
+						915664596.493000
+					],
+					"unit": "us"
+				}
+			}
+		},
+		"inference_measurements_#29": {
+			"type": "Event",
+			"Wall clock time_#29": {
+				"type": "Measurement",
+				"raw": [
+					3342.840000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#29": {
+				"type": "Measurement",
+				"raw": [
+					915905140.125000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#29": {
+				"type": "Measurement",
+				"raw": [
+					915908482.965000
+				],
+				"unit": "us"
+			},
+			"PrepareInputs_#30": {
+				"type": "Event",
+				"Wall clock time_#30": {
+					"type": "Measurement",
+					"raw": [
+						35.550000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#30": {
+					"type": "Measurement",
+					"raw": [
+						915905159.175000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#30": {
+					"type": "Measurement",
+					"raw": [
+						915905194.725000
+					],
+					"unit": "us"
+				}
+			},
+			"PrepareOutputs_#31": {
+				"type": "Event",
+				"Wall clock time_#31": {
+					"type": "Measurement",
+					"raw": [
+						13.860000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#31": {
+					"type": "Measurement",
+					"raw": [
+						915905197.815000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#31": {
+					"type": "Measurement",
+					"raw": [
+						915905211.675000
+					],
+					"unit": "us"
+				}
+			},
+			"Execute_#32": {
+				"type": "Event",
+				"Wall clock time_#32": {
+					"type": "Measurement",
+					"raw": [
+						3238.590000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#32": {
+					"type": "Measurement",
+					"raw": [
+						915905215.905000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#32": {
+					"type": "Measurement",
+					"raw": [
+						915908454.495000
+					],
+					"unit": "us"
+				},
+				"Working Memory Allocation_#33": {
+					"type": "Event",
+					"Wall clock time_#33": {
+						"type": "Measurement",
+						"raw": [
+							148.770000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#33": {
+						"type": "Measurement",
+						"raw": [
+							915905220.765000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#33": {
+						"type": "Measurement",
+						"raw": [
+							915905369.535000
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#34": {
+					"type": "Event",
+					"Wall clock time_#34": {
+						"type": "Measurement",
+						"raw": [
+							17.970000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#34": {
+						"type": "Measurement",
+						"raw": [
+							915905373.585000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#34": {
+						"type": "Measurement",
+						"raw": [
+							915905391.555000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#35": {
+						"type": "Event",
+						"Wall clock time_#35": {
+							"type": "Measurement",
+							"raw": [
+								2.070000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#35": {
+							"type": "Measurement",
+							"raw": [
+								915905387.865000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#35": {
+							"type": "Measurement",
+							"raw": [
+								915905389.935000
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"NeonConstantWorkload_Execute_#36": {
+					"GUID": "7538",
+					"type": "Event",
+					"Wall clock time_#36": {
+						"type": "Measurement",
+						"raw": [
+							1.230000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#36": {
+						"type": "Measurement",
+						"raw": [
+							915905400.435000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#36": {
+						"type": "Measurement",
+						"raw": [
+							915905401.665000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#37": {
+					"GUID": "7539",
+					"type": "Event",
+					"Wall clock time_#37": {
+						"type": "Measurement",
+						"raw": [
+							0.810000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#37": {
+						"type": "Measurement",
+						"raw": [
+							915905405.265000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#37": {
+						"type": "Measurement",
+						"raw": [
+							915905406.075000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#38": {
+					"GUID": "7540",
+					"type": "Event",
+					"Wall clock time_#38": {
+						"type": "Measurement",
+						"raw": [
+							0.960000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#38": {
+						"type": "Measurement",
+						"raw": [
+							915905415.555000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#38": {
+						"type": "Measurement",
+						"raw": [
+							915905416.515000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#39": {
+					"GUID": "7541",
+					"type": "Event",
+					"Wall clock time_#39": {
+						"type": "Measurement",
+						"raw": [
+							0.810000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#39": {
+						"type": "Measurement",
+						"raw": [
+							915905420.175000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#39": {
+						"type": "Measurement",
+						"raw": [
+							915905420.985000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#40": {
+					"GUID": "7542",
+					"type": "Event",
+					"Wall clock time_#40": {
+						"type": "Measurement",
+						"raw": [
+							0.930000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#40": {
+						"type": "Measurement",
+						"raw": [
+							915905430.195000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#40": {
+						"type": "Measurement",
+						"raw": [
+							915905431.125000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#41": {
+					"GUID": "7543",
+					"type": "Event",
+					"Wall clock time_#41": {
+						"type": "Measurement",
+						"raw": [
+							1.560000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#41": {
+						"type": "Measurement",
+						"raw": [
+							915905435.295000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#41": {
+						"type": "Measurement",
+						"raw": [
+							915905436.855000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#42": {
+					"GUID": "7544",
+					"type": "Event",
+					"Wall clock time_#42": {
+						"type": "Measurement",
+						"raw": [
+							0.780000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#42": {
+						"type": "Measurement",
+						"raw": [
+							915905440.725000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#42": {
+						"type": "Measurement",
+						"raw": [
+							915905441.505000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#43": {
+					"GUID": "7545",
+					"type": "Event",
+					"Wall clock time_#43": {
+						"type": "Measurement",
+						"raw": [
+							0.780000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#43": {
+						"type": "Measurement",
+						"raw": [
+							915905445.345000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#43": {
+						"type": "Measurement",
+						"raw": [
+							915905446.125000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#44": {
+					"GUID": "7546",
+					"type": "Event",
+					"Wall clock time_#44": {
+						"type": "Measurement",
+						"raw": [
+							0.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#44": {
+						"type": "Measurement",
+						"raw": [
+							915905449.845000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#44": {
+						"type": "Measurement",
+						"raw": [
+							915905450.595000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#45": {
+					"GUID": "7547",
+					"type": "Event",
+					"Wall clock time_#45": {
+						"type": "Measurement",
+						"raw": [
+							0.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#45": {
+						"type": "Measurement",
+						"raw": [
+							915905454.615000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#45": {
+						"type": "Measurement",
+						"raw": [
+							915905455.365000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#46": {
+					"GUID": "7548",
+					"type": "Event",
+					"Wall clock time_#46": {
+						"type": "Measurement",
+						"raw": [
+							1.200000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#46": {
+						"type": "Measurement",
+						"raw": [
+							915905459.055000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#46": {
+						"type": "Measurement",
+						"raw": [
+							915905460.255000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#47": {
+					"GUID": "7549",
+					"type": "Event",
+					"Wall clock time_#47": {
+						"type": "Measurement",
+						"raw": [
+							0.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#47": {
+						"type": "Measurement",
+						"raw": [
+							915905464.125000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#47": {
+						"type": "Measurement",
+						"raw": [
+							915905464.875000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#48": {
+					"GUID": "7550",
+					"type": "Event",
+					"Wall clock time_#48": {
+						"type": "Measurement",
+						"raw": [
+							0.780000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#48": {
+						"type": "Measurement",
+						"raw": [
+							915905468.565000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#48": {
+						"type": "Measurement",
+						"raw": [
+							915905469.345000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#49": {
+					"GUID": "7551",
+					"type": "Event",
+					"Wall clock time_#49": {
+						"type": "Measurement",
+						"raw": [
+							0.780000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#49": {
+						"type": "Measurement",
+						"raw": [
+							915905473.365000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#49": {
+						"type": "Measurement",
+						"raw": [
+							915905474.145000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#50": {
+					"GUID": "7552",
+					"type": "Event",
+					"Wall clock time_#50": {
+						"type": "Measurement",
+						"raw": [
+							0.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#50": {
+						"type": "Measurement",
+						"raw": [
+							915905478.015000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#50": {
+						"type": "Measurement",
+						"raw": [
+							915905478.765000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#51": {
+					"GUID": "7553",
+					"type": "Event",
+					"Wall clock time_#51": {
+						"type": "Measurement",
+						"raw": [
+							0.990000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#51": {
+						"type": "Measurement",
+						"raw": [
+							915905487.225000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#51": {
+						"type": "Measurement",
+						"raw": [
+							915905488.215000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonConstantWorkload_Execute_#52": {
+					"GUID": "7554",
+					"type": "Event",
+					"Wall clock time_#52": {
+						"type": "Measurement",
+						"raw": [
+							0.840000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#52": {
+						"type": "Measurement",
+						"raw": [
+							915905492.325000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#52": {
+						"type": "Measurement",
+						"raw": [
+							915905493.165000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonActivationWorkload_Execute_#53": {
+					"GUID": "7555",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuActivationKernel/neon_fp32_activation_#53": {
+						"type": "Measurement",
+						"raw": [
+							17.520000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#53": {
+						"type": "Measurement",
+						"raw": [
+							36.030000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#53": {
+						"type": "Measurement",
+						"raw": [
+							915905497.935000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#53": {
+						"type": "Measurement",
+						"raw": [
+							915905533.965000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonReshapeWorkload_Execute_#54": {
+					"GUID": "7556",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuReshapeKernel_#54": {
+						"type": "Measurement",
+						"raw": [
+							28.860000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#54": {
+						"type": "Measurement",
+						"raw": [
+							39.420000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#54": {
+						"type": "Measurement",
+						"raw": [
+							915905538.885000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#54": {
+						"type": "Measurement",
+						"raw": [
+							915905578.305000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#55": {
+					"GUID": "7557",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#55": {
+						"type": "Measurement",
+						"raw": [
+							18.030000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#55": {
+						"type": "Measurement",
+						"raw": [
+							29.310000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#55": {
+						"type": "Measurement",
+						"raw": [
+							915905583.645000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#55": {
+						"type": "Measurement",
+						"raw": [
+							915905612.955000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#56": {
+					"GUID": "7558",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#56": {
+						"type": "Measurement",
+						"raw": [
+							69.840000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#56": {
+						"type": "Measurement",
+						"raw": [
+							82.200000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#56": {
+						"type": "Measurement",
+						"raw": [
+							915905617.965000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#56": {
+						"type": "Measurement",
+						"raw": [
+							915905700.165000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonReshapeWorkload_Execute_#57": {
+					"GUID": "7559",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuReshapeKernel_#57": {
+						"type": "Measurement",
+						"raw": [
+							5.010000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#57": {
+						"type": "Measurement",
+						"raw": [
+							14.310000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#57": {
+						"type": "Measurement",
+						"raw": [
+							915905704.815000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#57": {
+						"type": "Measurement",
+						"raw": [
+							915905719.125000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#58": {
+					"GUID": "7560",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#58": {
+						"type": "Measurement",
+						"raw": [
+							46.350000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#58": {
+						"type": "Measurement",
+						"raw": [
+							57.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#58": {
+						"type": "Measurement",
+						"raw": [
+							915905723.295000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#58": {
+						"type": "Measurement",
+						"raw": [
+							915905781.045000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#59": {
+					"GUID": "7561",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#59": {
+						"type": "Measurement",
+						"raw": [
+							50.190000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#59": {
+						"type": "Measurement",
+						"raw": [
+							62.400000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#59": {
+						"type": "Measurement",
+						"raw": [
+							915905785.425000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#59": {
+						"type": "Measurement",
+						"raw": [
+							915905847.825000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#60": {
+					"GUID": "7562",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#60": {
+						"type": "Measurement",
+						"raw": [
+							45.870000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#60": {
+						"type": "Measurement",
+						"raw": [
+							58.080000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#60": {
+						"type": "Measurement",
+						"raw": [
+							915905851.995000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#60": {
+						"type": "Measurement",
+						"raw": [
+							915905910.075000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#61": {
+					"GUID": "7563",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#61": {
+						"type": "Measurement",
+						"raw": [
+							44.700000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#61": {
+						"type": "Measurement",
+						"raw": [
+							61.980000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#61": {
+						"type": "Measurement",
+						"raw": [
+							915905921.415000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#61": {
+						"type": "Measurement",
+						"raw": [
+							915905983.395000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#62": {
+					"GUID": "7564",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#62": {
+						"type": "Measurement",
+						"raw": [
+							46.050000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#62": {
+						"type": "Measurement",
+						"raw": [
+							57.660000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#62": {
+						"type": "Measurement",
+						"raw": [
+							915905987.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#62": {
+						"type": "Measurement",
+						"raw": [
+							915906045.285000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#63": {
+					"GUID": "7565",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#63": {
+						"type": "Measurement",
+						"raw": [
+							44.880000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#63": {
+						"type": "Measurement",
+						"raw": [
+							56.640000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#63": {
+						"type": "Measurement",
+						"raw": [
+							915906054.615000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#63": {
+						"type": "Measurement",
+						"raw": [
+							915906111.255000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#64": {
+					"GUID": "7566",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#64": {
+						"type": "Measurement",
+						"raw": [
+							44.190000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#64": {
+						"type": "Measurement",
+						"raw": [
+							55.380000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#64": {
+						"type": "Measurement",
+						"raw": [
+							915906115.515000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#64": {
+						"type": "Measurement",
+						"raw": [
+							915906170.895000
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#65": {
+					"type": "Event",
+					"Wall clock time_#65": {
+						"type": "Measurement",
+						"raw": [
+							18.690000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#65": {
+						"type": "Measurement",
+						"raw": [
+							915906180.195000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#65": {
+						"type": "Measurement",
+						"raw": [
+							915906198.885000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#66": {
+						"type": "Event",
+						"Wall clock time_#66": {
+							"type": "Measurement",
+							"raw": [
+								3.000000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#66": {
+							"type": "Measurement",
+							"raw": [
+								915906193.935000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#66": {
+							"type": "Measurement",
+							"raw": [
+								915906196.935000
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"CopyMemGeneric_Execute_#67": {
+					"type": "Event",
+					"Wall clock time_#67": {
+						"type": "Measurement",
+						"raw": [
+							14.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#67": {
+						"type": "Measurement",
+						"raw": [
+							915906201.915000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#67": {
+						"type": "Measurement",
+						"raw": [
+							915906216.165000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#68": {
+						"type": "Event",
+						"Wall clock time_#68": {
+							"type": "Measurement",
+							"raw": [
+								1.410000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#68": {
+							"type": "Measurement",
+							"raw": [
+								915906213.015000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#68": {
+							"type": "Measurement",
+							"raw": [
+								915906214.425000
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"NeonDivisionWorkload_Execute_#69": {
+					"GUID": "7569",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#69": {
+						"type": "Measurement",
+						"raw": [
+							48.360000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#69": {
+						"type": "Measurement",
+						"raw": [
+							63.270000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#69": {
+						"type": "Measurement",
+						"raw": [
+							915906221.505000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#69": {
+						"type": "Measurement",
+						"raw": [
+							915906284.775000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonDivisionWorkload_Execute_#70": {
+					"GUID": "7570",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#70": {
+						"type": "Measurement",
+						"raw": [
+							52.650000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#70": {
+						"type": "Measurement",
+						"raw": [
+							63.780000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#70": {
+						"type": "Measurement",
+						"raw": [
+							915906289.005000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#70": {
+						"type": "Measurement",
+						"raw": [
+							915906352.785000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonDivisionWorkload_Execute_#71": {
+					"GUID": "7571",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#71": {
+						"type": "Measurement",
+						"raw": [
+							45.900000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#71": {
+						"type": "Measurement",
+						"raw": [
+							58.020000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#71": {
+						"type": "Measurement",
+						"raw": [
+							915906357.045000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#71": {
+						"type": "Measurement",
+						"raw": [
+							915906415.065000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonDivisionWorkload_Execute_#72": {
+					"GUID": "7572",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#72": {
+						"type": "Measurement",
+						"raw": [
+							54.300000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#72": {
+						"type": "Measurement",
+						"raw": [
+							71.640000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#72": {
+						"type": "Measurement",
+						"raw": [
+							915906419.085000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#72": {
+						"type": "Measurement",
+						"raw": [
+							915906490.725000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonDivisionWorkload_Execute_#73": {
+					"GUID": "7573",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#73": {
+						"type": "Measurement",
+						"raw": [
+							52.200000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#73": {
+						"type": "Measurement",
+						"raw": [
+							64.170000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#73": {
+						"type": "Measurement",
+						"raw": [
+							915906495.285000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#73": {
+						"type": "Measurement",
+						"raw": [
+							915906559.455000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonDivisionWorkload_Execute_#74": {
+					"GUID": "7574",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuArithmeticKernel/neon_fp32_arithmetic_#74": {
+						"type": "Measurement",
+						"raw": [
+							46.710000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#74": {
+						"type": "Measurement",
+						"raw": [
+							58.200000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#74": {
+						"type": "Measurement",
+						"raw": [
+							915906563.955000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#74": {
+						"type": "Measurement",
+						"raw": [
+							915906622.155000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonFullyConnectedWorkload_Execute_#75": {
+					"GUID": "7575",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuTransposeKernel_#75": {
+						"type": "Measurement",
+						"raw": [
+							9.990000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/1: CpuGemmAssemblyDispatch/pretranspose_B_array_#75": {
+						"type": "Measurement",
+						"raw": [
+							33.360000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/2: CpuReshapeKernel_#75": {
+						"type": "Measurement",
+						"raw": [
+							16.710000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/3: CpuGemmAssemblyDispatch/pretranspose_B_array_#75": {
+						"type": "Measurement",
+						"raw": [
+							32.880000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/4: CpuGemmAssemblyWrapperKernel/a64_hybrid_fp32_mla_8x4_#75": {
+						"type": "Measurement",
+						"raw": [
+							12.030000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#75": {
+						"type": "Measurement",
+						"raw": [
+							218.670000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#75": {
+						"type": "Measurement",
+						"raw": [
+							915906628.035000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#75": {
+						"type": "Measurement",
+						"raw": [
+							915906846.705000
+						],
+						"unit": "us"
+					}
+				},
+				"RefElementwiseUnaryWorkload_Execute_#76": {
+					"type": "Event",
+					"Wall clock time_#76": {
+						"type": "Measurement",
+						"raw": [
+							84.720000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#76": {
+						"type": "Measurement",
+						"raw": [
+							915906854.265000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#76": {
+						"type": "Measurement",
+						"raw": [
+							915906938.985000
+						],
+						"unit": "us"
+					}
+				},
+				"RefElementwiseUnaryWorkload_Execute_#77": {
+					"type": "Event",
+					"Wall clock time_#77": {
+						"type": "Measurement",
+						"raw": [
+							70.950000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#77": {
+						"type": "Measurement",
+						"raw": [
+							915906942.975000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#77": {
+						"type": "Measurement",
+						"raw": [
+							915907013.925000
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#78": {
+					"type": "Event",
+					"Wall clock time_#78": {
+						"type": "Measurement",
+						"raw": [
+							15.630000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#78": {
+						"type": "Measurement",
+						"raw": [
+							915907016.955000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#78": {
+						"type": "Measurement",
+						"raw": [
+							915907032.585000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#79": {
+						"type": "Event",
+						"Wall clock time_#79": {
+							"type": "Measurement",
+							"raw": [
+								1.470000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#79": {
+							"type": "Measurement",
+							"raw": [
+								915907029.195000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#79": {
+							"type": "Measurement",
+							"raw": [
+								915907030.665000
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"CopyMemGeneric_Execute_#80": {
+					"type": "Event",
+					"Wall clock time_#80": {
+						"type": "Measurement",
+						"raw": [
+							26.880000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#80": {
+						"type": "Measurement",
+						"raw": [
+							915907035.585000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#80": {
+						"type": "Measurement",
+						"raw": [
+							915907062.465000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#81": {
+						"type": "Event",
+						"Wall clock time_#81": {
+							"type": "Measurement",
+							"raw": [
+								1.650000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#81": {
+							"type": "Measurement",
+							"raw": [
+								915907059.135000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#81": {
+							"type": "Measurement",
+							"raw": [
+								915907060.785000
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"NeonActivationWorkload_Execute_#82": {
+					"GUID": "7580",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuActivationKernel/neon_fp32_activation_#82": {
+						"type": "Measurement",
+						"raw": [
+							13.500000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#82": {
+						"type": "Measurement",
+						"raw": [
+							22.830000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#82": {
+						"type": "Measurement",
+						"raw": [
+							915907067.505000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#82": {
+						"type": "Measurement",
+						"raw": [
+							915907090.335000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonActivationWorkload_Execute_#83": {
+					"GUID": "7581",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuActivationKernel/neon_fp32_activation_#83": {
+						"type": "Measurement",
+						"raw": [
+							10.590000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#83": {
+						"type": "Measurement",
+						"raw": [
+							18.540000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#83": {
+						"type": "Measurement",
+						"raw": [
+							915907094.295000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#83": {
+						"type": "Measurement",
+						"raw": [
+							915907112.835000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSubtractionWorkload_Execute_#84": {
+					"GUID": "7582",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuSubKernel/neon_fp32_sub_#84": {
+						"type": "Measurement",
+						"raw": [
+							45.420000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#84": {
+						"type": "Measurement",
+						"raw": [
+							61.590000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#84": {
+						"type": "Measurement",
+						"raw": [
+							915907117.605000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#84": {
+						"type": "Measurement",
+						"raw": [
+							915907179.195000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#85": {
+					"GUID": "7583",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#85": {
+						"type": "Measurement",
+						"raw": [
+							16.290000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#85": {
+						"type": "Measurement",
+						"raw": [
+							27.330000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#85": {
+						"type": "Measurement",
+						"raw": [
+							915907184.595000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#85": {
+						"type": "Measurement",
+						"raw": [
+							915907211.925000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#86": {
+					"GUID": "7584",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#86": {
+						"type": "Measurement",
+						"raw": [
+							43.170000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#86": {
+						"type": "Measurement",
+						"raw": [
+							53.010000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#86": {
+						"type": "Measurement",
+						"raw": [
+							915907217.385000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#86": {
+						"type": "Measurement",
+						"raw": [
+							915907270.395000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#87": {
+					"GUID": "7585",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#87": {
+						"type": "Measurement",
+						"raw": [
+							44.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#87": {
+						"type": "Measurement",
+						"raw": [
+							53.880000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#87": {
+						"type": "Measurement",
+						"raw": [
+							915907274.595000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#87": {
+						"type": "Measurement",
+						"raw": [
+							915907328.475000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#88": {
+					"GUID": "7586",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#88": {
+						"type": "Measurement",
+						"raw": [
+							15.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#88": {
+						"type": "Measurement",
+						"raw": [
+							25.140000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#88": {
+						"type": "Measurement",
+						"raw": [
+							915907332.735000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#88": {
+						"type": "Measurement",
+						"raw": [
+							915907357.875000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#89": {
+					"GUID": "7587",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#89": {
+						"type": "Measurement",
+						"raw": [
+							12.930000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#89": {
+						"type": "Measurement",
+						"raw": [
+							22.020000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#89": {
+						"type": "Measurement",
+						"raw": [
+							915907361.865000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#89": {
+						"type": "Measurement",
+						"raw": [
+							915907383.885000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonAdditionWorkload_Execute_#90": {
+					"GUID": "7588",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuAddKernel/neon_fp32_add_#90": {
+						"type": "Measurement",
+						"raw": [
+							43.560000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#90": {
+						"type": "Measurement",
+						"raw": [
+							59.310000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#90": {
+						"type": "Measurement",
+						"raw": [
+							915907388.925000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#90": {
+						"type": "Measurement",
+						"raw": [
+							915907448.235000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#91": {
+					"GUID": "7589",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#91": {
+						"type": "Measurement",
+						"raw": [
+							43.830000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#91": {
+						"type": "Measurement",
+						"raw": [
+							53.190000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#91": {
+						"type": "Measurement",
+						"raw": [
+							915907452.765000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#91": {
+						"type": "Measurement",
+						"raw": [
+							915907505.955000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#92": {
+					"GUID": "7590",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#92": {
+						"type": "Measurement",
+						"raw": [
+							48.030000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#92": {
+						"type": "Measurement",
+						"raw": [
+							56.790000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#92": {
+						"type": "Measurement",
+						"raw": [
+							915907510.035000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#92": {
+						"type": "Measurement",
+						"raw": [
+							915907566.825000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#93": {
+					"GUID": "7591",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#93": {
+						"type": "Measurement",
+						"raw": [
+							29.520000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#93": {
+						"type": "Measurement",
+						"raw": [
+							39.600000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#93": {
+						"type": "Measurement",
+						"raw": [
+							915907570.965000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#93": {
+						"type": "Measurement",
+						"raw": [
+							915907610.565000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#94": {
+					"GUID": "7592",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#94": {
+						"type": "Measurement",
+						"raw": [
+							13.140000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#94": {
+						"type": "Measurement",
+						"raw": [
+							22.650000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#94": {
+						"type": "Measurement",
+						"raw": [
+							915907614.795000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#94": {
+						"type": "Measurement",
+						"raw": [
+							915907637.445000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonAdditionWorkload_Execute_#95": {
+					"GUID": "7593",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuAddKernel/neon_fp32_add_#95": {
+						"type": "Measurement",
+						"raw": [
+							43.650000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#95": {
+						"type": "Measurement",
+						"raw": [
+							55.350000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#95": {
+						"type": "Measurement",
+						"raw": [
+							915907641.495000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#95": {
+						"type": "Measurement",
+						"raw": [
+							915907696.845000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#96": {
+					"GUID": "7594",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#96": {
+						"type": "Measurement",
+						"raw": [
+							43.650000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#96": {
+						"type": "Measurement",
+						"raw": [
+							53.010000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#96": {
+						"type": "Measurement",
+						"raw": [
+							915907701.315000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#96": {
+						"type": "Measurement",
+						"raw": [
+							915907754.325000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonSliceWorkload_Execute_#97": {
+					"GUID": "7595",
+					"type": "Event",
+					"NeonKernelTimer/0: NEStridedSliceKernel_#97": {
+						"type": "Measurement",
+						"raw": [
+							48.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#97": {
+						"type": "Measurement",
+						"raw": [
+							56.970000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#97": {
+						"type": "Measurement",
+						"raw": [
+							915907758.255000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#97": {
+						"type": "Measurement",
+						"raw": [
+							915907815.225000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#98": {
+					"GUID": "7596",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#98": {
+						"type": "Measurement",
+						"raw": [
+							13.230000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#98": {
+						"type": "Measurement",
+						"raw": [
+							23.790000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#98": {
+						"type": "Measurement",
+						"raw": [
+							915907820.055000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#98": {
+						"type": "Measurement",
+						"raw": [
+							915907843.845000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonMultiplicationWorkload_Execute_#99": {
+					"GUID": "7597",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuMulKernel_#99": {
+						"type": "Measurement",
+						"raw": [
+							12.930000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#99": {
+						"type": "Measurement",
+						"raw": [
+							21.930000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#99": {
+						"type": "Measurement",
+						"raw": [
+							915907847.925000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#99": {
+						"type": "Measurement",
+						"raw": [
+							915907869.855000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonAdditionWorkload_Execute_#100": {
+					"GUID": "7598",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuAddKernel/neon_fp32_add_#100": {
+						"type": "Measurement",
+						"raw": [
+							47.460000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#100": {
+						"type": "Measurement",
+						"raw": [
+							59.280000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#100": {
+						"type": "Measurement",
+						"raw": [
+							915907873.905000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#100": {
+						"type": "Measurement",
+						"raw": [
+							915907933.185000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonReshapeWorkload_Execute_#101": {
+					"GUID": "7599",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuReshapeKernel_#101": {
+						"type": "Measurement",
+						"raw": [
+							158.010000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#101": {
+						"type": "Measurement",
+						"raw": [
+							167.580000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#101": {
+						"type": "Measurement",
+						"raw": [
+							915907937.805000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#101": {
+						"type": "Measurement",
+						"raw": [
+							915908105.385000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonFullyConnectedWorkload_Execute_#102": {
+					"GUID": "7600",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuTransposeKernel_#102": {
+						"type": "Measurement",
+						"raw": [
+							10.140000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/1: CpuGemmAssemblyDispatch/pretranspose_B_array_#102": {
+						"type": "Measurement",
+						"raw": [
+							20.010000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/2: CpuReshapeKernel_#102": {
+						"type": "Measurement",
+						"raw": [
+							125.340000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/3: CpuGemmAssemblyDispatch/pretranspose_B_array_#102": {
+						"type": "Measurement",
+						"raw": [
+							32.250000
+						],
+						"unit": "us"
+					},
+					"NeonKernelTimer/4: CpuGemmAssemblyWrapperKernel/a64_hybrid_fp32_mla_8x4_#102": {
+						"type": "Measurement",
+						"raw": [
+							12.540000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#102": {
+						"type": "Measurement",
+						"raw": [
+							297.420000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#102": {
+						"type": "Measurement",
+						"raw": [
+							915908110.425000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#102": {
+						"type": "Measurement",
+						"raw": [
+							915908407.845000
+						],
+						"unit": "us"
+					}
+				},
+				"NeonAdditionWorkload_Execute_#103": {
+					"GUID": "7601",
+					"type": "Event",
+					"NeonKernelTimer/0: CpuAddKernel/neon_fp32_add_#103": {
+						"type": "Measurement",
+						"raw": [
+							12.030000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#103": {
+						"type": "Measurement",
+						"raw": [
+							23.580000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#103": {
+						"type": "Measurement",
+						"raw": [
+							915908412.645000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#103": {
+						"type": "Measurement",
+						"raw": [
+							915908436.225000
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#104": {
+					"type": "Event",
+					"Wall clock time_#104": {
+						"type": "Measurement",
+						"raw": [
+							13.740000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#104": {
+						"type": "Measurement",
+						"raw": [
+							915908439.555000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#104": {
+						"type": "Measurement",
+						"raw": [
+							915908453.295000
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#105": {
+						"type": "Event",
+						"Wall clock time_#105": {
+							"type": "Measurement",
+							"raw": [
+								1.260000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#105": {
+							"type": "Measurement",
+							"raw": [
+								915908451.015000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#105": {
+							"type": "Measurement",
+							"raw": [
+								915908452.275000
+							],
+							"unit": "us"
+						}
+					}
+				}
+			}
+		}
+	}
+}

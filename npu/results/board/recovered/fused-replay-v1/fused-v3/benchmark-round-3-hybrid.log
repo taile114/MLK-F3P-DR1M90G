@@ -1,0 +1,2 @@
+result=inference_completed mode=hybrid samples=184 warmup=5 max_reference_error=0.03055000305 mismatches=182 rmse=2.467976508 mae=1.979486184 mean_forward_us=45432.65556 timed_allocation_calls=13312 timed_allocation_bytes=451608 NPU_layers=2 max_integer_lsb=0 integer_audit=0
+exit_code=0 results=/mnt/mmcblk0p2/npu-tests/fused-v3/results_hybrid_19700101_010141_5666

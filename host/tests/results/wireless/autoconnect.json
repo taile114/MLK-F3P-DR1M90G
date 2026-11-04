@@ -1,0 +1,38 @@
+{
+  "psLocalSha256": "d1bf68a2b445da909f78a956c46a55c8bc3517e870f0ee49a4965cab736a6260",
+  "remotePcSha256": "2feb5b9af0236753cdb29b3cc8b0d20507be8a602426db7cd1997f33c47323f1",
+  "rootfsSha256": "be14766bb633a667a66a409f6f3e27c986270807a0d88ec495215a483a9d18a2",
+  "pairedPrivateConfigInCommonRootfs": false,
+  "defaultSecurity": "ECDH; waiting for peer key on first use",
+  "identityGeneration": "unique at first startup, persistent, owner-only file",
+  "discovery": {
+    "port": 8001,
+    "authentication": "PSK or pinned static X25519 with HKDF/HMAC-SHA256",
+    "initialBoardCachedTarget": "192.0.2.1",
+    "initialPcCachedTarget": "192.0.2.2",
+    "foundBoard": "192.168.211.14:8000",
+    "foundRemotePc": "192.168.211.16:8000",
+    "noTargetOrListenCliArguments": true
+  },
+  "wifiReconnect": {
+    "disconnectedSeconds": 7,
+    "rejoinedAtoL": true,
+    "encryptedApplicationLinkRecovered": true
+  },
+  "pcAutostart": {
+    "service": "mlk-remote-pc.service",
+    "enabled": true,
+    "target": "graphical-session.target",
+    "dependencyVerification": "passed"
+  },
+  "tests": {
+    "discoveryPassed": 5,
+    "windowPassed": 6,
+    "physicalWindowPassed": 3,
+    "cryptoFailures": 0
+  },
+  "limits": [
+    "Discovery limited to private IPv4 /24 through /30 on WiFi/Ethernet",
+    "4G across NAT requires a reachable endpoint or VPN; not physically verified"
+  ]
+}

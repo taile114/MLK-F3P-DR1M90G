@@ -1,0 +1,23 @@
+src/native_rul_fused.cpp: In function ‘void* operator new(std::size_t)’:
+src/native_rul_fused.cpp:10:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+     if(void* p=std::malloc(n?n:1))return p;throw std::bad_alloc();
+     ^~
+src/native_rul_fused.cpp:10:44: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     if(void* p=std::malloc(n?n:1))return p;throw std::bad_alloc();
+                                            ^~~~~
+In file included from src/native_rul_fused.cpp:20:0:
+src/fused_ops.hpp: At global scope:
+src/fused_ops.hpp:35:8: warning: ‘fused::Graph’ has a field ‘fused::Graph::weights’ whose type uses the anonymous namespace [-Wsubobject-linkage]
+ struct Graph {
+        ^~~~~
+In file included from src/native_rul_fused.cpp:20:0:
+src/fused_ops.hpp: In member function ‘const std::vector<fused::Value>& fused::Graph::run(std::initializer_list<{anonymous}::View>)’:
+src/fused_ops.hpp:195:9: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+         for(auto& execute:operations)execute();return outputs;
+         ^~~
+src/fused_ops.hpp:195:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+         for(auto& execute:operations)execute();return outputs;
+                                                ^~~~~~
+result=inference_completed mode=scalar samples=184 warmup=5 max_reference_error=1.049041748e-05 mismatches=0 rmse=2.465940091 mae=1.977115041 mean_forward_us=268120.8416 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0
+result=inference_completed mode=neon samples=184 warmup=5 max_reference_error=8.106231689e-06 mismatches=0 rmse=2.465940142 mae=1.97711497 mean_forward_us=246519.8506 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0
+result=compiled_and_all_validation_cpu_checked

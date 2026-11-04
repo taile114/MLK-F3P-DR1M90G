@@ -1,0 +1,11 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    1 [label="{Input|Guid : 1\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    2 [label="{Comparison|Operation : Less\lGuid : 2\lLayerType : Comparison\lBackendID : CpuAcc\l}"];
+    3 [label="{Output|Guid : 3\lLayerType : Output\lBackendID : CpuAcc\l}"];
+    0 -> 2 [label=< [2,2,1] >];
+    1 -> 2 [label=< [1,2,3] >];
+    2 -> 3 [label=< [2,2,3] >];
+}

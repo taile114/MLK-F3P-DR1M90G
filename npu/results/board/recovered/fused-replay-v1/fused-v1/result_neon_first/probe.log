@@ -1,0 +1,1 @@
+result=inference_completed mode=neon samples=1 warmup=5 max_reference_error=3.814697266e-06 mismatches=0 rmse=3.54199791 mae=3.54199791 mean_forward_us=44101.591 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0

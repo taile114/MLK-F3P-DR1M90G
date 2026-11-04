@@ -1,0 +1,38 @@
+digraph Optimized {
+    node [shape="record"];
+    edge [fontsize=8 fontcolor="blue" fontname="arial-bold"];
+    0 [label="{Input|Guid : 0\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    1 [label="{Input|Guid : 1\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    2 [label="{Input|Guid : 2\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    3 [label="{Input|Guid : 3\lLayerType : Input\lBackendID : CpuAcc\l}"];
+    4 [label="{ElementwiseBinary|Guid : 4\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    27 [label="{MemCopy|Guid : 27\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuRef\l}"];
+    8 [label="{ElementwiseBinary|Guid : 8\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    28 [label="{MemCopy|Guid : 28\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuRef\l}"];
+    5 [label="{ElementwiseUnary|UnaryOperation : Unknown\lGuid : 5\lLayerType : ElementwiseUnary\lBackendID : CpuRef\l}"];
+    29 [label="{MemCopy|Guid : 29\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuAcc\l}"];
+    9 [label="{ElementwiseUnary|UnaryOperation : Unknown\lGuid : 9\lLayerType : ElementwiseUnary\lBackendID : CpuRef\l}"];
+    30 [label="{MemCopy|Guid : 30\lLayerName : [  (0) -\>  (0) ]\lLayerType : MemCopy\lBackendID : CpuAcc\l}"];
+    6 [label="{Activation|Function : BoundedReLu\lA : 1.000000\lB : 0.000000\lGuid : 6\lLayerType : Activation\lBackendID : CpuAcc\l}"];
+    10 [label="{Activation|Function : BoundedReLu\lA : 1.000000\lB : 0.000000\lGuid : 10\lLayerType : Activation\lBackendID : CpuAcc\l}"];
+    7 [label="{ElementwiseBinary|Guid : 7\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    11 [label="{ElementwiseBinary|Guid : 11\lLayerType : ElementwiseBinary\lBackendID : CpuAcc\l}"];
+    12 [label="{Output|Guid : 12\lLayerType : Output\lBackendID : CpuAcc\l}"];
+    1 -> 4 [label=< [2,3] >];
+    0 -> 4 [label=< [2,3] >];
+    4 -> 27 [label=< [2,3] >];
+    2 -> 8 [label=< [2,3] >];
+    0 -> 8 [label=< [2,3] >];
+    8 -> 28 [label=< [2,3] >];
+    27 -> 5 [label=< [2,3] >];
+    5 -> 29 [label=< [2,3] >];
+    28 -> 9 [label=< [2,3] >];
+    9 -> 30 [label=< [2,3] >];
+    29 -> 6 [label=< [2,3] >];
+    30 -> 10 [label=< [2,3] >];
+    3 -> 7 [label=< [2,3] >];
+    6 -> 7 [label=< [2,3] >];
+    7 -> 11 [label=< [2,3] >];
+    10 -> 11 [label=< [2,3] >];
+    11 -> 12 [label=< [2,3] >];
+}

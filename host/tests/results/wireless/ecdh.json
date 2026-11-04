@@ -1,0 +1,33 @@
+{
+  "badDecryptOrFrame": 0,
+  "datagrams": 20571,
+  "durationSeconds": 180,
+  "forbiddenReplies": 0,
+  "frameTypes": {
+    "0": 19893,
+    "1": 312,
+    "2": 0,
+    "3": 0,
+    "4": 181,
+    "5": 0,
+    "6": 0,
+    "7": 180
+  },
+  "mode": "ECDH",
+  "ok": true,
+  "onceReplies": 1,
+  "ordersSaved": 0,
+  "ownerWriteRejected": true,
+  "plaintextReceived": 0,
+  "preHandshakeCiphertext": 3,
+  "samples": {
+    "0": 3881,
+    "1": 8169,
+    "2": 547605,
+    "3": 1409
+  },
+  "sequenceGaps": 0,
+  "validConfig": true,
+  "wireBytes": 5012835,
+  "wrongPinRejected": true
+}

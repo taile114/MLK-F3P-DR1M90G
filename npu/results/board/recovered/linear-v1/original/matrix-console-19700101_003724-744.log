@@ -1,0 +1,239 @@
+results=/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_matrix_19700101_003724_746 runtime=/opt/armnn_lib/lib group=matrix
+--- shape=m00 B=1 I=64 O=1 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=229.84 mean_quantize_pack_enqueue_sync_restore_us=243.17 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m00 B=1 I=64 O=1 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=224.65 mean_quantize_pack_enqueue_sync_restore_us=250.56 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m00 B=1 I=64 O=1 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=266.9 mean_quantize_pack_enqueue_sync_restore_us=280.44 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m00 B=1 I=64 O=1 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=1 input_features=64 output_features=1 physical_input_features=64 physical_output_features=1 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.68 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=64 physical_output_bytes=1
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m00 B=1 I=64 O=1 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=324.07 mean_quantize_pack_enqueue_sync_restore_us=337.36 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m00 B=1 I=64 O=1 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=1 input_features=64 output_features=1 physical_input_features=64 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.69 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=64 physical_output_bytes=8
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.04 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m01 B=1 I=132 O=64 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=660.7 mean_quantize_pack_enqueue_sync_restore_us=676.44 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m01 B=1 I=132 O=64 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=221.71 mean_quantize_pack_enqueue_sync_restore_us=268.71 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m01 B=1 I=132 O=64 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=1135.55 mean_quantize_pack_enqueue_sync_restore_us=1165.15 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m01 B=1 I=132 O=64 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=1 input_features=132 output_features=64 physical_input_features=132 physical_output_features=64 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.62 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.5 requantization_divisor=16 zero_bias=true physical_input_bytes=132 physical_output_bytes=64
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m01 B=1 I=132 O=64 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=1225.88 mean_quantize_pack_enqueue_sync_restore_us=1242.05 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m01 B=1 I=132 O=64 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=1 input_features=132 output_features=64 physical_input_features=136 physical_output_features=64 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.72 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.5 requantization_divisor=16 zero_bias=true physical_input_bytes=136 physical_output_bytes=64
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.04 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m02 B=1 I=576 O=1 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=303.48 mean_quantize_pack_enqueue_sync_restore_us=329.67 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m02 B=1 I=576 O=1 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=2071.87 mean_quantize_pack_enqueue_sync_restore_us=2111.32 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m02 B=1 I=576 O=1 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=338.59 mean_quantize_pack_enqueue_sync_restore_us=364.6 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m02 B=1 I=576 O=1 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=1 input_features=576 output_features=1 physical_input_features=576 physical_output_features=1 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.68 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=2 requantization_divisor=64 zero_bias=true physical_input_bytes=576 physical_output_bytes=1
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m02 B=1 I=576 O=1 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=785.94 mean_quantize_pack_enqueue_sync_restore_us=812.97 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m02 B=1 I=576 O=1 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=1 input_features=576 output_features=1 physical_input_features=576 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.65 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=2 requantization_divisor=64 zero_bias=true physical_input_bytes=576 physical_output_bytes=8
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m03 B=1 I=1188 O=64 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=4371.14 mean_quantize_pack_enqueue_sync_restore_us=4418.86 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m03 B=1 I=1188 O=64 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=289.81 mean_quantize_pack_enqueue_sync_restore_us=352.77 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m03 B=1 I=1188 O=64 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=8801.91 mean_quantize_pack_enqueue_sync_restore_us=8850.31 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m03 B=1 I=1188 O=64 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=1 input_features=1188 output_features=64 physical_input_features=1188 physical_output_features=64 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.66 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=2 requantization_divisor=64 zero_bias=true physical_input_bytes=1188 physical_output_bytes=64
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m03 B=1 I=1188 O=64 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=8545.11 mean_quantize_pack_enqueue_sync_restore_us=8590.75 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m03 B=1 I=1188 O=64 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=1 input_features=1188 output_features=64 physical_input_features=1192 physical_output_features=64 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.66 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=2 requantization_divisor=64 zero_bias=true physical_input_bytes=1192 physical_output_bytes=64
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m04 B=10 I=23 O=1 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=245.91 mean_quantize_pack_enqueue_sync_restore_us=263.94 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m04 B=10 I=23 O=1 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=319.16 mean_quantize_pack_enqueue_sync_restore_us=351.28 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m04 B=10 I=23 O=1 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=278.41 mean_quantize_pack_enqueue_sync_restore_us=297.05 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m04 B=10 I=23 O=1 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=10 input_features=23 output_features=1 physical_input_features=23 physical_output_features=1 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.66 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=230 physical_output_bytes=10
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.04 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m04 B=10 I=23 O=1 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=381.76 mean_quantize_pack_enqueue_sync_restore_us=399.86 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m04 B=10 I=23 O=1 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=10 input_features=23 output_features=1 physical_input_features=24 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.63 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=240 physical_output_bytes=80
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m05 B=10 I=207 O=1 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=353.93 mean_quantize_pack_enqueue_sync_restore_us=423.14 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m05 B=10 I=207 O=1 mode=fc backend=Alnpu exit_code=0 ---
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+result=passed mode=fc backend=Alnpu iterations=3 max_error_lsb=1 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=388.51 mean_quantize_pack_enqueue_sync_restore_us=470.08 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m05 B=10 I=207 O=1 mode=conv backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=467.82 mean_quantize_pack_enqueue_sync_restore_us=537.1 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m05 B=10 I=207 O=1 mode=conv backend=Alnpu exit_code=40 ---
+mode=conv rows=10 input_features=207 output_features=1 physical_input_features=207 physical_output_features=1 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.69 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.5 requantization_divisor=16 zero_bias=true physical_input_bytes=2070 physical_output_bytes=10
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m05 B=10 I=207 O=1 mode=conv_pad8 backend=CpuRef exit_code=0 ---
+compute_layer_type=Convolution2d actual_backend=CpuRef
+result=passed mode=conv_pad8 backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=1482.980333 mean_quantize_pack_enqueue_sync_restore_us=1549.340333 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m05 B=10 I=207 O=1 mode=conv_pad8 backend=Alnpu exit_code=40 ---
+mode=conv_pad8 rows=10 input_features=207 output_features=1 physical_input_features=208 physical_output_features=8 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.66 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.5 requantization_divisor=16 zero_bias=true physical_input_bytes=2080 physical_output_bytes=80
+Warning: WARNING: Layer of type Convolution2d is not supported on requested backend Alnpu for input data type QAsymmU8 and output data type QAsymmU8 (reason: Do Not Supported, Convolution2d can`t fit to 'alnpu'
+***if you want to improve the performance of your network, please contact AL stuff for help***), falling back to the next backend.
+Warning: ERROR: Layer of type Convolution2d is not supported on any preferred backend [Alnpu ]
+Info: Shutdown time: 0.03 ms.
+result=failed stage=optimize error=Failed to assign a backend to each layer
+--- shape=m06 B=11 I=12 O=21 mode=fc backend=CpuRef exit_code=0 ---
+compute_layer_type=FullyConnected actual_backend=CpuRef
+result=passed mode=fc backend=CpuRef iterations=3 max_error_lsb=0 tolerance_lsb=1 mismatches=0 saturated_original_outputs=0 mean_enqueue_us=329.11 mean_quantize_pack_enqueue_sync_restore_us=348.83 profiling_enabled=true timing_is_diagnostic=true
+--- shape=m06 B=11 I=12 O=21 mode=fc backend=Alnpu exit_code=60 ---
+mode=fc rows=11 input_features=12 output_features=21 physical_input_features=12 physical_output_features=21 requested_backend=Alnpu cpu_fallback_allowed=false trained_model_weights_used=false
+Info: ArmNN v32.1.0
+Info: Initialization time: 0.72 ms.
+available_backends=CpuAcc,Alnpu,CpuRef,ALRef,
+stage=construct passed quantization=QAsymmU8 weight_zero_point=128 input_zero_point=128 input_scale=0.25 weight_scale=0.125 output_scale=0.25 requantization_divisor=8 zero_bias=true physical_input_bytes=132 physical_output_bytes=231
+Info: ******************************************************************************************************
+Info: Guid|Backend |LayerType                 InputSize(aligned)  |OutputSize(aligned) |TotalSize(aligned)  
+Info: ------------------------------------------------------------------------------------------------------
+Info:   11|Alnpu   |ALHardNPU                 0.00KB(0.00KB)      |0.23KB(0.23KB)      |0.23KB(0.23KB)      
+Info: ******************************************************************************************************
+compute_layer_type=ALHardNPU actual_backend=Alnpu
+stage=optimize passed compute_layers=1
+Info: 
+
+ Memory Usage Info: after Load Network(id=0), CMA Mem Usage: weight=1.02KB
+
+stage=load passed
+Error: filter_OC = 21 
+Error: [HARDNPU]Waiting for interrupt timeout
+[HARDNPU]Waiting for interrupt timeout
+Error: An error occurred attempting to execute a workload: [HARDNPU] CRASHED,reconfig the NPU and retry or contact the AL team
+Info: Execution time: 1029.83 ms.
+Info: Shutdown time: 0.25 ms.
+result=failed stage=inference error=EnqueueWorkload failed
+--- interrupt snapshots ---
+ 41:        771          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+ 41:        851          0     GICv3 144 Level     HARD_NPU_IRQ
+ 42:          0          0     GICv3 129 Level     SOFT_NPU_IRQ
+result=stopped exit_code=60 results=/mnt/mmcblk0p2/npu-tests/linear-v1-19700101_002235-357/f3p-npu-linear-v1/results_matrix_19700101_003724_746

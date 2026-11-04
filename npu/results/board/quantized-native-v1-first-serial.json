@@ -1,0 +1,52 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "command": "test -f '/mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.bin' && mkdir '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial'",
+      "output": "",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "sha256": "406cd5ff90aa8cbfc0bd35b8c0497128a1d2c61e848c70c699677aa4029b681e",
+      "verified": true,
+      "remote_path": "/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/bundle.tar.gz",
+      "bytes": 112058,
+      "operation": "upload",
+      "local_path": "E:\\competion\\code\\project\\npu\\work\\f3p-quantized-native-arm64-v1.tar.gz"
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial' && gzip -dc bundle.tar.gz | tar -xf -",
+      "output": "",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "command": "cp '/mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.bin' '/mnt/mmcblk1p2/root/f3p-cpu-accel-v1/native-rul/weights.tsv' '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1/'",
+      "output": "",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1' && sha256sum -c weights.sha256 && sha256sum -c checksums.sha256 > package-check.log && sh run.sh baseline 1",
+      "output": "weights.bin: OK\r\nweights.tsv: OK\r\n[ 1556.546398] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 1556.546475] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nrequested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 available_backends=CpuAcc,Alnpu,CpuRef,ALRef,\r\nstage=build_segment_0 begin\r\nsegment=0 optimizer_messages=30\r\nstage=build_segment_0 passed\r\nstage=build_segment_1 begin\r\nsegment=1 optimizer_messages=8\r\nstage=build_segment_1 passed\r\nstage=build_segment_2 begin\r\nsegment=2 optimizer_messages=8\r\nstage=build_segment_2 passed\r\nstage=build_segment_3 begin\r\nsegment=3 optimizer_messages=8\r\nstage=build_segment_3 passed\r\nstage=build_segment_4 begin\r\nsegment=4 optimizer_messages=4\r\nstage=build_segment_4 passed\r\nstage=build_segment_5 begin\r\nsegment=5 optimizer_messages=2\r\nstage=build_segment_5 passed\r\nsample=0 prediction=21.45800018 reference=21.45799828 absolute_error=1.907348633e-06\r\nresult=inference_completed samples=1 max_reference_error=1.907348633e-06 mismatches=0 rmse=3.541999817 mae=3.541999817 mean_forward_us=234072.693\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=0 accuracy_acceptance=TBD\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1/results_baseline_19700101_002555_5229",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1' && sh run.sh cpu_quantized 1",
+      "output": "[ 1561.549745] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 1561.549824] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nrequested_backend=CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 available_backends=CpuAcc,Alnpu,CpuRef,ALRef,\r\nstage=build_segment_0 begin\r\nsegment=0 optimizer_messages=30\r\nstage=build_segment_0 passed\r\nstage=build_segment_1 begin\r\nsegment=1 optimizer_messages=8\r\nstage=build_segment_1 passed\r\nstage=build_segment_2 begin\r\nsegment=2 optimizer_messages=8\r\nstage=build_segment_2 passed\r\nstage=build_segment_3 begin\r\nsegment=3 optimizer_messages=8\r\nstage=build_segment_3 passed\r\nstage=build_segment_4 begin\r\nsegment=4 optimizer_messages=4\r\nstage=build_segment_4 passed\r\nstage=build_segment_5 begin\r\nsegment=5 optimizer_messages=2\r\nstage=build_segment_5 passed\r\nsample=0 prediction=21.46642876 reference=21.45799828 absolute_error=0.008430480957\r\nresult=inference_completed samples=1 max_reference_error=0.008430480957 mismatches=1 rmse=3.533571243 mae=3.533571243 mean_forward_us=234685.353\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1/results_cpu_quantized_19700101_002600_5244",
+      "exit_code": 0,
+      "operation": "command"
+    },
+    {
+      "command": "cd '/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1' && sh run.sh hybrid 1",
+      "output": "[ 1566.470352] hard_npu 63f00000.hard_npu: map_to_register: phys_addr: 63f00000\r\n[ 1566.470432] soft_npu 1f0000000.soft_npu: map_to_register: phys_addr: 1f0000000\r\nrequested_backend=Alnpu,CpuAcc,CpuRef onnx_parser_used=false host_gelu=std::erf samples=1 profile_first_window=1 available_backends=CpuAcc,Alnpu,CpuRef,ALRef,\r\nstage=build_segment_0 begin\r\nsegment=0 physical_npu_layers=0\r\nsegment=0 optimizer_messages=834\r\nstage=build_segment_0 passed\r\nstage=build_segment_1 begin\r\nsegment=1 physical_npu_layers=0\r\nsegment=1 optimizer_messages=289\r\nstage=build_segment_1 passed\r\nstage=build_segment_2 begin\r\nsegment=2 physical_npu_layers=0\r\nsegment=2 optimizer_messages=289\r\nstage=build_segment_2 passed\r\nstage=build_segment_3 begin\r\nsegment=3 physical_npu_layers=0\r\nsegment=3 optimizer_messages=289\r\nstage=build_segment_3 passed\r\nstage=build_segment_4 begin\r\nsegment=4 physical_npu_layers=1\r\nsegment=4 optimizer_messages=110\r\nstage=build_segment_4 passed\r\nstage=build_segment_5 begin\r\nsegment=5 physical_npu_layers=1\r\nsegment=5 optimizer_messages=47\r\nstage=build_segment_5 passed\r\nsample=0 prediction=21.43906212 reference=21.45799828 absolute_error=0.01893615723\r\nresult=inference_completed samples=1 max_reference_error=0.01893615723 mismatches=1 rmse=3.560937881 mae=3.560937881 mean_forward_us=246266.462\r\nrul_unit=observed_aging_test_session\r\nquantized_branches=2 accuracy_acceptance=TBD\r\nexit_code=0 results=/mnt/mmcblk0p2/npu-tests/quantized-native-v1-serial/f3p-quantized-native-v1/results_hybrid_19700101_002605_5258",
+      "exit_code": 0,
+      "operation": "command"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

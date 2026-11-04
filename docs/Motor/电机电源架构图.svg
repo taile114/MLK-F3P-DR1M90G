@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2340" height="1300" viewBox="0 0 2340 1300">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#141414"/>
+    </marker>
+    <style>
+      .box  { fill:#EFEFFA; stroke:#8E8ECF; stroke-width:1.6; }
+      .gbox { fill:#EFF7EF; stroke:#7FAF8A; stroke-width:1.6; }
+      .kbox { fill:#FFF4EF; stroke:#D89A7A; stroke-width:1.6; }
+      .nbox { fill:#F3EEFB; stroke:#9B7FD4; stroke-width:1.8; }
+      .sbox { fill:#EFF9F7; stroke:#5FA9A0; stroke-width:1.8; }
+      .rbox { fill:#FDF2F2; stroke:#D98A8A; stroke-width:1.6; }
+      .ttl  { font-family:"Noto Sans CJK SC","Arial","Microsoft YaHei",sans-serif; font-size:17px; font-weight:bold; fill:#141414; }
+      .sub  { font-family:"Noto Sans CJK SC","Arial","Microsoft YaHei",sans-serif; font-size:13px; fill:#4A4A70; }
+      .ln   { stroke:#141414; stroke-width:1.6; fill:none; marker-end:url(#arw); }
+      .wire { stroke:#141414; stroke-width:1.6; fill:none; }
+      .net  { font-family:"Noto Sans CJK SC","Arial","Microsoft YaHei",sans-serif; font-size:12px; fill:#B03A2E; }
+      .title{ font-family:"Noto Sans CJK SC","Arial","Microsoft YaHei",sans-serif; font-size:26px; font-weight:bold; fill:#141414; }
+      .note { font-family:"Noto Sans CJK SC","Arial","Microsoft YaHei",sans-serif; font-size:13px; fill:#555; }
+    </style>
+  </defs>
+  <rect width="2340" height="1300" fill="#FFFFFF"/>
+  <text class="title" x="60" y="52">MLK-F3P 外设板 —— 电机驱动 / 电流采集 / 电源 系统架构</text>
+  <text class="note" x="60" y="80">方框 = 功能模块 · 箭头 = 连接 · 红色 = 网络名 ｜ 功率回路串联：U3.OUTA → U4.IP+ → U4.IP− → J2.1 → 755电机 → J2.2 = MOT_B → U3.OUTB</text>
+  <text class="note" x="60" y="101">紫色 = 选题四新增块（⑦CAN · ⑧过载硬件保护 · ⑨声光报警）· 青色 = 传感器扩展口 · 橙色 = 辅助电源</text>
+<rect class="box" x="60" y="140" width="280" height="120" rx="4"/>
+<text class="ttl" x="74" y="168">① USB-C PD 输入</text>
+<text class="sub" x="74" y="195">J1 Type-C(16P) + U1 HUSB238</text>
+<text class="sub" x="74" y="219">VSET 悬空 = 20V · ISET 3.25A</text>
+<text class="sub" x="74" y="243">CC1/CC2 内置 Rd</text>
+<rect class="box" x="390" y="140" width="280" height="120" rx="4"/>
+<text class="ttl" x="404" y="168">② 输入保护</text>
+<text class="sub" x="404" y="195">F1 4A 保险丝(1206)</text>
+<text class="sub" x="404" y="219">D1 SMCJ24A TVS</text>
+<text class="sub" x="404" y="243">C1/C4 10µF + C2/C5 100nF</text>
+<rect class="box" x="720" y="140" width="340" height="120" rx="4"/>
+<text class="ttl" x="734" y="168">③ Buck 降压 U2 TPS54560</text>
+<text class="sub" x="734" y="195">20V → 12V / 3A · 400kHz</text>
+<text class="sub" x="734" y="219">R5/R6=143k/10.2k → 12.02V</text>
+<text class="sub" x="734" y="243">L1 15µH · D2 B560C 续流</text>
+<rect class="box" x="1110" y="140" width="300" height="120" rx="4"/>
+<text class="ttl" x="1124" y="168">④ VM_12V 母线</text>
+<text class="sub" x="1124" y="195">C10/C11 47µF + C13/C17 470µF</text>
+<text class="sub" x="1124" y="219">≈1050µF 吸收制动/飞返</text>
+<text class="sub" x="1124" y="243">电机电源域 VS</text>
+<rect class="kbox" x="1460" y="140" width="340" height="120" rx="4"/>
+<text class="ttl" x="1474" y="168">⑥ 3.3V：K7805 DC-DC + LDL1117 LDO</text>
+<text class="sub" x="1474" y="195">U10 K7805-1000L：12V→5V/1A</text>
+<text class="sub" x="1474" y="219">U11 LDL1117S33R：5V→3.30V</text>
+<text class="sub" x="1474" y="243">C35/C36 10µF · C42/C43 22µF</text>
+<rect class="kbox" x="1850" y="140" width="380" height="120" rx="4"/>
+<text class="ttl" x="1864" y="168">辅助轨 +3.3V（经 FB1 隔离）</text>
+<text class="sub" x="1864" y="195">FB1 磁珠 GZ2012D601TF</text>
+<text class="sub" x="1864" y="219">+3.3V_LDO → +3.3V 安静轨</text>
+<text class="sub" x="1864" y="243">供霍尔/ADC/VREF/比较器/CAN/报警</text>
+<rect class="box" x="720" y="330" width="340" height="140" rx="4"/>
+<text class="ttl" x="734" y="358">H 桥 U3 VNH5050A</text>
+<text class="sub" x="734" y="385">30A · VS = VM_12V（VCC13/24+Slug1=39）</text>
+<text class="sub" x="734" y="409">PWM ≤ 20kHz · V_IH ≥ 2.1V</text>
+<text class="sub" x="734" y="433">Slug2(37)=MOT_A_BR · Slug3(38)=MOT_B</text>
+<text class="sub" x="734" y="457">EN/DIAG 分腿 → NFAULT_A/B</text>
+<rect class="box" x="1110" y="330" width="300" height="140" rx="4"/>
+<text class="ttl" x="1124" y="358">755 有刷电机</text>
+<text class="sub" x="1124" y="385">12V / 3A（36W）· 360° 连续转</text>
+<text class="sub" x="1124" y="409">J2 KF301-2P 螺钉端子</text>
+<text class="sub" x="1124" y="433">无限位行程 → 不装限位开关</text>
+<rect class="box" x="720" y="550" width="340" height="140" rx="4"/>
+<text class="ttl" x="734" y="578">霍尔电流 U4 ACS725 ±20A</text>
+<text class="sub" x="734" y="605">串在电机回路（一次侧）</text>
+<text class="sub" x="734" y="629">IP+ = MOT_A_BR · IP− = MOT_A</text>
+<text class="sub" x="734" y="653">3.3V · 66mV/A · VIOUT→R9/C21</text>
+<text class="sub" x="734" y="677">→ I_SENSE（0.33–2.97V）</text>
+<rect class="box" x="1110" y="550" width="340" height="140" rx="4"/>
+<text class="ttl" x="1124" y="578">ADC U5 MCP3204（SPI 12bit）</text>
+<text class="sub" x="1124" y="605">CH0 = I_SENSE（霍尔，闭环）</text>
+<text class="sub" x="1124" y="629">CH1 = CS_ADC（桥电流镜，D11 钳位）</text>
+<text class="sub" x="1124" y="653">CH2 = VM_SENSE · CH3 = MOT_V_SENSE</text>
+<text class="sub" x="1124" y="677">VREF = +3.3V（R10/C25/C31）</text>
+<rect class="nbox" x="1500" y="550" width="340" height="140" rx="4"/>
+<text class="ttl" x="1514" y="578">⑧-2 硬件跳闸 U9 MCP6547</text>
+<text class="sub" x="1514" y="605">窗口比较器 VTH_H 1.98V / VTH_L 1.32V</text>
+<text class="sub" x="1514" y="629">↔ 电机电流 ±5A（双向）</text>
+<text class="sub" x="1514" y="653">轨到轨输入 · 开漏线与 → OC_FLAG</text>
+<text class="sub" x="1514" y="677">R45/46/47=20k/10k/20k · 迟滞≈0.6A</text>
+<rect class="nbox" x="1890" y="550" width="360" height="140" rx="4"/>
+<text class="ttl" x="1904" y="578">⑧-1 硬件联锁 U8 74HC08</text>
+<text class="sub" x="1904" y="605">PWM_SAFE = PWM ∧ OC_FLAG</text>
+<text class="sub" x="1904" y="629">→ U3.IN_PWM（过流即撤 PWM）</text>
+<text class="sub" x="1904" y="653">不经过 PL · PL 跑飞也动作</text>
+<text class="sub" x="1904" y="677">R56/R57/R58 10k 下拉（禁浮空）</text>
+<rect class="box" x="60" y="770" width="340" height="140" rx="4"/>
+<text class="ttl" x="74" y="798">FPGA 接口 J3（2×13 排母）</text>
+<text class="sub" x="74" y="825">对插底板 J12 / BANK13（3.3V）</text>
+<text class="sub" x="74" y="849">PWM/INA/INB · NFAULT_A/B · SPI×4</text>
+<text class="sub" x="74" y="873">CAN_TX/RX · OC_FLAG · ALARM×2</text>
+<text class="sub" x="74" y="897">SENS_SDA/SCL（I2C）· 8 个 IO 空闲</text>
+<rect class="box" x="440" y="770" width="340" height="140" rx="4"/>
+<text class="ttl" x="454" y="798">接口串阻 100Ω</text>
+<text class="sub" x="454" y="825">R20–R27：PWM/INA/INB/SPI/NFAULT</text>
+<text class="sub" x="454" y="849">R34/R36：CAN_TX/RX</text>
+<text class="sub" x="454" y="873">R55：OC_FLAG · R59/R60：I2C</text>
+<text class="sub" x="454" y="897">抑制振铃 / 限制倒灌电流</text>
+<rect class="gbox" x="820" y="770" width="420" height="140" rx="4"/>
+<text class="ttl" x="834" y="798">接地 / EMC</text>
+<text class="sub" x="834" y="825">AGND 岛 → R19(0Ω) → GND（单点星接）</text>
+<text class="sub" x="834" y="849">星点位于 ADC 下方 · 模拟/功率分区</text>
+<text class="sub" x="834" y="873">J3.2 = 两板之间唯一的地返回</text>
+<rect class="rbox" x="1280" y="770" width="560" height="140" rx="4"/>
+<text class="ttl" x="1294" y="798">关键约束</text>
+<text class="sub" x="1294" y="825">PWM ≤ 20kHz · V_IH ≥ 2.1V · 禁用 ACS724（5V）</text>
+<text class="sub" x="1294" y="849">J12 偶数脚是 PL IO —— 绝不可接地</text>
+<text class="sub" x="1294" y="873">单域共地、无 galvanic 隔离（A2 决策，非遗漏）</text>
+<text class="sub" x="1294" y="897">VNH 输入禁浮空：R56/R57/R58 10k 下拉</text>
+<rect class="nbox" x="60" y="990" width="400" height="150" rx="4"/>
+<text class="ttl" x="74" y="1018">⑦ CAN 总线控制</text>
+<text class="sub" x="74" y="1045">U7 SN65HVD232D（3.3V，与底板同型）</text>
+<text class="sub" x="74" y="1068">R34/R36 100Ω 串阻 · R35 10k 上拉</text>
+<text class="sub" x="74" y="1091">R37 120Ω 固定终端（TERM）· D8/D9 TVS</text>
+<text class="sub" x="74" y="1114">J4 KF2EDGV-3.81-3P：CAN_H/L/GND</text>
+<text class="sub" x="74" y="1137">供电 +3.3V_LDO</text>
+<rect class="nbox" x="500" y="990" width="340" height="150" rx="4"/>
+<text class="ttl" x="514" y="1018">⑨ 声光报警</text>
+<text class="sub" x="514" y="1045">D6 LED 红 + R42 330Ω（光）</text>
+<text class="sub" x="514" y="1068">BZ1 有源蜂鸣器 + Q1 MMBT3904</text>
+<text class="sub" x="514" y="1091">R43 1k / R44 10k · D7 续流</text>
+<text class="sub" x="514" y="1114">由 PL/AI 主动驱动</text>
+<rect class="sbox" x="880" y="990" width="600" height="150" rx="4"/>
+<text class="ttl" x="894" y="1018">传感器扩展口（I2C，独立电源域）</text>
+<text class="sub" x="894" y="1045">J6 4P：VCC_SENS / GND / SCL / SDA</text>
+<text class="sub" x="894" y="1068">J7/J8 = 电源汇流排（4 组 VCC/GND 抽头）</text>
+<text class="sub" x="894" y="1091">J3.1 → F2 PTC 0.5A → D10 SS14 → VCC_SENS</text>
+<text class="sub" x="894" y="1114">R53/R54 4.7k 上拉 · D12/D13 BAT54S 钳位</text>
+<text class="sub" x="894" y="1137">不得与本板 +3.3V 相连（防倒灌）· 地只走 J3.2</text>
+<rect class="rbox" x="1520" y="990" width="420" height="150" rx="4"/>
+<text class="ttl" x="1534" y="1018">两层保护 / 选题映射</text>
+<text class="sub" x="1534" y="1045">第 1 层 软件：PL/AI 主动控制</text>
+<text class="sub" x="1534" y="1068">  ±3A 分级判据 · 记录 / 上报</text>
+<text class="sub" x="1534" y="1091">第 2 层 硬件：±5A 反射弧（不经 PL）</text>
+<text class="sub" x="1534" y="1114">选题四：①CAN 时序解析 ⑤总线接口</text>
+<path class="ln" d="M340,200 L390,200"/>
+<path class="ln" d="M670,200 L720,200"/>
+<path class="ln" d="M1060,200 L1110,200"/>
+<path class="ln" d="M1410,200 L1460,200"/>
+<path class="ln" d="M1800,200 L1850,200"/>
+<path class="ln" d="M1260,260 L1260,288 L890,288 L890,330"/>
+<text class="net" x="1050" y="281" text-anchor="middle">VM_12V</text>
+<path class="ln" d="M2140,260 L2140,550"/>
+<text class="net" x="2154" y="430" text-anchor="start">+3.3V</text>
+<path class="ln" d="M2000,550 L2000,308 L980,308 L980,330"/>
+<text class="net" x="1490" y="302" text-anchor="middle">PWM_SAFE</text>
+<path class="ln" d="M800,470 L800,550"/>
+<text class="net" x="812" y="516" text-anchor="start">OUTA→IP+</text>
+<path class="ln" d="M1060,600 L1085,600 L1085,500 L1250,500 L1250,470"/>
+<text class="net" x="1150" y="512" text-anchor="middle">IP−→MOT_A</text>
+<path class="ln" d="M1110,380 L1060,380"/>
+<text class="net" x="1087" y="371" text-anchor="middle">MOT_B</text>
+<path class="wire" d="M900,690 L900,730 L1620,730"/>
+<path class="ln" d="M1180,730 L1180,690"/>
+<path class="ln" d="M1620,730 L1620,690"/>
+<text class="net" x="1250" y="723" text-anchor="middle">I_SENSE</text>
+<path class="ln" d="M1840,620 L1890,620"/>
+<text class="net" x="1865" y="542" text-anchor="middle">OC_FLAG</text>
+<path class="ln" d="M400,840 L440,840"/>
+<path class="ln" d="M600,770 L600,430 L720,430"/>
+<text class="net" x="714" y="422" text-anchor="end">PWM/INA/INB/SPI</text>
+<path class="ln" d="M200,910 L200,990"/>
+<text class="net" x="210" y="946" text-anchor="start">CAN</text>
+<path class="ln" d="M260,910 L260,955 L560,955 L560,990"/>
+<text class="net" x="410" y="969" text-anchor="middle">ALARM</text>
+<path class="ln" d="M320,910 L320,935 L1000,935 L1000,990"/>
+<text class="net" x="660" y="928" text-anchor="middle">I2C</text>
+  <text class="note" x="60" y="1190">功率回路（串联）：U3.OUTA → U4.IP+ → U4.IP− → MOT_A → J2.1 → 755电机 → J2.2 = MOT_B → U3.OUTB（ACS725 测全部电机电流）</text>
+  <text class="note" x="60" y="1215">保护两层：PL/AI 主动控制（±3A 分级 / 记录）＋ 板载硬件反射弧（±5A，PL 跑飞也在）；VNH5050A 芯片内部限流/过温/短路作最后兜底</text>
+  <text class="note" x="60" y="1240">对应 LCEDA 实测：127 器件+1 旗标 = 128 图元 · 377 导线 · 71 网络 · 408 脚（已接 377 / 悬空 31，全为合法 NC）· sch_Drc 普通模式 passed</text>
+</svg>

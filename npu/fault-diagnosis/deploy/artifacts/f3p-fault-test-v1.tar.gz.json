@@ -1,0 +1,8 @@
+{
+  "archive": "E:\\competion\\code\\project\\npu\\fault-diagnosis\\deploy\\artifacts\\f3p-fault-test-v1.tar.gz",
+  "archive_bytes": 15922597,
+  "archive_sha256": "66ea396e2cb5dbb1e6af00e9eefc01ad23c1f0885a9753336bd59faa9cac510e",
+  "files": 30,
+  "architecture": "AArch64",
+  "physical_npu_verified": false
+}

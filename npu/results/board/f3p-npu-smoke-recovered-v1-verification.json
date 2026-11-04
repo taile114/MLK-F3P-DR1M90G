@@ -1,0 +1,231 @@
+{
+  "scope": "Independently read recovered physical board graphs, profiles, CSV, output bytes and interrupt snapshots",
+  "cases": {
+    "u8": {
+      "directory": "results/board/recovered/npu-smoke-v1/results_u8_19700101_003311_321",
+      "backends": {
+        "CpuRef": {
+          "exit_code": 0,
+          "probe_log_sha256": "9848431872ec4cfc353c13f4386f53898b628412bd0fdc653302d04eabc69c8d",
+          "checked_outputs": 1536,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "graph_assignments": [
+            {
+              "layer_type": "Input",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Convolution2d",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Output",
+              "backend": "CpuRef"
+            }
+          ],
+          "execution_events": [
+            {
+              "name": "RefConvolution2dWorkload_Execute_#24",
+              "kind": "RefConvolution2dWorkload",
+              "wall_clock_us": [
+                1315.29,
+                1282.35,
+                1250.13
+              ]
+            }
+          ]
+        },
+        "Alnpu": {
+          "exit_code": 0,
+          "probe_log_sha256": "1ee9f3f192d3926e48daa482b58248bd9eaeae94495a5d59bbb3a3d623c39b83",
+          "checked_outputs": 1536,
+          "max_error_lsb": 1,
+          "mismatches": 0,
+          "graph_assignments": [
+            {
+              "layer_type": "Input",
+              "backend": "Alnpu"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "Alnpu"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "Alnpu"
+            },
+            {
+              "layer_type": "ALHardNPU",
+              "backend": "Alnpu"
+            },
+            {
+              "layer_type": "Output",
+              "backend": "Alnpu"
+            }
+          ],
+          "execution_events": [
+            {
+              "name": "AlnpuALHardNPUWorkload_Execute_#22",
+              "kind": "AlnpuALHardNPUWorkload",
+              "wall_clock_us": [
+                49.05,
+                34.2,
+                24.12
+              ]
+            }
+          ]
+        }
+      },
+      "interrupts": {
+        "HARD_NPU_IRQ": {
+          "before": 0,
+          "after": 3,
+          "delta": 3
+        },
+        "SOFT_NPU_IRQ": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce"
+    },
+    "u8_s8": {
+      "directory": "results/board/recovered/npu-smoke-v1/results_u8_s8_19700101_003554_349",
+      "backends": {
+        "CpuRef": {
+          "exit_code": 0,
+          "probe_log_sha256": "4465bc89df8089a0b1232159f1841cc446c11b3e09bec0f5b608731c11e53dd8",
+          "checked_outputs": 1536,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "graph_assignments": [
+            {
+              "layer_type": "Input",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Convolution2d",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Output",
+              "backend": "CpuRef"
+            }
+          ],
+          "execution_events": [
+            {
+              "name": "RefConvolution2dWorkload_Execute_#24",
+              "kind": "RefConvolution2dWorkload",
+              "wall_clock_us": [
+                1252.5,
+                1210.11,
+                1199.4
+              ]
+            }
+          ]
+        },
+        "Alnpu": {
+          "exit_code": 40,
+          "probe_log_sha256": "008bc8ef8d405cc7fda4927e96ff8c3bdd22e39aff7ad641e7f73926ff8828d7",
+          "failure_stage": "optimize"
+        }
+      },
+      "interrupts": {
+        "HARD_NPU_IRQ": {
+          "before": 3,
+          "after": 3,
+          "delta": 0
+        },
+        "SOFT_NPU_IRQ": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce"
+    },
+    "s8": {
+      "directory": "results/board/recovered/npu-smoke-v1/results_s8_19700101_003601_374",
+      "backends": {
+        "CpuRef": {
+          "exit_code": 0,
+          "probe_log_sha256": "63585a2b8dbbd618b06163e1757bcaa893713b2ee25a9a15fde9252dc3d3f9b0",
+          "checked_outputs": 1536,
+          "max_error_lsb": 0,
+          "mismatches": 0,
+          "graph_assignments": [
+            {
+              "layer_type": "Input",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Constant",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Convolution2d",
+              "backend": "CpuRef"
+            },
+            {
+              "layer_type": "Output",
+              "backend": "CpuRef"
+            }
+          ],
+          "execution_events": [
+            {
+              "name": "RefConvolution2dWorkload_Execute_#24",
+              "kind": "RefConvolution2dWorkload",
+              "wall_clock_us": [
+                1302.36,
+                1280.01,
+                1201.14
+              ]
+            }
+          ]
+        },
+        "Alnpu": {
+          "exit_code": 40,
+          "probe_log_sha256": "f776b7aab7b95a180d81c1cd8a8247a919e6cc7be21377a114ca93aba95d0515",
+          "failure_stage": "optimize"
+        }
+      },
+      "interrupts": {
+        "HARD_NPU_IRQ": {
+          "before": 3,
+          "after": 3,
+          "delta": 0
+        },
+        "SOFT_NPU_IRQ": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "runtime_sha256": "5def7ba75e4b59644be6f58deaf8b2bb3791c62ed38b52b6aea08b11a8f728ce"
+    }
+  },
+  "rul_model_on_npu_verified": false,
+  "physical_hard_npu_u8_verified": true
+}

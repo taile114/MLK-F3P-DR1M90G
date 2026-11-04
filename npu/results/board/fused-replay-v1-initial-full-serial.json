@@ -1,0 +1,14 @@
+{
+  "port": "COM4",
+  "format": "115200 8N1 None",
+  "steps": [
+    {
+      "operation": "command",
+      "command": "cd /mnt/mmcblk0p2/npu-tests/fused-v1 && mkdir result_neon_full; LD_LIBRARY_PATH=/opt/armnn_lib/lib ../cma-fixed-v2/bin/timeout -k 5 30 bin/rul_fused . 0 result_neon_full neon > result_neon_full/probe.log 2>&1; code=$?; echo \"$code\" > result_neon_full/exit_code.txt; cat result_neon_full/probe.log; test \"$code\" -eq 0",
+      "exit_code": 0,
+      "output": "result=inference_completed mode=neon samples=184 warmup=5 max_reference_error=8.106231689e-06 mismatches=0 rmse=2.465940142 mae=1.97711497 mean_forward_us=45437.85306 timed_allocation_calls=0 timed_allocation_bytes=0 NPU_layers=0"
+    }
+  ],
+  "status": "passed",
+  "port_released": true
+}

@@ -1,0 +1,95 @@
+{
+  "evidence": "User-provided physical-board serial output",
+  "board_result_directory": "/root/f3p-parser-compat-v2/results_19700101_010233_412",
+  "clock_valid": false,
+  "archive_sha256": "879aea9e283ef2da236dfbbea02e41c8680595a0efd3f695ba40a91c8959cfff",
+  "file_checksums": "22 OK, no failures",
+  "cases": [
+    {
+      "name": "00_reshape_with_shapes",
+      "exit_code": 0,
+      "result": "passed"
+    },
+    {
+      "name": "01_unsqueeze_negative_with_shapes",
+      "exit_code": 20,
+      "result": "negative axis -1 rejected"
+    },
+    {
+      "name": "02_unsqueeze_positive_with_shapes",
+      "exit_code": 0,
+      "result": "passed"
+    },
+    {
+      "name": "03_less_prefix_with_shapes",
+      "exit_code": 20,
+      "result": "Unsupported operation Less"
+    },
+    {
+      "name": "10_less",
+      "exit_code": 20,
+      "result": "Unsupported operation Less"
+    },
+    {
+      "name": "11_greater_equal",
+      "exit_code": 20,
+      "result": "Unsupported operation GreaterOrEqual"
+    },
+    {
+      "name": "12_and",
+      "exit_code": 20,
+      "result": "Unsupported operation And"
+    },
+    {
+      "name": "13_cast_bool_float",
+      "exit_code": 20,
+      "result": "Cast BOOL input rejected"
+    },
+    {
+      "name": "14_erf",
+      "exit_code": 20,
+      "result": "Unsupported operation Erf"
+    },
+    {
+      "name": "15_reduce_l2",
+      "exit_code": 20,
+      "result": "Unsupported operation ReduceL2"
+    },
+    {
+      "name": "16_einsum_const",
+      "exit_code": 20,
+      "result": "Unsupported operation Einsum"
+    },
+    {
+      "name": "17_matmul_dynamic_2d",
+      "exit_code": 20,
+      "result": "one input must be constant"
+    },
+    {
+      "name": "18_matmul_dynamic_3d",
+      "exit_code": 20,
+      "result": "one input must be constant"
+    },
+    {
+      "name": "19_matmul_const_2d",
+      "exit_code": 0,
+      "result": "passed"
+    },
+    {
+      "name": "20_gemm_const_2d",
+      "exit_code": 0,
+      "result": "passed"
+    },
+    {
+      "name": "90_full_unsqueeze_positive",
+      "exit_code": 20,
+      "result": "Unsupported operation Less at /linear_x/Less"
+    },
+    {
+      "name": "91_full_all_axes_positive",
+      "exit_code": 20,
+      "result": "Unsupported operation Less at /linear_x/Less"
+    }
+  ],
+  "conclusion": "Current complete model is not accepted by vendor ONNX parser. These results do not establish native layer or NPU backend support."
+}

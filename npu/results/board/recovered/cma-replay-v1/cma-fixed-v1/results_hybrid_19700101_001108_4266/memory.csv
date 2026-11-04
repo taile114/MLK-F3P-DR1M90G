@@ -1,0 +1,6 @@
+event,sample,stage,cma_bytes,cma_free_kb,allocate_calls,free_calls,live_bytes,live_blocks
+after_load,0,0,0,124428,0,0,0,0
+after_load,0,1,0,124428,0,0,0,0
+after_load,0,2,0,124428,0,0,0,0
+after_load,0,3,0,124428,0,0,0,0
+after_load,0,4,94208,124336,0,0,0,0

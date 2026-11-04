@@ -1,0 +1,33 @@
+# TD 编译产物与运行时状态
+*_Runs/
+log/
+out/
+cw/
+al_ip/**/ooc*
+*.bit
+*.bid
+*.db
+*.ts
+*.area
+*.qor
+*.timing
+*.params
+*.prj
+*.log
+*.logw
+*.status
+*.rpt
+*.bak
+*.dmp
+.lock.f
+.recent_user_depot.ini
+readMe.txt
+run.sh
+
+# 仿真产物
+*.vvp
+*.vcd
+*.fst
+
+# verilator 临时产物
+obj_dir/
